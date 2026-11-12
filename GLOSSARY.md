@@ -50,6 +50,22 @@ _Avoid_: False positive, explained variance
 A Finding that cannot be resolved or quantified from the evidence supplied; it names what is missing and is never mixed into confirmed corrections.
 _Avoid_: Open item (alone), pending, unknown
 
+**Reconciliation**:
+The comparison, for every customer and stream (platform, usage), of what was expected against what was billed, and of expected October revenue against what is booked; each nonzero difference must be explained by exactly one Finding.
+_Avoid_: Variance report, diff
+
+**Billing Effect**:
+The signed amount a Finding says billing is off by: positive when underbilled, negative when overbilled; empty when not supportable.
+_Avoid_: Billing variance, correction amount
+
+**October Revenue Effect**:
+The signed amount a Finding says October's booked revenue is off by; when zero, the Finding states why no October entry is needed.
+_Avoid_: Revenue adjustment (alone), P&L impact
+
+**Exposure**:
+A conditional amount attached to a Needs Info Finding: what would be owed if the missing evidence came out one way. Never added to confirmed corrections.
+_Avoid_: Potential error, estimate, at-risk amount
+
 ### Evidence
 
 **Billing Message**:
