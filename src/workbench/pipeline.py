@@ -5,7 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
 
-from workbench import contracts, db, inputs, ledger, messages, outputs, pdf
+from workbench import contracts, db, findings, inputs, ledger, messages, outputs, pdf
 from workbench.controls import ControlResult, passed, run_controls
 from workbench.period import Period, load_period
 
@@ -33,6 +33,9 @@ def run(period_key: str, root: Path | None = None) -> RunResult:
     contract_stats = contracts.build_contract_terms(con, period)
     n_messages = messages.load_billing_messages(con, period)
     n_journal = ledger.build_journal(con, period)
+    # Streams -> reconciliations -> finding rules (which add Proposed Entries to journal_lines),
+    # so the ledger controls below also check every Proposed Entry.
+    ctx = findings.run(con, period)
 
     results = [
         passed("contracts", "order_forms_parsed", "Order Forms parsed from the template and agree with contract_register.csv",
@@ -43,8 +46,10 @@ def run(period_key: str, root: Path | None = None) -> RunResult:
     ]
     results += run_controls(con, "inputs")
     results += ledger.run_ledger_controls(con)
+    results += run_controls(con, "findings")
 
-    stats = {"row_counts": counts, "journal_lines": n_journal, "billing_messages": n_messages, **contract_stats}
+    stats = {"row_counts": counts, "journal_lines": n_journal, "billing_messages": n_messages,
+             "streams": ctx.streams, **contract_stats}
     written = outputs.write_workpapers(con, period, results)
     written.append(outputs.write_report(con, period, results, stats, written))
     con.close()

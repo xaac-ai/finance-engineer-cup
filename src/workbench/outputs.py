@@ -28,6 +28,12 @@ WORKPAPERS = [
     "contract_terms",
     "billing_messages",
     "customers",
+    "billing_reconciliation",
+    "revenue_reconciliation",
+    "findings",
+    "finding_calculations",
+    "finding_evidence",
+    "proposed_billing_documents",
 ]
 
 # Policies applied by the workbench, each cited to its source (START_HERE.pdf section).
@@ -83,15 +89,44 @@ def write_workpapers(con: duckdb.DuckDBPyConnection, period: Period, controls: l
 
 def write_report(con: duckdb.DuckDBPyConnection, period: Period, controls: list[ControlResult], stats: dict, workpapers: list[str]) -> str:
     customers = [{k: _jsonable(v) for k, v in r.items()} for r in _rows(con, "SELECT * FROM out_customers")]
-    tb = [{k: _jsonable(v) for k, v in r.items()} for r in _rows(con, "SELECT * FROM out_trial_balance_by_account")]
+    def j(sql):
+        return [{k: _jsonable(v) for k, v in r.items()} for r in _rows(con, sql)]
+
+    tb = j("SELECT * FROM out_trial_balance_by_account")
+    found = j("SELECT f.*, s.\"AccountName\" AS customer_name FROM out_findings f "
+              "LEFT JOIN raw_salesforce_accounts s ON s.\"NetSuiteCustomerInternalId__c\" = f.customer_id")
+    calcs, evid = j("SELECT * FROM out_finding_calculations"), j("SELECT * FROM out_finding_evidence")
+    docs, entries = j("SELECT * FROM out_proposed_billing_documents"), j("SELECT * FROM out_proposed_journal_entries")
+    for f in found:
+        fid = f["finding_id"]
+        f["calculation"] = [c for c in calcs if c["finding_id"] == fid]
+        f["evidence"] = [e for e in evid if e["finding_id"] == fid]
+        f["documents"] = [d for d in docs if d["finding_id"] == fid]
+        f["entries"] = [e for e in entries if e["finding_id"] == fid]
+    index: dict[tuple, dict] = {}
+    for e in evid:
+        k = (e["file"], e["line"], e["text"])
+        index.setdefault(k, {"file": e["file"], "line": e["line"], "kind": e["kind"], "text": e["text"], "cited_by": []})
+        if e["finding_id"] not in index[k]["cited_by"]:
+            index[k]["cited_by"].append(e["finding_id"])
+    totals = j("""SELECT
+        coalesce(sum(CASE WHEN status = 'error' AND billing_effect > 0 THEN billing_effect END), 0) AS underbilled,
+        coalesce(sum(CASE WHEN status = 'error' AND billing_effect < 0 THEN billing_effect END), 0) AS overbilled,
+        coalesce(sum(CASE WHEN status = 'error' AND october_revenue_effect > 0 THEN october_revenue_effect END), 0) AS october_understated,
+        coalesce(sum(CASE WHEN status = 'error' AND october_revenue_effect < 0 THEN october_revenue_effect END), 0) AS october_overstated,
+        count(*) FILTER (WHERE status = 'needs_info' AND exposure IS NOT NULL) AS exposure_items
+        FROM out_findings""")[0]
     data = {
         "run": {"period": period.key, "label": period.label, "cutoff": period.cutoff,
                 "command": f"make run PERIOD={period.key}", "commit": _git_commit(period)},
         "stats": stats,
         "controls": [asdict(c) for c in controls],
         "customers": customers,
-        "findings": [],  # filled by the accounting logic (separate map)
-        "evidence": [],  # every cited source row, derived from findings
+        "findings": found,
+        "evidence": sorted(index.values(), key=lambda e: (e["file"], e["line"] or 0)),
+        "totals": totals,
+        "billing_reconciliation": j("SELECT * FROM out_billing_reconciliation"),
+        "revenue_reconciliation": j("SELECT * FROM out_revenue_reconciliation"),
         "trial_balance_by_account": tb,
         "assumptions": [{"text": t, "source": s} for t, s in ASSUMPTIONS],
         "workpapers": workpapers,
