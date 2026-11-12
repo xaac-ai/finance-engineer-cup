@@ -1,0 +1,33 @@
+product_account_id,salesforce_account_id,account_label,effective_from,effective_to,mapping_updated_at
+pa_29bef2ab673ae7,001cd754c8a00dfAAA,"Alder Fieldworks, Inc.",2026-09-01,,2026-09-01T08:00:00-06:00
+pa_3ecc8f2ea61075,00121902038e29fAAA,"Brookstone Data, Inc.",2026-09-01,,2026-09-01T08:00:00-06:00
+pa_fdb9e8b1a20001,00199462379bc17AAA,"Copper Finch Systems, Inc.",2026-09-01,,2026-09-01T08:00:00-06:00
+pa_f3203cb3d10b96,0019b4299633298AAA,"Driftwood Research, Inc.",2026-09-01,,2026-09-01T08:00:00-06:00
+pa_0a4e7d52d6517e,001c74a3f587756AAA,"Evergreen Dispatch, Inc.",2026-09-01,,2026-09-01T08:00:00-06:00
+pa_28b1032eb4f855,00101f851e7fbe9AAA,"Falcon Ridge Software, Inc.",2026-09-01,,2026-09-01T08:00:00-06:00
+pa_e42d35b1515df1,001528ebc1bb6a2AAA,"Granite Orchard, Inc.",2026-09-01,,2026-09-01T08:00:00-06:00
+pa_8106ec036dd8a2,001a0b34c4386c3AAA,"Highwater Studio, Inc.",2026-09-01,,2026-09-01T08:00:00-06:00
+pa_006e622d3d5809,00137c096146731AAA,"Indigo Trail Networks, Inc.",2026-09-01,,2026-09-01T08:00:00-06:00
+pa_b7aeebafce6fdb,001e9a35c92d800AAA,"Juniper Bay Analytics, Inc.",2026-09-01,,2026-09-01T08:00:00-06:00
+pa_b7b4fd74262254,0013ac3411943d1AAA,"Kestrel Bridge, Inc.",2026-09-01,,2026-09-01T08:00:00-06:00
+pa_098af589827983,00141dc91389400AAA,"Larch Point Services, Inc.",2026-09-01,,2026-09-01T08:00:00-06:00
+pa_849bd672a67445,00185c69a4a7d58AAA,"Maple Lantern, Inc.",2026-09-01,,2026-09-01T08:00:00-06:00
+pa_f262997a456a04,0011cbc851d9008AAA,"Northbank Design, Inc.",2026-09-01,,2026-09-01T08:00:00-06:00
+pa_4785cd225b89ba,00168d5f330df06AAA,"Oak Harbor Digital, Inc.",2026-09-01,,2026-09-01T08:00:00-06:00
+pa_5ad3eb8ecfe221,001674c38a854e9AAA,"Pine Summit Logistics, Inc.",2026-09-01,,2026-09-01T08:00:00-06:00
+pa_137837beb1550a,00171cbc47d54f3AAA,"Quartz Meadow, Inc.",2026-09-01,,2026-09-01T08:00:00-06:00
+pa_1851d249dd06cb,001a54070f5a2e4AAA,"Riverbend Operations, Inc.",2026-09-01,,2026-09-01T08:00:00-06:00
+pa_47b88c661eb874,00158dba86a41d6AAA,"Silver Current, Inc. / East",2026-09-01,,2026-09-01T08:00:00-06:00
+pa_f870ed4e1b3515,00158dba86a41d6AAA,"Silver Current, Inc. / West",2026-09-01,,2026-09-01T08:00:00-06:00
+pa_dd3b1cb039fe81,001cebd325093cbAAA,"Timberline Insights, Inc. / East",2026-09-01,,2026-09-01T08:00:00-06:00
+pa_5c642fdd78497b,001cebd325093cbAAA,"Timberline Insights, Inc. / West",2026-09-01,,2026-09-01T08:00:00-06:00
+pa_6f486d59fde2c4,001ff8487ef5b3dAAA,"Juniper Signal Works, Inc.",2026-09-01,,2026-09-01T08:00:00-06:00
+pa_0f28aff4fcff87,0018dcff54e943cAAA,"Westhaven Metrics, Inc.",2026-09-01,,2026-09-01T08:00:00-06:00
+pa_e6a75ee04d9e8b,0011e97a0fc9929AAA,"Cedar Harbor Labs, Inc.",2026-09-01,,2026-09-01T08:00:00-06:00
+pa_a1dad6e6a9a5cd,001cf5f649adb5cAAA,"Meridian Process Systems, Inc.",2026-09-01,,2026-09-01T08:00:00-06:00
+pa_64b090ce98d42f,001e11d0aa846d7AAA,"Yarrow Ridge, Inc.",2026-09-01,,2026-09-01T08:00:00-06:00
+pa_2c0b53d1d7dd6b,001e7f010081dd7AAA,"Zephyr Grove, Inc.",2026-09-01,,2026-09-01T08:00:00-06:00
+pa_9983d91e91e873,001a2e2bf7c89bdAAA,"Aspen Vale, Inc.",2026-09-01,,2026-09-01T08:00:00-06:00
+pa_fbb2b8766f4fac,0010f1c55725cd6AAA,"Beacon Marsh, Inc.",2026-09-01,,2026-09-01T08:00:00-06:00
+pa_c38895c66dfafd,001c9d190b0f125AAA,"Crescent Shore, Inc.",2026-09-15,,2026-09-15T08:00:00-06:00
+pa_676b6b455e0887,,Workspace pending identity verification,2026-09-15,,2026-09-15T08:00:00-06:00

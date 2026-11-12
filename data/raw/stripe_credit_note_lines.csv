@@ -1,0 +1,3 @@
+id,credit_note_id,invoice_line_item_id,description,amount,quantity,service_start,service_end_exclusive,service_period_source
+cnli_03c7633608049f,cn_82a7ddd6e88e69,il_3e61bdcb3f3274,Cancelled credit created in error,5000,,2026-10-01,2026-11-01,original invoice line
+cnli_b89c120fa7fbd0,cn_85bf669490fd97,il_df52e1ad4a7155,Approved October usage concession,10000,,2026-10-01,2026-11-01,original invoice line

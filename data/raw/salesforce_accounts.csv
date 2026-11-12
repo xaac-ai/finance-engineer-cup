@@ -1,0 +1,31 @@
+AccountId,AccountName,ParentId,BillingCountry,StripeCustomerId__c,NetSuiteCustomerInternalId__c,AccountOwner
+001cd754c8a00dfAAA,"Alder Fieldworks, Inc.",,US,cus_12d0dbb00ef364,186097,Morgan Lee
+00121902038e29fAAA,"Brookstone Data, Inc.",,US,cus_1c17e255781bad,866587,Morgan Lee
+00199462379bc17AAA,"Copper Finch Systems, Inc.",,US,cus_3dbc6b464d0e31,477694,Morgan Lee
+0019b4299633298AAA,"Driftwood Research, Inc.",,US,cus_98c3c75fd26149,731059,Morgan Lee
+001c74a3f587756AAA,"Evergreen Dispatch, Inc.",,US,cus_fb548d00174b56,436791,Morgan Lee
+00101f851e7fbe9AAA,"Falcon Ridge Software, Inc.",,US,cus_a58cd4932b01d7,286595,Morgan Lee
+001528ebc1bb6a2AAA,"Granite Orchard, Inc.",,US,cus_ed6cb4728e8022,963044,Morgan Lee
+001a0b34c4386c3AAA,"Highwater Studio, Inc.",,US,cus_633aaa8be0687d,142182,Morgan Lee
+00137c096146731AAA,"Indigo Trail Networks, Inc.",,US,cus_35b0367a38f10f,620310,Morgan Lee
+001e9a35c92d800AAA,"Juniper Bay Analytics, Inc.",,US,cus_4a5ff59dfed00d,879513,Morgan Lee
+0013ac3411943d1AAA,"Kestrel Bridge, Inc.",,US,cus_e55898135de61c,654552,Morgan Lee
+00141dc91389400AAA,"Larch Point Services, Inc.",,US,cus_022f885a5cb476,232251,Morgan Lee
+00185c69a4a7d58AAA,"Maple Lantern, Inc.",,US,cus_817655124b9b98,507826,Morgan Lee
+0011cbc851d9008AAA,"Northbank Design, Inc.",,US,cus_1be410211b982c,553102,Morgan Lee
+00168d5f330df06AAA,"Oak Harbor Digital, Inc.",,US,cus_8d5fc851f9c0e4,300468,Morgan Lee
+001674c38a854e9AAA,"Pine Summit Logistics, Inc.",,US,cus_ba70f7d283542e,561562,Morgan Lee
+00171cbc47d54f3AAA,"Quartz Meadow, Inc.",,US,cus_9c5156ea37f983,730965,Morgan Lee
+001a54070f5a2e4AAA,"Riverbend Operations, Inc.",,US,cus_84c025f9615cf1,856042,Morgan Lee
+00158dba86a41d6AAA,"Silver Current, Inc.",,US,cus_c71c17defe8cd1,676664,Morgan Lee
+001cebd325093cbAAA,"Timberline Insights, Inc.",,US,cus_51b926427b2220,941670,Morgan Lee
+001ff8487ef5b3dAAA,"Juniper Signal Works, Inc.",,US,cus_e5ab4c55ca775a,437384,Morgan Lee
+0018dcff54e943cAAA,"Westhaven Metrics, Inc.",,US,cus_3fa65401464793,240793,Morgan Lee
+0011e97a0fc9929AAA,"Cedar Harbor Labs, Inc.",,US,cus_c34b5d920c411f,639373,Morgan Lee
+001cf5f649adb5cAAA,"Meridian Process Systems, Inc.",,US,cus_75c30f56fb3df9,335780,Morgan Lee
+001e11d0aa846d7AAA,"Yarrow Ridge, Inc.",,US,cus_46ee9e5b5a2782,188999,Morgan Lee
+001e7f010081dd7AAA,"Zephyr Grove, Inc.",,US,cus_499cb732fd7b9c,148565,Morgan Lee
+001a2e2bf7c89bdAAA,"Aspen Vale, Inc.",,US,cus_98616f9101909d,314334,Morgan Lee
+0010f1c55725cd6AAA,"Beacon Marsh, Inc.",,US,cus_6cd97b5f63f72f,810234,Morgan Lee
+001c9d190b0f125AAA,"Crescent Shore, Inc.",,US,cus_bec865da1ebb19,260381,Morgan Lee
+00174337ea6baeeAAA,"Willow Passage, Inc.",,US,cus_e33bdc2ba07de2,839653,Morgan Lee
