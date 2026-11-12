@@ -1,1 +1,36 @@
 finding_id,seq,kind,file,line,text,role
+F-188999-USAGE-MISSING-INVOICE-2026-10,1,contract_term,data/raw/2026-10/contracts/OF-2026-375.pdf,,"03 SERVICES AND FEES: 30,000 included runs per calendar month",allowance
+F-188999-USAGE-MISSING-INVOICE-2026-10,2,contract_term,data/raw/2026-10/contracts/OF-2026-375.pdf,,"03 SERVICES AND FEES: Monthly, in arrears $0.12 / excess run",overage rate
+F-188999-USAGE-MISSING-INVOICE-2026-10,3,csv_row,data/raw/2026-10/product_usage.csv,,"31 October records, 55,619 runs on pa_64b090ce98d42f (deduplicated, active, verified mapping)",validated usage
+F-188999-USAGE-MISSING-INVOICE-2026-10,4,pdf_quote,data/raw/2026-10/START_HERE.pdf,,"USAGE: Charges equal max(0, eligible units minus allowance) x signed overage rate, rounded once to USD cents half up.",policy
+F-188999-USAGE-MISSING-INVOICE-2026-10,5,pdf_quote,data/raw/2026-10/START_HERE.pdf,,BILLING: An absent usage invoice can be valid when no overage exists.,policy (overage exists here)
+F-314334-USAGE-NO-OVERAGE-2026-10,1,contract_term,data/raw/2026-10/contracts/OF-2026-397.pdf,,"03 SERVICES AND FEES: 30,000 included runs per calendar month",allowance
+F-314334-USAGE-NO-OVERAGE-2026-10,2,contract_term,data/raw/2026-10/contracts/OF-2026-397.pdf,,"03 SERVICES AND FEES: Monthly, in arrears $0.05 / excess run",overage rate
+F-314334-USAGE-NO-OVERAGE-2026-10,3,csv_row,data/raw/2026-10/product_usage.csv,,"31 October records, 25,000 runs on pa_9983d91e91e873 (deduplicated, active, verified mapping)",validated usage
+F-314334-USAGE-NO-OVERAGE-2026-10,4,pdf_quote,data/raw/2026-10/START_HERE.pdf,,BILLING: An absent usage invoice can be valid when no overage exists.,policy
+F-437384-USAGE-RATE-2026-10,1,contract_term,data/raw/2026-10/contracts/OF-2026-331.pdf,,"03 SERVICES AND FEES: 30,000 included runs per calendar month",allowance
+F-437384-USAGE-RATE-2026-10,2,contract_term,data/raw/2026-10/contracts/OF-2026-331.pdf,,"03 SERVICES AND FEES: Monthly, in arrears $0.16 / excess run",overage rate
+F-437384-USAGE-RATE-2026-10,3,csv_row,data/raw/2026-10/product_usage.csv,,"31 October records, 58,502 runs on pa_6f486d59fde2c4 (deduplicated, active, verified mapping)",validated usage
+F-437384-USAGE-RATE-2026-10,4,csv_row,data/raw/2026-10/stripe_invoice_lines.csv,86,"RC-261101-437384-U il_e620266becab6f: 28,502 × $0.05 = $1,425.10",invoice billed
+F-437384-USAGE-RATE-2026-10,5,csv_row,data/raw/2026-10/netsuite_gl_detail.csv,233,GL 4010 October usage accrual: credit 1425.10,October accrual booked
+F-437384-USAGE-RATE-2026-10,6,pdf_quote,data/raw/2026-10/START_HERE.pdf,,"USAGE: Prices are negotiated net prices, with no additional invoice discounts.",policy
+F-639373-USAGE-ALLOWANCE-2026-10,1,contract_term,data/raw/2026-10/contracts/OF-2026-157.pdf,,"03 SERVICES AND FEES: 30,000 included runs per calendar month",allowance
+F-639373-USAGE-ALLOWANCE-2026-10,2,contract_term,data/raw/2026-10/contracts/AM-OF-2026-157.pdf,,"03 CHANGES TO COMMERCIAL TERMS: Included workflow runs 30,000 / calendar month 45,000 / calendar month",allowance
+F-639373-USAGE-ALLOWANCE-2026-10,3,contract_term,data/raw/2026-10/contracts/AM-OF-2026-157.pdf,,"04 APPLICATION AND OTHER TERMS: For October, weight the prior allowance for October 1-15 and the amended allowance for October 16-31 by calendar days. Round the resulting allowance once to a whole run, half up.",allowance
+F-639373-USAGE-ALLOWANCE-2026-10,4,contract_term,data/raw/2026-10/contracts/OF-2026-157.pdf,,"03 SERVICES AND FEES: Monthly, in arrears $0.40 / excess run",overage rate
+F-639373-USAGE-ALLOWANCE-2026-10,5,csv_row,data/raw/2026-10/product_usage.csv,,"31 October records, 58,470 runs on pa_e6a75ee04d9e8b (deduplicated, active, verified mapping)",validated usage
+F-639373-USAGE-ALLOWANCE-2026-10,6,csv_row,data/raw/2026-10/stripe_invoice_lines.csv,96,"RC-261101-639373-U il_b62fbf2f78fbad: 28,470 × $0.40 = $11,388.00",invoice billed
+F-639373-USAGE-ALLOWANCE-2026-10,7,csv_row,data/raw/2026-10/netsuite_gl_detail.csv,261,GL 4010 October usage accrual: credit 11388.00,October accrual booked
+F-639373-USAGE-ALLOWANCE-2026-10,8,pdf_quote,data/raw/2026-10/START_HERE.pdf,,"USAGE: For an allowance amendment, weight each allowance by applicable calendar days and round once.",policy
+F-810234-USAGE-LATE-RECORD-2026-10,1,contract_term,data/raw/2026-10/contracts/OF-2026-408.pdf,,"03 SERVICES AND FEES: 30,000 included runs per calendar month",allowance
+F-810234-USAGE-LATE-RECORD-2026-10,2,contract_term,data/raw/2026-10/contracts/OF-2026-408.pdf,,"03 SERVICES AND FEES: Monthly, in arrears $0.10 / excess run",overage rate
+F-810234-USAGE-LATE-RECORD-2026-10,3,csv_row,data/raw/2026-10/product_usage.csv,,"31 October records, 44,443 runs on pa_fbb2b8766f4fac (deduplicated, active, verified mapping)",validated usage
+F-810234-USAGE-LATE-RECORD-2026-10,4,csv_row,data/raw/2026-10/stripe_invoice_lines.csv,119,"RC-261101-810234-U il_7ba6ac5c304310: 13,443 × $0.10 = $1,344.30",invoice billed
+F-810234-USAGE-LATE-RECORD-2026-10,5,csv_row,data/raw/2026-10/netsuite_gl_detail.csv,325,GL 4010 October usage accrual: credit 1444.30,October accrual booked
+F-810234-USAGE-LATE-RECORD-2026-10,6,csv_row,data/raw/2026-10/product_usage.csv,1832,"ur_19d11e47355517 pa_fbb2b8766f4fac 2026-10-31: 1,000 runs, ingested 2026-11-03 08:30",late record
+F-810234-USAGE-LATE-RECORD-2026-10,7,pdf_quote,data/raw/2026-10/START_HERE.pdf,,"TIMING: Source activity, ingestion timestamp, invoice issue date, service period, GL posting period and GL Created At are distinct.",policy
+F-UNATTRIBUTED-USAGE-UNVERIFIED-pa_676b6b455e0887-2026-10,1,csv_row,data/raw/2026-10/product_usage.csv,1896,"pa_676b6b455e0887: 31 October records, 49,762 runs, 2026-10-01 to 2026-10-31 (lines 1896–1926)",unattributed usage
+F-UNATTRIBUTED-USAGE-UNVERIFIED-pa_676b6b455e0887-2026-10,2,csv_row,data/raw/2026-10/product_account_mapping.csv,33,"pa_676b6b455e0887 mapping: label 'Workspace pending identity verification', Salesforce account blank",no verified owner
+F-UNATTRIBUTED-USAGE-UNVERIFIED-pa_676b6b455e0887-2026-10,3,billing_message,data/raw/2026-10/billing_followups.pdf,,MSG-2026-131: Workspace pa_676b6b455e0887 has October metering but no verified billing owner. It could be an internal workspace or belong to an existing customer. Do not identify it by elimination from the customer list. Product Operations must verify ownership before Billing assigns usage. Account names and one-to-one assumptions are not evidence.,instruction
+F-UNATTRIBUTED-USAGE-UNVERIFIED-pa_676b6b455e0887-2026-10,4,billing_message,data/raw/2026-10/billing_followups.pdf,,MSG-2026-132: Passage concession request Willow Passage has requested USD 250 off October usage. This is a request only; I have no Controller approval and have not authorized Billing to issue a credit. The request does not establish ownership of any unverified workspace.,instruction
+F-UNATTRIBUTED-USAGE-UNVERIFIED-pa_676b6b455e0887-2026-10,5,pdf_quote,data/raw/2026-10/START_HERE.pdf,,"UNVERIFIED USAGE: Do not force a mapping, assume the remaining customer owns a workspace, or treat missing attribution as zero usage. Document conditional exposure and request Product Operations evidence.",policy

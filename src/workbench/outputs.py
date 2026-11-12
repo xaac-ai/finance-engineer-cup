@@ -34,6 +34,8 @@ WORKPAPERS = [
     "finding_calculations",
     "finding_evidence",
     "proposed_billing_documents",
+    "usage_by_customer",
+    "usage_batch_tieout",
 ]
 
 # Policies applied by the workbench, each cited to its source (START_HERE.pdf section).

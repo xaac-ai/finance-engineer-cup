@@ -18,7 +18,7 @@ def test_end_to_end_writes_outputs_and_passes(repo_copy):
     blob = html.split('<script id="report-data" type="application/json">')[1].split("</script>")[0]
     data = json.loads(blob)
     assert len(data["customers"]) == 30
-    assert data["findings"] == []
+    assert {f["status"] for f in data["findings"]} <= {"error", "valid_explanation", "needs_info"}
 
 
 def test_rerun_is_deterministic(repo_copy):

@@ -1,1 +1,23 @@
 finding_id,step,description,formula,value
+F-188999-USAGE-MISSING-INVOICE-2026-10,1,Validated October runs,sum of unique active records on verified accounts,"55,619"
+F-188999-USAGE-MISSING-INVOICE-2026-10,2,October allowance,"30,000 (full month)","30,000"
+F-188999-USAGE-MISSING-INVOICE-2026-10,3,Expected charge,"max(0, 55,619 − 30,000) × $0.12","3,074.28"
+F-188999-USAGE-MISSING-INVOICE-2026-10,4,Billed,no usage invoice for 2026-10-01 to 2026-11-01,0.00
+F-314334-USAGE-NO-OVERAGE-2026-10,1,Validated October runs,sum of unique active records on verified accounts,"25,000"
+F-314334-USAGE-NO-OVERAGE-2026-10,2,October allowance,"30,000 (full month)","30,000"
+F-314334-USAGE-NO-OVERAGE-2026-10,3,Expected charge,"max(0, 25,000 − 30,000) × $0.05",0.00
+F-437384-USAGE-RATE-2026-10,1,Billed overage runs,invoice quantity (agrees with validated usage),"28,502"
+F-437384-USAGE-RATE-2026-10,2,At contract rate,"28,502 × $0.16","4,560.32"
+F-437384-USAGE-RATE-2026-10,3,Billed,"28,502 × $0.05","1,425.10"
+F-437384-USAGE-RATE-2026-10,4,Billing Effect,contract − billed,"3,135.22"
+F-639373-USAGE-ALLOWANCE-2026-10,1,Validated October runs,sum of unique active records on verified accounts,"58,470"
+F-639373-USAGE-ALLOWANCE-2026-10,2,October allowance,"30,000 × 15/31 + 45,000 × 16/31 = 37,741.94, rounded once half up to 37,742","37,742"
+F-639373-USAGE-ALLOWANCE-2026-10,3,Expected charge,"max(0, 58,470 − 37,742) × $0.40","8,291.20"
+F-639373-USAGE-ALLOWANCE-2026-10,4,Billed,"28,470 × $0.40 (implies allowance 30,000)","11,388.00"
+F-639373-USAGE-ALLOWANCE-2026-10,5,Billing Effect,expected − billed,"-3,096.80"
+F-810234-USAGE-LATE-RECORD-2026-10,1,Runs known when invoiced,records ingested by 2026-11-01 09:00,"43,443"
+F-810234-USAGE-LATE-RECORD-2026-10,2,Late runs (before cutoff),records ingested after the invoice,"1,000"
+F-810234-USAGE-LATE-RECORD-2026-10,3,Expected charge,"max(0, 44,443 − 30,000) × $0.10","1,444.30"
+F-810234-USAGE-LATE-RECORD-2026-10,4,Charge on runs known at invoicing,"max(0, 43,443 − 30,000) × $0.10","1,344.30"
+F-810234-USAGE-LATE-RECORD-2026-10,5,Billing Effect,expected − charge on known runs,100.00
+F-UNATTRIBUTED-USAGE-UNVERIFIED-pa_676b6b455e0887-2026-10,1,Unattributed October runs,unique active records with no verified mapping,"49,762"

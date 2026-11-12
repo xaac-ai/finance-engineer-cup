@@ -1,0 +1,12 @@
+# Hand-curated approved concessions, each cited to the Controller's Billing Message.
+# Every quote must appear verbatim (whitespace-normalised) in that message's body, and the
+# message must be sent by the Controller; the run fails otherwise. Requests without approval
+# (e.g. MSG-2026-132) are NOT listed here: START_HERE · UNVERIFIED USAGE, "An unapproved
+# concession request alone does not authorize a credit or revenue reduction."
+concessions:
+  - customer_id: "148565"  # Zephyr Grove
+    stream: usage
+    service_period: "2026-10"
+    amount: "100.00"
+    message_id: MSG-2026-109
+    quote: "Approved: reduce Zephyr Grove October usage consideration by USD 100."

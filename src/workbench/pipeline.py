@@ -5,7 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
 
-from workbench import contracts, db, findings, inputs, ledger, messages, outputs, pdf
+from workbench import approvals, contracts, db, findings, inputs, ledger, messages, outputs, pdf
 from workbench.controls import ControlResult, passed, run_controls
 from workbench.period import Period, load_period
 
@@ -32,6 +32,7 @@ def run(period_key: str, root: Path | None = None) -> RunResult:
     pdf.extract_to(period.raw_dir / "START_HERE.pdf", period.extracted_dir)
     contract_stats = contracts.build_contract_terms(con, period)
     n_messages = messages.load_billing_messages(con, period)
+    n_approvals = approvals.load_approvals(con, period)
     n_journal = ledger.build_journal(con, period)
     # Streams -> reconciliations -> finding rules (which add Proposed Entries to journal_lines),
     # so the ledger controls below also check every Proposed Entry.
@@ -43,8 +44,12 @@ def run(period_key: str, root: Path | None = None) -> RunResult:
         passed("contracts", "amendment_quotes", "Every curated Amendment quote appears verbatim in the document text",
                f"{contract_stats['quotes_checked']} quotes across {contract_stats['amendments']} Amendments"),
         passed("inputs", "billing_messages_parsed", "Billing Messages parsed from billing_followups.pdf", f"{n_messages} messages"),
+        passed("inputs", "approval_quotes", "Every curated approval quote appears verbatim in a Controller Billing Message",
+               f"{n_approvals} approved concessions"),
     ]
     results += run_controls(con, "inputs")
+    if "usage" in ctx.streams:
+        results += run_controls(con, "usage")
     results += ledger.run_ledger_controls(con)
     results += run_controls(con, "findings")
 
