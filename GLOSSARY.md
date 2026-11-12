@@ -18,6 +18,10 @@ _Avoid_: Superseding contract, replacement order
 One commercial term of a contract (e.g. platform fee, included runs per month, overage rate) with the date range it applies to and the document and quote it comes from.
 _Avoid_: Contract field, setting
 
+**Drafted Term**:
+A Contract Term proposed by the drafter agent from an Amendment's text. It has no effect until a person copies it into the curated terms.
+_Avoid_: Extracted term, AI term
+
 ### Books
 
 **Recorded Entry**:

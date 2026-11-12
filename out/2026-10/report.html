@@ -52,6 +52,142 @@
 <nav id="nav"></nav>
 <main id="view"></main>
 <script id="report-data" type="application/json">{
+ "agents": {
+  "drafter": {
+   "calls": [
+    {
+     "cache_key": "08c85397c3db0797044ac7be",
+     "document_id": "AM-OF-2026-157",
+     "model": "claude-opus-5-5",
+     "recorded_at": "2026-11-12T23:12:48Z",
+     "usage": {
+      "input_tokens": 2262,
+      "output_tokens": 940
+     }
+    },
+    {
+     "cache_key": "6999629534d8b33e8f810bc9",
+     "document_id": "AM-OF-2026-164",
+     "model": "claude-opus-5-5",
+     "recorded_at": "2026-11-12T23:13:01Z",
+     "usage": {
+      "input_tokens": 2332,
+      "output_tokens": 1666
+     }
+    }
+   ],
+   "documents": [
+    {
+     "document_id": "AM-OF-2026-157",
+     "extra_terms": [],
+     "terms": [
+      {
+       "confidence": "high",
+       "curated_value": "45000",
+       "date_match": true,
+       "drafted_quote": "Monthly included workflow runs increase from 30,000 to 45,000 effective October 16, 2026 at 00:00 America/Denver.",
+       "drafted_value": "45000",
+       "found": true,
+       "notes": "Up from 30000. The change takes effect at 00:00 America/Denver. Section 03 shows the same change in its table.",
+       "quote_check": "passed",
+       "term": "included_runs_per_month",
+       "value_match": true
+      },
+      {
+       "confidence": "high",
+       "curated_value": "October: prior allowance Oct 1-15 + amended allowance Oct 16-31 by calendar days, rounded once half up",
+       "date_match": true,
+       "drafted_quote": "For October, weight the prior allowance for October 1-15 and the amended allowance for October 16-31 by calendar days. Round the resulting allowance once to a whole run, half up.",
+       "drafted_value": "October allowance weighted by calendar days: 30000 for Oct 1-15 and 45000 for Oct 16-31, rounded once to a whole run, half up",
+       "found": true,
+       "notes": "Applies to the October 2026 transition month only. Derived figure, not stated in the Amendment: (30000*15 + 45000*16)/31 = 37741.94, rounded to 37742 runs for October. The text also says there is no retrospective change to earlier service. Overage rate, platform fee, invoice amount, term and payment terms are stated as unchanged.",
+       "quote_check": "passed",
+       "term": "allowance_weighting_rule",
+       "value_match": null
+      }
+     ]
+    },
+    {
+     "document_id": "AM-OF-2026-164",
+     "extra_terms": [],
+     "terms": [
+      {
+       "confidence": "high",
+       "curated_value": "60000.00",
+       "date_match": true,
+       "drafted_quote": "Annual platform subscription rate increases from USD 48,000 to USD 60,000 effective October 16, 2026 at 00:00 America/Denver, for the remainder of the original term.",
+       "drafted_value": "60000.00",
+       "found": true,
+       "notes": "Previously 48000.00. The 00:00 America/Denver effective time matches the register effective date of 2026-10-16. Section 03 shows the same change.",
+       "quote_check": "passed",
+       "term": "platform_annual_rate",
+       "value_match": true
+      },
+      {
+       "confidence": "high",
+       "curated_value": "5000.00",
+       "date_match": true,
+       "drafted_quote": "Monthly platform invoices are USD 5,000.00 from November 2026 through August 2027.",
+       "drafted_value": "5000.00",
+       "found": true,
+       "notes": "Previously 4000.00. The section 03 table states '$5,000.00 from Nov 1'. Billing anchor day 1 is unchanged.",
+       "quote_check": "passed",
+       "term": "platform_invoice_amount",
+       "value_match": true
+      },
+      {
+       "confidence": "high",
+       "curated_value": "526.03",
+       "date_match": true,
+       "drafted_quote": "October upgrade catch-up: USD 526.03, using USD 12,000 x 16 / 365, rounded half up.",
+       "drafted_value": "526.03",
+       "found": true,
+       "notes": "One-off charge for October 16-31, 2026 (16 days) at the incremental annual rate of 12000. It may be invoiced separately. Recomputed: 12000 x 16 / 365 = 526.03.",
+       "quote_check": "passed",
+       "term": "catch_up_amount",
+       "value_match": true
+      },
+      {
+       "confidence": "high",
+       "curated_value": "10520.55",
+       "date_match": true,
+       "drafted_quote": "Incremental consideration for 320 remaining service days is USD 10,520.55.",
+       "drafted_value": "10520.55",
+       "found": true,
+       "notes": "Covers 320 days from 2026-10-16 to 2027-09-01 (exclusive). Recomputed: 12000 x 320 / 365 = 10520.55. The effective date is taken from the stated rate change date.",
+       "quote_check": "passed",
+       "term": "incremental_consideration",
+       "value_match": true
+      },
+      {
+       "confidence": "medium",
+       "curated_value": "5.48",
+       "date_match": true,
+       "drafted_quote": "The final platform invoice includes a USD 5.48 credit to reconcile the monthly billing convention to that amount.",
+       "drafted_value": "5.48",
+       "found": true,
+       "notes": "The credit applies on the final platform invoice, presumably August 2027, but no date is stated, so the amendment effective date is used. Reconciles 526.03 + 10 x 1000 = 10526.03 against 10520.55, a difference of 5.48.",
+       "quote_check": "passed",
+       "term": "final_invoice_credit",
+       "value_match": true
+      }
+     ]
+    }
+   ],
+   "effort": "high",
+   "model": "claude-opus-5-5",
+   "totals": {
+    "curated": 7,
+    "date_match": 7,
+    "drafted": 7,
+    "extra": 0,
+    "found": 7,
+    "quote_pass": 7,
+    "value_comparable": 6,
+    "value_match": 6
+   }
+  }
+ },
  "assumptions": [
   {
    "source": "START_HERE \u00b7 MONEY",
@@ -5075,7 +5211,7 @@
  ],
  "run": {
   "command": "make run PERIOD=2026-10",
-  "commit": "de24f1d-dirty",
+  "commit": "16fe7f0-dirty",
   "cutoff": "2026-11-11T18:00:00-07:00",
   "label": "Oct 2026",
   "period": "2026-10"
@@ -5328,10 +5464,28 @@ function briefView() {
     <code>make run PERIOD=&lt;YYYY-MM&gt;</code>. Missing inputs, unparseable Order Forms and uncited Amendment terms stop the run with a message. See <a href="#controls">Controls</a>.</p></div>`;
 }
 
+function agentSteps() {
+  const dr = (D.agents||{}).drafter;
+  if (!dr) return `<h2>Agent steps</h2><p class="mute">Not run for this period.</p>`;
+  const t = dr.totals, yn = v => v === true ? "✓" : v === false ? "✗" : "—";
+  return `<h2>Agent steps</h2>
+    <h3>Amendment-term drafter (${esc(dr.model)}, effort ${esc(dr.effort)})</h3>
+    <p>Run with <code>make draft-terms</code>, outside the review; the answers are committed and replayed without a key. Drafting blind (it never sees the curated file), it found
+      <b>${t.found}/${t.curated}</b> curated terms: numeric values ${t.value_match}/${t.value_comparable}, effective dates ${t.date_match}/${t.found}, quotes passing the word-for-word gate ${t.quote_pass}/${t.drafted}, with ${t.extra} extra term(s).
+      Drafted Terms have no effect until a person copies them into the curated terms.</p>
+    <div class="scroll"><table><tr><th>Amendment</th><th>Term</th><th>Curated</th><th>Drafted</th><th>Value</th><th>Date</th><th>Quote gate</th><th>Drafted quote</th></tr>
+    ${dr.documents.flatMap(d => d.terms.map(x => `<tr><td class="mono">${esc(d.document_id)}</td><td class="mono">${esc(x.term)}</td>
+      <td class="mono">${esc(x.curated_value)}</td><td class="mono">${esc(x.drafted_value ?? "missed")}</td><td>${yn(x.value_match)}</td><td>${yn(x.date_match)}</td>
+      <td>${x.quote_check ? chip(x.quote_check === "passed" ? "pass" : "fail") : ""}</td><td class="mute" style="font-size:12px">${esc(x.drafted_quote || "")}</td></tr>`)).join("")}
+    </table></div>
+    <p class="mute" style="font-size:12px">Calls: ${dr.calls.map(c => `${esc(c.document_id)}: ${esc(c.model)}, ${c.usage.input_tokens.toLocaleString()} in / ${c.usage.output_tokens.toLocaleString()} out, recorded ${esc(c.recorded_at)}`).join("; ")}.</p>`;
+}
+
 function controlsView() {
   return `<h1>Controls</h1><div class="scroll"><table><tr><th>Status</th><th>Group</th><th>Control</th><th class="n">Rows</th><th>Detail</th></tr>
     ${D.controls.map(c=>`<tr><td>${chip(c.status)}</td><td>${esc(c.group)}</td><td>${esc(c.title)}</td><td class="n">${c.count}</td>
       <td class="mute">${c.view ? `offending rows: <code>${esc(c.view)}</code>` : esc(c.detail)}</td></tr>`).join("")}</table></div>
+    ${agentSteps()}
     <h2>Assumptions</h2><ul>${D.assumptions.map(a=>`<li>${esc(a.text)} <span class="mute">(${esc(a.source)})</span></li>`).join("")}</ul>
     <h2>Input row counts</h2><table><tr><th>File</th><th class="n">Rows</th></tr>${Object.entries(D.stats.row_counts).map(([f,n])=>`<tr><td class="mono">${esc(f)}</td><td class="n">${n}</td></tr>`).join("")}</table>
     <h2>Workpapers</h2><ul>${D.workpapers.map(w=>`<li><a href="${esc(w)}">${esc(w)}</a></li>`).join("")}</ul>`;

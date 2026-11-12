@@ -94,6 +94,24 @@ def write_workpapers(con: duckdb.DuckDBPyConnection, period: Period, controls: l
     return written
 
 
+def _agent_steps(period: Period) -> dict:
+    """Committed outputs of the agent steps (they run outside `make run`), for the report. Absent = not run."""
+    import yaml
+    drafts = period.curated_dir / "drafts"
+    out: dict = {}
+    if (drafts / "drafter_eval.json").exists():
+        ev = json.loads((drafts / "drafter_eval.json").read_text())
+        draft = yaml.safe_load((drafts / "amendment_terms.yaml").read_text()) or {}
+        by_term = {(a["document_id"], c["term"]): c for a in draft.get("amendments") or [] for c in a.get("changes") or []}
+        for d in ev["documents"]:
+            for t in d["terms"]:
+                c = by_term.get((d["document_id"], t["term"]), {})
+                t.update(drafted_quote=c.get("quote"), confidence=c.get("confidence"), notes=c.get("notes"))
+        ev["calls"] = [{k: v for k, v in c.items() if k != "replayed"} for c in ev["calls"]]
+        out["drafter"] = ev
+    return out
+
+
 def write_report(con: duckdb.DuckDBPyConnection, period: Period, controls: list[ControlResult], stats: dict, workpapers: list[str]) -> str:
     customers = [{k: _jsonable(v) for k, v in r.items()} for r in _rows(con, "SELECT * FROM out_customers")]
     def j(sql):
@@ -125,6 +143,7 @@ def write_report(con: duckdb.DuckDBPyConnection, period: Period, controls: list[
         count(*) FILTER (WHERE follow_up) AS follow_ups
         FROM out_findings""")[0]
     data = {
+        "agents": _agent_steps(period),
         "run": {"period": period.key, "label": period.label, "cutoff": period.cutoff,
                 "command": f"make run PERIOD={period.key}", "commit": _git_commit(period)},
         "stats": stats,
