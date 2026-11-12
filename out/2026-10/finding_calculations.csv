@@ -6,6 +6,22 @@ F-188999-USAGE-MISSING-INVOICE-2026-10,4,Billed,no usage invoice for 2026-10-01 
 F-314334-USAGE-NO-OVERAGE-2026-10,1,Validated October runs,sum of unique active records on verified accounts,"25,000"
 F-314334-USAGE-NO-OVERAGE-2026-10,2,October allowance,"30,000 (full month)","30,000"
 F-314334-USAGE-NO-OVERAGE-2026-10,3,Expected charge,"max(0, 25,000 − 30,000) × $0.05",0.00
+F-335780-PLATFORM-INVOICE-AMOUNT-2026-11,1,Contract amount,per AM-OF-2026-164,"5,000.00"
+F-335780-PLATFORM-INVOICE-AMOUNT-2026-11,2,Invoiced,RC-261101-335780-P,"4,000.00"
+F-335780-PLATFORM-INVOICE-AMOUNT-2026-11,3,Difference,contract − invoiced,"1,000.00"
+F-335780-PLATFORM-MISSING-CATCH-UP-2026-10,1,Expected charge,per AM-OF-2026-164,526.03
+F-335780-PLATFORM-MISSING-CATCH-UP-2026-10,2,Issued by cutoff,Stripe platform lines for this service period,0.00
+F-335780-PLATFORM-MISSING-CATCH-UP-2026-10,3,Billing Effect,expected − issued,526.03
+F-335780-PLATFORM-UPGRADE-INCREMENT-2026-10,1,Base schedule (OF-2026-164),"48,000.00 × 31 / 365","4,076.71"
+F-335780-PLATFORM-UPGRADE-INCREMENT-2026-10,2,"Upgrade increment (AM-OF-2026-164, from 2026-10-16)","12,000.00 × 16 / 365",526.03
+F-335780-PLATFORM-UPGRADE-INCREMENT-2026-10,3,Expected October platform revenue,base + increments,"4,602.74"
+F-335780-PLATFORM-UPGRADE-INCREMENT-2026-10,4,Booked to 4000,"GL, October","4,076.71"
+F-335780-PLATFORM-UPGRADE-INCREMENT-2026-10,5,October Revenue Effect,expected − booked,526.03
+F-335780-PLATFORM-UPGRADE-INCREMENT-2026-10,6,"2200 before reclass, as booked",opening 2200 + 1160 and October 2200 + 1160 movements (credit +),-21.92
+F-335780-PLATFORM-UPGRADE-INCREMENT-2026-10,7,"2200 before reclass, corrected",-21.92 − 526.03,-547.95
+F-335780-PLATFORM-UPGRADE-INCREMENT-2026-10,8,Required 1160,"net debit in 2200, else 0",547.95
+F-335780-PLATFORM-UPGRADE-INCREMENT-2026-10,9,1160 already booked,opening + October reclass,21.92
+F-335780-PLATFORM-UPGRADE-INCREMENT-2026-10,10,Incremental reclass,required − booked,526.03
 F-437384-USAGE-RATE-2026-10,1,Billed overage runs,invoice quantity (agrees with validated usage),"28,502"
 F-437384-USAGE-RATE-2026-10,2,At contract rate,"28,502 × $0.16","4,560.32"
 F-437384-USAGE-RATE-2026-10,3,Billed,"28,502 × $0.05","1,425.10"

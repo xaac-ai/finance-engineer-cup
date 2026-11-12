@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from datetime import date
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 import yaml
@@ -32,6 +32,12 @@ class Period:
     def label(self) -> str:
         """NetSuite posting-period label, e.g. 'Oct 2026'."""
         return self.start.strftime("%b %Y")
+
+    @property
+    def billing_issue_date(self) -> date:
+        """Issue date for proposed billing documents: the first day after the close cutoff (in November).
+        START_HERE · APPROVAL AND DATES: "Proposed billing documents use November issue dates"."""
+        return datetime.fromisoformat(self.cutoff).date() + timedelta(days=1)
 
     @property
     def raw_dir(self) -> Path:

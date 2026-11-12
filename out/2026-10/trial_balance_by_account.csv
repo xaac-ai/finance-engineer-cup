@@ -1,7 +1,7 @@
 account_number,account_name,recorded_balance,with_proposed_balance,proposed_change
 1100,Accounts receivable,154170.97,154170.97,0.00
 1150,Unbilled usage receivable,74831.90,77944.60,3112.70
-1160,Platform contract asset,339.66,339.66,0.00
+1160,Platform contract asset,339.66,865.69,526.03
 2200,Deferred platform revenue,-204438.34,-204438.34,0.00
-4000,Platform revenue,-93764.36,-93764.36,0.00
+4000,Platform revenue,-93764.36,-94290.39,-526.03
 4010,Usage revenue,-74831.90,-77944.60,-3112.70
