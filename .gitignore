@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# The DuckDB working database is rebuilt every run; reviewers get CSVs + report.html.
+out/*/workbench.duckdb
+out/*/workbench.duckdb.wal

@@ -1,0 +1,18 @@
+# Curated period inputs. Source: data/raw/2026-10/START_HERE.pdf
+period: "2026-10"
+# START_HERE · REQUIRED SCOPE: "Close cutoff: 2026-11-11T18:00:00-07:00."
+cutoff: "2026-11-11T18:00:00-07:00"
+# START_HERE · EXTRACT COMPLETENESS: "Source report row counts: ..."
+# product_usage.csv and usage_batch_controls.csv are not listed there; their population is
+# stated as "1,924 unique source daily usage records across 61 dates" (RECONCILIATION POPULATION).
+expected_counts:
+  contract_register.csv: 32
+  netsuite_gl_detail.csv: 340
+  netsuite_opening_balances.csv: 120
+  netsuite_revenue_plan_detail.csv: 362
+  product_account_mapping.csv: 32
+  salesforce_accounts.csv: 30
+  stripe_credit_note_lines.csv: 2
+  stripe_credit_notes.csv: 2
+  stripe_invoice_lines.csv: 124
+  stripe_invoices.csv: 124
