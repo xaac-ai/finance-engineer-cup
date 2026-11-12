@@ -1,0 +1,198 @@
+Finance Engineer Cup Challenge Instructions
+Build a reusable workflow to check RelayCloud customer contracts and usage against billing,
+explain findings and recommend actions. All companies, people and records are fictional.
+Use any tools or interface; no live system access is needed.
+REQUIRED SCOPE: October 1-31, 2026 service and its effect on October books. Close cutoff:
+2026-11-11T18:00:00-07:00. This is business day 8 using Monday-Friday and ignoring public
+holidays. The calendar definition only establishes the cutoff; no business-day calculation
+is required.
+Use adjacent-period records where needed to explain October. Flag later-service issues as
+follow-ups; do not reconcile November or rebuild future contract history. Compare expected
+and actual customer billing with platform fees and usage shown separately. An annual
+prepaid platform fee is not billed again in October, but October earned revenue still
+exists.
+For advance subscriptions, reconcile the invoice billing periods covering October and
+identify any additional October-service charges. You may instead show explicit day-based
+allocations to October, provided your basis is clear. Neither a full crossing-period
+invoice nor its billing allocation automatically equals October recognized revenue. Both
+well-supported presentation approaches are accepted.
+Show errors, valid explanations and uncertainty with customer, affected period, supportable
+amounts, evidence and recommended next step. Customer complaints are not required to
+identify a finding. Results can be inside your build or exported; a separately formatted
+exception register is not required.
+Submit the working build with run instructions, findings and supported October journal
+entries. A 3-5 minute walkthrough should demonstrate one important finding, one judgment
+call and a rerun; the artifact carries remaining detail. AI is welcome, but extracted terms
+and calculations must be reviewable. No future revenue schedule or system-record export is
+required; recommend updates instead.
+COMPANY RULES: One USD entity/book, one platform subscription and one workflow-run usage
+SKU. Tax, FX, collections, cash settlement, processing fees, marketplace sales, breakage
+and complex multi-obligation arrangements are excluded.
+PAYMENT AND DATE DISPLAY: Order forms use Net 30 payment terms. Collections, aging and
+settlement remain outside the exercise; unpaid invoices alone do not imply a required
+adjustment. Visible service ends are inclusive; the equivalent end-exclusive boundary is
+stated in the commercial terms and retained in system exports.
+RelayCloud | Fictional challenge material | Page 1 of 6
+SOURCE PRECEDENCE: Executed order forms and amendments determine commercial terms. An
+amendment changes only named terms; unchanged terms persist. Register
+supersedes_document_id denotes partial precedence, not cancellation of the original order.
+START_HERE defines exercise accounting policy; messages establish approvals and context.
+USAGE: Aggregate unique active records across a customer’s verified product accounts before
+applying its calendar-month allowance. No rollover or tiers. Daily records are additive
+across product accounts but versions/duplicates must not be double counted. Explicit zero-
+use days remain records. record_status and replaces_record_id describe source corrections;
+there are no superseded versions in this release.
+Partial first-month allowance: monthly allowance x active calendar days / days in month,
+rounded once to whole runs half up. For an allowance amendment, weight each allowance by
+applicable calendar days and round once. Charges equal max(0, eligible units minus
+allowance) x signed overage rate, rounded once to USD cents half up. Prices are negotiated
+net prices, with no additional invoice discounts.
+UNVERIFIED USAGE: Reconcile known mapped activity separately and isolate unverified usage.
+Do not force a mapping, assume the remaining customer owns a workspace, or treat missing
+attribution as zero usage. Document conditional exposure and request Product Operations
+evidence. An unapproved concession request alone does not authorize a credit or revenue
+reduction.
+BILLING: Platform invoices are issued in advance on contract billing anchors, either
+monthly or annually. Usage is always calendar-month based and separately invoiced on the
+first day of the next month. An absent usage invoice can be valid when no overage exists.
+Include invoices issued by cutoff; November 15 invoices have not yet been issued. September
+platform invoices are settled; October/November invoices remain unpaid.
+ACCOUNTING: Recognize platform consideration by actual service days / 365, independent of
+invoice frequency. Preserve the original base schedule when adding an upgrade increment.
+Round each monthly recognition component once to cents, with final-period rounding
+allocated to the last period. The signed amendment defines incremental consideration and
+billing conventions.
+Platform invoice: Dr 1100 AR / Cr 2200 deferred platform revenue. Recognition: Dr 2200 / Cr
+4000 platform revenue. Any customer platform net debit in 2200 is reclassified Dr 1160
+platform contract asset / Cr 2200. Reverse any prior reclass before recalculating. The
+supplied October GL ALREADY contains its baseline reclass. Propose only incremental changes
+after correcting recognition. Do not net different customers or platform assets against
+usage.
+Usage accounting: Dr 1150 unbilled usage receivable / Cr 4010 usage revenue in the service
+RelayCloud | Fictional challenge material | Page 2 of 6
+month. The next-month invoice is Dr 1100 / Cr 1150, not revenue again. September 30
+unbilled balances are released by October 1 invoices; November 1 invoices release October
+accruals only to the amounts actually billed. Residuals may remain until supported billing
+corrections.
+CREDITS: Use issued notes only; void notes have no current credit effect. Retain original
+service-period allocation. Approved reductions of October consideration affect October
+where not already reflected. A November credit can reduce AR and reverse the corresponding
+release of unbilled usage without reducing revenue a second time.
+APPROVAL AND DATES: Recommend corrections for Controller approval. Finalized invoices are
+not silently edited: propose supplemental invoices or linked credit notes. Proposed billing
+documents use November issue dates; supported October-service accounting corrections use
+the October posting period. You need not create live records.
+TIMING: Source activity, ingestion timestamp, invoice issue date, service period, GL
+posting period and GL Created At are distinct. October entries can be created during
+November close. Determine evidence availability using the cutoff, not an assumption that
+October entries were all created October 31.
+FORMATS: UTF-8 comma-delimited CSV, one header, blank means missing/not applicable rather
+than zero. IDs are strings. ISO dates; normalized ISO timestamps include America/Denver UTC
+offsets. All normalized service intervals are start-inclusive/end-exclusive. These reports
+normalize source dates/units; they are not raw API payloads.
+MONEY: Stripe amount/subtotal/total/discount fields are integer USD cents;
+unit_amount_decimal is decimal cents per unit. NetSuite amounts are decimal USD. Use exact
+decimal arithmetic, round half up. Debit/Credit fields are unsigned; signed movement =
+Debit minus Credit. USD is the sole currency.
+EXPORT PROVENANCE: Salesforce configured Details Only account-report CSV; cross-system
+identifiers are custom fields. Stripe invoice/line custom reports based on Sigma
+structures; credit files are flattened API extracts with service-period enrichment from
+invoice lines or approval evidence. NetSuite configured posting/saved-search and ARM plan-
+detail extracts. Headers are configured company selections, not claimed universal defaults.
+RECONCILIATION POPULATION: 30 customers, 32 product accounts, 30 executed order forms, 2
+amendments; 1,924 unique source daily usage records across 61 dates. Physical export row
+count can differ and must be reconciled. 120 customer opening-account rows; 362 existing
+plan-period rows. Independent usage_batch_controls are source counts/totals, not a
+commercial-billability answer.
+CONTROLS: September 1-14 source batches have 30 records/day; September 15-October 31 have
+RelayCloud | Fictional challenge material | Page 3 of 6
+32. Opening balances include accounts 1100, 1150, 1160 and 2200 for every customer,
+including zeros. September recognition journal IDs in plans are historical references
+outside the GL period; October recognized plan rows must join included postings. Future
+plan rows are context.
+EXTRACT COMPLETENESS: These are all issued invoices and credit notes for the supplied
+customer population through cutoff, and all relevant-account GL posting lines in the stated
+periods. No pagination or file truncation is intended. Source report row counts:
+contract_register.csv = 32, netsuite_gl_detail.csv = 340, netsuite_opening_balances.csv =
+120, netsuite_revenue_plan_detail.csv = 362, product_account_mapping.csv = 32,
+salesforce_accounts.csv = 30, stripe_credit_note_lines.csv = 2, stripe_credit_notes.csv =
+2, stripe_invoice_lines.csv = 124, stripe_invoices.csv = 124. Compare these counts to the
+supplied files; they do not establish that a commercially required invoice was actually
+issued.
+PRODUCTS: prod_platform = platform subscription; prod_workflow_run = workflow-run overage.
+Price IDs are customer-specific. Product-account labels are display text, not a substitute
+for verified mappings.
+FILE DICTIONARY:
+contract_register.csv: One document indexed by document_id. Filename locates PDF.
+contract_id groups order/amendment. signed_at, effective dates and billing_loaded_at are
+distinct; blank billing load means not recorded as loaded. approval_reference links a
+message where applicable.
+Columns: document_id, contract_id, salesforce_account_id, document_type, document_filename,
+signed_at, effective_from, effective_to, supersedes_document_id, billing_loaded_at,
+approval_reference
+netsuite_gl_detail.csv: Internal ID + Line ID identifies posting line; all legs supplied.
+Date, Posting Period and Created At differ. External Source ID joins invoice/credit,
+Revenue Plan ID joins recognition plan where applicable. Memo is descriptive. October and
+relevant November activity supplied through cutoff.
+Columns: Internal ID, Line ID, Transaction Type, Document Number, Date, Posting Period,
+Account Number, Customer Internal ID, Debit, Credit, Memo, External Source ID, Revenue Plan
+ID, Created At
+netsuite_opening_balances.csv: One Customer Internal ID + Account Number at September 30.
+Debit Balance/Credit Balance are USD; only one nonzero. Source Reference links supported
+closing workpaper. All four balance-sheet accounts are explicit per customer.
+RelayCloud | Fictional challenge material | Page 4 of 6
+Columns: Customer Internal ID, Account Number, Account Name, As Of Date, Debit Balance,
+Credit Balance, Source Reference
+netsuite_revenue_plan_detail.csv: Plan + element + posting period + source document
+identifies recognition segment. Recognition Start/End Exclusive are service dates. Plan
+Type Actual is not a forecast. Planned Amount and Recognized Amount are USD; Journal
+Internal ID references recognized postings. Plan Updated At is source configuration
+timestamp.
+Columns: Revenue Plan ID, Revenue Element ID, Customer Internal ID, Source Document ID,
+Plan Type, Recognition Start, Recognition End Exclusive, Posting Period, Planned Amount,
+Recognized Amount, Journal Internal ID, Plan Updated At
+product_account_mapping.csv: One product account. salesforce_account_id can be
+unverified/blank. Effective dates are date intervals; effective_to blank means no known
+end. mapping_updated_at records registry update.
+Columns: product_account_id, salesforce_account_id, account_label, effective_from,
+effective_to, mapping_updated_at
+product_usage.csv: One record/version exported from metering. record_id identifies source
+activity and is the deduplication key. units is integer runs. ingested_at records
+availability. batch_id joins daily controls. Exact repeated source IDs are not new
+activity.
+Columns: record_id, product_account_id, sku, service_date, units, ingested_at,
+record_status, replaces_record_id, batch_id
+salesforce_accounts.csv: One account per AccountId. Custom StripeCustomerId__c and
+NetSuiteCustomerInternalId__c join source customers. ParentId is nullable; owner and
+billing country are descriptive.
+Columns: AccountId, AccountName, ParentId, BillingCountry, StripeCustomerId__c,
+NetSuiteCustomerInternalId__c, AccountOwner
+stripe_credit_note_lines.csv: One credit line by id. credit_note_id joins note;
+invoice_line_item_id joins original line. amount is positive cents. quantity nullable.
+Service dates are internal enrichment, with service_period_source identifying provenance.
+Columns: id, credit_note_id, invoice_line_item_id, description, amount, quantity,
+service_start, service_end_exclusive, service_period_source
+stripe_credit_notes.csv: One note by id, joined to invoice_id/customer_id. amount is
+RelayCloud | Fictional challenge material | Page 5 of 6
+positive credit cents. status issued/void determines effect; voided_at is nullable. reason
+is a source reason code.
+Columns: id, number, invoice_id, customer_id, status, created, voided_at, currency, amount,
+reason
+stripe_invoice_lines.csv: One line by id. invoice_id joins header. product_id/price_id
+identify product and customer price. quantity is units (1 for platform). amount is before
+separate discount_amount. period_start/end are normalized exclusive service boundaries;
+proration is boolean.
+Columns: id, invoice_id, description, product_id, price_id, quantity, unit_amount_decimal,
+amount, discount_amount, period_start, period_end, proration
+stripe_invoices.csv: One header by id. customer_id joins Salesforce custom ID.
+created/finalized_at are timestamps, status is open/paid/etc.
+subtotal/total/total_discount_amount are cents. total = subtotal minus discount;
+taxes/fees/customer-balance effects excluded.
+Columns: id, number, customer_id, status, created, finalized_at, currency, subtotal,
+total_discount_amount, total, source_system
+usage_batch_controls.csv: One service date. distinct_active_record_count and
+active_units_total come from source before export. extracted_at is the cutoff snapshot.
+Reconcile after deduplication, not after dropping unmatched customers.
+Columns: service_date, batch_id, distinct_active_record_count, active_units_total,
+extracted_at
+RelayCloud | Fictional challenge material | Page 6 of 6

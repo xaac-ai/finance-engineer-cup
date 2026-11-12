@@ -1,0 +1,37 @@
+RelayCloud EXECUTED AMENDMENT
+AM-OF-2026-157
+Subscription amendment
+Contract CT-639373   |   Executed October 14, 2026
+01 CUSTOMER AND BILLING DETAILS
+CUSTOMER / BILL TO SUPPLIER
+Cedar Harbor Labs, Inc. RelayCloud, Inc.
+494 Willow Road, Suite 300
+Denver, CO 80202, United States
+1800 Market Street, Suite 400
+Denver, CO 80202, United States
+Billing contact: Accounts Payable
+ap@cedarharborlabs.example
+Billing enquiries
+billing@relaycloud.example
+02 AMENDMENT SCOPE
+ORIGINAL ORDER EFFECTIVE DATE TERM END (INCLUSIVE)
+OF-2026-157 October 16, 2026 August 31, 2027
+03 CHANGES TO COMMERCIAL TERMS
+TERM PREVIOUS AMENDED
+Included workflow runs 30,000 / calendar month 45,000 / calendar month
+Overage rate $0.40 / run $0.40 / run (unchanged)
+Platform fee $48,000.00 / year $48,000.00 (unchanged)
+04 APPLICATION AND OTHER TERMS
+Monthly included workflow runs increase from 30,000 to 45,000 effective October 16, 2026 at 00:00
+America/Denver. The USD 0.40 overage rate and all other pricing terms remain unchanged.
+For October, weight the prior allowance for October 1-15 and the amended allowance for October 16-31 by calendar
+days. Round the resulting allowance once to a whole run, half up. There is no retrospective change to earlier
+service.
+This amendment changes only the included workflow-run allowance. The monthly platform invoice remains USD
+4,000.00. The original service term, payment terms and all other terms of the referenced Order Form continue.
+05 ACCEPTANCE
+FOR CEDAR HARBOR LABS, INC. FOR RELAYCLOUD, INC.
+/s/ Maya Collins /s/ Morgan Lee
+Maya Collins  |  VP, Finance Morgan Lee  |  Sales Director
+Date signed: October 14, 2026 Date signed: October 14, 2026
+Fictional commercial document for Finance Engineer Cup. No legal effect. AM-OF-2026-157  |  1 / 1

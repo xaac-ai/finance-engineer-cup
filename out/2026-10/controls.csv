@@ -1,0 +1,14 @@
+group,name,title,status,count,view,detail
+contracts,order_forms_parsed,Order Forms parsed from the template and agree with contract_register.csv,pass,0,,30 Order Forms
+contracts,amendment_quotes,Every curated Amendment quote appears verbatim in the document text,pass,0,,7 quotes across 2 Amendments
+inputs,billing_messages_parsed,Billing Messages parsed from billing_followups.pdf,pass,0,,10 messages
+inputs,01_row_counts,Extract completeness: physical row counts match START_HERE expected counts,pass,0,ctl_inputs_row_counts,
+inputs,02_money_precision,NetSuite amounts have at most two decimals (no silent rounding on load),pass,0,ctl_inputs_money_precision,
+ledger,01_balanced_entries,Balanced entries (debits = credits per Recorded and Proposed Entry),pass,0,ctl_ledger_balanced_entries,
+ledger,02_opening_completeness,"Opening Balances cover accounts 1100/1150/1160/2200 for every customer, one side only",pass,0,ctl_ledger_opening_completeness,
+ledger,03_known_accounts,Every journal line posts to an account in the chart of accounts,pass,0,ctl_ledger_known_accounts,
+ledger,04_no_duplicates,"No duplicate GL lines, and no source document posted twice for the same purpose",pass,0,ctl_ledger_no_duplicates,
+ledger,05_period_integrity,Each GL line's date falls inside its posting period,pass,0,ctl_ledger_period_integrity,
+ledger,06_cutoff,No Recorded Entry was created after the close cutoff,pass,0,ctl_ledger_cutoff,
+ledger,07_revenue_plan_join,Every recognised revenue-plan row for the period joins an included GL posting,pass,0,ctl_ledger_revenue_plan_join,
+ledger,08_proposed_entry_rules,Proposed Entries cite a finding and sit in their allowed period,pass,0,ctl_ledger_proposed_entry_rules,
