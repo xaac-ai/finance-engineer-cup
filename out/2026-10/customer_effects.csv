@@ -1,0 +1,181 @@
+customer_id,customer_name,account_number,account_name,october_recorded,october_proposed,october_after,next_recorded,next_proposed,next_after
+186097,"Alder Fieldworks, Inc.",1100,Accounts receivable,1437.36,0.00,1437.36,1575.76,0.00,3013.12
+186097,"Alder Fieldworks, Inc.",1150,Unbilled usage receivable,1575.76,0.00,1575.76,-1575.76,0.00,0.00
+186097,"Alder Fieldworks, Inc.",1160,Platform contract asset,0.00,0.00,0.00,0.00,0.00,0.00
+186097,"Alder Fieldworks, Inc.",2200,Deferred platform revenue,-19989.04,0.00,-19989.04,0.00,0.00,-19989.04
+186097,"Alder Fieldworks, Inc.",4000,Platform revenue,-2038.36,0.00,-2038.36,0.00,0.00,-2038.36
+186097,"Alder Fieldworks, Inc.",4010,Usage revenue,-1575.76,0.00,-1575.76,0.00,0.00,-1575.76
+314334,"Aspen Vale, Inc.",1100,Accounts receivable,4415.70,0.00,4415.70,4000.00,0.00,8415.70
+314334,"Aspen Vale, Inc.",1150,Unbilled usage receivable,0.00,0.00,0.00,0.00,0.00,0.00
+314334,"Aspen Vale, Inc.",1160,Platform contract asset,21.92,0.00,21.92,0.00,0.00,21.92
+314334,"Aspen Vale, Inc.",2200,Deferred platform revenue,0.00,0.00,0.00,-4000.00,0.00,-4000.00
+314334,"Aspen Vale, Inc.",4000,Platform revenue,-4076.71,0.00,-4076.71,0.00,0.00,-4076.71
+314334,"Aspen Vale, Inc.",4010,Usage revenue,0.00,0.00,0.00,0.00,0.00,0.00
+810234,"Beacon Marsh, Inc.",1100,Accounts receivable,5565.40,0.00,5565.40,5344.30,100.00,11009.70
+810234,"Beacon Marsh, Inc.",1150,Unbilled usage receivable,1444.30,0.00,1444.30,-1344.30,-100.00,0.00
+810234,"Beacon Marsh, Inc.",1160,Platform contract asset,21.92,0.00,21.92,0.00,0.00,21.92
+810234,"Beacon Marsh, Inc.",2200,Deferred platform revenue,0.00,0.00,0.00,-4000.00,0.00,-4000.00
+810234,"Beacon Marsh, Inc.",4000,Platform revenue,-4076.71,0.00,-4076.71,0.00,0.00,-4076.71
+810234,"Beacon Marsh, Inc.",4010,Usage revenue,-1444.30,0.00,-1444.30,0.00,0.00,-1444.30
+866587,"Brookstone Data, Inc.",1100,Accounts receivable,1809.92,0.00,1809.92,2041.04,0.00,3850.96
+866587,"Brookstone Data, Inc.",1150,Unbilled usage receivable,2041.04,0.00,2041.04,-2041.04,0.00,0.00
+866587,"Brookstone Data, Inc.",1160,Platform contract asset,0.00,0.00,0.00,0.00,0.00,0.00
+866587,"Brookstone Data, Inc.",2200,Deferred platform revenue,-19989.04,0.00,-19989.04,0.00,0.00,-19989.04
+866587,"Brookstone Data, Inc.",4000,Platform revenue,-2038.36,0.00,-2038.36,0.00,0.00,-2038.36
+866587,"Brookstone Data, Inc.",4010,Usage revenue,-2041.04,0.00,-2041.04,0.00,0.00,-2041.04
+639373,"Cedar Harbor Labs, Inc.",1100,Accounts receivable,16243.20,0.00,16243.20,15388.00,-3096.80,28534.40
+639373,"Cedar Harbor Labs, Inc.",1150,Unbilled usage receivable,11388.00,-3096.80,8291.20,-11388.00,3096.80,0.00
+639373,"Cedar Harbor Labs, Inc.",1160,Platform contract asset,21.92,0.00,21.92,0.00,0.00,21.92
+639373,"Cedar Harbor Labs, Inc.",2200,Deferred platform revenue,0.00,0.00,0.00,-4000.00,0.00,-4000.00
+639373,"Cedar Harbor Labs, Inc.",4000,Platform revenue,-4076.71,0.00,-4076.71,0.00,0.00,-4076.71
+639373,"Cedar Harbor Labs, Inc.",4010,Usage revenue,-11388.00,3096.80,-8291.20,0.00,0.00,-8291.20
+477694,"Copper Finch Systems, Inc.",1100,Accounts receivable,1335.84,0.00,1335.84,1227.52,0.00,2563.36
+477694,"Copper Finch Systems, Inc.",1150,Unbilled usage receivable,1227.52,0.00,1227.52,-1227.52,0.00,0.00
+477694,"Copper Finch Systems, Inc.",1160,Platform contract asset,0.00,0.00,0.00,0.00,0.00,0.00
+477694,"Copper Finch Systems, Inc.",2200,Deferred platform revenue,-19989.04,0.00,-19989.04,0.00,0.00,-19989.04
+477694,"Copper Finch Systems, Inc.",4000,Platform revenue,-2038.36,0.00,-2038.36,0.00,0.00,-2038.36
+477694,"Copper Finch Systems, Inc.",4010,Usage revenue,-1227.52,0.00,-1227.52,0.00,0.00,-1227.52
+260381,"Crescent Shore, Inc.",1100,Accounts receivable,5128.00,0.00,5128.00,141.72,0.00,5269.72
+260381,"Crescent Shore, Inc.",1150,Unbilled usage receivable,141.72,0.00,141.72,-141.72,0.00,0.00
+260381,"Crescent Shore, Inc.",1160,Platform contract asset,0.00,0.00,0.00,0.00,0.00,0.00
+260381,"Crescent Shore, Inc.",2200,Deferred platform revenue,-2273.97,0.00,-2273.97,0.00,0.00,-2273.97
+260381,"Crescent Shore, Inc.",4000,Platform revenue,-5095.89,0.00,-5095.89,0.00,0.00,-5095.89
+260381,"Crescent Shore, Inc.",4010,Usage revenue,-141.72,0.00,-141.72,0.00,0.00,-141.72
+731059,"Driftwood Research, Inc.",1100,Accounts receivable,1220.16,0.00,1220.16,1341.36,0.00,2561.52
+731059,"Driftwood Research, Inc.",1150,Unbilled usage receivable,1341.36,0.00,1341.36,-1341.36,0.00,0.00
+731059,"Driftwood Research, Inc.",1160,Platform contract asset,0.00,0.00,0.00,0.00,0.00,0.00
+731059,"Driftwood Research, Inc.",2200,Deferred platform revenue,-19989.04,0.00,-19989.04,0.00,0.00,-19989.04
+731059,"Driftwood Research, Inc.",4000,Platform revenue,-2038.36,0.00,-2038.36,0.00,0.00,-2038.36
+731059,"Driftwood Research, Inc.",4010,Usage revenue,-1341.36,0.00,-1341.36,0.00,0.00,-1341.36
+436791,"Evergreen Dispatch, Inc.",1100,Accounts receivable,2462.32,0.00,2462.32,2624.64,0.00,5086.96
+436791,"Evergreen Dispatch, Inc.",1150,Unbilled usage receivable,2624.64,0.00,2624.64,-2624.64,0.00,0.00
+436791,"Evergreen Dispatch, Inc.",1160,Platform contract asset,0.00,0.00,0.00,0.00,0.00,0.00
+436791,"Evergreen Dispatch, Inc.",2200,Deferred platform revenue,-19989.04,0.00,-19989.04,0.00,0.00,-19989.04
+436791,"Evergreen Dispatch, Inc.",4000,Platform revenue,-2038.36,0.00,-2038.36,0.00,0.00,-2038.36
+436791,"Evergreen Dispatch, Inc.",4010,Usage revenue,-2624.64,0.00,-2624.64,0.00,0.00,-2624.64
+286595,"Falcon Ridge Software, Inc.",1100,Accounts receivable,6720.48,0.00,6720.48,5908.48,0.00,12628.96
+286595,"Falcon Ridge Software, Inc.",1150,Unbilled usage receivable,5908.48,0.00,5908.48,-5908.48,0.00,0.00
+286595,"Falcon Ridge Software, Inc.",1160,Platform contract asset,0.00,0.00,0.00,0.00,0.00,0.00
+286595,"Falcon Ridge Software, Inc.",2200,Deferred platform revenue,-19989.04,0.00,-19989.04,0.00,0.00,-19989.04
+286595,"Falcon Ridge Software, Inc.",4000,Platform revenue,-2038.36,0.00,-2038.36,0.00,0.00,-2038.36
+286595,"Falcon Ridge Software, Inc.",4010,Usage revenue,-5908.48,0.00,-5908.48,0.00,0.00,-5908.48
+963044,"Granite Orchard, Inc.",1100,Accounts receivable,3498.00,0.00,3498.00,3712.08,0.00,7210.08
+963044,"Granite Orchard, Inc.",1150,Unbilled usage receivable,3712.08,0.00,3712.08,-3712.08,0.00,0.00
+963044,"Granite Orchard, Inc.",1160,Platform contract asset,0.00,0.00,0.00,0.00,0.00,0.00
+963044,"Granite Orchard, Inc.",2200,Deferred platform revenue,-19989.04,0.00,-19989.04,0.00,0.00,-19989.04
+963044,"Granite Orchard, Inc.",4000,Platform revenue,-2038.36,0.00,-2038.36,0.00,0.00,-2038.36
+963044,"Granite Orchard, Inc.",4010,Usage revenue,-3712.08,0.00,-3712.08,0.00,0.00,-3712.08
+142182,"Highwater Studio, Inc.",1100,Accounts receivable,5741.36,0.00,5741.36,5857.28,0.00,11598.64
+142182,"Highwater Studio, Inc.",1150,Unbilled usage receivable,5857.28,0.00,5857.28,-5857.28,0.00,0.00
+142182,"Highwater Studio, Inc.",1160,Platform contract asset,0.00,0.00,0.00,0.00,0.00,0.00
+142182,"Highwater Studio, Inc.",2200,Deferred platform revenue,-19989.04,0.00,-19989.04,0.00,0.00,-19989.04
+142182,"Highwater Studio, Inc.",4000,Platform revenue,-2038.36,0.00,-2038.36,0.00,0.00,-2038.36
+142182,"Highwater Studio, Inc.",4010,Usage revenue,-5857.28,0.00,-5857.28,0.00,0.00,-5857.28
+620310,"Indigo Trail Networks, Inc.",1100,Accounts receivable,3031.92,0.00,3031.92,2916.32,0.00,5948.24
+620310,"Indigo Trail Networks, Inc.",1150,Unbilled usage receivable,2916.32,0.00,2916.32,-2916.32,0.00,0.00
+620310,"Indigo Trail Networks, Inc.",1160,Platform contract asset,0.00,0.00,0.00,0.00,0.00,0.00
+620310,"Indigo Trail Networks, Inc.",2200,Deferred platform revenue,-19989.04,0.00,-19989.04,0.00,0.00,-19989.04
+620310,"Indigo Trail Networks, Inc.",4000,Platform revenue,-2038.36,0.00,-2038.36,0.00,0.00,-2038.36
+620310,"Indigo Trail Networks, Inc.",4010,Usage revenue,-2916.32,0.00,-2916.32,0.00,0.00,-2916.32
+879513,"Juniper Bay Analytics, Inc.",1100,Accounts receivable,2091.60,0.00,2091.60,2162.64,0.00,4254.24
+879513,"Juniper Bay Analytics, Inc.",1150,Unbilled usage receivable,2162.64,0.00,2162.64,-2162.64,0.00,0.00
+879513,"Juniper Bay Analytics, Inc.",1160,Platform contract asset,0.00,0.00,0.00,0.00,0.00,0.00
+879513,"Juniper Bay Analytics, Inc.",2200,Deferred platform revenue,-19989.04,0.00,-19989.04,0.00,0.00,-19989.04
+879513,"Juniper Bay Analytics, Inc.",4000,Platform revenue,-2038.36,0.00,-2038.36,0.00,0.00,-2038.36
+879513,"Juniper Bay Analytics, Inc.",4010,Usage revenue,-2162.64,0.00,-2162.64,0.00,0.00,-2162.64
+437384,"Juniper Signal Works, Inc.",1100,Accounts receivable,8320.00,0.00,8320.00,5425.10,3135.22,16880.32
+437384,"Juniper Signal Works, Inc.",1150,Unbilled usage receivable,1425.10,3135.22,4560.32,-1425.10,-3135.22,0.00
+437384,"Juniper Signal Works, Inc.",1160,Platform contract asset,21.92,0.00,21.92,0.00,0.00,21.92
+437384,"Juniper Signal Works, Inc.",2200,Deferred platform revenue,0.00,0.00,0.00,-4000.00,0.00,-4000.00
+437384,"Juniper Signal Works, Inc.",4000,Platform revenue,-4076.71,0.00,-4076.71,0.00,0.00,-4076.71
+437384,"Juniper Signal Works, Inc.",4010,Usage revenue,-1425.10,-3135.22,-4560.32,0.00,0.00,-4560.32
+654552,"Kestrel Bridge, Inc.",1100,Accounts receivable,5723.52,0.00,5723.52,5750.22,0.00,11473.74
+654552,"Kestrel Bridge, Inc.",1150,Unbilled usage receivable,2750.22,0.00,2750.22,-2750.22,0.00,0.00
+654552,"Kestrel Bridge, Inc.",1160,Platform contract asset,16.43,0.00,16.43,0.00,0.00,16.43
+654552,"Kestrel Bridge, Inc.",2200,Deferred platform revenue,0.00,0.00,0.00,-3000.00,0.00,-3000.00
+654552,"Kestrel Bridge, Inc.",4000,Platform revenue,-3057.53,0.00,-3057.53,0.00,0.00,-3057.53
+654552,"Kestrel Bridge, Inc.",4010,Usage revenue,-2750.22,0.00,-2750.22,0.00,0.00,-2750.22
+232251,"Larch Point Services, Inc.",1100,Accounts receivable,4405.32,0.00,4405.32,4068.96,0.00,8474.28
+232251,"Larch Point Services, Inc.",1150,Unbilled usage receivable,1068.96,0.00,1068.96,-1068.96,0.00,0.00
+232251,"Larch Point Services, Inc.",1160,Platform contract asset,16.43,0.00,16.43,0.00,0.00,16.43
+232251,"Larch Point Services, Inc.",2200,Deferred platform revenue,0.00,0.00,0.00,-3000.00,0.00,-3000.00
+232251,"Larch Point Services, Inc.",4000,Platform revenue,-3057.53,0.00,-3057.53,0.00,0.00,-3057.53
+232251,"Larch Point Services, Inc.",4010,Usage revenue,-1068.96,0.00,-1068.96,0.00,0.00,-1068.96
+507826,"Maple Lantern, Inc.",1100,Accounts receivable,7782.30,0.00,7782.30,7967.94,0.00,15750.24
+507826,"Maple Lantern, Inc.",1150,Unbilled usage receivable,4967.94,0.00,4967.94,-4967.94,0.00,0.00
+507826,"Maple Lantern, Inc.",1160,Platform contract asset,16.43,0.00,16.43,0.00,0.00,16.43
+507826,"Maple Lantern, Inc.",2200,Deferred platform revenue,0.00,0.00,0.00,-3000.00,0.00,-3000.00
+507826,"Maple Lantern, Inc.",4000,Platform revenue,-3057.53,0.00,-3057.53,0.00,0.00,-3057.53
+507826,"Maple Lantern, Inc.",4010,Usage revenue,-4967.94,0.00,-4967.94,0.00,0.00,-4967.94
+335780,"Meridian Process Systems, Inc.",1100,Accounts receivable,6985.48,0.00,6985.48,6327.52,526.03,13839.03
+335780,"Meridian Process Systems, Inc.",1150,Unbilled usage receivable,2327.52,0.00,2327.52,-2327.52,0.00,0.00
+335780,"Meridian Process Systems, Inc.",1160,Platform contract asset,21.92,526.03,547.95,0.00,0.00,547.95
+335780,"Meridian Process Systems, Inc.",2200,Deferred platform revenue,0.00,0.00,0.00,-4000.00,-526.03,-4526.03
+335780,"Meridian Process Systems, Inc.",4000,Platform revenue,-4076.71,-526.03,-4602.74,0.00,0.00,-4602.74
+335780,"Meridian Process Systems, Inc.",4010,Usage revenue,-2327.52,0.00,-2327.52,0.00,0.00,-2327.52
+553102,"Northbank Design, Inc.",1100,Accounts receivable,4453.92,0.00,4453.92,4604.40,0.00,9058.32
+553102,"Northbank Design, Inc.",1150,Unbilled usage receivable,1604.40,0.00,1604.40,-1604.40,0.00,0.00
+553102,"Northbank Design, Inc.",1160,Platform contract asset,16.43,0.00,16.43,0.00,0.00,16.43
+553102,"Northbank Design, Inc.",2200,Deferred platform revenue,0.00,0.00,0.00,-3000.00,0.00,-3000.00
+553102,"Northbank Design, Inc.",4000,Platform revenue,-3057.53,0.00,-3057.53,0.00,0.00,-3057.53
+553102,"Northbank Design, Inc.",4010,Usage revenue,-1604.40,0.00,-1604.40,0.00,0.00,-1604.40
+300468,"Oak Harbor Digital, Inc.",1100,Accounts receivable,4949.04,0.00,4949.04,4984.62,0.00,9933.66
+300468,"Oak Harbor Digital, Inc.",1150,Unbilled usage receivable,1984.62,0.00,1984.62,-1984.62,0.00,0.00
+300468,"Oak Harbor Digital, Inc.",1160,Platform contract asset,16.43,0.00,16.43,0.00,0.00,16.43
+300468,"Oak Harbor Digital, Inc.",2200,Deferred platform revenue,0.00,0.00,0.00,-3000.00,0.00,-3000.00
+300468,"Oak Harbor Digital, Inc.",4000,Platform revenue,-3057.53,0.00,-3057.53,0.00,0.00,-3057.53
+300468,"Oak Harbor Digital, Inc.",4010,Usage revenue,-1984.62,0.00,-1984.62,0.00,0.00,-1984.62
+561562,"Pine Summit Logistics, Inc.",1100,Accounts receivable,5496.54,0.00,5496.54,5988.24,0.00,11484.78
+561562,"Pine Summit Logistics, Inc.",1150,Unbilled usage receivable,2988.24,0.00,2988.24,-2988.24,0.00,0.00
+561562,"Pine Summit Logistics, Inc.",1160,Platform contract asset,16.43,0.00,16.43,0.00,0.00,16.43
+561562,"Pine Summit Logistics, Inc.",2200,Deferred platform revenue,0.00,0.00,0.00,-3000.00,0.00,-3000.00
+561562,"Pine Summit Logistics, Inc.",4000,Platform revenue,-3057.53,0.00,-3057.53,0.00,0.00,-3057.53
+561562,"Pine Summit Logistics, Inc.",4010,Usage revenue,-2988.24,0.00,-2988.24,0.00,0.00,-2988.24
+730965,"Quartz Meadow, Inc.",1100,Accounts receivable,7568.22,0.00,7568.22,6889.14,0.00,14457.36
+730965,"Quartz Meadow, Inc.",1150,Unbilled usage receivable,3889.14,0.00,3889.14,-3889.14,0.00,0.00
+730965,"Quartz Meadow, Inc.",1160,Platform contract asset,16.43,0.00,16.43,0.00,0.00,16.43
+730965,"Quartz Meadow, Inc.",2200,Deferred platform revenue,0.00,0.00,0.00,-3000.00,0.00,-3000.00
+730965,"Quartz Meadow, Inc.",4000,Platform revenue,-3057.53,0.00,-3057.53,0.00,0.00,-3057.53
+730965,"Quartz Meadow, Inc.",4010,Usage revenue,-3889.14,0.00,-3889.14,0.00,0.00,-3889.14
+856042,"Riverbend Operations, Inc.",1100,Accounts receivable,3220.44,0.00,3220.44,3345.66,0.00,6566.10
+856042,"Riverbend Operations, Inc.",1150,Unbilled usage receivable,345.66,0.00,345.66,-345.66,0.00,0.00
+856042,"Riverbend Operations, Inc.",1160,Platform contract asset,16.43,0.00,16.43,0.00,0.00,16.43
+856042,"Riverbend Operations, Inc.",2200,Deferred platform revenue,0.00,0.00,0.00,-3000.00,0.00,-3000.00
+856042,"Riverbend Operations, Inc.",4000,Platform revenue,-3057.53,0.00,-3057.53,0.00,0.00,-3057.53
+856042,"Riverbend Operations, Inc.",4010,Usage revenue,-345.66,0.00,-345.66,0.00,0.00,-345.66
+676664,"Silver Current, Inc.",1100,Accounts receivable,5753.52,0.00,5753.52,6135.96,0.00,11889.48
+676664,"Silver Current, Inc.",1150,Unbilled usage receivable,3135.96,0.00,3135.96,-3135.96,0.00,0.00
+676664,"Silver Current, Inc.",1160,Platform contract asset,16.43,0.00,16.43,0.00,0.00,16.43
+676664,"Silver Current, Inc.",2200,Deferred platform revenue,0.00,0.00,0.00,-3000.00,0.00,-3000.00
+676664,"Silver Current, Inc.",4000,Platform revenue,-3057.53,0.00,-3057.53,0.00,0.00,-3057.53
+676664,"Silver Current, Inc.",4010,Usage revenue,-3135.96,0.00,-3135.96,0.00,0.00,-3135.96
+941670,"Timberline Insights, Inc.",1100,Accounts receivable,6560.82,0.00,6560.82,6557.10,0.00,13117.92
+941670,"Timberline Insights, Inc.",1150,Unbilled usage receivable,3557.10,0.00,3557.10,-3557.10,0.00,0.00
+941670,"Timberline Insights, Inc.",1160,Platform contract asset,16.43,0.00,16.43,0.00,0.00,16.43
+941670,"Timberline Insights, Inc.",2200,Deferred platform revenue,0.00,0.00,0.00,-3000.00,0.00,-3000.00
+941670,"Timberline Insights, Inc.",4000,Platform revenue,-3057.53,0.00,-3057.53,0.00,0.00,-3057.53
+941670,"Timberline Insights, Inc.",4010,Usage revenue,-3557.10,0.00,-3557.10,0.00,0.00,-3557.10
+240793,"Westhaven Metrics, Inc.",1100,Accounts receivable,5197.85,0.00,5197.85,5593.30,0.00,10791.15
+240793,"Westhaven Metrics, Inc.",1150,Unbilled usage receivable,1593.30,0.00,1593.30,-1593.30,0.00,0.00
+240793,"Westhaven Metrics, Inc.",1160,Platform contract asset,21.92,0.00,21.92,0.00,0.00,21.92
+240793,"Westhaven Metrics, Inc.",2200,Deferred platform revenue,0.00,0.00,0.00,-4000.00,0.00,-4000.00
+240793,"Westhaven Metrics, Inc.",4000,Platform revenue,-4076.71,0.00,-4076.71,0.00,0.00,-4076.71
+240793,"Westhaven Metrics, Inc.",4010,Usage revenue,-1593.30,0.00,-1593.30,0.00,0.00,-1593.30
+839653,"Willow Passage, Inc.",1100,Accounts receivable,5000.00,0.00,5000.00,0.00,0.00,5000.00
+839653,"Willow Passage, Inc.",1150,Unbilled usage receivable,0.00,0.00,0.00,0.00,0.00,0.00
+839653,"Willow Passage, Inc.",1160,Platform contract asset,0.00,0.00,0.00,0.00,0.00,0.00
+839653,"Willow Passage, Inc.",2200,Deferred platform revenue,-2273.97,0.00,-2273.97,0.00,0.00,-2273.97
+839653,"Willow Passage, Inc.",4000,Platform revenue,-5095.89,0.00,-5095.89,0.00,0.00,-5095.89
+839653,"Willow Passage, Inc.",4010,Usage revenue,0.00,0.00,0.00,0.00,0.00,0.00
+188999,"Yarrow Ridge, Inc.",1100,Accounts receivable,7161.64,0.00,7161.64,4000.00,3074.28,14235.92
+188999,"Yarrow Ridge, Inc.",1150,Unbilled usage receivable,0.00,3074.28,3074.28,0.00,-3074.28,0.00
+188999,"Yarrow Ridge, Inc.",1160,Platform contract asset,21.92,0.00,21.92,0.00,0.00,21.92
+188999,"Yarrow Ridge, Inc.",2200,Deferred platform revenue,0.00,0.00,0.00,-4000.00,0.00,-4000.00
+188999,"Yarrow Ridge, Inc.",4000,Platform revenue,-4076.71,0.00,-4076.71,0.00,0.00,-4076.71
+188999,"Yarrow Ridge, Inc.",4010,Usage revenue,0.00,-3074.28,-3074.28,0.00,0.00,-3074.28
+148565,"Zephyr Grove, Inc.",1100,Accounts receivable,4891.10,0.00,4891.10,4852.60,0.00,9743.70
+148565,"Zephyr Grove, Inc.",1150,Unbilled usage receivable,852.60,0.00,852.60,-852.60,0.00,0.00
+148565,"Zephyr Grove, Inc.",1160,Platform contract asset,21.92,0.00,21.92,0.00,0.00,21.92
+148565,"Zephyr Grove, Inc.",2200,Deferred platform revenue,0.00,0.00,0.00,-4000.00,0.00,-4000.00
+148565,"Zephyr Grove, Inc.",4000,Platform revenue,-4076.71,0.00,-4076.71,0.00,0.00,-4076.71
+148565,"Zephyr Grove, Inc.",4010,Usage revenue,-852.60,0.00,-852.60,0.00,0.00,-852.60

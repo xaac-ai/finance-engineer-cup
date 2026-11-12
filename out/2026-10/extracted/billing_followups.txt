@@ -1,0 +1,61 @@
+RelayCloud Sales and Billing Messages
+Selected internal messages. All people and records are fictional. Snapshot:
+2026-11-11T18:00:00-07:00
+MSG-2026-104 | October 14, 2026 14:00 America/Denver | Morgan Lee, Sales Director ->
+Billing and Revenue Accounting | Signed amendments
+The Cedar Harbor Labs allowance amendment and Meridian Process Systems platform upgrade are
+signed and effective October 16. Please use the executed documents for their terms and
+update the relevant systems.
+MSG-2026-108 | October 28, 2026 11:00 America/Denver | Morgan Lee, Sales Director -> Priya
+Shah, Controller | Zephyr Grove request
+Zephyr Grove requested a USD 100 concession for October workflow usage after a service
+interruption. The underlying contract pricing is unchanged.
+MSG-2026-109 | October 29, 2026 15:00 America/Denver | Priya Shah, Controller -> Billing
+and Revenue Accounting | Approved Zephyr concession
+Approved: reduce Zephyr Grove October usage consideration by USD 100. Issue a credit
+against its October-service usage invoice once finalized; ensure the October accrual is
+already net of this approved concession. Do not apply a second concession.
+MSG-2026-116 | November 3, 2026 10:15 America/Denver | Alex Chen, Billing -> Priya Shah |
+Alder credit cancellation
+The USD 50 Alder Fieldworks credit note cn_82a7ddd6e88e69 was created in error and voided
+before the NetSuite import. There is no other Alder credit note associated with this
+mistake. No credit or reversal has been posted to NetSuite; please use its void status when
+reviewing the current extract.
+MSG-2026-119 | November 4, 2026 09:30 America/Denver | Priya Shah, Controller -> Revenue
+Accounting | October review
+Sales has flagged an amendment that may not have reached billing. Review October service
+across the supplied customers, explain supported billing corrections and October accounting
+effects, and propose a repeatable review. Use later invoices as evidence; later-service
+issues are follow-ups rather than a required November reconciliation.
+MSG-2026-125 | November 5, 2026 13:00 America/Denver | Alex Chen, Revenue Accountant ->
+Priya Shah | Extract status
+RelayCloud | Fictional challenge material | Page 1 of 2
+The extract contains the usage accruals currently posted for October, base platform
+recognition, and routine contract-asset reclassification. The accrual work was prepared
+November 5. These are the existing records for your review; completeness and the
+application of contract terms have not yet been checked. October remains open for supported
+adjustments. September balances are finalized. Historical September journals are outside
+this extract, supported by opening balances and plan references.
+MSG-2026-130 | September 15, 2026 16:00 America/Denver | Morgan Lee -> Priya Shah | Willow
+Passage onboarding
+Willow Passage subscription service begins September 15. No metered production runs are
+expected during September onboarding. The platform subscription is chargeable during
+onboarding; there is no free subscription period.
+MSG-2026-131 | November 6, 2026 10:00 America/Denver | Product Operations -> Revenue
+Accounting | Unverified workspace
+Workspace pa_676b6b455e0887 has October metering but no verified billing owner. It could be
+an internal workspace or belong to an existing customer. Do not identify it by elimination
+from the customer list. Product Operations must verify ownership before Billing assigns
+usage. Account names and one-to-one assumptions are not evidence.
+MSG-2026-132 | November 6, 2026 11:00 America/Denver | Morgan Lee -> Priya Shah | Willow
+Passage concession request
+Willow Passage has requested USD 250 off October usage. This is a request only; I have no
+Controller approval and have not authorized Billing to issue a credit. The request does not
+establish ownership of any unverified workspace.
+MSG-2026-133 | November 7, 2026 09:00 America/Denver | Priya Shah -> Revenue Accounting |
+Review authority
+Recommend supported corrections for Controller approval. Billing documents proposed during
+this review use November issue dates, while supported October service adjustments retain
+the October posting period. Do not create live invoices or entries. Recommend updating an
+affected revenue plan; a future schedule or new system record is not required.
+RelayCloud | Fictional challenge material | Page 2 of 2

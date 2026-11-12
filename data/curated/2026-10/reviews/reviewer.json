@@ -1,0 +1,1746 @@
+{
+ "calls": [
+  {
+   "customer_id": "186097",
+   "model": "claude-opus-5-5",
+   "recorded_at": "2026-11-13T01:46:49Z",
+   "usage": {
+    "cache_read_input_tokens": 11022,
+    "input_tokens": 11527,
+    "output_tokens": 1960
+   }
+  },
+  {
+   "customer_id": "866587",
+   "model": "claude-opus-5-5",
+   "recorded_at": "2026-11-13T01:46:47Z",
+   "usage": {
+    "cache_read_input_tokens": 11022,
+    "input_tokens": 11324,
+    "output_tokens": 1845
+   }
+  },
+  {
+   "customer_id": "477694",
+   "model": "claude-opus-5-5",
+   "recorded_at": "2026-11-13T01:46:47Z",
+   "usage": {
+    "cache_read_input_tokens": 11022,
+    "input_tokens": 11328,
+    "output_tokens": 1730
+   }
+  },
+  {
+   "customer_id": "731059",
+   "model": "claude-opus-5-5",
+   "recorded_at": "2026-11-13T01:46:48Z",
+   "usage": {
+    "cache_read_input_tokens": 11022,
+    "input_tokens": 11235,
+    "output_tokens": 1988
+   }
+  },
+  {
+   "customer_id": "436791",
+   "model": "claude-opus-5-5",
+   "recorded_at": "2026-11-13T01:46:47Z",
+   "usage": {
+    "cache_read_input_tokens": 11022,
+    "input_tokens": 11344,
+    "output_tokens": 1681
+   }
+  },
+  {
+   "customer_id": "286595",
+   "model": "claude-opus-5-5",
+   "recorded_at": "2026-11-13T01:46:47Z",
+   "usage": {
+    "cache_read_input_tokens": 11022,
+    "input_tokens": 11247,
+    "output_tokens": 1753
+   }
+  },
+  {
+   "customer_id": "963044",
+   "model": "claude-opus-5-5",
+   "recorded_at": "2026-11-13T01:47:01Z",
+   "usage": {
+    "cache_read_input_tokens": 11022,
+    "input_tokens": 11272,
+    "output_tokens": 1762
+   }
+  },
+  {
+   "customer_id": "142182",
+   "model": "claude-opus-5-5",
+   "recorded_at": "2026-11-13T01:47:03Z",
+   "usage": {
+    "cache_read_input_tokens": 11022,
+    "input_tokens": 11300,
+    "output_tokens": 1904
+   }
+  },
+  {
+   "customer_id": "620310",
+   "model": "claude-opus-5-5",
+   "recorded_at": "2026-11-13T01:47:01Z",
+   "usage": {
+    "cache_read_input_tokens": 11022,
+    "input_tokens": 11224,
+    "output_tokens": 1671
+   }
+  },
+  {
+   "customer_id": "879513",
+   "model": "claude-opus-5-5",
+   "recorded_at": "2026-11-13T01:47:05Z",
+   "usage": {
+    "cache_read_input_tokens": 11022,
+    "input_tokens": 11380,
+    "output_tokens": 2227
+   }
+  },
+  {
+   "customer_id": "654552",
+   "model": "claude-opus-5-5",
+   "recorded_at": "2026-11-13T01:47:05Z",
+   "usage": {
+    "cache_read_input_tokens": 11022,
+    "input_tokens": 12442,
+    "output_tokens": 1937
+   }
+  },
+  {
+   "customer_id": "232251",
+   "model": "claude-opus-5-5",
+   "recorded_at": "2026-11-13T01:47:04Z",
+   "usage": {
+    "cache_read_input_tokens": 11022,
+    "input_tokens": 12153,
+    "output_tokens": 2041
+   }
+  },
+  {
+   "customer_id": "507826",
+   "model": "claude-opus-5-5",
+   "recorded_at": "2026-11-13T01:47:18Z",
+   "usage": {
+    "cache_read_input_tokens": 11022,
+    "input_tokens": 12305,
+    "output_tokens": 2080
+   }
+  },
+  {
+   "customer_id": "553102",
+   "model": "claude-opus-5-5",
+   "recorded_at": "2026-11-13T01:47:18Z",
+   "usage": {
+    "cache_read_input_tokens": 11022,
+    "input_tokens": 12325,
+    "output_tokens": 2051
+   }
+  },
+  {
+   "customer_id": "300468",
+   "model": "claude-opus-5-5",
+   "recorded_at": "2026-11-13T01:47:18Z",
+   "usage": {
+    "cache_read_input_tokens": 11022,
+    "input_tokens": 12501,
+    "output_tokens": 1948
+   }
+  },
+  {
+   "customer_id": "561562",
+   "model": "claude-opus-5-5",
+   "recorded_at": "2026-11-13T01:47:23Z",
+   "usage": {
+    "cache_read_input_tokens": 11022,
+    "input_tokens": 12657,
+    "output_tokens": 2339
+   }
+  },
+  {
+   "customer_id": "730965",
+   "model": "claude-opus-5-5",
+   "recorded_at": "2026-11-13T01:47:20Z",
+   "usage": {
+    "cache_read_input_tokens": 11022,
+    "input_tokens": 12381,
+    "output_tokens": 1971
+   }
+  },
+  {
+   "customer_id": "856042",
+   "model": "claude-opus-5-5",
+   "recorded_at": "2026-11-13T01:47:21Z",
+   "usage": {
+    "cache_read_input_tokens": 11022,
+    "input_tokens": 12452,
+    "output_tokens": 1908
+   }
+  },
+  {
+   "customer_id": "676664",
+   "model": "claude-opus-5-5",
+   "recorded_at": "2026-11-13T01:47:37Z",
+   "usage": {
+    "cache_read_input_tokens": 11022,
+    "input_tokens": 18507,
+    "output_tokens": 2373
+   }
+  },
+  {
+   "customer_id": "941670",
+   "model": "claude-opus-5-5",
+   "recorded_at": "2026-11-13T01:47:38Z",
+   "usage": {
+    "cache_read_input_tokens": 11022,
+    "input_tokens": 18700,
+    "output_tokens": 2437
+   }
+  },
+  {
+   "customer_id": "437384",
+   "model": "claude-opus-5-5",
+   "recorded_at": "2026-11-13T01:47:38Z",
+   "usage": {
+    "cache_read_input_tokens": 11022,
+    "input_tokens": 12634,
+    "output_tokens": 2450
+   }
+  },
+  {
+   "customer_id": "240793",
+   "model": "claude-opus-5-5",
+   "recorded_at": "2026-11-13T01:47:38Z",
+   "usage": {
+    "cache_read_input_tokens": 11022,
+    "input_tokens": 12620,
+    "output_tokens": 2276
+   }
+  },
+  {
+   "customer_id": "639373",
+   "model": "claude-opus-5-5",
+   "recorded_at": "2026-11-13T01:46:22Z",
+   "usage": {
+    "cache_read_input_tokens": 0,
+    "input_tokens": 13680,
+    "output_tokens": 2285
+   }
+  },
+  {
+   "customer_id": "335780",
+   "model": "claude-opus-5-5",
+   "recorded_at": "2026-11-13T01:47:43Z",
+   "usage": {
+    "cache_read_input_tokens": 11022,
+    "input_tokens": 13819,
+    "output_tokens": 2751
+   }
+  },
+  {
+   "customer_id": "188999",
+   "model": "claude-opus-5-5",
+   "recorded_at": "2026-11-13T01:47:46Z",
+   "usage": {
+    "cache_read_input_tokens": 11022,
+    "input_tokens": 11781,
+    "output_tokens": 2796
+   }
+  },
+  {
+   "customer_id": "148565",
+   "model": "claude-opus-5-5",
+   "recorded_at": "2026-11-13T01:47:57Z",
+   "usage": {
+    "cache_read_input_tokens": 11022,
+    "input_tokens": 13229,
+    "output_tokens": 2338
+   }
+  },
+  {
+   "customer_id": "314334",
+   "model": "claude-opus-5-5",
+   "recorded_at": "2026-11-13T01:47:59Z",
+   "usage": {
+    "cache_read_input_tokens": 11022,
+    "input_tokens": 11692,
+    "output_tokens": 2530
+   }
+  },
+  {
+   "customer_id": "810234",
+   "model": "claude-opus-5-5",
+   "recorded_at": "2026-11-13T01:47:55Z",
+   "usage": {
+    "cache_read_input_tokens": 11022,
+    "input_tokens": 12661,
+    "output_tokens": 2080
+   }
+  },
+  {
+   "customer_id": "260381",
+   "model": "claude-opus-5-5",
+   "recorded_at": "2026-11-13T01:47:56Z",
+   "usage": {
+    "cache_read_input_tokens": 11022,
+    "input_tokens": 10507,
+    "output_tokens": 2320
+   }
+  },
+  {
+   "customer_id": "839653",
+   "model": "claude-opus-5-5",
+   "recorded_at": "2026-11-13T01:48:05Z",
+   "usage": {
+    "cache_read_input_tokens": 11022,
+    "input_tokens": 4679,
+    "output_tokens": 2497
+   }
+  }
+ ],
+ "effort": "high",
+ "model": "claude-opus-5-5",
+ "reviews": [
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-118.pdf",
+    "data/raw/2026-10/contract_register.csv:2",
+    "data/raw/2026-10/stripe_invoices.csv:2",
+    "data/raw/2026-10/stripe_invoice_lines.csv:2",
+    "data/raw/2026-10/netsuite_opening_balances.csv:5",
+    "data/raw/2026-10/netsuite_gl_detail.csv:6",
+    "data/raw/2026-10/netsuite_gl_detail.csv:7",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:2",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:3"
+   ],
+   "customer_id": "186097",
+   "customer_name": "Alder Fieldworks, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "OF-2026-118 sets a $24,000.00 annual platform fee for the term 2026-09-01 to 2027-09-01 (end-exclusive), billed in full in advance on Sept 1. Invoice in_b168e63706278b billed $24,000.00 for exactly that period, so no October platform invoice is due. October recognition is 24,000 x 31/365 = 2,038.356, rounded to 2,038.36. GL JE-d035d70f84e22a (Dr 2200 / Cr 4000) books 2,038.36, which agrees with revenue plan RP-53d8c223f8d8f0. The opening deferred balance also ties: 24,000.00 - 1,972.60 (September, 30/365) = 22,027.40. No amendment exists for this customer. No correction is needed.",
+   "status": "clean",
+   "stream": "platform"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-118.pdf",
+    "data/raw/2026-10/product_account_mapping.csv:2",
+    "data/raw/2026-10/product_usage.csv:32",
+    "data/raw/2026-10/product_usage.csv:62",
+    "data/raw/2026-10/stripe_invoices.csv:3",
+    "data/raw/2026-10/stripe_invoices.csv:4",
+    "data/raw/2026-10/stripe_invoice_lines.csv:3",
+    "data/raw/2026-10/stripe_invoice_lines.csv:4",
+    "data/raw/2026-10/stripe_credit_notes.csv:2",
+    "data/raw/2026-10/stripe_credit_note_lines.csv:2",
+    "data/raw/2026-10/netsuite_opening_balances.csv:3",
+    "data/raw/2026-10/netsuite_gl_detail.csv:2",
+    "data/raw/2026-10/netsuite_gl_detail.csv:3",
+    "data/raw/2026-10/netsuite_gl_detail.csv:4",
+    "data/raw/2026-10/netsuite_gl_detail.csv:5",
+    "data/raw/2026-10/netsuite_gl_detail.csv:8",
+    "data/raw/2026-10/netsuite_gl_detail.csv:9",
+    "data/raw/2026-10/billing_followups.pdf:MSG-2026-116"
+   ],
+   "customer_id": "186097",
+   "customer_name": "Alder Fieldworks, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "Alder has one verified product account, pa_29bef2ab673ae7. Its 31 unique active October records total 29,697 runs. October is a full month, so the 10,000-run allowance applies: overage = 19,697 runs x $0.08 = $1,575.76. That matches the Nov 1 invoice in_e213ca4456c1e8 (19,697 x 8.00 cents = 157,576 cents) and the October accrual JE-3893fa44625154 (Dr 1150 / Cr 4010 $1,575.76). The Nov 1 invoice release of 1150 also matches the accrual. The September accrual of $1,437.36 was correctly released by the Oct 1 invoice. The $50 credit note cn_82a7ddd6e88e69 against the October-service usage line looks like a reduction at first sight. However, it is void (voided 2026-11-03), was confirmed by Billing in MSG-2026-116 as created in error, and was never posted to NetSuite. Under policy a void note has no credit effect, so no correction is needed.",
+   "status": "valid_explanation",
+   "stream": "usage"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-122.pdf",
+    "data/raw/2026-10/contract_register.csv:3",
+    "data/raw/2026-10/stripe_invoices.csv:5",
+    "data/raw/2026-10/stripe_invoice_lines.csv:5",
+    "data/raw/2026-10/netsuite_opening_balances.csv:9",
+    "data/raw/2026-10/netsuite_gl_detail.csv:14",
+    "data/raw/2026-10/netsuite_gl_detail.csv:15",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:14",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:15"
+   ],
+   "customer_id": "866587",
+   "customer_name": "Brookstone Data, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "OF-2026-122 sets a $24,000 annual platform fee for 2026-09-01 to 2027-09-01 (end-exclusive), invoiced in full on September 1. Invoice RC-260901-866587-P bills $24,000.00 for that period, so no October platform billing is expected. October revenue is 24,000 x 31/365 = 2,038.356, rounded to $2,038.36. JE-7006afacd37e79 books exactly $2,038.36 (Dr 2200 / Cr 4000), matching plan RP-a463fceeaf825a for October. Opening 2200 credit of $22,027.40 equals 24,000 less September's $1,972.60. No amendment, credit note or approval affects this customer.",
+   "status": "clean",
+   "stream": "platform"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-122.pdf",
+    "data/raw/2026-10/product_account_mapping.csv:3",
+    "data/raw/2026-10/product_usage.csv:93",
+    "data/raw/2026-10/product_usage.csv:123",
+    "data/raw/2026-10/stripe_invoices.csv:6",
+    "data/raw/2026-10/stripe_invoices.csv:7",
+    "data/raw/2026-10/stripe_invoice_lines.csv:6",
+    "data/raw/2026-10/stripe_invoice_lines.csv:7",
+    "data/raw/2026-10/netsuite_opening_balances.csv:7",
+    "data/raw/2026-10/netsuite_gl_detail.csv:10",
+    "data/raw/2026-10/netsuite_gl_detail.csv:11",
+    "data/raw/2026-10/netsuite_gl_detail.csv:12",
+    "data/raw/2026-10/netsuite_gl_detail.csv:13",
+    "data/raw/2026-10/netsuite_gl_detail.csv:16",
+    "data/raw/2026-10/netsuite_gl_detail.csv:17"
+   ],
+   "customer_id": "866587",
+   "customer_name": "Brookstone Data, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "Brookstone's only verified product account is pa_3ecc8f2ea61075. It has 31 unique active October records (2026-10-01 through 2026-10-31) totalling 35,513 runs, with no duplicates or replacements. October is a full month, so the allowance is 10,000. Overage is 35,513 - 10,000 = 25,513 runs x $0.08 = $2,041.04. The Nov 1 invoice RC-261101-866587-U bills 25,513 runs x 8.00 cents = $2,041.04 for the 2026-10-01 to 2026-11-01 period. The October accrual JE-23b8d2703d5450 books $2,041.04 (Dr 1150 / Cr 4010), and the November invoice releases exactly that amount from 1150. The September opening 1150 balance of $1,809.92 was released by the Oct 1 invoice of $1,809.92 (22,624 x $0.08). No credits or concessions apply.",
+   "status": "clean",
+   "stream": "usage"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-133.pdf",
+    "data/raw/2026-10/contract_register.csv:4",
+    "data/raw/2026-10/stripe_invoices.csv:8",
+    "data/raw/2026-10/stripe_invoice_lines.csv:8",
+    "data/raw/2026-10/netsuite_opening_balances.csv:13",
+    "data/raw/2026-10/netsuite_gl_detail.csv:22",
+    "data/raw/2026-10/netsuite_gl_detail.csv:23",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:26",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:27"
+   ],
+   "customer_id": "477694",
+   "customer_name": "Copper Finch Systems, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "OF-2026-133 sets a $24,000 annual platform fee, billed in advance on September 1, 2026, for service from 2026-09-01 to 2027-09-01 (365 days). Stripe invoice in_0d41d09d937df1 billed $24,000.00 for exactly that period, so no October platform invoice is expected and October billing is right (0.00). October recognition is 24,000 x 31/365 = 2,038.356, rounded to 2,038.36. GL journal JE-d5ffc4a887f654 recognized 2,038.36 (Dr 2200 / Cr 4000), which matches the revenue plan row for October. The opening 2200 credit of 22,027.40 equals 24,000 less the September recognition of 1,972.60. No 1160 reclass is needed. No amendment or credit note exists for this customer.",
+   "status": "clean",
+   "stream": "platform"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-133.pdf",
+    "data/raw/2026-10/product_account_mapping.csv:4",
+    "data/raw/2026-10/product_usage.csv:154",
+    "data/raw/2026-10/product_usage.csv:184",
+    "data/raw/2026-10/stripe_invoices.csv:10",
+    "data/raw/2026-10/stripe_invoice_lines.csv:10",
+    "data/raw/2026-10/netsuite_gl_detail.csv:20",
+    "data/raw/2026-10/netsuite_gl_detail.csv:21",
+    "data/raw/2026-10/netsuite_gl_detail.csv:24",
+    "data/raw/2026-10/netsuite_gl_detail.csv:25",
+    "data/raw/2026-10/netsuite_opening_balances.csv:11",
+    "data/raw/2026-10/netsuite_gl_detail.csv:18",
+    "data/raw/2026-10/netsuite_gl_detail.csv:19"
+   ],
+   "customer_id": "477694",
+   "customer_name": "Copper Finch Systems, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "The only verified product account for this customer is pa_fdb9e8b1a20001. It has 31 unique active October records (2026-10-01 to 2026-10-31) totalling 25,344 runs. October is a full month, so the full 10,000-run allowance applies. Overage is 15,344 x $0.08 = $1,227.52. The November 1 invoice in_5fc19904409fe5 billed 15,344 runs at 8.00 cents = $1,227.52. The October accrual JE-ecdbdc49f20145 booked Dr 1150 / Cr 4010 of 1,227.52, and the November 1 invoice released exactly that amount from 1150. The September accrual of 1,335.84 (16,698 runs) was released in full by the October 1 invoice. There are no credit notes and no concessions. Billing and October revenue are both correct.",
+   "status": "clean",
+   "stream": "usage"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-144.pdf",
+    "data/raw/2026-10/contract_register.csv:5",
+    "data/raw/2026-10/stripe_invoices.csv:11",
+    "data/raw/2026-10/stripe_invoice_lines.csv:11",
+    "data/raw/2026-10/netsuite_opening_balances.csv:17",
+    "data/raw/2026-10/netsuite_gl_detail.csv:30",
+    "data/raw/2026-10/netsuite_gl_detail.csv:31",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:38",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:39"
+   ],
+   "customer_id": "731059",
+   "customer_name": "Driftwood Research, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "OF-2026-144 sets a $24,000.00 annual platform fee, billed in advance for 2026-09-01 to 2027-09-01. Invoice RC-260901-731059-P billed the full $24,000.00 on Sep 1 and covers October, so no October platform billing is due. October revenue is 24,000.00 x 31/365 = 2,038.36. The GL booked 2,038.36 (JE-730e5a6a6d3e7e), matching plan RP-88fef00ce717db. The opening 2200 credit of 22,027.40 equals 24,000.00 - 1,972.60 (September recognition), so balances tie and no contract-asset reclass is needed. No credit notes or amendments exist for this customer.",
+   "status": "clean",
+   "stream": "platform"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-144.pdf",
+    "data/raw/2026-10/product_account_mapping.csv:5",
+    "data/raw/2026-10/product_usage.csv:215",
+    "data/raw/2026-10/product_usage.csv:245",
+    "data/raw/2026-10/stripe_invoices.csv:12",
+    "data/raw/2026-10/stripe_invoices.csv:13",
+    "data/raw/2026-10/stripe_invoice_lines.csv:12",
+    "data/raw/2026-10/stripe_invoice_lines.csv:13",
+    "data/raw/2026-10/netsuite_opening_balances.csv:15",
+    "data/raw/2026-10/netsuite_gl_detail.csv:26",
+    "data/raw/2026-10/netsuite_gl_detail.csv:27",
+    "data/raw/2026-10/netsuite_gl_detail.csv:28",
+    "data/raw/2026-10/netsuite_gl_detail.csv:29",
+    "data/raw/2026-10/netsuite_gl_detail.csv:32",
+    "data/raw/2026-10/netsuite_gl_detail.csv:33"
+   ],
+   "customer_id": "731059",
+   "customer_name": "Driftwood Research, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "The only verified product account is pa_f3203cb3d10b96. It has 31 unique active October records totalling 26,767 runs. October is a full month, so the allowance is 10,000 runs. Overage is 16,767 x $0.08 = $1,341.36. The Nov 1 invoice RC-261101-731059-U billed 16,767 runs for $1,341.36, so billing is correct. The October accrual JE-0b4f8bd517dbe2 booked $1,341.36 to 4010, so revenue is correct, and the Nov 1 invoice releases exactly that 1150 accrual. As a cross-check, September had 25,252 runs less 10,000 = 15,252 x 0.08 = $1,220.16, which matches the Oct 1 invoice and the opening 1150 balance. No credits or concessions apply, and the unverified workspace pa_676b6b455e0887 is not attributed to this customer.",
+   "status": "clean",
+   "stream": "usage"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-155.pdf",
+    "data/raw/2026-10/contract_register.csv:6",
+    "data/raw/2026-10/stripe_invoices.csv:14",
+    "data/raw/2026-10/stripe_invoice_lines.csv:14",
+    "data/raw/2026-10/netsuite_opening_balances.csv:21",
+    "data/raw/2026-10/netsuite_gl_detail.csv:38",
+    "data/raw/2026-10/netsuite_gl_detail.csv:39",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:50",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:51"
+   ],
+   "customer_id": "436791",
+   "customer_name": "Evergreen Dispatch, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "OF-2026-155 sets a $24,000 annual platform fee, billed in advance for 2026-09-01 to 2027-09-01. Invoice in_25a787a0829b17 billed 2,400,000 cents on Sep 1 for that full period, so no further October platform billing was due. October revenue at actual days / 365 is 24,000 x 31/365 = 2,038.356, which rounds to 2,038.36. JE-757eb7c702e847 booked 2,038.36 Dr 2200 / Cr 4000, matching plan RP-1d367f91d4532e. The September opening deferred balance of 22,027.40 equals 24,000 - 1,972.60 (September plan). No amendment, credit or reclass issue.",
+   "status": "clean",
+   "stream": "platform"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-155.pdf",
+    "data/raw/2026-10/product_account_mapping.csv:6",
+    "data/raw/2026-10/product_usage.csv:276",
+    "data/raw/2026-10/product_usage.csv:306",
+    "data/raw/2026-10/stripe_invoices.csv:16",
+    "data/raw/2026-10/stripe_invoice_lines.csv:16",
+    "data/raw/2026-10/stripe_invoice_lines.csv:15",
+    "data/raw/2026-10/netsuite_opening_balances.csv:19",
+    "data/raw/2026-10/netsuite_gl_detail.csv:34",
+    "data/raw/2026-10/netsuite_gl_detail.csv:35",
+    "data/raw/2026-10/netsuite_gl_detail.csv:36",
+    "data/raw/2026-10/netsuite_gl_detail.csv:37",
+    "data/raw/2026-10/netsuite_gl_detail.csv:40",
+    "data/raw/2026-10/netsuite_gl_detail.csv:41"
+   ],
+   "customer_id": "436791",
+   "customer_name": "Evergreen Dispatch, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "The only verified product account is pa_0a4e7d52d6517e, mapped from 2026-09-01. It has 31 unique active October records totalling 42,808 runs. October is a full month, so the allowance is 10,000 runs. Overage is 42,808 - 10,000 = 32,808 runs x $0.08 = $2,624.64. Nov 1 invoice in_b6711298d18029 billed 32,808 units for 262,464 cents. The October accrual JE-4786e159b90944 (Dr 1150 / Cr 4010) booked 2,624.64, and the Nov invoice released exactly 2,624.64 from 1150. The September accrual of 2,462.32 was released by the Oct 1 invoice of 30,779 units (2,462.32). No credits or concessions apply.",
+   "status": "clean",
+   "stream": "usage"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-166.pdf",
+    "data/raw/2026-10/contract_register.csv:7",
+    "data/raw/2026-10/stripe_invoices.csv:17",
+    "data/raw/2026-10/stripe_invoice_lines.csv:17",
+    "data/raw/2026-10/netsuite_opening_balances.csv:25",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:62",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:63",
+    "data/raw/2026-10/netsuite_gl_detail.csv:46",
+    "data/raw/2026-10/netsuite_gl_detail.csv:47"
+   ],
+   "customer_id": "286595",
+   "customer_name": "Falcon Ridge Software, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "OF-2026-166 sets a $24,000 annual platform fee, billed in advance for 2026-09-01 to 2027-09-01. Invoice RC-260901-286595-P billed the full $24,000.00 on September 1, so no October platform invoice is expected. October revenue is $24,000 x 31/365 = $2,038.356, rounded to $2,038.36. That matches plan RP-73686db2c033c6 for Oct 2026 and journal JE-293776cd43319f (Dr 2200 / Cr 4000 $2,038.36). The September 30 deferred balance of $22,027.40 equals $24,000 - $1,972.60, which is consistent. No amendment or credit applies.",
+   "status": "clean",
+   "stream": "platform"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-166.pdf",
+    "data/raw/2026-10/product_account_mapping.csv:7",
+    "data/raw/2026-10/product_usage.csv:337",
+    "data/raw/2026-10/product_usage.csv:367",
+    "data/raw/2026-10/stripe_invoices.csv:19",
+    "data/raw/2026-10/stripe_invoice_lines.csv:19",
+    "data/raw/2026-10/stripe_invoices.csv:18",
+    "data/raw/2026-10/netsuite_opening_balances.csv:23",
+    "data/raw/2026-10/netsuite_gl_detail.csv:42",
+    "data/raw/2026-10/netsuite_gl_detail.csv:43",
+    "data/raw/2026-10/netsuite_gl_detail.csv:44",
+    "data/raw/2026-10/netsuite_gl_detail.csv:45",
+    "data/raw/2026-10/netsuite_gl_detail.csv:48",
+    "data/raw/2026-10/netsuite_gl_detail.csv:49"
+   ],
+   "customer_id": "286595",
+   "customer_name": "Falcon Ridge Software, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "The only verified product account is pa_28b1032eb4f855. It has 31 unique active October records (Oct 1-31), with no duplicates or replacements, totalling 83,856 runs. The full-month allowance is 10,000, leaving 73,856 overage runs. At $0.08 per run, the expected charge is $5,908.48. November 1 invoice RC-261101-286595-U billed 73,856 runs at 8.00 cents, or $5,908.48. October accrual JE-c4a7460b449303 (Dr 1150 / Cr 4010 $5,908.48) and its November release JE-307309b31102f2 ($5,908.48) both agree. There are no credit notes. The September usage invoice ($6,720.48) released the opening 1150 balance of $6,720.48 on October 1, as expected.",
+   "status": "clean",
+   "stream": "usage"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-177.pdf",
+    "data/raw/2026-10/contract_register.csv:8",
+    "data/raw/2026-10/stripe_invoices.csv:20",
+    "data/raw/2026-10/stripe_invoice_lines.csv:20",
+    "data/raw/2026-10/netsuite_opening_balances.csv:29",
+    "data/raw/2026-10/netsuite_gl_detail.csv:54",
+    "data/raw/2026-10/netsuite_gl_detail.csv:55",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:75"
+   ],
+   "customer_id": "963044",
+   "customer_name": "Granite Orchard, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "OF-2026-177 sets a $24,000 annual platform fee, billed in advance for 2026-09-01 to 2027-09-01 (end-exclusive). Invoice RC-260901-963044-P billed the full $24,000.00 on Sep 1, so no October platform invoice is due. October recognition = 24,000 x 31/365 = 2,038.356, rounded to 2,038.36. The October plan row and JE-fb746f138e8b71 book exactly 2,038.36 (Dr 2200 / Cr 4000). The opening 2200 credit of 22,027.40 equals 24,000 - 1,972.60 (September). No amendments or credit notes exist. Nothing to correct.",
+   "status": "clean",
+   "stream": "platform"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-177.pdf",
+    "data/raw/2026-10/product_account_mapping.csv:8",
+    "data/raw/2026-10/product_usage.csv:398",
+    "data/raw/2026-10/product_usage.csv:428",
+    "data/raw/2026-10/stripe_invoices.csv:22",
+    "data/raw/2026-10/stripe_invoice_lines.csv:22",
+    "data/raw/2026-10/netsuite_gl_detail.csv:56",
+    "data/raw/2026-10/netsuite_gl_detail.csv:57",
+    "data/raw/2026-10/netsuite_gl_detail.csv:52",
+    "data/raw/2026-10/netsuite_gl_detail.csv:53",
+    "data/raw/2026-10/netsuite_gl_detail.csv:50",
+    "data/raw/2026-10/netsuite_gl_detail.csv:51",
+    "data/raw/2026-10/netsuite_opening_balances.csv:27"
+   ],
+   "customer_id": "963044",
+   "customer_name": "Granite Orchard, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "Granite Orchard has one verified product account, pa_e42d35b1515df1, effective from 2026-09-01. It has 31 active, non-duplicate October records (Oct 1-31) totalling 56,401 runs. October is a full month, so the allowance is 10,000. Overage = 56,401 - 10,000 = 46,401 runs x $0.08 = $3,712.08. Nov 1 invoice RC-261101-963044-U bills 46,401 runs for $3,712.08, matching. The October accrual JE-781667c78ac129 books $3,712.08 (Dr 1150 / Cr 4010), also matching. The Nov 1 invoice releases 1150 by the same amount, which is correct. The September accrual of 3,498.00 (43,725 runs) was released by the Oct 1 invoice. No credit notes or concessions apply.",
+   "status": "clean",
+   "stream": "usage"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-188.pdf",
+    "data/raw/2026-10/contract_register.csv:9",
+    "data/raw/2026-10/stripe_invoices.csv:23",
+    "data/raw/2026-10/stripe_invoice_lines.csv:23",
+    "data/raw/2026-10/netsuite_opening_balances.csv:33",
+    "data/raw/2026-10/netsuite_gl_detail.csv:62",
+    "data/raw/2026-10/netsuite_gl_detail.csv:63",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:86",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:87"
+   ],
+   "customer_id": "142182",
+   "customer_name": "Highwater Studio, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "OF-2026-188 sets a $24,000.00 annual platform fee for Sept 1, 2026 to Aug 31, 2027, invoiced in full in advance on Sept 1. Invoice in_19b02ff6575724 billed 2,400,000 cents for exactly that period and is paid. No October platform billing is expected, so the billing effect is 0.00. October recognition under the days/365 policy is 24,000 \u00d7 31/365 = 2,038.356, which rounds to 2,038.36. That equals the plan row and journal JE-8f506c81bbadab (Dr 2200 / Cr 4000 2,038.36). Deferred revenue was a 22,027.40 credit at Sept 30 (24,000 \u2212 1,972.60). After the October release it is 19,989.04 credit, so no contract-asset reclass is needed. There are no amendments or credit notes.",
+   "status": "clean",
+   "stream": "platform"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-188.pdf",
+    "data/raw/2026-10/product_account_mapping.csv:9",
+    "data/raw/2026-10/product_usage.csv:459",
+    "data/raw/2026-10/product_usage.csv:489",
+    "data/raw/2026-10/stripe_invoices.csv:24",
+    "data/raw/2026-10/stripe_invoices.csv:25",
+    "data/raw/2026-10/stripe_invoice_lines.csv:24",
+    "data/raw/2026-10/stripe_invoice_lines.csv:25",
+    "data/raw/2026-10/netsuite_opening_balances.csv:31",
+    "data/raw/2026-10/netsuite_gl_detail.csv:58",
+    "data/raw/2026-10/netsuite_gl_detail.csv:59",
+    "data/raw/2026-10/netsuite_gl_detail.csv:60",
+    "data/raw/2026-10/netsuite_gl_detail.csv:61",
+    "data/raw/2026-10/netsuite_gl_detail.csv:64",
+    "data/raw/2026-10/netsuite_gl_detail.csv:65"
+   ],
+   "customer_id": "142182",
+   "customer_name": "Highwater Studio, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "The customer has one verified product account, pa_8106ec036dd8a2, mapped from Sept 1. It has 31 unique active October records with no duplicates or replacements, all ingested before cutoff, totalling 83,216 runs. October is a full month, so the full 10,000-run allowance applies. Overage is 83,216 \u2212 10,000 = 73,216 runs \u00d7 $0.08 = $5,857.28. The Nov 1 invoice in_ed974241aa3881 billed 73,216 runs for 585,728 cents, so the billing effect is 0.00. The October accrual JE-1fcced9bb5b7bc books Dr 1150 / Cr 4010 5,857.28, so the revenue effect is 0.00. The Sept 30 unbilled balance of 5,741.36 was released by the Oct 1 invoice for the same amount. The Nov 1 invoice releases the October accrual in full, leaving no residual. There are no credit notes or concessions.",
+   "status": "clean",
+   "stream": "usage"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-199.pdf",
+    "data/raw/2026-10/contract_register.csv:10",
+    "data/raw/2026-10/stripe_invoices.csv:26",
+    "data/raw/2026-10/stripe_invoice_lines.csv:26",
+    "data/raw/2026-10/netsuite_opening_balances.csv:37",
+    "data/raw/2026-10/netsuite_gl_detail.csv:70",
+    "data/raw/2026-10/netsuite_gl_detail.csv:71",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:98",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:99"
+   ],
+   "customer_id": "620310",
+   "customer_name": "Indigo Trail Networks, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "OF-2026-199 sets a $24,000.00 annual platform fee, billed in full in advance for 2026-09-01 to 2027-09-01. Invoice RC-260901-620310-P billed $24,000.00 for that period, so no further October platform billing is due. October revenue is 24,000.00 x 31/365 = 2,038.36. Booked October recognition is 2,038.36 (JE-ab97945edbebb0, matching the plan row). The September 30 deferred balance of 22,027.40 equals 24,000.00 - 1,972.60 (30/365), which is consistent. No credits apply.",
+   "status": "clean",
+   "stream": "platform"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-199.pdf",
+    "data/raw/2026-10/product_account_mapping.csv:10",
+    "data/raw/2026-10/product_usage.csv:520",
+    "data/raw/2026-10/product_usage.csv:550",
+    "data/raw/2026-10/stripe_invoices.csv:27",
+    "data/raw/2026-10/stripe_invoices.csv:28",
+    "data/raw/2026-10/stripe_invoice_lines.csv:27",
+    "data/raw/2026-10/stripe_invoice_lines.csv:28",
+    "data/raw/2026-10/netsuite_opening_balances.csv:35",
+    "data/raw/2026-10/netsuite_gl_detail.csv:66",
+    "data/raw/2026-10/netsuite_gl_detail.csv:67",
+    "data/raw/2026-10/netsuite_gl_detail.csv:68",
+    "data/raw/2026-10/netsuite_gl_detail.csv:69",
+    "data/raw/2026-10/netsuite_gl_detail.csv:72",
+    "data/raw/2026-10/netsuite_gl_detail.csv:73"
+   ],
+   "customer_id": "620310",
+   "customer_name": "Indigo Trail Networks, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "The only verified product account is pa_006e622d3d5809. It has 31 unique active October records totalling 46,454 runs, with no duplicates. October is a full month, so the full 10,000-run allowance applies. Overage is 36,454 runs x $0.08 = $2,916.32. Invoice RC-261101-620310-U billed 36,454 runs for $2,916.32 for October service. The October accrual (JE-4ce12db269904f) booked $2,916.32 to 4010, and the November 1 invoice released exactly that amount from 1150. The October 1 invoice of $3,031.92 released the September accrual (opening 1150 balance $3,031.92) and was not revenue again. No credit notes exist for this customer.",
+   "status": "clean",
+   "stream": "usage"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-210.pdf",
+    "data/raw/2026-10/contract_register.csv:11",
+    "data/raw/2026-10/stripe_invoices.csv:29",
+    "data/raw/2026-10/stripe_invoice_lines.csv:29",
+    "data/raw/2026-10/netsuite_opening_balances.csv:41",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:110",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:111",
+    "data/raw/2026-10/netsuite_gl_detail.csv:78",
+    "data/raw/2026-10/netsuite_gl_detail.csv:79"
+   ],
+   "customer_id": "879513",
+   "customer_name": "Juniper Bay Analytics, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "OF-2026-210 sets a $24,000.00/year platform fee, billed annually in advance on Sep 1, 2026, for service Sep 1, 2026 to Sep 1, 2027 (end-exclusive). Invoice RC-260901-879513-P billed 2,400,000 cents ($24,000.00) for that period and is paid. No platform billing is due in October. Expected October revenue is 24,000 x 31/365 = 2,038.356, rounded to $2,038.36. The October plan row and JE-aec94a94488c94 (Dr 2200 / Cr 4000) book $2,038.36. The opening 2200 credit of $22,027.40 equals $24,000.00 less September recognition of $1,972.60, which is consistent. There are no amendments and no credit notes.",
+   "status": "clean",
+   "stream": "platform"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-210.pdf",
+    "data/raw/2026-10/product_account_mapping.csv:11",
+    "data/raw/2026-10/product_usage.csv:551",
+    "data/raw/2026-10/product_usage.csv:580",
+    "data/raw/2026-10/product_usage.csv:581",
+    "data/raw/2026-10/product_usage.csv:611",
+    "data/raw/2026-10/stripe_invoices.csv:30",
+    "data/raw/2026-10/stripe_invoices.csv:31",
+    "data/raw/2026-10/stripe_invoice_lines.csv:30",
+    "data/raw/2026-10/stripe_invoice_lines.csv:31",
+    "data/raw/2026-10/netsuite_opening_balances.csv:39",
+    "data/raw/2026-10/netsuite_gl_detail.csv:74",
+    "data/raw/2026-10/netsuite_gl_detail.csv:75",
+    "data/raw/2026-10/netsuite_gl_detail.csv:76",
+    "data/raw/2026-10/netsuite_gl_detail.csv:77",
+    "data/raw/2026-10/netsuite_gl_detail.csv:80",
+    "data/raw/2026-10/netsuite_gl_detail.csv:81"
+   ],
+   "customer_id": "879513",
+   "customer_name": "Juniper Bay Analytics, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "The only verified product account is pa_b7aeebafce6fdb. It has 31 unique active October records with no duplicates or replacements, totaling 37,033 runs. October is a full month, so the full 10,000-run allowance applies. Overage is 37,033 - 10,000 = 27,033 runs; 27,033 x $0.08 = $2,162.64. Invoice RC-261101-879513-U billed 27,033 runs at 8.00 cents = 216,264 cents ($2,162.64). The October accrual JE-cb8a25ec4990a3 books $2,162.64 to 4010, and the Nov 1 invoice releases exactly $2,162.64 from 1150. For September, 36,145 runs - 10,000 = 26,145 x $0.08 = $2,091.60, which matches the Oct 1 invoice and the release of the opening 1150 balance. There are no credit notes and no concessions apply to this customer.",
+   "status": "clean",
+   "stream": "usage"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-221.pdf",
+    "data/raw/2026-10/contract_register.csv:12",
+    "data/raw/2026-10/stripe_invoices.csv:33",
+    "data/raw/2026-10/stripe_invoice_lines.csv:33",
+    "data/raw/2026-10/netsuite_gl_detail.csv:82",
+    "data/raw/2026-10/netsuite_gl_detail.csv:83",
+    "data/raw/2026-10/netsuite_gl_detail.csv:90",
+    "data/raw/2026-10/netsuite_gl_detail.csv:91",
+    "data/raw/2026-10/netsuite_gl_detail.csv:94",
+    "data/raw/2026-10/netsuite_gl_detail.csv:95",
+    "data/raw/2026-10/netsuite_opening_balances.csv:45",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:123"
+   ],
+   "customer_id": "654552",
+   "customer_name": "Kestrel Bridge, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "OF-2026-221 sets a $3,000/month platform fee billed monthly in advance ($36,000 a year) for Sep 1, 2026 to Aug 31, 2027. Invoice RC-261001-654552-P bills $3,000.00 for Oct 1 to Nov 1, which is correct. October revenue by policy is 36,000 x 31/365 = 3,057.53, and the booked recognition JE-07081d86bfe256 is 3,057.53, matching the plan. Deferred revenue (2200) opened at a 41.10 credit, plus the 3,000.00 credit for the October invoice, less the 3,057.53 recognition debit, leaves a 16.43 net debit. That equals the booked reclass to 1160 of 16.43, so the reclass is correct. The November invoice for $3,000 is also consistent with the contract, so no follow-up is needed.",
+   "status": "clean",
+   "stream": "platform"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-221.pdf",
+    "data/raw/2026-10/product_account_mapping.csv:12",
+    "data/raw/2026-10/product_usage.csv:642",
+    "data/raw/2026-10/product_usage.csv:672",
+    "data/raw/2026-10/stripe_invoices.csv:36",
+    "data/raw/2026-10/stripe_invoice_lines.csv:36",
+    "data/raw/2026-10/stripe_invoice_lines.csv:35",
+    "data/raw/2026-10/netsuite_opening_balances.csv:43",
+    "data/raw/2026-10/netsuite_gl_detail.csv:86",
+    "data/raw/2026-10/netsuite_gl_detail.csv:87",
+    "data/raw/2026-10/netsuite_gl_detail.csv:88",
+    "data/raw/2026-10/netsuite_gl_detail.csv:89",
+    "data/raw/2026-10/netsuite_gl_detail.csv:92",
+    "data/raw/2026-10/netsuite_gl_detail.csv:93"
+   ],
+   "customer_id": "654552",
+   "customer_name": "Kestrel Bridge, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "The verified mapping assigns only pa_b7b4fd74262254 to this customer. Its 31 active October records, with no duplicates, total 65,837 runs. Less the 20,000-run monthly allowance, overage is 45,837 runs x $0.06 = $2,750.22. Invoice RC-261101-654552-U (Nov 1) bills 45,837 runs for $2,750.22, which is correct. The October accrual JE-1c25937951ca8e books 2,750.22 to 4010, so October revenue is correct, and the Nov 1 invoice releases 1150 for exactly that amount. The September check also ties: 45,392 overage runs = 2,723.52, matching the opening 1150 balance and its Oct 1 release. There are no credit notes for this customer.",
+   "status": "clean",
+   "stream": "usage"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-232.pdf",
+    "data/raw/2026-10/contract_register.csv:13",
+    "data/raw/2026-10/stripe_invoices.csv:38",
+    "data/raw/2026-10/stripe_invoice_lines.csv:38",
+    "data/raw/2026-10/stripe_invoice_lines.csv:39",
+    "data/raw/2026-10/netsuite_gl_detail.csv:96",
+    "data/raw/2026-10/netsuite_gl_detail.csv:97",
+    "data/raw/2026-10/netsuite_gl_detail.csv:104",
+    "data/raw/2026-10/netsuite_gl_detail.csv:105",
+    "data/raw/2026-10/netsuite_gl_detail.csv:108",
+    "data/raw/2026-10/netsuite_gl_detail.csv:109",
+    "data/raw/2026-10/netsuite_opening_balances.csv:49",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:134",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:135"
+   ],
+   "customer_id": "232251",
+   "customer_name": "Larch Point Services, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "OF-2026-232 sets the platform fee at $3,000.00 per month, billed monthly in advance from 2026-09-01. Invoice RC-261001-232251-P bills $3,000.00 for the 2026-10-01 to 2026-11-01 period, so October billing is correct: 3,000.00 - 3,000.00 = 0.00. There are no amendments or credit notes. October recognition is 36,000 x 31/365 = 3,057.534, which rounds to 3,057.53 and matches the booked JE-1c2b00c55c5abf and plan row (September was 36,000 x 30/365 = 2,958.90). The 2200 balance ties out: opening credit 41.10 + October billing credit 3,000.00 - recognition debit 3,057.53 = 16.43 net debit. That equals the existing 1160 reclass of 16.43, so no adjustment is needed. The November invoice for $3,000.00 is consistent with the contract and is noted as context only.",
+   "status": "clean",
+   "stream": "platform"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-232.pdf",
+    "data/raw/2026-10/product_account_mapping.csv:13",
+    "data/raw/2026-10/product_usage.csv:703",
+    "data/raw/2026-10/product_usage.csv:733",
+    "data/raw/2026-10/stripe_invoices.csv:41",
+    "data/raw/2026-10/stripe_invoice_lines.csv:41",
+    "data/raw/2026-10/stripe_invoices.csv:40",
+    "data/raw/2026-10/stripe_invoice_lines.csv:40",
+    "data/raw/2026-10/netsuite_opening_balances.csv:47",
+    "data/raw/2026-10/netsuite_gl_detail.csv:100",
+    "data/raw/2026-10/netsuite_gl_detail.csv:101",
+    "data/raw/2026-10/netsuite_gl_detail.csv:102",
+    "data/raw/2026-10/netsuite_gl_detail.csv:103",
+    "data/raw/2026-10/netsuite_gl_detail.csv:106",
+    "data/raw/2026-10/netsuite_gl_detail.csv:107"
+   ],
+   "customer_id": "232251",
+   "customer_name": "Larch Point Services, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "The customer has one verified product account, pa_098af589827983. It has 31 active, unique October daily records (lines 703-733) totalling 37,816 runs. After the full-month allowance of 20,000, overage is 17,816 runs x $0.06 = $1,068.96. Invoice RC-261101-232251-U bills 17,816 x 6.00 cents = $1,068.96, so billing is correct: 1,068.96 - 1,068.96 = 0.00. The October accrual JE-6f49e43f57da6f books $1,068.96 to 4010, so revenue is correct. The November 1 invoice releases 1150 for exactly that amount. The September usage invoice (23,422 x 0.06 = $1,405.32) released the $1,405.32 opening 1150 balance on October 1. There are no credit notes and no unverified usage is attributed to this customer.",
+   "status": "clean",
+   "stream": "usage"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-243.pdf",
+    "data/raw/2026-10/contract_register.csv:14",
+    "data/raw/2026-10/stripe_invoices.csv:43",
+    "data/raw/2026-10/stripe_invoice_lines.csv:43",
+    "data/raw/2026-10/stripe_invoices.csv:44",
+    "data/raw/2026-10/stripe_invoice_lines.csv:44",
+    "data/raw/2026-10/netsuite_gl_detail.csv:110",
+    "data/raw/2026-10/netsuite_gl_detail.csv:111",
+    "data/raw/2026-10/netsuite_gl_detail.csv:118",
+    "data/raw/2026-10/netsuite_gl_detail.csv:119",
+    "data/raw/2026-10/netsuite_gl_detail.csv:122",
+    "data/raw/2026-10/netsuite_gl_detail.csv:123",
+    "data/raw/2026-10/netsuite_opening_balances.csv:53",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:147"
+   ],
+   "customer_id": "507826",
+   "customer_name": "Maple Lantern, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "OF-2026-243 sets a platform fee of $3,000.00 per month, billed monthly in advance, for service from 2026-09-01 to 2027-09-01 ($36,000 a year). Billing: invoice RC-261001-507826-P bills $3,000.00 for 2026-10-01 to 2026-11-01, matching the contract, so the billing effect is 0.00. Revenue: 36,000 x 31/365 = 3,057.53, and JE-c09d3aaed9d480 / plan row Oct 2026 book exactly 3,057.53, so the revenue effect is 0.00. Contract asset check: opening 2200 is a 41.10 credit; adding the 3,000.00 billing credit and the 3,057.53 recognition debit leaves a 16.43 net debit, which equals the 1160 reclass of 16.43 already posted. The November invoice for $3,000.00 is consistent with the contract; no follow-up is needed.",
+   "status": "clean",
+   "stream": "platform"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-243.pdf",
+    "data/raw/2026-10/product_account_mapping.csv:14",
+    "data/raw/2026-10/product_usage.csv:764",
+    "data/raw/2026-10/product_usage.csv:794",
+    "data/raw/2026-10/stripe_invoices.csv:46",
+    "data/raw/2026-10/stripe_invoice_lines.csv:46",
+    "data/raw/2026-10/stripe_invoices.csv:45",
+    "data/raw/2026-10/stripe_invoice_lines.csv:45",
+    "data/raw/2026-10/netsuite_opening_balances.csv:51",
+    "data/raw/2026-10/netsuite_gl_detail.csv:114",
+    "data/raw/2026-10/netsuite_gl_detail.csv:115",
+    "data/raw/2026-10/netsuite_gl_detail.csv:116",
+    "data/raw/2026-10/netsuite_gl_detail.csv:117",
+    "data/raw/2026-10/netsuite_gl_detail.csv:120",
+    "data/raw/2026-10/netsuite_gl_detail.csv:121"
+   ],
+   "customer_id": "507826",
+   "customer_name": "Maple Lantern, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "The only verified product account for this customer is pa_849bd672a67445. It has 31 unique active October records totalling 102,799 runs, with no duplicates or replacement records. October is a full month, so the allowance is the full 20,000 runs, leaving 82,799 overage runs. At $0.06 per run the charge is 82,799 x 0.06 = $4,967.94. Billing: invoice RC-261101-507826-U bills 82,799 runs for $4,967.94, so the billing effect is 0.00. Revenue: the October accrual JE-76e90ffbdbb6c7 books $4,967.94 to 4010, so the revenue effect is 0.00. The November 1 invoice releases the full 1150 accrual. The September accrual of 4,782.30 was released by the October 1 invoice, which billed 79,705 overage runs for $4,782.30. No credit notes or concessions apply to this customer.",
+   "status": "clean",
+   "stream": "usage"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-254.pdf",
+    "data/raw/2026-10/contract_register.csv:15",
+    "data/raw/2026-10/stripe_invoices.csv:48",
+    "data/raw/2026-10/stripe_invoice_lines.csv:48",
+    "data/raw/2026-10/netsuite_gl_detail.csv:124",
+    "data/raw/2026-10/netsuite_gl_detail.csv:125",
+    "data/raw/2026-10/netsuite_gl_detail.csv:132",
+    "data/raw/2026-10/netsuite_gl_detail.csv:133",
+    "data/raw/2026-10/netsuite_gl_detail.csv:136",
+    "data/raw/2026-10/netsuite_gl_detail.csv:137",
+    "data/raw/2026-10/netsuite_opening_balances.csv:57",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:159"
+   ],
+   "customer_id": "553102",
+   "customer_name": "Northbank Design, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "OF-2026-254 sets a $3,000/month platform fee billed monthly in advance, with a $36,000 annual commitment running Sep 1, 2026 to Sep 1, 2027 (end-exclusive). Invoice RC-261001-553102-P bills $3,000.00 for Oct 1 to Nov 1, which matches the contract, so the October billing effect is 0.00. October revenue on a days/365 basis is 36,000 x 31/365 = 3,057.53, and JE-44cb971e42d74b books exactly 3,057.53. The 2200 roll-forward also ties: opening credit 41.10, plus the 3,000.00 invoice credit, less the 3,057.53 recognition debit, leaves a net debit of 16.43, which equals the baseline 1160 reclass. The November invoice for $3,000 is correct; it is a later-service item, not an October effect.",
+   "status": "clean",
+   "stream": "platform"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-254.pdf",
+    "data/raw/2026-10/product_account_mapping.csv:15",
+    "data/raw/2026-10/product_usage.csv:825",
+    "data/raw/2026-10/product_usage.csv:851",
+    "data/raw/2026-10/product_usage.csv:855",
+    "data/raw/2026-10/stripe_invoices.csv:51",
+    "data/raw/2026-10/stripe_invoice_lines.csv:51",
+    "data/raw/2026-10/netsuite_gl_detail.csv:128",
+    "data/raw/2026-10/netsuite_gl_detail.csv:129",
+    "data/raw/2026-10/netsuite_gl_detail.csv:130",
+    "data/raw/2026-10/netsuite_gl_detail.csv:131",
+    "data/raw/2026-10/netsuite_gl_detail.csv:134",
+    "data/raw/2026-10/netsuite_gl_detail.csv:135",
+    "data/raw/2026-10/netsuite_opening_balances.csv:55"
+   ],
+   "customer_id": "553102",
+   "customer_name": "Northbank Design, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "The only verified product account for Northbank is pa_f262997a456a04. It has 31 unique active October records with no duplicates or replacements, totalling 46,740 runs; the 3,515-run day on Oct 27 is a single active record. October is a full month, so the full 20,000-run allowance applies. Overage is 46,740 - 20,000 = 26,740 runs, and 26,740 x $0.06 = $1,604.40. Invoice RC-261101-553102-U bills 26,740 runs for $1,604.40, so the billing effect is 0.00. The October accrual JE-a28e3e5c0a9f32 books $1,604.40 to 4010, so the revenue effect is 0.00. The November 1 invoice releases 1150 by exactly 1,604.40. The September accrual of 1,453.92 was released by the October 1 invoice for the same amount.",
+   "status": "clean",
+   "stream": "usage"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-265.pdf",
+    "data/raw/2026-10/contract_register.csv:16",
+    "data/raw/2026-10/stripe_invoices.csv:53",
+    "data/raw/2026-10/stripe_invoice_lines.csv:53",
+    "data/raw/2026-10/stripe_invoice_lines.csv:54",
+    "data/raw/2026-10/netsuite_opening_balances.csv:61",
+    "data/raw/2026-10/netsuite_gl_detail.csv:138",
+    "data/raw/2026-10/netsuite_gl_detail.csv:139",
+    "data/raw/2026-10/netsuite_gl_detail.csv:146",
+    "data/raw/2026-10/netsuite_gl_detail.csv:147",
+    "data/raw/2026-10/netsuite_gl_detail.csv:150",
+    "data/raw/2026-10/netsuite_gl_detail.csv:151",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:171"
+   ],
+   "customer_id": "300468",
+   "customer_name": "Oak Harbor Digital, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "OF-2026-265 sets the platform fee at $3,000.00 per month, billed monthly in advance; the annual consideration is $36,000.00. Stripe invoice RC-261001-300468-P bills $3,000.00 for service 2026-10-01 to 2026-11-01, so October billing is right. Expected October recognition is 36,000 x 31/365 = 3,057.534, rounded to 3,057.53. Booked recognition (JE-f4a18edfcb8ba7, plan row for Oct 2026) is 3,057.53, a difference of 0.00. The 2200 roll-forward also agrees with the GL: opening credit 41.10 + 3,000.00 billed - 3,057.53 recognized = 16.43 net debit, which matches the 16.43 reclass to 1160. The November invoice ($3,000.00, Nov service) is consistent with the contract; no follow-up is needed.",
+   "status": "clean",
+   "stream": "platform"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-265.pdf",
+    "data/raw/2026-10/product_account_mapping.csv:16",
+    "data/raw/2026-10/product_usage.csv:886",
+    "data/raw/2026-10/product_usage.csv:916",
+    "data/raw/2026-10/stripe_invoices.csv:56",
+    "data/raw/2026-10/stripe_invoice_lines.csv:56",
+    "data/raw/2026-10/netsuite_opening_balances.csv:59",
+    "data/raw/2026-10/netsuite_gl_detail.csv:142",
+    "data/raw/2026-10/netsuite_gl_detail.csv:143",
+    "data/raw/2026-10/netsuite_gl_detail.csv:144",
+    "data/raw/2026-10/netsuite_gl_detail.csv:145",
+    "data/raw/2026-10/netsuite_gl_detail.csv:148",
+    "data/raw/2026-10/netsuite_gl_detail.csv:149"
+   ],
+   "customer_id": "300468",
+   "customer_name": "Oak Harbor Digital, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "The only verified product account is pa_4785cd225b89ba. It has 31 unique active October records totaling 53,077 runs, with no duplicates or replacements. October is a full month, so the allowance is the full 20,000 runs. Overage is 53,077 - 20,000 = 33,077 runs, and 33,077 x $0.06 = $1,984.62. The 2026-11-01 usage invoice RC-261101-300468-U bills 33,077 units for $1,984.62. The October accrual JE-c3072db6c597c9 (Dr 1150 / Cr 4010) is also $1,984.62, and the November invoice releases 1150 by exactly $1,984.62. No credit notes exist for this customer, and no approvals are relevant. The September accrual of $1,949.04 was released by the October 1 invoice, so the opening 1150 balance clears.",
+   "status": "clean",
+   "stream": "usage"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-276.pdf",
+    "data/raw/2026-10/contract_register.csv:17",
+    "data/raw/2026-10/stripe_invoices.csv:58",
+    "data/raw/2026-10/stripe_invoice_lines.csv:58",
+    "data/raw/2026-10/stripe_invoice_lines.csv:59",
+    "data/raw/2026-10/netsuite_gl_detail.csv:152",
+    "data/raw/2026-10/netsuite_gl_detail.csv:153",
+    "data/raw/2026-10/netsuite_gl_detail.csv:160",
+    "data/raw/2026-10/netsuite_gl_detail.csv:161",
+    "data/raw/2026-10/netsuite_gl_detail.csv:164",
+    "data/raw/2026-10/netsuite_gl_detail.csv:165",
+    "data/raw/2026-10/netsuite_opening_balances.csv:65",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:182",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:183"
+   ],
+   "customer_id": "561562",
+   "customer_name": "Pine Summit Logistics, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "OF-2026-276 sets the platform fee at $3,000/month, billed monthly in advance, for an annual $36,000 term running 2026-09-01 to 2027-09-01. Billing: invoice RC-261001-561562-P bills $3,000.00 for the period 2026-10-01 to 2026-11-01, which matches the contract, so the billing effect is 0.00. Revenue: on an actual-days/365 basis, October is 36,000 x 31/365 = 3,057.534, rounded to 3,057.53. JE-f1a3670c4aad90 booked exactly 3,057.53 to account 4000, in line with the plan row. Balance check on 2200: the opening credit of 41.10 (3,000 billed less 2,958.90 recognized in September) plus 3,000 billed less 3,057.53 recognized gives a net debit of 16.43. The existing reclass of 16.43 to 1160 is therefore correct. The November invoice for $3,000 is consistent with the contract; it is later service and noted as context only.",
+   "status": "clean",
+   "stream": "platform"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-276.pdf",
+    "data/raw/2026-10/product_account_mapping.csv:17",
+    "data/raw/2026-10/product_usage.csv:947",
+    "data/raw/2026-10/product_usage.csv:954",
+    "data/raw/2026-10/product_usage.csv:965",
+    "data/raw/2026-10/product_usage.csv:977",
+    "data/raw/2026-10/stripe_invoices.csv:61",
+    "data/raw/2026-10/stripe_invoice_lines.csv:61",
+    "data/raw/2026-10/netsuite_gl_detail.csv:156",
+    "data/raw/2026-10/netsuite_gl_detail.csv:157",
+    "data/raw/2026-10/netsuite_gl_detail.csv:158",
+    "data/raw/2026-10/netsuite_gl_detail.csv:159",
+    "data/raw/2026-10/netsuite_gl_detail.csv:162",
+    "data/raw/2026-10/netsuite_gl_detail.csv:163",
+    "data/raw/2026-10/netsuite_opening_balances.csv:63"
+   ],
+   "customer_id": "561562",
+   "customer_name": "Pine Summit Logistics, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "The only verified product account for this customer is pa_5ad3eb8ecfe221. It has 31 unique active October records with no replacements or duplicates, totalling 69,804 runs. October is a full month, so the full 20,000-run allowance applies. Overage is 69,804 - 20,000 = 49,804 runs x $0.06 = $2,988.24. Billing: RC-261101-561562-U bills 49,804 runs for $2,988.24, so the billing effect is 0.00. Revenue: the October accrual JE-c8629b48075ca0 booked $2,988.24 to 4010, so the revenue effect is 0.00. The November 1 invoice releases 1150 by exactly $2,988.24. The September accrual of $2,496.54 was released by the October 1 invoice, leaving no residual. Large days (4,000 runs on Oct 8 and 8,001 on Oct 19) are unique active source records with no correction evidence, so they are included. There are no credit notes and no concession messages for this customer.",
+   "status": "clean",
+   "stream": "usage"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-287.pdf",
+    "data/raw/2026-10/contract_register.csv:18",
+    "data/raw/2026-10/stripe_invoices.csv:63",
+    "data/raw/2026-10/stripe_invoice_lines.csv:63",
+    "data/raw/2026-10/stripe_invoice_lines.csv:64",
+    "data/raw/2026-10/netsuite_gl_detail.csv:166",
+    "data/raw/2026-10/netsuite_gl_detail.csv:167",
+    "data/raw/2026-10/netsuite_gl_detail.csv:174",
+    "data/raw/2026-10/netsuite_gl_detail.csv:175",
+    "data/raw/2026-10/netsuite_gl_detail.csv:178",
+    "data/raw/2026-10/netsuite_gl_detail.csv:179",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:195",
+    "data/raw/2026-10/netsuite_opening_balances.csv:69"
+   ],
+   "customer_id": "730965",
+   "customer_name": "Quartz Meadow, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "OF-2026-287 sets the platform fee at $3,000.00 per month, billed monthly in advance on the 1st, for a term of 2026-09-01 to 2027-09-01 (end-exclusive). No amendment exists. Invoice RC-261001-730965-P bills $3,000.00 for service 2026-10-01 to 2026-11-01, so October billing difference = 3,000.00 - 3,000.00 = 0.00. Expected October revenue = 36,000 x 31/365 = 3,057.53. Booked revenue is 3,057.53 (JE-85856a099b40ae, which matches plan RP-bcbae13327b470), so the revenue difference is 0.00. The contract-asset reclass also ties: opening 2200 credit 41.10 + 3,000.00 billed - 3,057.53 recognized = 16.43 net debit, reclassed to 1160 as 16.43. The November invoice of $3,000.00 is consistent with the contract; no follow-up is needed.",
+   "status": "clean",
+   "stream": "platform"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-287.pdf",
+    "data/raw/2026-10/product_account_mapping.csv:18",
+    "data/raw/2026-10/product_usage.csv:1008",
+    "data/raw/2026-10/product_usage.csv:1038",
+    "data/raw/2026-10/stripe_invoices.csv:66",
+    "data/raw/2026-10/stripe_invoice_lines.csv:66",
+    "data/raw/2026-10/netsuite_gl_detail.csv:172",
+    "data/raw/2026-10/netsuite_gl_detail.csv:173",
+    "data/raw/2026-10/netsuite_gl_detail.csv:176",
+    "data/raw/2026-10/netsuite_gl_detail.csv:177",
+    "data/raw/2026-10/netsuite_gl_detail.csv:170",
+    "data/raw/2026-10/netsuite_gl_detail.csv:171",
+    "data/raw/2026-10/netsuite_opening_balances.csv:67"
+   ],
+   "customer_id": "730965",
+   "customer_name": "Quartz Meadow, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "Quartz Meadow has one verified product account, pa_137837beb1550a. It has 31 unique active October records, one per day, with no duplicates or replacements, totalling 84,819 runs. October is a full month, so the allowance is 20,000. Overage = 84,819 - 20,000 = 64,819 runs x $0.06 = $3,889.14. Invoice RC-261101-730965-U bills 64,819 runs for $3,889.14, so the billing difference is 0.00. The October accrual JE-f3cced862a4799 books $3,889.14 to 4010, so the revenue difference is 0.00. The November 1 invoice releases 1150 by exactly $3,889.14. The October 1 invoice of $4,568.22 for September service releases the opening 1150 balance of $4,568.22. No credits, concessions or unverified usage apply to this customer.",
+   "status": "clean",
+   "stream": "usage"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-298.pdf",
+    "data/raw/2026-10/contract_register.csv:19",
+    "data/raw/2026-10/stripe_invoices.csv:68",
+    "data/raw/2026-10/stripe_invoice_lines.csv:68",
+    "data/raw/2026-10/netsuite_gl_detail.csv:180",
+    "data/raw/2026-10/netsuite_gl_detail.csv:181",
+    "data/raw/2026-10/netsuite_gl_detail.csv:188",
+    "data/raw/2026-10/netsuite_gl_detail.csv:189",
+    "data/raw/2026-10/netsuite_gl_detail.csv:192",
+    "data/raw/2026-10/netsuite_gl_detail.csv:193",
+    "data/raw/2026-10/netsuite_opening_balances.csv:73",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:207"
+   ],
+   "customer_id": "856042",
+   "customer_name": "Riverbend Operations, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "OF-2026-298 sets $3,000.00 per month billed monthly in advance, for an annual commitment of $36,000. Service runs from 2026-09-01 to 2027-09-01 (end-exclusive), with no amendment. Invoice RC-261001-856042-P bills $3,000.00 for 2026-10-01 to 2026-11-01, which matches the contract. Expected October recognition is 36,000 x 31/365 = 3,057.53, and JE-25b885256fdbda books 3,057.53 to 4000, matching plan row Oct 2026. The 2200 roll-forward is: opening credit 41.10 + 3,000.00 billed - 3,057.53 recognized = 16.43 net debit. RECLASS-OCT moves exactly 16.43 to 1160, which is correct. The November invoice of $3,000 for November service is also consistent with the contract.",
+   "status": "clean",
+   "stream": "platform"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-298.pdf",
+    "data/raw/2026-10/product_account_mapping.csv:19",
+    "data/raw/2026-10/product_usage.csv:1069",
+    "data/raw/2026-10/product_usage.csv:1099",
+    "data/raw/2026-10/stripe_invoices.csv:71",
+    "data/raw/2026-10/stripe_invoice_lines.csv:71",
+    "data/raw/2026-10/netsuite_gl_detail.csv:186",
+    "data/raw/2026-10/netsuite_gl_detail.csv:187",
+    "data/raw/2026-10/netsuite_gl_detail.csv:190",
+    "data/raw/2026-10/netsuite_gl_detail.csv:191",
+    "data/raw/2026-10/netsuite_opening_balances.csv:71",
+    "data/raw/2026-10/netsuite_gl_detail.csv:185"
+   ],
+   "customer_id": "856042",
+   "customer_name": "Riverbend Operations, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "The only verified product account is pa_1851d249dd06cb. It has 31 unique active October records totalling 25,761 runs; the 10-12 and 10-13 records are distinct IDs and dates, not duplicates. October is a full month, so the allowance is 20,000. Overage is 25,761 - 20,000 = 5,761 runs x $0.06 = $345.66. Invoice RC-261101-856042-U bills 5,761 runs for $345.66 (Oct service), and October accrual JE-16f8538279c718 books $345.66 to 4010. The November 1 invoice releases 1150 by the same $345.66. The September accrual of $220.44 (3,674 runs) was released by the October 1 invoice. No credits or concessions apply to this customer.",
+   "status": "clean",
+   "stream": "usage"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-309.pdf",
+    "data/raw/2026-10/contract_register.csv:20",
+    "data/raw/2026-10/stripe_invoices.csv:73",
+    "data/raw/2026-10/stripe_invoice_lines.csv:73",
+    "data/raw/2026-10/stripe_invoice_lines.csv:74",
+    "data/raw/2026-10/netsuite_gl_detail.csv:194",
+    "data/raw/2026-10/netsuite_gl_detail.csv:195",
+    "data/raw/2026-10/netsuite_gl_detail.csv:202",
+    "data/raw/2026-10/netsuite_gl_detail.csv:203",
+    "data/raw/2026-10/netsuite_gl_detail.csv:206",
+    "data/raw/2026-10/netsuite_gl_detail.csv:207",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:219",
+    "data/raw/2026-10/netsuite_opening_balances.csv:77"
+   ],
+   "customer_id": "676664",
+   "customer_name": "Silver Current, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "OF-2026-309 sets platform billing at $3,000.00 per month in advance from 2026-09-01 to 2027-09-01 (exclusive). October service was billed once, on in_e5da72510da0bd for $3,000.00 (period 2026-10-01 to 2026-11-01), so billing is right. Expected October revenue is $36,000 x 31/365 = 3,057.534, which rounds to $3,057.53. That matches the October plan row and journal JE-4bfd81ecd6933e. The reclass also ties: opening 2200 credit of 41.10, plus the October invoice credit of 3,000.00, less recognition debit of 3,057.53, leaves a net debit of 16.43, which equals the 1160 reclass already booked. The November invoice ($3,000.00 for November service) is a later period and shows no issue.",
+   "status": "clean",
+   "stream": "platform"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-309.pdf",
+    "data/raw/2026-10/product_account_mapping.csv:20",
+    "data/raw/2026-10/product_account_mapping.csv:21",
+    "data/raw/2026-10/product_usage.csv:1160",
+    "data/raw/2026-10/product_usage.csv:1221",
+    "data/raw/2026-10/stripe_invoices.csv:76",
+    "data/raw/2026-10/stripe_invoice_lines.csv:76",
+    "data/raw/2026-10/netsuite_gl_detail.csv:198",
+    "data/raw/2026-10/netsuite_gl_detail.csv:199",
+    "data/raw/2026-10/netsuite_gl_detail.csv:200",
+    "data/raw/2026-10/netsuite_gl_detail.csv:201",
+    "data/raw/2026-10/netsuite_gl_detail.csv:204",
+    "data/raw/2026-10/netsuite_gl_detail.csv:205",
+    "data/raw/2026-10/netsuite_opening_balances.csv:75"
+   ],
+   "customer_id": "676664",
+   "customer_name": "Silver Current, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "Silver Current has two verified product accounts: East (pa_47b88c661eb874) and West (pa_f870ed4e1b3515). Each has 31 unique active October records with no replacements or duplicates. East totals 38,404 runs and West totals 33,862 runs, for 72,266 runs combined. October is a full month, so the full 20,000-run allowance applies, leaving 52,266 excess runs. At $0.06 per run, the charge is $3,135.96. The November 1 invoice in_0a77b995bf2dcc bills 52,266 runs for $3,135.96, so billing is right. The October accrual JE-874d6b8774b0b9 books $3,135.96 to 4010, and the November invoice releases exactly $3,135.96 from 1150, so October revenue is right. The October 1 usage invoice ($2,753.52) correctly released the September accrual in the same amount. No credit notes or concessions exist for this customer.",
+   "status": "clean",
+   "stream": "usage"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-320.pdf",
+    "data/raw/2026-10/contract_register.csv:21",
+    "data/raw/2026-10/stripe_invoices.csv:78",
+    "data/raw/2026-10/stripe_invoice_lines.csv:78",
+    "data/raw/2026-10/stripe_invoice_lines.csv:79",
+    "data/raw/2026-10/netsuite_gl_detail.csv:208",
+    "data/raw/2026-10/netsuite_gl_detail.csv:209",
+    "data/raw/2026-10/netsuite_gl_detail.csv:216",
+    "data/raw/2026-10/netsuite_gl_detail.csv:217",
+    "data/raw/2026-10/netsuite_gl_detail.csv:220",
+    "data/raw/2026-10/netsuite_gl_detail.csv:221",
+    "data/raw/2026-10/netsuite_opening_balances.csv:81",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:231"
+   ],
+   "customer_id": "941670",
+   "customer_name": "Timberline Insights, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "OF-2026-320 bills $3,000.00 monthly in advance for service from 2026-09-01 to 2027-09-01, with no amendment. The October invoice RC-261001-941670-P bills 300000 cents for the period 2026-10-01 to 2026-11-01, matching the contract, so the billing effect is 0.00. Expected October revenue uses actual days/365: 36,000.00 x 31/365 = 3,057.53. Booked recognition JE-c53bc0dc1faf4b is 3,057.53, so the revenue effect is 0.00. The deferred revenue roll is also consistent: opening 2200 credit 41.10 + October billing credit 3,000.00 - recognition debit 3,057.53 = net debit 16.43. That matches the existing 1160 reclass of 16.43, so no change is needed. The November invoice for $3,000 also agrees with the contract; it is later service and needs no follow-up.",
+   "status": "clean",
+   "stream": "platform"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-320.pdf",
+    "data/raw/2026-10/product_account_mapping.csv:22",
+    "data/raw/2026-10/product_account_mapping.csv:23",
+    "data/raw/2026-10/product_usage.csv:1282",
+    "data/raw/2026-10/product_usage.csv:1343",
+    "data/raw/2026-10/stripe_invoices.csv:81",
+    "data/raw/2026-10/stripe_invoice_lines.csv:81",
+    "data/raw/2026-10/netsuite_gl_detail.csv:212",
+    "data/raw/2026-10/netsuite_gl_detail.csv:213",
+    "data/raw/2026-10/netsuite_gl_detail.csv:214",
+    "data/raw/2026-10/netsuite_gl_detail.csv:215",
+    "data/raw/2026-10/netsuite_gl_detail.csv:218",
+    "data/raw/2026-10/netsuite_gl_detail.csv:219",
+    "data/raw/2026-10/netsuite_opening_balances.csv:79"
+   ],
+   "customer_id": "941670",
+   "customer_name": "Timberline Insights, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "Two product accounts are verified as Timberline's: pa_dd3b1cb039fe81 (East) and pa_5c642fdd78497b (West). October active records, one per account per day with no duplicates, are East 44,145 runs + West 35,140 runs = 79,285 runs. The full-month allowance is 20,000 runs, so overage is 59,285 runs x $0.06 = $3,557.10. The November 1 invoice RC-261101-941670-U bills 59,285 runs at 6.00 cents = 355710 cents ($3,557.10), so the billing effect is 0.00. The October accrual USG-OCT-941670 (Dr 1150 / Cr 4010) is $3,557.10, so the revenue effect is 0.00. The November invoice releases 1150 for the same $3,557.10. The September opening accrual of $3,560.82 was released by the October 1 invoice for that same amount. There are no credit notes and no concession messages for this customer.",
+   "status": "clean",
+   "stream": "usage"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-331.pdf",
+    "data/raw/2026-10/contract_register.csv:22",
+    "data/raw/2026-10/stripe_invoices.csv:83",
+    "data/raw/2026-10/stripe_invoice_lines.csv:83",
+    "data/raw/2026-10/stripe_invoice_lines.csv:84",
+    "data/raw/2026-10/netsuite_opening_balances.csv:85",
+    "data/raw/2026-10/netsuite_gl_detail.csv:222",
+    "data/raw/2026-10/netsuite_gl_detail.csv:223",
+    "data/raw/2026-10/netsuite_gl_detail.csv:230",
+    "data/raw/2026-10/netsuite_gl_detail.csv:231",
+    "data/raw/2026-10/netsuite_gl_detail.csv:234",
+    "data/raw/2026-10/netsuite_gl_detail.csv:235",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:243"
+   ],
+   "customer_id": "437384",
+   "customer_name": "Juniper Signal Works, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "OF-2026-331 sets platform at $4,000.00/month, billed monthly in advance from Sep 1, 2026 through Aug 31, 2027 ($48,000 annual). The October invoice RC-261001-437384-P bills $4,000.00 for 2026-10-01 to 2026-11-01, matching the contract; expected minus billed = 0.00. October recognition is 48,000 x 31/365 = 4,076.71, which equals the booked JE-9ae6c2281d0d90 and plan row RP-eae6b3a1bf725d. The 2200 balance is -54.79 opening - 4,000.00 billed + 4,076.71 recognized = 21.92 net debit, and that matches the booked 1160 reclass of 21.92. The November invoice for $4,000.00 is also consistent with the contract (follow-up only).",
+   "status": "clean",
+   "stream": "platform"
+  },
+  {
+   "billing_effect": "3135.22",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-331.pdf",
+    "data/raw/2026-10/product_account_mapping.csv:24",
+    "data/raw/2026-10/product_usage.csv:1374",
+    "data/raw/2026-10/product_usage.csv:1404",
+    "data/raw/2026-10/stripe_invoices.csv:85",
+    "data/raw/2026-10/stripe_invoices.csv:86",
+    "data/raw/2026-10/stripe_invoice_lines.csv:85",
+    "data/raw/2026-10/stripe_invoice_lines.csv:86",
+    "data/raw/2026-10/netsuite_opening_balances.csv:83",
+    "data/raw/2026-10/netsuite_gl_detail.csv:226",
+    "data/raw/2026-10/netsuite_gl_detail.csv:227",
+    "data/raw/2026-10/netsuite_gl_detail.csv:228",
+    "data/raw/2026-10/netsuite_gl_detail.csv:229",
+    "data/raw/2026-10/netsuite_gl_detail.csv:232",
+    "data/raw/2026-10/netsuite_gl_detail.csv:233"
+   ],
+   "customer_id": "437384",
+   "customer_name": "Juniper Signal Works, Inc.",
+   "october_revenue_effect": "3135.22",
+   "reason": "Juniper Signal Works has one verified product account, pa_6f486d59fde2c4. It has 31 unique active October records totaling 58,502 runs, with no duplicates. October is a full month, so the allowance is 30,000 runs. Overage is 28,502 runs x $0.16 (contract rate, with no amendment) = $4,560.32. Invoice RC-261101-437384-U billed 28,502 runs at 5.00 cents ($0.05) = $1,425.10, so billing is underbilled by 4,560.32 - 1,425.10 = 3,135.22. The October accrual JE-1ff986b849345d booked 4010 revenue of only $1,425.10, so October usage revenue is understated by 3,135.22. September is a cross-check only: 57,000 runs less the 30,000 allowance gives 27,000 x $0.16 = $4,320.00, which was billed correctly at 16 cents. No approval or concession explains the October rate. Recommended corrections, for Controller approval: issue a November-dated supplemental usage invoice for $3,135.22 (Dr 1100 / Cr 1150); post an October-period accrual Dr 1150 / Cr 4010 of 3,135.22; and fix the customer price ID to $0.16.",
+   "status": "error",
+   "stream": "usage"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-342.pdf",
+    "data/raw/2026-10/contract_register.csv:23",
+    "data/raw/2026-10/stripe_invoices.csv:88",
+    "data/raw/2026-10/stripe_invoice_lines.csv:88",
+    "data/raw/2026-10/stripe_invoices.csv:89",
+    "data/raw/2026-10/stripe_invoice_lines.csv:89",
+    "data/raw/2026-10/netsuite_gl_detail.csv:236",
+    "data/raw/2026-10/netsuite_gl_detail.csv:237",
+    "data/raw/2026-10/netsuite_gl_detail.csv:244",
+    "data/raw/2026-10/netsuite_gl_detail.csv:245",
+    "data/raw/2026-10/netsuite_gl_detail.csv:248",
+    "data/raw/2026-10/netsuite_gl_detail.csv:249",
+    "data/raw/2026-10/netsuite_opening_balances.csv:89",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:255"
+   ],
+   "customer_id": "240793",
+   "customer_name": "Westhaven Metrics, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "OF-2026-342 sets $4,000.00/month billed monthly in advance ($48,000 annual) from 2026-09-01. October service was billed once on RC-261001-240793-P at $4,000.00 for the period 2026-10-01 to 2026-11-01, so expected minus billed is 4,000.00 - 4,000.00 = 0.00. Recognition at 48,000 x 31/365 = 4,076.71, which matches the October plan row and JE-dce8aec438becd, so the revenue effect is 0.00. The 2200 account check also holds: opening credit 54.79 + invoice credit 4,000.00 - recognition debit 4,076.71 = net debit 21.92. That equals the posted RECLASS-OCT 1160 entry of 21.92, so no incremental entry is needed. The November-service invoice of $4,000 also agrees with the contract, so there is no follow-up.",
+   "status": "clean",
+   "stream": "platform"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-342.pdf",
+    "data/raw/2026-10/product_account_mapping.csv:25",
+    "data/raw/2026-10/product_usage.csv:1435",
+    "data/raw/2026-10/product_usage.csv:1448",
+    "data/raw/2026-10/product_usage.csv:1449",
+    "data/raw/2026-10/product_usage.csv:1466",
+    "data/raw/2026-10/stripe_invoices.csv:91",
+    "data/raw/2026-10/stripe_invoice_lines.csv:91",
+    "data/raw/2026-10/netsuite_gl_detail.csv:240",
+    "data/raw/2026-10/netsuite_gl_detail.csv:241",
+    "data/raw/2026-10/netsuite_gl_detail.csv:242",
+    "data/raw/2026-10/netsuite_gl_detail.csv:243",
+    "data/raw/2026-10/netsuite_gl_detail.csv:246",
+    "data/raw/2026-10/netsuite_gl_detail.csv:247",
+    "data/raw/2026-10/netsuite_opening_balances.csv:87"
+   ],
+   "customer_id": "240793",
+   "customer_name": "Westhaven Metrics, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "The only verified product account for this customer is pa_0f28aff4fcff87. Its October export has 32 rows, but record ur_7352010ec2e04c (2026-10-14, 1,730 runs) appears twice. That is an exact repeated source ID, so it is counted once, giving 31 unique records totalling 61,866 runs. October is a full month, so the allowance is the full 30,000 runs and the overage is 31,866 runs. At $0.05 per run, 31,866 x 0.05 = $1,593.30. The November 1 usage invoice RC-261101-240793-U bills 31,866 runs for $1,593.30, so billing is correct and was not inflated by the duplicate (counting it twice would have given 33,596 runs). The October accrual JE-71740ab4896baf books $1,593.30 to 4010, so the revenue effect is 0.00. The November 1 invoice releases the full 1150 accrual, and the September opening 1150 balance of $1,197.85 was released by the October 1 invoice. There are no credit notes or concessions for this customer.",
+   "status": "clean",
+   "stream": "usage"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-157.pdf",
+    "data/raw/2026-10/contracts/AM-OF-2026-157.pdf",
+    "data/raw/2026-10/stripe_invoices.csv:93",
+    "data/raw/2026-10/stripe_invoice_lines.csv:93",
+    "data/raw/2026-10/netsuite_opening_balances.csv:93",
+    "data/raw/2026-10/netsuite_gl_detail.csv:250",
+    "data/raw/2026-10/netsuite_gl_detail.csv:251",
+    "data/raw/2026-10/netsuite_gl_detail.csv:258",
+    "data/raw/2026-10/netsuite_gl_detail.csv:259",
+    "data/raw/2026-10/netsuite_gl_detail.csv:262",
+    "data/raw/2026-10/netsuite_gl_detail.csv:263",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:267"
+   ],
+   "customer_id": "639373",
+   "customer_name": "Cedar Harbor Labs, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "The amendment changes only the workflow-run allowance; the platform fee stays USD 4,000.00 per month, billed monthly in advance. Billing is correct: invoice RC-261001-639373-P bills 4,000.00 for 2026-10-01 to 2026-11-01. Revenue is correct: expected October recognition is 48,000.00 x 31/365 = 4,076.71, matching plan RP-4309667d93d19d and journal JE-00a241563df67e. The contract-asset reclass is consistent: opening 2200 credit 54.79, less the 4,000.00 October invoice credit, plus the 4,076.71 recognition debit, leaves a net debit of 21.92, which JE-9f95f72af13d32 reclasses to 1160. No correction is needed.",
+   "status": "clean",
+   "stream": "platform"
+  },
+  {
+   "billing_effect": "-3096.80",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-157.pdf",
+    "data/raw/2026-10/contracts/AM-OF-2026-157.pdf",
+    "data/raw/2026-10/contract_register.csv:25",
+    "data/raw/2026-10/billing_followups.pdf:MSG-2026-104",
+    "data/raw/2026-10/product_account_mapping.csv:26",
+    "data/raw/2026-10/product_usage.csv:1497",
+    "data/raw/2026-10/product_usage.csv:1511",
+    "data/raw/2026-10/product_usage.csv:1512",
+    "data/raw/2026-10/product_usage.csv:1527",
+    "data/raw/2026-10/stripe_invoices.csv:96",
+    "data/raw/2026-10/stripe_invoice_lines.csv:96",
+    "data/raw/2026-10/netsuite_gl_detail.csv:256",
+    "data/raw/2026-10/netsuite_gl_detail.csv:257",
+    "data/raw/2026-10/netsuite_gl_detail.csv:260",
+    "data/raw/2026-10/netsuite_gl_detail.csv:261"
+   ],
+   "customer_id": "639373",
+   "customer_name": "Cedar Harbor Labs, Inc.",
+   "october_revenue_effect": "-3096.80",
+   "reason": "Validated October usage on the only verified product account, pa_e6a75ee04d9e8b, is 58,470 runs (30,025 for Oct 1-15 plus 28,445 for Oct 16-31). The executed amendment AM-OF-2026-157, effective October 16 with a blank billing_loaded_at in the register, sets a weighted October allowance of (30,000 x 15 + 45,000 x 16)/31 = 37,741.94, rounded to 37,742 runs. Expected overage is 58,470 - 37,742 = 20,728 runs x 0.40 = 8,291.20. The November 1 invoice RC-261101-639373-U billed 28,470 runs (58,470 - 30,000, the pre-amendment allowance) for 11,388.00, and the October accrual JE-3670271955a1fc booked the same 11,388.00 to 4010. Both are overstated: billing effect is 8,291.20 - 11,388.00 = -3,096.80, and October revenue is overstated by the same 3,096.80. No approval explains the difference. Recommended actions, for Controller approval: issue a November-dated credit note of 3,096.80 linked to the October-service usage line. Post an October-period entry Dr 4010 / Cr 1150 for 3,096.80; the November credit then reduces AR and reverses the over-release of 1150 rather than reducing revenue again. Load the amendment into billing; the 45,000 allowance applies to later months (follow-up).",
+   "status": "error",
+   "stream": "usage"
+  },
+  {
+   "billing_effect": "526.03",
+   "citations": [
+    "data/raw/2026-10/contracts/AM-OF-2026-164.pdf",
+    "data/raw/2026-10/contracts/OF-2026-164.pdf",
+    "data/raw/2026-10/contract_register.csv:26",
+    "data/raw/2026-10/contract_register.csv:27",
+    "data/raw/2026-10/billing_followups.pdf:MSG-2026-104",
+    "data/raw/2026-10/stripe_invoices.csv:98",
+    "data/raw/2026-10/stripe_invoices.csv:99",
+    "data/raw/2026-10/stripe_invoice_lines.csv:98",
+    "data/raw/2026-10/stripe_invoice_lines.csv:99",
+    "data/raw/2026-10/netsuite_gl_detail.csv:264",
+    "data/raw/2026-10/netsuite_gl_detail.csv:265",
+    "data/raw/2026-10/netsuite_gl_detail.csv:272",
+    "data/raw/2026-10/netsuite_gl_detail.csv:273",
+    "data/raw/2026-10/netsuite_gl_detail.csv:276",
+    "data/raw/2026-10/netsuite_gl_detail.csv:277",
+    "data/raw/2026-10/netsuite_opening_balances.csv:97",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:279"
+   ],
+   "customer_id": "335780",
+   "customer_name": "Meridian Process Systems, Inc.",
+   "october_revenue_effect": "526.03",
+   "reason": "Executed amendment AM-OF-2026-164 (signed Oct 14, effective Oct 16; billing_loaded_at blank) raises the annual rate from 48,000 to 60,000 and sets an October upgrade catch-up of 12,000 x 16/365 = 526.027, rounded to 526.03. October billing is only the base 4,000.00 invoice RC-261001-335780-P. No catch-up invoice was issued by cutoff, so expected 4,526.03 - billed 4,000.00 = +526.03 underbilled. October revenue booked is base only: 48,000 x 31/365 = 4,076.71 (plan RP-26645e070609bc, JE-f9723c1c618a30). Expected is 4,076.71 + 526.03 increment (10,520.55 x 16/320 = 526.03) = 4,602.74, so revenue is understated by +526.03. The original base schedule should be kept. Recommend: 1) a November-dated supplemental invoice for 526.03; 2) an October entry Dr 2200 / Cr 4000 526.03; 3) an incremental reclass Dr 1160 / Cr 2200 526.03, giving a 1160 total of 547.95 on top of the existing 21.92; 4) adding the upgrade increment element to the revenue plan. Follow-up (November service, excluded from October effects): RC-261101-335780-P billed 4,000.00 instead of 5,000.00, an underbilling of 1,000.00.",
+   "status": "error",
+   "stream": "platform"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/product_account_mapping.csv:27",
+    "data/raw/2026-10/contracts/OF-2026-164.pdf",
+    "data/raw/2026-10/contracts/AM-OF-2026-164.pdf",
+    "data/raw/2026-10/product_usage.csv:1558",
+    "data/raw/2026-10/product_usage.csv:1588",
+    "data/raw/2026-10/stripe_invoices.csv:101",
+    "data/raw/2026-10/stripe_invoice_lines.csv:101",
+    "data/raw/2026-10/stripe_invoice_lines.csv:100",
+    "data/raw/2026-10/netsuite_gl_detail.csv:268",
+    "data/raw/2026-10/netsuite_gl_detail.csv:269",
+    "data/raw/2026-10/netsuite_gl_detail.csv:270",
+    "data/raw/2026-10/netsuite_gl_detail.csv:271",
+    "data/raw/2026-10/netsuite_gl_detail.csv:274",
+    "data/raw/2026-10/netsuite_gl_detail.csv:275",
+    "data/raw/2026-10/netsuite_opening_balances.csv:95"
+   ],
+   "customer_id": "335780",
+   "customer_name": "Meridian Process Systems, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "The verified mapping assigns pa_a1dad6e6a9a5cd to Meridian. October has 31 unique active daily records totaling 49,396 runs. The amendment leaves usage terms unchanged, so the full-month allowance is 30,000 and overage is 19,396 x 0.12 = 2,327.52. Invoice RC-261101-335780-U bills 19,396 units for 2,327.52, so the billing effect is 0.00. The October accrual JE-eddeb99230affe of Dr 1150 / Cr 4010 2,327.52 matches, and the Nov 1 invoice releases exactly 2,327.52 from 1150, so the revenue effect is 0.00. The September accrual of 2,985.48 was released by the Oct 1 invoice of 24,879 x 0.12 = 2,985.48.",
+   "status": "clean",
+   "stream": "usage"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-375.pdf",
+    "data/raw/2026-10/contract_register.csv:28",
+    "data/raw/2026-10/stripe_invoices.csv:103",
+    "data/raw/2026-10/stripe_invoice_lines.csv:103",
+    "data/raw/2026-10/stripe_invoices.csv:104",
+    "data/raw/2026-10/stripe_invoice_lines.csv:104",
+    "data/raw/2026-10/netsuite_opening_balances.csv:101",
+    "data/raw/2026-10/netsuite_gl_detail.csv:278",
+    "data/raw/2026-10/netsuite_gl_detail.csv:279",
+    "data/raw/2026-10/netsuite_gl_detail.csv:284",
+    "data/raw/2026-10/netsuite_gl_detail.csv:285",
+    "data/raw/2026-10/netsuite_gl_detail.csv:286",
+    "data/raw/2026-10/netsuite_gl_detail.csv:287",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:291"
+   ],
+   "customer_id": "188999",
+   "customer_name": "Yarrow Ridge, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "OF-2026-375 sets a $4,000.00 monthly platform fee, billed in advance on the 1st, for a $48,000.00 annual commitment running 2026-09-01 to 2027-09-01. Billing: RC-261001-188999-P bills 400000 cents = $4,000.00 for service 2026-10-01 to 2026-11-01, which matches the contract, so the billing effect is 0.00. Revenue: 48,000 x 31/365 = 4,076.712, rounded to $4,076.71, and JE-655d2e4d59c2c6 books exactly $4,076.71 to account 4000, so the revenue effect is 0.00. Reclass check: the opening 2200 credit of 54.79, plus the 4,000.00 billing credit, less the 4,076.71 recognition debit, leaves a net debit of 21.92. The 1160/2200 reclass of $21.92 is therefore correct. The November invoice for $4,000.00 is also correct; it is later service and is context only.",
+   "status": "clean",
+   "stream": "platform"
+  },
+  {
+   "billing_effect": "3074.28",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-375.pdf",
+    "data/raw/2026-10/product_account_mapping.csv:28",
+    "data/raw/2026-10/product_usage.csv:1619",
+    "data/raw/2026-10/product_usage.csv:1649",
+    "data/raw/2026-10/stripe_invoices.csv:105",
+    "data/raw/2026-10/stripe_invoice_lines.csv:105",
+    "data/raw/2026-10/netsuite_opening_balances.csv:99",
+    "data/raw/2026-10/netsuite_gl_detail.csv:282",
+    "data/raw/2026-10/netsuite_gl_detail.csv:283",
+    "data/raw/2026-10/START_HERE.pdf"
+   ],
+   "customer_id": "188999",
+   "customer_name": "Yarrow Ridge, Inc.",
+   "october_revenue_effect": "3074.28",
+   "reason": "The only verified product account for this customer is pa_64b090ce98d42f. It has 31 unique active October records totalling 55,619 runs. October is a full month, so the allowance is 30,000 runs. Overage is 25,619 runs x $0.12 = $3,074.28. Billing: no November 1 October-service usage invoice (RC-261101-188999-U) exists in the issued invoices through cutoff, and no messages or approvals explain its absence. October is therefore underbilled by $3,074.28. Revenue: the GL has no October 1150/4010 usage accrual for customer 188999, so October usage revenue is understated by $3,074.28. Consistency check: September's 56,347 runs less 30,000 gives 26,347 runs x $0.12 = $3,161.64. That matches the October 1 invoice, which correctly released the opening 1150 balance. Recommended Controller-approved actions: post Dr 1150 / Cr 4010 $3,074.28 in the October period, and issue a November-dated usage invoice for $3,074.28 (Dr 1100 / Cr 1150).",
+   "status": "error",
+   "stream": "usage"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-386.pdf",
+    "data/raw/2026-10/contract_register.csv:29",
+    "data/raw/2026-10/stripe_invoices.csv:107",
+    "data/raw/2026-10/stripe_invoice_lines.csv:107",
+    "data/raw/2026-10/netsuite_gl_detail.csv:288",
+    "data/raw/2026-10/netsuite_gl_detail.csv:289",
+    "data/raw/2026-10/netsuite_gl_detail.csv:298",
+    "data/raw/2026-10/netsuite_gl_detail.csv:299",
+    "data/raw/2026-10/netsuite_gl_detail.csv:302",
+    "data/raw/2026-10/netsuite_gl_detail.csv:303",
+    "data/raw/2026-10/netsuite_opening_balances.csv:105",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:303"
+   ],
+   "customer_id": "148565",
+   "customer_name": "Zephyr Grove, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "OF-2026-386 sets a $4,000.00 monthly-in-advance fee ($48,000 a year) from 2026-09-01. Invoice RC-261001-148565-P bills $4,000.00 for 2026-10-01 to 2026-11-01, so billing is right. October revenue on actual days/365 is 48,000 x 31/365 = 4,076.71, which matches the REV-OCT posting and the plan row. The full plan schedule sums to 48,000.00. The 2200 balance is consistent: opening credit 54.79 + 4,000.00 billed - 4,076.71 recognized = 21.92 net debit, which is the amount reclassified to 1160. The November invoice ($4,000) is also correct; no follow-up needed.",
+   "status": "clean",
+   "stream": "platform"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-386.pdf",
+    "data/raw/2026-10/product_account_mapping.csv:29",
+    "data/raw/2026-10/product_usage.csv:1680",
+    "data/raw/2026-10/product_usage.csv:1710",
+    "data/raw/2026-10/stripe_invoices.csv:110",
+    "data/raw/2026-10/stripe_invoice_lines.csv:110",
+    "data/raw/2026-10/stripe_credit_notes.csv:3",
+    "data/raw/2026-10/stripe_credit_note_lines.csv:3",
+    "data/raw/2026-10/netsuite_gl_detail.csv:294",
+    "data/raw/2026-10/netsuite_gl_detail.csv:295",
+    "data/raw/2026-10/netsuite_gl_detail.csv:296",
+    "data/raw/2026-10/netsuite_gl_detail.csv:297",
+    "data/raw/2026-10/netsuite_gl_detail.csv:300",
+    "data/raw/2026-10/netsuite_gl_detail.csv:301",
+    "data/raw/2026-10/billing_followups.pdf:MSG-2026-108",
+    "data/raw/2026-10/billing_followups.pdf:MSG-2026-109"
+   ],
+   "customer_id": "148565",
+   "customer_name": "Zephyr Grove, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "The only verified product account is pa_2c0b53d1d7dd6b, which has 31 unique active October records totalling 49,052 runs. The full-month allowance is 30,000, so overage is 19,052 x $0.05 = $952.60. Invoice RC-261101-148565-U bills exactly 19,052 runs for $952.60. The Controller approved a $100 reduction of October usage consideration (MSG-2026-109), so expected consideration is 952.60 - 100.00 = 852.60. Issued credit note CN-148565-20261104 credits $100 against the October-service line, so net billing is 852.60 and the billing effect is 0.00. The October accrual of 852.60 to 4010 is already net of the concession, so the revenue effect is 0.00. The November credit memo debits 1150 / credits 1100, reversing the excess release rather than reducing revenue twice, which leaves 1150 at zero. The credit looks off at first sight but is explained by the approval; no correction is needed.",
+   "status": "valid_explanation",
+   "stream": "usage"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-397.pdf:1",
+    "data/raw/2026-10/contract_register.csv:30",
+    "data/raw/2026-10/stripe_invoices.csv:112",
+    "data/raw/2026-10/stripe_invoice_lines.csv:112",
+    "data/raw/2026-10/stripe_invoices.csv:113",
+    "data/raw/2026-10/stripe_invoice_lines.csv:113",
+    "data/raw/2026-10/netsuite_opening_balances.csv:109",
+    "data/raw/2026-10/netsuite_gl_detail.csv:304",
+    "data/raw/2026-10/netsuite_gl_detail.csv:305",
+    "data/raw/2026-10/netsuite_gl_detail.csv:310",
+    "data/raw/2026-10/netsuite_gl_detail.csv:311",
+    "data/raw/2026-10/netsuite_gl_detail.csv:312",
+    "data/raw/2026-10/netsuite_gl_detail.csv:313",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:314",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:315",
+    "data/raw/2026-10/START_HERE.pdf:2"
+   ],
+   "customer_id": "314334",
+   "customer_name": "Aspen Vale, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "OF-2026-397 sets a $4,000.00 monthly platform fee billed in advance on the 1st, with an annual commitment of $48,000.00 from 2026-09-01 to 2027-09-01 (end-exclusive). The October invoice RC-261001-314334-P bills $4,000.00 for 2026-10-01 to 2026-11-01, so October billing is correct (4,000.00 - 4,000.00 = 0.00). Policy recognizes revenue on actual days / 365: 48,000 x 31/365 = 4,076.712, which rounds to 4,076.71. JE-43145d1bb88e33 books exactly 4,076.71, matching the plan row. September also ties: 48,000 x 30/365 = 3,945.21, leaving an opening 2200 credit of 54.79 (4,000 - 3,945.21). The October 2200 roll is 54.79 credit + 4,000.00 credit - 4,076.71 debit, a 21.92 net debit. The existing 21.92 reclass to 1160 is therefore correct, and no adjustment is needed. The November invoice for $4,000.00 is also consistent with the contract (follow-up context only).",
+   "status": "clean",
+   "stream": "platform"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-397.pdf:1",
+    "data/raw/2026-10/product_account_mapping.csv:30",
+    "data/raw/2026-10/product_account_mapping.csv:33",
+    "data/raw/2026-10/product_usage.csv:1711",
+    "data/raw/2026-10/product_usage.csv:1740",
+    "data/raw/2026-10/product_usage.csv:1741",
+    "data/raw/2026-10/product_usage.csv:1771",
+    "data/raw/2026-10/stripe_invoices.csv:114",
+    "data/raw/2026-10/stripe_invoice_lines.csv:114",
+    "data/raw/2026-10/netsuite_opening_balances.csv:107",
+    "data/raw/2026-10/netsuite_gl_detail.csv:308",
+    "data/raw/2026-10/netsuite_gl_detail.csv:309",
+    "data/raw/2026-10/START_HERE.pdf:2",
+    "data/raw/2026-10/billing_followups.pdf:2"
+   ],
+   "customer_id": "314334",
+   "customer_name": "Aspen Vale, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "Aspen Vale has one verified product account, pa_9983d91e91e873. Its 31 unique active October records (no duplicates or replacements) total 25,000 runs. October is a full month, so the allowance is 30,000 runs. Overage is max(0, 25,000 - 30,000) x $0.05 = $0.00. The absence of a 2026-11-01 usage invoice and of any October usage accrual in 1150/4010 is therefore valid under policy, since no overage exists. September ties as well: 38,314 runs - 30,000 = 8,314 x $0.05 = $415.70. That amount was billed on RC-261001-314334-U, and the October 1 invoice correctly released the opening 1150 balance of 415.70 rather than booking revenue again. The unverified workspace pa_676b6b455e0887 is not attributed to this customer.",
+   "status": "valid_explanation",
+   "stream": "usage"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-408.pdf",
+    "data/raw/2026-10/contract_register.csv:31",
+    "data/raw/2026-10/stripe_invoices.csv:116",
+    "data/raw/2026-10/stripe_invoice_lines.csv:116",
+    "data/raw/2026-10/stripe_invoice_lines.csv:117",
+    "data/raw/2026-10/netsuite_gl_detail.csv:314",
+    "data/raw/2026-10/netsuite_gl_detail.csv:315",
+    "data/raw/2026-10/netsuite_gl_detail.csv:322",
+    "data/raw/2026-10/netsuite_gl_detail.csv:323",
+    "data/raw/2026-10/netsuite_gl_detail.csv:326",
+    "data/raw/2026-10/netsuite_gl_detail.csv:327",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:327",
+    "data/raw/2026-10/netsuite_opening_balances.csv:113"
+   ],
+   "customer_id": "810234",
+   "customer_name": "Beacon Marsh, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "OF-2026-408 sets the platform fee at $4,000.00/month, billed monthly in advance, for a $48,000 annual commitment. October service (Oct 1 to Nov 1) was billed once on RC-261001-810234-P for $4,000.00, so billing is right. Expected October revenue is 48,000 x 31/365 = 4,076.71, which matches the October plan row and the booked JE-976859f34e25b2. The 2200 roll-forward is: opening credit 54.79 (4,000 - 3,945.21 for September) + 4,000.00 billed - 4,076.71 recognized = a net debit of 21.92. That matches the existing 1160 reclass of 21.92, so no adjustment is needed. The November invoice for $4,000 is consistent with the contract.",
+   "status": "clean",
+   "stream": "platform"
+  },
+  {
+   "billing_effect": "100.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-408.pdf",
+    "data/raw/2026-10/product_account_mapping.csv:31",
+    "data/raw/2026-10/product_usage.csv:1802",
+    "data/raw/2026-10/product_usage.csv:1832",
+    "data/raw/2026-10/stripe_invoices.csv:119",
+    "data/raw/2026-10/stripe_invoice_lines.csv:119",
+    "data/raw/2026-10/netsuite_gl_detail.csv:320",
+    "data/raw/2026-10/netsuite_gl_detail.csv:321",
+    "data/raw/2026-10/netsuite_gl_detail.csv:324",
+    "data/raw/2026-10/netsuite_gl_detail.csv:325"
+   ],
+   "customer_id": "810234",
+   "customer_name": "Beacon Marsh, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "Verified account pa_fbb2b8766f4fac has 31 active October records with no duplicates, totalling 44,443 runs. After the 30,000-run allowance, overage is 14,443 x $0.10 = $1,444.30. The October accrual USG-OCT-810234 books $1,444.30, so October revenue is correct. However, invoice RC-261101-810234-U billed only 13,443 runs ($1,344.30). The Oct 31 record ur_19d11e47355517 (1,000 runs) was ingested Nov 3, after the Nov 1 invoice, but is still valid October usage within the cutoff. Billing is therefore short by 1,444.30 - 1,344.30 = $100.00. A $100.00 residual remains in 1150. Recommended next step: a supplemental November-dated invoice for $100.00 (1,000 runs), posted Dr 1100 / Cr 1150, with no additional revenue. There are no credit notes.",
+   "status": "error",
+   "stream": "usage"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-419.pdf",
+    "data/raw/2026-10/contract_register.csv:32",
+    "data/raw/2026-10/stripe_invoices.csv:120",
+    "data/raw/2026-10/stripe_invoices.csv:121",
+    "data/raw/2026-10/stripe_invoice_lines.csv:120",
+    "data/raw/2026-10/stripe_invoice_lines.csv:121",
+    "data/raw/2026-10/netsuite_opening_balances.csv:117",
+    "data/raw/2026-10/netsuite_gl_detail.csv:328",
+    "data/raw/2026-10/netsuite_gl_detail.csv:329",
+    "data/raw/2026-10/netsuite_gl_detail.csv:334",
+    "data/raw/2026-10/netsuite_gl_detail.csv:335",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:338",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:339"
+   ],
+   "customer_id": "260381",
+   "customer_name": "Crescent Shore, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "OF-2026-419 sets a $5,000/month platform fee ($60,000 a year), billed in advance on the 15th from 2026-09-15. October service is covered by two $5,000.00 invoices: in_296ba99d7a7aeb (Sep 15-Oct 15, paid) and in_886e313f0d300e (Oct 15-Nov 15, open). There are no amendments or credit notes, so October billing is correct. October revenue at actual days/365 is 60,000 x 31/365 = 5,095.89, which matches JE-a45844828c57c2 and the plan row. September was 60,000 x 16/365 = 2,630.14, so the opening deferred balance of 2,369.86 credit ties out. The October-end 2200 balance is 2,369.86 + 5,000.00 - 5,095.89 = 2,273.97 credit, so no contract-asset reclass is needed.",
+   "status": "clean",
+   "stream": "platform"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-419.pdf",
+    "data/raw/2026-10/product_account_mapping.csv:32",
+    "data/raw/2026-10/product_usage.csv:1833",
+    "data/raw/2026-10/product_usage.csv:1848",
+    "data/raw/2026-10/product_usage.csv:1849",
+    "data/raw/2026-10/product_usage.csv:1879",
+    "data/raw/2026-10/stripe_invoices.csv:122",
+    "data/raw/2026-10/stripe_invoices.csv:123",
+    "data/raw/2026-10/stripe_invoice_lines.csv:122",
+    "data/raw/2026-10/stripe_invoice_lines.csv:123",
+    "data/raw/2026-10/netsuite_opening_balances.csv:115",
+    "data/raw/2026-10/netsuite_gl_detail.csv:330",
+    "data/raw/2026-10/netsuite_gl_detail.csv:331",
+    "data/raw/2026-10/netsuite_gl_detail.csv:332",
+    "data/raw/2026-10/netsuite_gl_detail.csv:333",
+    "data/raw/2026-10/netsuite_gl_detail.csv:336",
+    "data/raw/2026-10/netsuite_gl_detail.csv:337"
+   ],
+   "customer_id": "260381",
+   "customer_name": "Crescent Shore, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "Usage comes from the single verified product account pa_c38895c66dfafd (effective 2026-09-15). The unverified workspace pa_676b6b455e0887 is not attributed to this customer. October has 31 unique active records totalling 43,543 runs. With the full 40,000 allowance, overage is 3,543 x $0.04 = $141.72, which matches invoice in_b360f48e6e65d3 (3,543 units, 14,172 cents) and the October accrual JE-12bc4d5be52d19 (Dr 1150 / Cr 4010 141.72). The November 1 invoice releases 1150 for exactly 141.72. As a check, September is also correct: the prorated allowance is 40,000 x 16/30 = 21,333.33, rounded to 21,333; usage was 24,533, so overage is 3,200 x $0.04 = $128.00. That matches the October 1 invoice, which released the $128.00 opening 1150 balance. No credits or concessions apply.",
+   "status": "clean",
+   "stream": "usage"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-430.pdf",
+    "data/raw/2026-10/contract_register.csv:33",
+    "data/raw/2026-10/stripe_invoices.csv:124",
+    "data/raw/2026-10/stripe_invoices.csv:125",
+    "data/raw/2026-10/stripe_invoice_lines.csv:124",
+    "data/raw/2026-10/stripe_invoice_lines.csv:125",
+    "data/raw/2026-10/netsuite_opening_balances.csv:121",
+    "data/raw/2026-10/netsuite_gl_detail.csv:338",
+    "data/raw/2026-10/netsuite_gl_detail.csv:339",
+    "data/raw/2026-10/netsuite_gl_detail.csv:340",
+    "data/raw/2026-10/netsuite_gl_detail.csv:341",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:351",
+    "data/raw/2026-10/netsuite_revenue_plan_detail.csv:352"
+   ],
+   "customer_id": "839653",
+   "customer_name": "Willow Passage, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "OF-2026-430 sets a $5,000.00 monthly platform fee, billed in advance on the 15th, for $60,000.00 a year. Service runs 2026-09-15 to 2027-09-15 (end-exclusive). October service is fully covered by two invoices: in_7bf225c052e3a8 (Sep 15 to Oct 15, $5,000.00) and in_1c1cda4bb37a95 (Oct 15 to Nov 15, $5,000.00, issued and posted Dr 1100 / Cr 2200). There is no missing or duplicate charge, so billing_effect is 0.00. Revenue is recognized by days/365: 60,000 x 31/365 = 5,095.89. That matches plan row RP-24bd1c2eeaab3e Oct 2026 and journal JE-e53113f4887824 (Dr 2200 / Cr 4000 5,095.89). The opening 2200 credit of 2,369.86 ties to September: 5,000.00 billed less 2,630.14 earned (60,000 x 16/365). The October 2200 roll-forward is 2,369.86 + 5,000.00 - 5,095.89 = 2,273.97 credit. That is a liability, so no 1160 contract-asset reclass is needed. No adjustment.",
+   "status": "clean",
+   "stream": "platform"
+  },
+  {
+   "billing_effect": "0.00",
+   "citations": [
+    "data/raw/2026-10/contracts/OF-2026-430.pdf",
+    "data/raw/2026-10/product_account_mapping.csv:32",
+    "data/raw/2026-10/product_account_mapping.csv:33",
+    "data/raw/2026-10/billing_followups.pdf MSG-2026-130",
+    "data/raw/2026-10/billing_followups.pdf MSG-2026-131",
+    "data/raw/2026-10/billing_followups.pdf MSG-2026-132",
+    "data/raw/2026-10/netsuite_opening_balances.csv:119"
+   ],
+   "customer_id": "839653",
+   "customer_name": "Willow Passage, Inc.",
+   "october_revenue_effect": "0.00",
+   "reason": "No product account in product_account_mapping.csv has a verified mapping to Willow Passage (00174337ea6baeeAAA). Verified October usage is therefore 0 runs. Against the 40,000-run allowance, overage is max(0, 0 - 40,000) x $0.04 = $0.00. On that basis, the absence of a Nov 1 usage invoice and of any 1150/4010 October accrual is valid: billing and revenue effects are both 0.00. Workspace pa_676b6b455e0887 has October metering and the same 2026-09-15 effective date, but no verified owner. Product Operations (MSG-2026-131) forbids assigning it by elimination, and Crescent Shore also starts 2026-09-15. So that usage is not Willow's and is isolated only as a conditional exposure. Willow's USD 250 October usage concession request (MSG-2026-132) is unapproved and establishes no ownership, so no credit or revenue reduction applies. Follow-ups: ask Product Operations to verify ownership of pa_676b6b455e0887 and to confirm whether Willow has any production workspace. If ownership is later verified, compute overage against the 40,000-run allowance and bill it as a supplemental invoice for Controller approval.",
+   "status": "valid_explanation",
+   "stream": "usage"
+  }
+ ]
+}

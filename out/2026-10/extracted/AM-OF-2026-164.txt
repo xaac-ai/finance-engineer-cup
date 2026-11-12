@@ -1,0 +1,40 @@
+RelayCloud EXECUTED AMENDMENT
+AM-OF-2026-164
+Subscription amendment
+Contract CT-335780   |   Executed October 14, 2026
+01 CUSTOMER AND BILLING DETAILS
+CUSTOMER / BILL TO SUPPLIER
+Meridian Process Systems, Inc. RelayCloud, Inc.
+511 Elm Street, Suite 400
+Portland, OR 97205, United States
+1800 Market Street, Suite 400
+Denver, CO 80202, United States
+Billing contact: Accounts Payable
+ap@meridianprocesssystems.example
+Billing enquiries
+billing@relaycloud.example
+02 AMENDMENT SCOPE
+ORIGINAL ORDER EFFECTIVE DATE TERM END (INCLUSIVE)
+OF-2026-164 October 16, 2026 August 31, 2027
+03 CHANGES TO COMMERCIAL TERMS
+TERM PREVIOUS AMENDED
+Annual platform rate $48,000.00 / year $60,000.00 / year
+Monthly platform invoice $4,000.00 / month $5,000.00 from Nov 1
+October upgrade catch-up Not previously billed $526.03 additional
+04 APPLICATION AND OTHER TERMS
+Annual platform subscription rate increases from USD 48,000 to USD 60,000 effective October 16, 2026 at 00:00
+America/Denver, for the remainder of the original term. No service before that date is repriced. Usage terms are
+unchanged.
+October upgrade catch-up: USD 526.03, using USD 12,000 x 16 / 365, rounded half up. This additional October-
+service charge may be invoiced separately. Monthly platform invoices are USD 5,000.00 from November 2026 through
+August 2027.
+Incremental consideration for 320 remaining service days is USD 10,520.55. The final platform invoice includes a
+USD 5.48 credit to reconcile the monthly billing convention to that amount. Original base consideration remains
+unchanged.
+All terms not expressly amended, including the original service term and payment terms, remain in effect.
+05 ACCEPTANCE
+FOR MERIDIAN PROCESS SYSTEMS, INC. FOR RELAYCLOUD, INC.
+/s/ Noah Dawson /s/ Morgan Lee
+Noah Dawson  |  Controller Morgan Lee  |  Sales Director
+Date signed: October 14, 2026 Date signed: October 14, 2026
+Fictional commercial document for Finance Engineer Cup. No legal effect. AM-OF-2026-164  |  1 / 1

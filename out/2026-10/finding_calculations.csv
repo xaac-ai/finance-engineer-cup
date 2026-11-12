@@ -1,0 +1,44 @@
+finding_id,step,description,formula,value
+F-148565-CREDIT-APPROVED-CONCESSION-2026-10,1,Contract usage charge,"max(0, 49,052 − 30,000) × $0.05",952.60
+F-148565-CREDIT-APPROVED-CONCESSION-2026-10,2,Approved concession,MSG-2026-109,-100.00
+F-148565-CREDIT-APPROVED-CONCESSION-2026-10,3,Expected October consideration,charge − concession,852.60
+F-148565-CREDIT-APPROVED-CONCESSION-2026-10,4,October accrual booked,GL 4010,0.00
+F-148565-CREDIT-APPROVED-CONCESSION-2026-10,5,Net billed,invoice 952.60 − credit 100.00,852.60
+F-188999-USAGE-MISSING-INVOICE-2026-10,1,Validated October runs,sum of unique active records on verified accounts,"55,619"
+F-188999-USAGE-MISSING-INVOICE-2026-10,2,October allowance,"30,000 (full month)","30,000"
+F-188999-USAGE-MISSING-INVOICE-2026-10,3,Expected charge,"max(0, 55,619 − 30,000) × $0.12","3,074.28"
+F-188999-USAGE-MISSING-INVOICE-2026-10,4,Billed,no usage invoice for 2026-10-01 to 2026-11-01,0.00
+F-314334-USAGE-NO-OVERAGE-2026-10,1,Validated October runs,sum of unique active records on verified accounts,"25,000"
+F-314334-USAGE-NO-OVERAGE-2026-10,2,October allowance,"30,000 (full month)","30,000"
+F-314334-USAGE-NO-OVERAGE-2026-10,3,Expected charge,"max(0, 25,000 − 30,000) × $0.05",0.00
+F-335780-PLATFORM-INVOICE-AMOUNT-2026-11,1,Contract amount,per AM-OF-2026-164,"5,000.00"
+F-335780-PLATFORM-INVOICE-AMOUNT-2026-11,2,Invoiced,RC-261101-335780-P,"4,000.00"
+F-335780-PLATFORM-INVOICE-AMOUNT-2026-11,3,Difference,contract − invoiced,"1,000.00"
+F-335780-PLATFORM-MISSING-CATCH-UP-2026-10,1,Expected charge,per AM-OF-2026-164,526.03
+F-335780-PLATFORM-MISSING-CATCH-UP-2026-10,2,Issued by cutoff,Stripe platform lines for this service period,0.00
+F-335780-PLATFORM-MISSING-CATCH-UP-2026-10,3,Billing Effect,expected − issued,526.03
+F-335780-PLATFORM-UPGRADE-INCREMENT-2026-10,1,Base schedule (OF-2026-164),"48,000.00 × 31 / 365","4,076.71"
+F-335780-PLATFORM-UPGRADE-INCREMENT-2026-10,2,"Upgrade increment (AM-OF-2026-164, from 2026-10-16)","12,000.00 × 16 / 365",526.03
+F-335780-PLATFORM-UPGRADE-INCREMENT-2026-10,3,Expected October platform revenue,base + increments,"4,602.74"
+F-335780-PLATFORM-UPGRADE-INCREMENT-2026-10,4,Booked to 4000,"GL, October","4,076.71"
+F-335780-PLATFORM-UPGRADE-INCREMENT-2026-10,5,October Revenue Effect,expected − booked,526.03
+F-335780-PLATFORM-UPGRADE-INCREMENT-2026-10,6,"2200 before reclass, as booked",opening 2200 + 1160 and October 2200 + 1160 movements (credit +),-21.92
+F-335780-PLATFORM-UPGRADE-INCREMENT-2026-10,7,"2200 before reclass, corrected",-21.92 − 526.03,-547.95
+F-335780-PLATFORM-UPGRADE-INCREMENT-2026-10,8,Required 1160,"net debit in 2200, else 0",547.95
+F-335780-PLATFORM-UPGRADE-INCREMENT-2026-10,9,1160 already booked,opening + October reclass,21.92
+F-335780-PLATFORM-UPGRADE-INCREMENT-2026-10,10,Incremental reclass,required − booked,526.03
+F-437384-USAGE-RATE-2026-10,1,Billed overage runs,invoice quantity (agrees with validated usage),"28,502"
+F-437384-USAGE-RATE-2026-10,2,At contract rate,"28,502 × $0.16","4,560.32"
+F-437384-USAGE-RATE-2026-10,3,Billed,"28,502 × $0.05","1,425.10"
+F-437384-USAGE-RATE-2026-10,4,Billing Effect,contract − billed,"3,135.22"
+F-639373-USAGE-ALLOWANCE-2026-10,1,Validated October runs,sum of unique active records on verified accounts,"58,470"
+F-639373-USAGE-ALLOWANCE-2026-10,2,October allowance,"30,000 × 15/31 + 45,000 × 16/31 = 37,741.94, rounded once half up to 37,742","37,742"
+F-639373-USAGE-ALLOWANCE-2026-10,3,Expected charge,"max(0, 58,470 − 37,742) × $0.40","8,291.20"
+F-639373-USAGE-ALLOWANCE-2026-10,4,Billed,"28,470 × $0.40 (implies allowance 30,000)","11,388.00"
+F-639373-USAGE-ALLOWANCE-2026-10,5,Billing Effect,expected − billed,"-3,096.80"
+F-810234-USAGE-LATE-RECORD-2026-10,1,Runs known when invoiced,records ingested by 2026-11-01 09:00,"43,443"
+F-810234-USAGE-LATE-RECORD-2026-10,2,Late runs (before cutoff),records ingested after the invoice,"1,000"
+F-810234-USAGE-LATE-RECORD-2026-10,3,Expected charge,"max(0, 44,443 − 30,000) × $0.10","1,444.30"
+F-810234-USAGE-LATE-RECORD-2026-10,4,Charge on runs known at invoicing,"max(0, 43,443 − 30,000) × $0.10","1,344.30"
+F-810234-USAGE-LATE-RECORD-2026-10,5,Billing Effect,expected − charge on known runs,100.00
+F-UNATTRIBUTED-USAGE-UNVERIFIED-pa_676b6b455e0887-2026-10,1,Unattributed October runs,unique active records with no verified mapping,"49,762"

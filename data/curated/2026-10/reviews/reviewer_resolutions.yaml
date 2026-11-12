@@ -1,0 +1,12 @@
+# Resolutions of Independent Review Disagreements, decided by a person (Daniel Bank).
+# resolution: rules_correct (the Finding stands) or reviewer_correct (fix the rules, then re-run).
+resolutions:
+  - customer_id: "839653"  # Willow Passage
+    stream: usage
+    resolution: rules_correct
+    reason: >-
+      Keep Needs Info. Nothing is owed today, but Willow's USD 250 request (MSG-2026-132) has no
+      Controller approval. The Controller still owes a decision, and the review names open evidence
+      rather than clearing it. The reviewer agrees on the facts: no verified usage, no credit.
+    decided_by: Daniel Bank
+    decided_on: "2026-11-12"

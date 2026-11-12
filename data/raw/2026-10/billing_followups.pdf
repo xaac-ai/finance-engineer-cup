@@ -1,0 +1,290 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R 6 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 3272 >>
+stream
+BT
+52 744 Td
+/F1 17 Tf
+(RelayCloud Sales and Billing Messages) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(Selected internal messages. All people and records are fictional. Snapshot:) Tj
+0 -15 Td
+/F1 10 Tf
+(2026-11-11T18:00:00-07:00) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(MSG-2026-104 | October 14, 2026 14:00 America/Denver | Morgan Lee, Sales Director ->) Tj
+0 -15 Td
+/F1 10 Tf
+(Billing and Revenue Accounting | Signed amendments) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(The Cedar Harbor Labs allowance amendment and Meridian Process Systems platform upgrade are) Tj
+0 -15 Td
+/F1 10 Tf
+(signed and effective October 16. Please use the executed documents for their terms and) Tj
+0 -15 Td
+/F1 10 Tf
+(update the relevant systems.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(MSG-2026-108 | October 28, 2026 11:00 America/Denver | Morgan Lee, Sales Director -> Priya) Tj
+0 -15 Td
+/F1 10 Tf
+(Shah, Controller | Zephyr Grove request) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(Zephyr Grove requested a USD 100 concession for October workflow usage after a service) Tj
+0 -15 Td
+/F1 10 Tf
+(interruption. The underlying contract pricing is unchanged.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(MSG-2026-109 | October 29, 2026 15:00 America/Denver | Priya Shah, Controller -> Billing) Tj
+0 -15 Td
+/F1 10 Tf
+(and Revenue Accounting | Approved Zephyr concession) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(Approved: reduce Zephyr Grove October usage consideration by USD 100. Issue a credit) Tj
+0 -15 Td
+/F1 10 Tf
+(against its October-service usage invoice once finalized; ensure the October accrual is) Tj
+0 -15 Td
+/F1 10 Tf
+(already net of this approved concession. Do not apply a second concession.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(MSG-2026-116 | November 3, 2026 10:15 America/Denver | Alex Chen, Billing -> Priya Shah |) Tj
+0 -15 Td
+/F1 10 Tf
+(Alder credit cancellation) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(The USD 50 Alder Fieldworks credit note cn_82a7ddd6e88e69 was created in error and voided) Tj
+0 -15 Td
+/F1 10 Tf
+(before the NetSuite import. There is no other Alder credit note associated with this) Tj
+0 -15 Td
+/F1 10 Tf
+(mistake. No credit or reversal has been posted to NetSuite; please use its void status when) Tj
+0 -15 Td
+/F1 10 Tf
+(reviewing the current extract.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(MSG-2026-119 | November 4, 2026 09:30 America/Denver | Priya Shah, Controller -> Revenue) Tj
+0 -15 Td
+/F1 10 Tf
+(Accounting | October review) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(Sales has flagged an amendment that may not have reached billing. Review October service) Tj
+0 -15 Td
+/F1 10 Tf
+(across the supplied customers, explain supported billing corrections and October accounting) Tj
+0 -15 Td
+/F1 10 Tf
+(effects, and propose a repeatable review. Use later invoices as evidence; later-service) Tj
+0 -15 Td
+/F1 10 Tf
+(issues are follow-ups rather than a required November reconciliation.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(MSG-2026-125 | November 5, 2026 13:00 America/Denver | Alex Chen, Revenue Accountant ->) Tj
+0 -15 Td
+/F1 10 Tf
+(Priya Shah | Extract status) Tj
+ET
+BT /F1 8 Tf 52 28 Td (RelayCloud | Fictional challenge material | Page 1 of 2) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 3104 >>
+stream
+BT
+52 744 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(The extract contains the usage accruals currently posted for October, base platform) Tj
+0 -15 Td
+/F1 10 Tf
+(recognition, and routine contract-asset reclassification. The accrual work was prepared) Tj
+0 -15 Td
+/F1 10 Tf
+(November 5. These are the existing records for your review; completeness and the) Tj
+0 -15 Td
+/F1 10 Tf
+(application of contract terms have not yet been checked. October remains open for supported) Tj
+0 -15 Td
+/F1 10 Tf
+(adjustments. September balances are finalized. Historical September journals are outside) Tj
+0 -15 Td
+/F1 10 Tf
+(this extract, supported by opening balances and plan references.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(MSG-2026-130 | September 15, 2026 16:00 America/Denver | Morgan Lee -> Priya Shah | Willow) Tj
+0 -15 Td
+/F1 10 Tf
+(Passage onboarding) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(Willow Passage subscription service begins September 15. No metered production runs are) Tj
+0 -15 Td
+/F1 10 Tf
+(expected during September onboarding. The platform subscription is chargeable during) Tj
+0 -15 Td
+/F1 10 Tf
+(onboarding; there is no free subscription period.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(MSG-2026-131 | November 6, 2026 10:00 America/Denver | Product Operations -> Revenue) Tj
+0 -15 Td
+/F1 10 Tf
+(Accounting | Unverified workspace) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(Workspace pa_676b6b455e0887 has October metering but no verified billing owner. It could be) Tj
+0 -15 Td
+/F1 10 Tf
+(an internal workspace or belong to an existing customer. Do not identify it by elimination) Tj
+0 -15 Td
+/F1 10 Tf
+(from the customer list. Product Operations must verify ownership before Billing assigns) Tj
+0 -15 Td
+/F1 10 Tf
+(usage. Account names and one-to-one assumptions are not evidence.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(MSG-2026-132 | November 6, 2026 11:00 America/Denver | Morgan Lee -> Priya Shah | Willow) Tj
+0 -15 Td
+/F1 10 Tf
+(Passage concession request) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(Willow Passage has requested USD 250 off October usage. This is a request only; I have no) Tj
+0 -15 Td
+/F1 10 Tf
+(Controller approval and have not authorized Billing to issue a credit. The request does not) Tj
+0 -15 Td
+/F1 10 Tf
+(establish ownership of any unverified workspace.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(MSG-2026-133 | November 7, 2026 09:00 America/Denver | Priya Shah -> Revenue Accounting |) Tj
+0 -15 Td
+/F1 10 Tf
+(Review authority) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(Recommend supported corrections for Controller approval. Billing documents proposed during) Tj
+0 -15 Td
+/F1 10 Tf
+(this review use November issue dates, while supported October service adjustments retain) Tj
+0 -15 Td
+/F1 10 Tf
+(the October posting period. Do not create live invoices or entries. Recommend updating an) Tj
+0 -15 Td
+/F1 10 Tf
+(affected revenue plan; a future schedule or new system record is not required.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+ET
+BT /F1 8 Tf 52 28 Td (RelayCloud | Fictional challenge material | Page 2 of 2) Tj ET
+endstream
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000191 00000 n 
+0000000317 00000 n 
+0000003641 00000 n 
+0000003767 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+6923
+%%EOF
