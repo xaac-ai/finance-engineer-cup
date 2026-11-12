@@ -10,3 +10,13 @@ concessions:
     amount: "100.00"
     message_id: MSG-2026-109
     quote: "Approved: reduce Zephyr Grove October usage consideration by USD 100."
+
+# Concession requests WITHOUT approval: reported as Needs Info, never netted. The quote must appear
+# verbatim in the cited Billing Message.
+requests:
+  - customer_id: "839653"  # Willow Passage
+    stream: usage
+    service_period: "2026-10"
+    amount: "250.00"
+    message_id: MSG-2026-132
+    quote: "Willow Passage has requested USD 250 off October usage. This is a request only; I have no Controller approval and have not authorized Billing to issue a credit."

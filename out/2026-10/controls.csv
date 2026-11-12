@@ -2,7 +2,7 @@ group,name,title,status,count,view,detail
 contracts,order_forms_parsed,Order Forms parsed from the template and agree with contract_register.csv,pass,0,,30 Order Forms
 contracts,amendment_quotes,Every curated Amendment quote appears verbatim in the document text,pass,0,,7 quotes across 2 Amendments
 inputs,billing_messages_parsed,Billing Messages parsed from billing_followups.pdf,pass,0,,10 messages
-inputs,approval_quotes,Every curated approval quote appears verbatim in a Controller Billing Message,pass,0,,1 approved concessions
+inputs,approval_quotes,Every curated approval (Controller) and concession request quote appears verbatim in its Billing Message,pass,0,,2 approvals and requests
 inputs,01_row_counts,Extract completeness: physical row counts match START_HERE expected counts,pass,0,ctl_inputs_row_counts,
 inputs,02_money_precision,NetSuite amounts have at most two decimals (no silent rounding on load),pass,0,ctl_inputs_money_precision,
 platform,01_baseline_reclass,Recorded 1160 equals each customer's net debit in 2200 before reclass (baseline reclass is right),pass,0,ctl_platform_baseline_reclass,
