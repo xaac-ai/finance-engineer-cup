@@ -1,0 +1,179 @@
+customer_id,account_number,account_name,recorded_balance,with_proposed_balance,proposed_change
+142182,1100,Accounts receivable,5741.36,5741.36,0.00
+142182,1150,Unbilled usage receivable,5857.28,5857.28,0.00
+142182,1160,Platform contract asset,0.00,0.00,0.00
+142182,2200,Deferred platform revenue,-19989.04,-19989.04,0.00
+142182,4000,Platform revenue,-2038.36,-2038.36,0.00
+142182,4010,Usage revenue,-5857.28,-5857.28,0.00
+148565,1100,Accounts receivable,4891.10,4891.10,0.00
+148565,1150,Unbilled usage receivable,852.60,852.60,0.00
+148565,1160,Platform contract asset,21.92,21.92,0.00
+148565,2200,Deferred platform revenue,0.00,0.00,0.00
+148565,4000,Platform revenue,-4076.71,-4076.71,0.00
+148565,4010,Usage revenue,-852.60,-852.60,0.00
+186097,1100,Accounts receivable,1437.36,1437.36,0.00
+186097,1150,Unbilled usage receivable,1575.76,1575.76,0.00
+186097,1160,Platform contract asset,0.00,0.00,0.00
+186097,2200,Deferred platform revenue,-19989.04,-19989.04,0.00
+186097,4000,Platform revenue,-2038.36,-2038.36,0.00
+186097,4010,Usage revenue,-1575.76,-1575.76,0.00
+188999,1100,Accounts receivable,7161.64,7161.64,0.00
+188999,1150,Unbilled usage receivable,0.00,3074.28,3074.28
+188999,1160,Platform contract asset,21.92,21.92,0.00
+188999,2200,Deferred platform revenue,0.00,0.00,0.00
+188999,4000,Platform revenue,-4076.71,-4076.71,0.00
+188999,4010,Usage revenue,0.00,-3074.28,-3074.28
+232251,1100,Accounts receivable,4405.32,4405.32,0.00
+232251,1150,Unbilled usage receivable,1068.96,1068.96,0.00
+232251,1160,Platform contract asset,16.43,16.43,0.00
+232251,2200,Deferred platform revenue,0.00,0.00,0.00
+232251,4000,Platform revenue,-3057.53,-3057.53,0.00
+232251,4010,Usage revenue,-1068.96,-1068.96,0.00
+240793,1100,Accounts receivable,5197.85,5197.85,0.00
+240793,1150,Unbilled usage receivable,1593.30,1593.30,0.00
+240793,1160,Platform contract asset,21.92,21.92,0.00
+240793,2200,Deferred platform revenue,0.00,0.00,0.00
+240793,4000,Platform revenue,-4076.71,-4076.71,0.00
+240793,4010,Usage revenue,-1593.30,-1593.30,0.00
+260381,1100,Accounts receivable,5128.00,5128.00,0.00
+260381,1150,Unbilled usage receivable,141.72,141.72,0.00
+260381,1160,Platform contract asset,0.00,0.00,0.00
+260381,2200,Deferred platform revenue,-2273.97,-2273.97,0.00
+260381,4000,Platform revenue,-5095.89,-5095.89,0.00
+260381,4010,Usage revenue,-141.72,-141.72,0.00
+286595,1100,Accounts receivable,6720.48,6720.48,0.00
+286595,1150,Unbilled usage receivable,5908.48,5908.48,0.00
+286595,1160,Platform contract asset,0.00,0.00,0.00
+286595,2200,Deferred platform revenue,-19989.04,-19989.04,0.00
+286595,4000,Platform revenue,-2038.36,-2038.36,0.00
+286595,4010,Usage revenue,-5908.48,-5908.48,0.00
+300468,1100,Accounts receivable,4949.04,4949.04,0.00
+300468,1150,Unbilled usage receivable,1984.62,1984.62,0.00
+300468,1160,Platform contract asset,16.43,16.43,0.00
+300468,2200,Deferred platform revenue,0.00,0.00,0.00
+300468,4000,Platform revenue,-3057.53,-3057.53,0.00
+300468,4010,Usage revenue,-1984.62,-1984.62,0.00
+314334,1100,Accounts receivable,4415.70,4415.70,0.00
+314334,1150,Unbilled usage receivable,0.00,0.00,0.00
+314334,1160,Platform contract asset,21.92,21.92,0.00
+314334,2200,Deferred platform revenue,0.00,0.00,0.00
+314334,4000,Platform revenue,-4076.71,-4076.71,0.00
+335780,1100,Accounts receivable,6985.48,6985.48,0.00
+335780,1150,Unbilled usage receivable,2327.52,2327.52,0.00
+335780,1160,Platform contract asset,21.92,547.95,526.03
+335780,2200,Deferred platform revenue,0.00,0.00,0.00
+335780,4000,Platform revenue,-4076.71,-4602.74,-526.03
+335780,4010,Usage revenue,-2327.52,-2327.52,0.00
+436791,1100,Accounts receivable,2462.32,2462.32,0.00
+436791,1150,Unbilled usage receivable,2624.64,2624.64,0.00
+436791,1160,Platform contract asset,0.00,0.00,0.00
+436791,2200,Deferred platform revenue,-19989.04,-19989.04,0.00
+436791,4000,Platform revenue,-2038.36,-2038.36,0.00
+436791,4010,Usage revenue,-2624.64,-2624.64,0.00
+437384,1100,Accounts receivable,8320.00,8320.00,0.00
+437384,1150,Unbilled usage receivable,1425.10,4560.32,3135.22
+437384,1160,Platform contract asset,21.92,21.92,0.00
+437384,2200,Deferred platform revenue,0.00,0.00,0.00
+437384,4000,Platform revenue,-4076.71,-4076.71,0.00
+437384,4010,Usage revenue,-1425.10,-4560.32,-3135.22
+477694,1100,Accounts receivable,1335.84,1335.84,0.00
+477694,1150,Unbilled usage receivable,1227.52,1227.52,0.00
+477694,1160,Platform contract asset,0.00,0.00,0.00
+477694,2200,Deferred platform revenue,-19989.04,-19989.04,0.00
+477694,4000,Platform revenue,-2038.36,-2038.36,0.00
+477694,4010,Usage revenue,-1227.52,-1227.52,0.00
+507826,1100,Accounts receivable,7782.30,7782.30,0.00
+507826,1150,Unbilled usage receivable,4967.94,4967.94,0.00
+507826,1160,Platform contract asset,16.43,16.43,0.00
+507826,2200,Deferred platform revenue,0.00,0.00,0.00
+507826,4000,Platform revenue,-3057.53,-3057.53,0.00
+507826,4010,Usage revenue,-4967.94,-4967.94,0.00
+553102,1100,Accounts receivable,4453.92,4453.92,0.00
+553102,1150,Unbilled usage receivable,1604.40,1604.40,0.00
+553102,1160,Platform contract asset,16.43,16.43,0.00
+553102,2200,Deferred platform revenue,0.00,0.00,0.00
+553102,4000,Platform revenue,-3057.53,-3057.53,0.00
+553102,4010,Usage revenue,-1604.40,-1604.40,0.00
+561562,1100,Accounts receivable,5496.54,5496.54,0.00
+561562,1150,Unbilled usage receivable,2988.24,2988.24,0.00
+561562,1160,Platform contract asset,16.43,16.43,0.00
+561562,2200,Deferred platform revenue,0.00,0.00,0.00
+561562,4000,Platform revenue,-3057.53,-3057.53,0.00
+561562,4010,Usage revenue,-2988.24,-2988.24,0.00
+620310,1100,Accounts receivable,3031.92,3031.92,0.00
+620310,1150,Unbilled usage receivable,2916.32,2916.32,0.00
+620310,1160,Platform contract asset,0.00,0.00,0.00
+620310,2200,Deferred platform revenue,-19989.04,-19989.04,0.00
+620310,4000,Platform revenue,-2038.36,-2038.36,0.00
+620310,4010,Usage revenue,-2916.32,-2916.32,0.00
+639373,1100,Accounts receivable,16243.20,16243.20,0.00
+639373,1150,Unbilled usage receivable,11388.00,8291.20,-3096.80
+639373,1160,Platform contract asset,21.92,21.92,0.00
+639373,2200,Deferred platform revenue,0.00,0.00,0.00
+639373,4000,Platform revenue,-4076.71,-4076.71,0.00
+639373,4010,Usage revenue,-11388.00,-8291.20,3096.80
+654552,1100,Accounts receivable,5723.52,5723.52,0.00
+654552,1150,Unbilled usage receivable,2750.22,2750.22,0.00
+654552,1160,Platform contract asset,16.43,16.43,0.00
+654552,2200,Deferred platform revenue,0.00,0.00,0.00
+654552,4000,Platform revenue,-3057.53,-3057.53,0.00
+654552,4010,Usage revenue,-2750.22,-2750.22,0.00
+676664,1100,Accounts receivable,5753.52,5753.52,0.00
+676664,1150,Unbilled usage receivable,3135.96,3135.96,0.00
+676664,1160,Platform contract asset,16.43,16.43,0.00
+676664,2200,Deferred platform revenue,0.00,0.00,0.00
+676664,4000,Platform revenue,-3057.53,-3057.53,0.00
+676664,4010,Usage revenue,-3135.96,-3135.96,0.00
+730965,1100,Accounts receivable,7568.22,7568.22,0.00
+730965,1150,Unbilled usage receivable,3889.14,3889.14,0.00
+730965,1160,Platform contract asset,16.43,16.43,0.00
+730965,2200,Deferred platform revenue,0.00,0.00,0.00
+730965,4000,Platform revenue,-3057.53,-3057.53,0.00
+730965,4010,Usage revenue,-3889.14,-3889.14,0.00
+731059,1100,Accounts receivable,1220.16,1220.16,0.00
+731059,1150,Unbilled usage receivable,1341.36,1341.36,0.00
+731059,1160,Platform contract asset,0.00,0.00,0.00
+731059,2200,Deferred platform revenue,-19989.04,-19989.04,0.00
+731059,4000,Platform revenue,-2038.36,-2038.36,0.00
+731059,4010,Usage revenue,-1341.36,-1341.36,0.00
+810234,1100,Accounts receivable,5565.40,5565.40,0.00
+810234,1150,Unbilled usage receivable,1444.30,1444.30,0.00
+810234,1160,Platform contract asset,21.92,21.92,0.00
+810234,2200,Deferred platform revenue,0.00,0.00,0.00
+810234,4000,Platform revenue,-4076.71,-4076.71,0.00
+810234,4010,Usage revenue,-1444.30,-1444.30,0.00
+839653,1100,Accounts receivable,5000.00,5000.00,0.00
+839653,1150,Unbilled usage receivable,0.00,0.00,0.00
+839653,1160,Platform contract asset,0.00,0.00,0.00
+839653,2200,Deferred platform revenue,-2273.97,-2273.97,0.00
+839653,4000,Platform revenue,-5095.89,-5095.89,0.00
+856042,1100,Accounts receivable,3220.44,3220.44,0.00
+856042,1150,Unbilled usage receivable,345.66,345.66,0.00
+856042,1160,Platform contract asset,16.43,16.43,0.00
+856042,2200,Deferred platform revenue,0.00,0.00,0.00
+856042,4000,Platform revenue,-3057.53,-3057.53,0.00
+856042,4010,Usage revenue,-345.66,-345.66,0.00
+866587,1100,Accounts receivable,1809.92,1809.92,0.00
+866587,1150,Unbilled usage receivable,2041.04,2041.04,0.00
+866587,1160,Platform contract asset,0.00,0.00,0.00
+866587,2200,Deferred platform revenue,-19989.04,-19989.04,0.00
+866587,4000,Platform revenue,-2038.36,-2038.36,0.00
+866587,4010,Usage revenue,-2041.04,-2041.04,0.00
+879513,1100,Accounts receivable,2091.60,2091.60,0.00
+879513,1150,Unbilled usage receivable,2162.64,2162.64,0.00
+879513,1160,Platform contract asset,0.00,0.00,0.00
+879513,2200,Deferred platform revenue,-19989.04,-19989.04,0.00
+879513,4000,Platform revenue,-2038.36,-2038.36,0.00
+879513,4010,Usage revenue,-2162.64,-2162.64,0.00
+941670,1100,Accounts receivable,6560.82,6560.82,0.00
+941670,1150,Unbilled usage receivable,3557.10,3557.10,0.00
+941670,1160,Platform contract asset,16.43,16.43,0.00
+941670,2200,Deferred platform revenue,0.00,0.00,0.00
+941670,4000,Platform revenue,-3057.53,-3057.53,0.00
+941670,4010,Usage revenue,-3557.10,-3557.10,0.00
+963044,1100,Accounts receivable,3498.00,3498.00,0.00
+963044,1150,Unbilled usage receivable,3712.08,3712.08,0.00
+963044,1160,Platform contract asset,0.00,0.00,0.00
+963044,2200,Deferred platform revenue,-19989.04,-19989.04,0.00
+963044,4000,Platform revenue,-2038.36,-2038.36,0.00
+963044,4010,Usage revenue,-3712.08,-3712.08,0.00

@@ -1,0 +1,831 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R 6 0 R 8 0 R 10 0 R 12 0 R 14 0 R] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 3721 >>
+stream
+BT
+52 744 Td
+/F1 17 Tf
+(Finance Engineer Cup Challenge Instructions) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(Build a reusable workflow to check RelayCloud customer contracts and usage against billing,) Tj
+0 -15 Td
+/F1 10 Tf
+(explain findings and recommend actions. All companies, people and records are fictional.) Tj
+0 -15 Td
+/F1 10 Tf
+(Use any tools or interface; no live system access is needed.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(REQUIRED SCOPE: October 1-31, 2026 service and its effect on October books. Close cutoff:) Tj
+0 -15 Td
+/F1 10 Tf
+(2026-11-11T18:00:00-07:00. This is business day 8 using Monday-Friday and ignoring public) Tj
+0 -15 Td
+/F1 10 Tf
+(holidays. The calendar definition only establishes the cutoff; no business-day calculation) Tj
+0 -15 Td
+/F1 10 Tf
+(is required.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(Use adjacent-period records where needed to explain October. Flag later-service issues as) Tj
+0 -15 Td
+/F1 10 Tf
+(follow-ups; do not reconcile November or rebuild future contract history. Compare expected) Tj
+0 -15 Td
+/F1 10 Tf
+(and actual customer billing with platform fees and usage shown separately. An annual) Tj
+0 -15 Td
+/F1 10 Tf
+(prepaid platform fee is not billed again in October, but October earned revenue still) Tj
+0 -15 Td
+/F1 10 Tf
+(exists.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(For advance subscriptions, reconcile the invoice billing periods covering October and) Tj
+0 -15 Td
+/F1 10 Tf
+(identify any additional October-service charges. You may instead show explicit day-based) Tj
+0 -15 Td
+/F1 10 Tf
+(allocations to October, provided your basis is clear. Neither a full crossing-period) Tj
+0 -15 Td
+/F1 10 Tf
+(invoice nor its billing allocation automatically equals October recognized revenue. Both) Tj
+0 -15 Td
+/F1 10 Tf
+(well-supported presentation approaches are accepted.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(Show errors, valid explanations and uncertainty with customer, affected period, supportable) Tj
+0 -15 Td
+/F1 10 Tf
+(amounts, evidence and recommended next step. Customer complaints are not required to) Tj
+0 -15 Td
+/F1 10 Tf
+(identify a finding. Results can be inside your build or exported; a separately formatted) Tj
+0 -15 Td
+/F1 10 Tf
+(exception register is not required.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(Submit the working build with run instructions, findings and supported October journal) Tj
+0 -15 Td
+/F1 10 Tf
+(entries. A 3-5 minute walkthrough should demonstrate one important finding, one judgment) Tj
+0 -15 Td
+/F1 10 Tf
+(call and a rerun; the artifact carries remaining detail. AI is welcome, but extracted terms) Tj
+0 -15 Td
+/F1 10 Tf
+(and calculations must be reviewable. No future revenue schedule or system-record export is) Tj
+0 -15 Td
+/F1 10 Tf
+(required; recommend updates instead.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(COMPANY RULES: One USD entity/book, one platform subscription and one workflow-run usage) Tj
+0 -15 Td
+/F1 10 Tf
+(SKU. Tax, FX, collections, cash settlement, processing fees, marketplace sales, breakage) Tj
+0 -15 Td
+/F1 10 Tf
+(and complex multi-obligation arrangements are excluded.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(PAYMENT AND DATE DISPLAY: Order forms use Net 30 payment terms. Collections, aging and) Tj
+0 -15 Td
+/F1 10 Tf
+(settlement remain outside the exercise; unpaid invoices alone do not imply a required) Tj
+0 -15 Td
+/F1 10 Tf
+(adjustment. Visible service ends are inclusive; the equivalent end-exclusive boundary is) Tj
+0 -15 Td
+/F1 10 Tf
+(stated in the commercial terms and retained in system exports.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+ET
+BT /F1 8 Tf 52 28 Td (RelayCloud | Fictional challenge material | Page 1 of 6) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 3993 >>
+stream
+BT
+52 744 Td
+/F1 10 Tf
+(SOURCE PRECEDENCE: Executed order forms and amendments determine commercial terms. An) Tj
+0 -15 Td
+/F1 10 Tf
+(amendment changes only named terms; unchanged terms persist. Register) Tj
+0 -15 Td
+/F1 10 Tf
+(supersedes_document_id denotes partial precedence, not cancellation of the original order.) Tj
+0 -15 Td
+/F1 10 Tf
+(START_HERE defines exercise accounting policy; messages establish approvals and context.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(USAGE: Aggregate unique active records across a customer's verified product accounts before) Tj
+0 -15 Td
+/F1 10 Tf
+(applying its calendar-month allowance. No rollover or tiers. Daily records are additive) Tj
+0 -15 Td
+/F1 10 Tf
+(across product accounts but versions/duplicates must not be double counted. Explicit zero-) Tj
+0 -15 Td
+/F1 10 Tf
+(use days remain records. record_status and replaces_record_id describe source corrections;) Tj
+0 -15 Td
+/F1 10 Tf
+(there are no superseded versions in this release.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(Partial first-month allowance: monthly allowance x active calendar days / days in month,) Tj
+0 -15 Td
+/F1 10 Tf
+(rounded once to whole runs half up. For an allowance amendment, weight each allowance by) Tj
+0 -15 Td
+/F1 10 Tf
+(applicable calendar days and round once. Charges equal max\(0, eligible units minus) Tj
+0 -15 Td
+/F1 10 Tf
+(allowance\) x signed overage rate, rounded once to USD cents half up. Prices are negotiated) Tj
+0 -15 Td
+/F1 10 Tf
+(net prices, with no additional invoice discounts.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(UNVERIFIED USAGE: Reconcile known mapped activity separately and isolate unverified usage.) Tj
+0 -15 Td
+/F1 10 Tf
+(Do not force a mapping, assume the remaining customer owns a workspace, or treat missing) Tj
+0 -15 Td
+/F1 10 Tf
+(attribution as zero usage. Document conditional exposure and request Product Operations) Tj
+0 -15 Td
+/F1 10 Tf
+(evidence. An unapproved concession request alone does not authorize a credit or revenue) Tj
+0 -15 Td
+/F1 10 Tf
+(reduction.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(BILLING: Platform invoices are issued in advance on contract billing anchors, either) Tj
+0 -15 Td
+/F1 10 Tf
+(monthly or annually. Usage is always calendar-month based and separately invoiced on the) Tj
+0 -15 Td
+/F1 10 Tf
+(first day of the next month. An absent usage invoice can be valid when no overage exists.) Tj
+0 -15 Td
+/F1 10 Tf
+(Include invoices issued by cutoff; November 15 invoices have not yet been issued. September) Tj
+0 -15 Td
+/F1 10 Tf
+(platform invoices are settled; October/November invoices remain unpaid.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(ACCOUNTING: Recognize platform consideration by actual service days / 365, independent of) Tj
+0 -15 Td
+/F1 10 Tf
+(invoice frequency. Preserve the original base schedule when adding an upgrade increment.) Tj
+0 -15 Td
+/F1 10 Tf
+(Round each monthly recognition component once to cents, with final-period rounding) Tj
+0 -15 Td
+/F1 10 Tf
+(allocated to the last period. The signed amendment defines incremental consideration and) Tj
+0 -15 Td
+/F1 10 Tf
+(billing conventions.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(Platform invoice: Dr 1100 AR / Cr 2200 deferred platform revenue. Recognition: Dr 2200 / Cr) Tj
+0 -15 Td
+/F1 10 Tf
+(4000 platform revenue. Any customer platform net debit in 2200 is reclassified Dr 1160) Tj
+0 -15 Td
+/F1 10 Tf
+(platform contract asset / Cr 2200. Reverse any prior reclass before recalculating. The) Tj
+0 -15 Td
+/F1 10 Tf
+(supplied October GL ALREADY contains its baseline reclass. Propose only incremental changes) Tj
+0 -15 Td
+/F1 10 Tf
+(after correcting recognition. Do not net different customers or platform assets against) Tj
+0 -15 Td
+/F1 10 Tf
+(usage.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(Usage accounting: Dr 1150 unbilled usage receivable / Cr 4010 usage revenue in the service) Tj
+ET
+BT /F1 8 Tf 52 28 Td (RelayCloud | Fictional challenge material | Page 2 of 6) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 9 0 R >>
+endobj
+9 0 obj
+<< /Length 3923 >>
+stream
+BT
+52 744 Td
+/F1 10 Tf
+(month. The next-month invoice is Dr 1100 / Cr 1150, not revenue again. September 30) Tj
+0 -15 Td
+/F1 10 Tf
+(unbilled balances are released by October 1 invoices; November 1 invoices release October) Tj
+0 -15 Td
+/F1 10 Tf
+(accruals only to the amounts actually billed. Residuals may remain until supported billing) Tj
+0 -15 Td
+/F1 10 Tf
+(corrections.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(CREDITS: Use issued notes only; void notes have no current credit effect. Retain original) Tj
+0 -15 Td
+/F1 10 Tf
+(service-period allocation. Approved reductions of October consideration affect October) Tj
+0 -15 Td
+/F1 10 Tf
+(where not already reflected. A November credit can reduce AR and reverse the corresponding) Tj
+0 -15 Td
+/F1 10 Tf
+(release of unbilled usage without reducing revenue a second time.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(APPROVAL AND DATES: Recommend corrections for Controller approval. Finalized invoices are) Tj
+0 -15 Td
+/F1 10 Tf
+(not silently edited: propose supplemental invoices or linked credit notes. Proposed billing) Tj
+0 -15 Td
+/F1 10 Tf
+(documents use November issue dates; supported October-service accounting corrections use) Tj
+0 -15 Td
+/F1 10 Tf
+(the October posting period. You need not create live records.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(TIMING: Source activity, ingestion timestamp, invoice issue date, service period, GL) Tj
+0 -15 Td
+/F1 10 Tf
+(posting period and GL Created At are distinct. October entries can be created during) Tj
+0 -15 Td
+/F1 10 Tf
+(November close. Determine evidence availability using the cutoff, not an assumption that) Tj
+0 -15 Td
+/F1 10 Tf
+(October entries were all created October 31.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(FORMATS: UTF-8 comma-delimited CSV, one header, blank means missing/not applicable rather) Tj
+0 -15 Td
+/F1 10 Tf
+(than zero. IDs are strings. ISO dates; normalized ISO timestamps include America/Denver UTC) Tj
+0 -15 Td
+/F1 10 Tf
+(offsets. All normalized service intervals are start-inclusive/end-exclusive. These reports) Tj
+0 -15 Td
+/F1 10 Tf
+(normalize source dates/units; they are not raw API payloads.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(MONEY: Stripe amount/subtotal/total/discount fields are integer USD cents;) Tj
+0 -15 Td
+/F1 10 Tf
+(unit_amount_decimal is decimal cents per unit. NetSuite amounts are decimal USD. Use exact) Tj
+0 -15 Td
+/F1 10 Tf
+(decimal arithmetic, round half up. Debit/Credit fields are unsigned; signed movement =) Tj
+0 -15 Td
+/F1 10 Tf
+(Debit minus Credit. USD is the sole currency.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(EXPORT PROVENANCE: Salesforce configured Details Only account-report CSV; cross-system) Tj
+0 -15 Td
+/F1 10 Tf
+(identifiers are custom fields. Stripe invoice/line custom reports based on Sigma) Tj
+0 -15 Td
+/F1 10 Tf
+(structures; credit files are flattened API extracts with service-period enrichment from) Tj
+0 -15 Td
+/F1 10 Tf
+(invoice lines or approval evidence. NetSuite configured posting/saved-search and ARM plan-) Tj
+0 -15 Td
+/F1 10 Tf
+(detail extracts. Headers are configured company selections, not claimed universal defaults.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(RECONCILIATION POPULATION: 30 customers, 32 product accounts, 30 executed order forms, 2) Tj
+0 -15 Td
+/F1 10 Tf
+(amendments; 1,924 unique source daily usage records across 61 dates. Physical export row) Tj
+0 -15 Td
+/F1 10 Tf
+(count can differ and must be reconciled. 120 customer opening-account rows; 362 existing) Tj
+0 -15 Td
+/F1 10 Tf
+(plan-period rows. Independent usage_batch_controls are source counts/totals, not a) Tj
+0 -15 Td
+/F1 10 Tf
+(commercial-billability answer.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(CONTROLS: September 1-14 source batches have 30 records/day; September 15-October 31 have) Tj
+ET
+BT /F1 8 Tf 52 28 Td (RelayCloud | Fictional challenge material | Page 3 of 6) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 11 0 R >>
+endobj
+11 0 obj
+<< /Length 3586 >>
+stream
+BT
+52 744 Td
+/F1 10 Tf
+(32. Opening balances include accounts 1100, 1150, 1160 and 2200 for every customer,) Tj
+0 -15 Td
+/F1 10 Tf
+(including zeros. September recognition journal IDs in plans are historical references) Tj
+0 -15 Td
+/F1 10 Tf
+(outside the GL period; October recognized plan rows must join included postings. Future) Tj
+0 -15 Td
+/F1 10 Tf
+(plan rows are context.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(EXTRACT COMPLETENESS: These are all issued invoices and credit notes for the supplied) Tj
+0 -15 Td
+/F1 10 Tf
+(customer population through cutoff, and all relevant-account GL posting lines in the stated) Tj
+0 -15 Td
+/F1 10 Tf
+(periods. No pagination or file truncation is intended. Source report row counts:) Tj
+0 -15 Td
+/F1 10 Tf
+(contract_register.csv = 32, netsuite_gl_detail.csv = 340, netsuite_opening_balances.csv =) Tj
+0 -15 Td
+/F1 10 Tf
+(120, netsuite_revenue_plan_detail.csv = 362, product_account_mapping.csv = 32,) Tj
+0 -15 Td
+/F1 10 Tf
+(salesforce_accounts.csv = 30, stripe_credit_note_lines.csv = 2, stripe_credit_notes.csv =) Tj
+0 -15 Td
+/F1 10 Tf
+(2, stripe_invoice_lines.csv = 124, stripe_invoices.csv = 124. Compare these counts to the) Tj
+0 -15 Td
+/F1 10 Tf
+(supplied files; they do not establish that a commercially required invoice was actually) Tj
+0 -15 Td
+/F1 10 Tf
+(issued.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(PRODUCTS: prod_platform = platform subscription; prod_workflow_run = workflow-run overage.) Tj
+0 -15 Td
+/F1 10 Tf
+(Price IDs are customer-specific. Product-account labels are display text, not a substitute) Tj
+0 -15 Td
+/F1 10 Tf
+(for verified mappings.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(FILE DICTIONARY:) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(contract_register.csv: One document indexed by document_id. Filename locates PDF.) Tj
+0 -15 Td
+/F1 10 Tf
+(contract_id groups order/amendment. signed_at, effective dates and billing_loaded_at are) Tj
+0 -15 Td
+/F1 10 Tf
+(distinct; blank billing load means not recorded as loaded. approval_reference links a) Tj
+0 -15 Td
+/F1 10 Tf
+(message where applicable.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(Columns: document_id, contract_id, salesforce_account_id, document_type, document_filename,) Tj
+0 -15 Td
+/F1 10 Tf
+(signed_at, effective_from, effective_to, supersedes_document_id, billing_loaded_at,) Tj
+0 -15 Td
+/F1 10 Tf
+(approval_reference) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(netsuite_gl_detail.csv: Internal ID + Line ID identifies posting line; all legs supplied.) Tj
+0 -15 Td
+/F1 10 Tf
+(Date, Posting Period and Created At differ. External Source ID joins invoice/credit,) Tj
+0 -15 Td
+/F1 10 Tf
+(Revenue Plan ID joins recognition plan where applicable. Memo is descriptive. October and) Tj
+0 -15 Td
+/F1 10 Tf
+(relevant November activity supplied through cutoff.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(Columns: Internal ID, Line ID, Transaction Type, Document Number, Date, Posting Period,) Tj
+0 -15 Td
+/F1 10 Tf
+(Account Number, Customer Internal ID, Debit, Credit, Memo, External Source ID, Revenue Plan) Tj
+0 -15 Td
+/F1 10 Tf
+(ID, Created At) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(netsuite_opening_balances.csv: One Customer Internal ID + Account Number at September 30.) Tj
+0 -15 Td
+/F1 10 Tf
+(Debit Balance/Credit Balance are USD; only one nonzero. Source Reference links supported) Tj
+0 -15 Td
+/F1 10 Tf
+(closing workpaper. All four balance-sheet accounts are explicit per customer.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+ET
+BT /F1 8 Tf 52 28 Td (RelayCloud | Fictional challenge material | Page 4 of 6) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 13 0 R >>
+endobj
+13 0 obj
+<< /Length 3369 >>
+stream
+BT
+52 744 Td
+/F1 10 Tf
+(Columns: Customer Internal ID, Account Number, Account Name, As Of Date, Debit Balance,) Tj
+0 -15 Td
+/F1 10 Tf
+(Credit Balance, Source Reference) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(netsuite_revenue_plan_detail.csv: Plan + element + posting period + source document) Tj
+0 -15 Td
+/F1 10 Tf
+(identifies recognition segment. Recognition Start/End Exclusive are service dates. Plan) Tj
+0 -15 Td
+/F1 10 Tf
+(Type Actual is not a forecast. Planned Amount and Recognized Amount are USD; Journal) Tj
+0 -15 Td
+/F1 10 Tf
+(Internal ID references recognized postings. Plan Updated At is source configuration) Tj
+0 -15 Td
+/F1 10 Tf
+(timestamp.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(Columns: Revenue Plan ID, Revenue Element ID, Customer Internal ID, Source Document ID,) Tj
+0 -15 Td
+/F1 10 Tf
+(Plan Type, Recognition Start, Recognition End Exclusive, Posting Period, Planned Amount,) Tj
+0 -15 Td
+/F1 10 Tf
+(Recognized Amount, Journal Internal ID, Plan Updated At) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(product_account_mapping.csv: One product account. salesforce_account_id can be) Tj
+0 -15 Td
+/F1 10 Tf
+(unverified/blank. Effective dates are date intervals; effective_to blank means no known) Tj
+0 -15 Td
+/F1 10 Tf
+(end. mapping_updated_at records registry update.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(Columns: product_account_id, salesforce_account_id, account_label, effective_from,) Tj
+0 -15 Td
+/F1 10 Tf
+(effective_to, mapping_updated_at) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(product_usage.csv: One record/version exported from metering. record_id identifies source) Tj
+0 -15 Td
+/F1 10 Tf
+(activity and is the deduplication key. units is integer runs. ingested_at records) Tj
+0 -15 Td
+/F1 10 Tf
+(availability. batch_id joins daily controls. Exact repeated source IDs are not new) Tj
+0 -15 Td
+/F1 10 Tf
+(activity.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(Columns: record_id, product_account_id, sku, service_date, units, ingested_at,) Tj
+0 -15 Td
+/F1 10 Tf
+(record_status, replaces_record_id, batch_id) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(salesforce_accounts.csv: One account per AccountId. Custom StripeCustomerId__c and) Tj
+0 -15 Td
+/F1 10 Tf
+(NetSuiteCustomerInternalId__c join source customers. ParentId is nullable; owner and) Tj
+0 -15 Td
+/F1 10 Tf
+(billing country are descriptive.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(Columns: AccountId, AccountName, ParentId, BillingCountry, StripeCustomerId__c,) Tj
+0 -15 Td
+/F1 10 Tf
+(NetSuiteCustomerInternalId__c, AccountOwner) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(stripe_credit_note_lines.csv: One credit line by id. credit_note_id joins note;) Tj
+0 -15 Td
+/F1 10 Tf
+(invoice_line_item_id joins original line. amount is positive cents. quantity nullable.) Tj
+0 -15 Td
+/F1 10 Tf
+(Service dates are internal enrichment, with service_period_source identifying provenance.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(Columns: id, credit_note_id, invoice_line_item_id, description, amount, quantity,) Tj
+0 -15 Td
+/F1 10 Tf
+(service_start, service_end_exclusive, service_period_source) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(stripe_credit_notes.csv: One note by id, joined to invoice_id/customer_id. amount is) Tj
+ET
+BT /F1 8 Tf 52 28 Td (RelayCloud | Fictional challenge material | Page 5 of 6) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 15 0 R >>
+endobj
+15 0 obj
+<< /Length 2180 >>
+stream
+BT
+52 744 Td
+/F1 10 Tf
+(positive credit cents. status issued/void determines effect; voided_at is nullable. reason) Tj
+0 -15 Td
+/F1 10 Tf
+(is a source reason code.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(Columns: id, number, invoice_id, customer_id, status, created, voided_at, currency, amount,) Tj
+0 -15 Td
+/F1 10 Tf
+(reason) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(stripe_invoice_lines.csv: One line by id. invoice_id joins header. product_id/price_id) Tj
+0 -15 Td
+/F1 10 Tf
+(identify product and customer price. quantity is units \(1 for platform\). amount is before) Tj
+0 -15 Td
+/F1 10 Tf
+(separate discount_amount. period_start/end are normalized exclusive service boundaries;) Tj
+0 -15 Td
+/F1 10 Tf
+(proration is boolean.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(Columns: id, invoice_id, description, product_id, price_id, quantity, unit_amount_decimal,) Tj
+0 -15 Td
+/F1 10 Tf
+(amount, discount_amount, period_start, period_end, proration) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(stripe_invoices.csv: One header by id. customer_id joins Salesforce custom ID.) Tj
+0 -15 Td
+/F1 10 Tf
+(created/finalized_at are timestamps, status is open/paid/etc.) Tj
+0 -15 Td
+/F1 10 Tf
+(subtotal/total/total_discount_amount are cents. total = subtotal minus discount;) Tj
+0 -15 Td
+/F1 10 Tf
+(taxes/fees/customer-balance effects excluded.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(Columns: id, number, customer_id, status, created, finalized_at, currency, subtotal,) Tj
+0 -15 Td
+/F1 10 Tf
+(total_discount_amount, total, source_system) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(usage_batch_controls.csv: One service date. distinct_active_record_count and) Tj
+0 -15 Td
+/F1 10 Tf
+(active_units_total come from source before export. extracted_at is the cutoff snapshot.) Tj
+0 -15 Td
+/F1 10 Tf
+(Reconcile after deduplication, not after dropping unmatched customers.) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+0 -15 Td
+/F1 10 Tf
+(Columns: service_date, batch_id, distinct_active_record_count, active_units_total,) Tj
+0 -15 Td
+/F1 10 Tf
+(extracted_at) Tj
+0 -15 Td
+/F1 10 Tf
+() Tj
+ET
+BT /F1 8 Tf 52 28 Td (RelayCloud | Fictional challenge material | Page 6 of 6) Tj ET
+endstream
+endobj
+xref
+0 16
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000148 00000 n 
+0000000218 00000 n 
+0000000344 00000 n 
+0000004117 00000 n 
+0000004243 00000 n 
+0000008288 00000 n 
+0000008414 00000 n 
+0000012389 00000 n 
+0000012517 00000 n 
+0000016156 00000 n 
+0000016284 00000 n 
+0000019706 00000 n 
+0000019834 00000 n 
+trailer
+<< /Size 16 /Root 1 0 R >>
+startxref
+22067
+%%EOF

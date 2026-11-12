@@ -1,0 +1,32 @@
+group,name,title,status,count,view,detail
+contracts,order_forms_parsed,Order Forms parsed from the template and agree with contract_register.csv,pass,0,,30 Order Forms
+contracts,amendment_quotes,Every curated Amendment quote appears verbatim in the document text,pass,0,,7 quotes across 2 Amendments
+inputs,billing_messages_parsed,Billing Messages parsed from billing_followups.pdf,pass,0,,10 messages
+inputs,approval_quotes,Every curated approval (Controller) and concession request quote appears verbatim in its Billing Message,pass,0,,2 approvals and requests
+inputs,01_row_counts,Extract completeness: physical row counts match START_HERE expected counts,pass,0,ctl_inputs_row_counts,
+inputs,02_money_precision,NetSuite amounts have at most two decimals (no silent rounding on load),pass,0,ctl_inputs_money_precision,
+agents,jev_current,Every curated Amendment term has a current Jev check (rerun `make jev-check` after curating),pass,0,,7 curated terms checked with jev-1.14.0
+agents,jev_supported,Jev finds every curated Amendment term supported by the Amendment text (confidence >= 0.8),pass,0,,7 supported
+platform,01_baseline_reclass,Recorded 1160 equals each customer's net debit in 2200 before reclass (baseline reclass is right),pass,0,ctl_platform_baseline_reclass,
+platform,02_unmatched_invoices,Every platform invoice line covering the period matches an expected billing document,pass,0,ctl_platform_unmatched_invoices,
+usage,01_batch_tieout,Countable usage records and units tie to usage_batch_controls for every service date,pass,0,ctl_usage_batch_tieout,
+usage,02_conflicting_duplicates,No usage record_id is exported twice with different content,pass,0,ctl_usage_conflicting_duplicates,
+usage,03_after_cutoff,Usage records for the period ingested after the cutoff (excluded from October),pass,0,ctl_usage_after_cutoff,
+usage,04_unattributed,Usage for the period with no verified owner (isolated; see the unverified-usage Needs Info finding),warn,1,ctl_usage_unattributed,
+ledger,01_balanced_entries,Balanced entries (debits = credits per Recorded and Proposed Entry),pass,0,ctl_ledger_balanced_entries,
+ledger,02_opening_completeness,"Opening Balances cover accounts 1100/1150/1160/2200 for every customer, one side only",pass,0,ctl_ledger_opening_completeness,
+ledger,03_known_accounts,Every journal line posts to an account in the chart of accounts,pass,0,ctl_ledger_known_accounts,
+ledger,04_no_duplicates,"No duplicate GL lines, and no source document posted twice for the same purpose",pass,0,ctl_ledger_no_duplicates,
+ledger,05_period_integrity,Each GL line's date falls inside its posting period,pass,0,ctl_ledger_period_integrity,
+ledger,06_cutoff,No Recorded Entry was created after the close cutoff,pass,0,ctl_ledger_cutoff,
+ledger,07_revenue_plan_join,Every recognised revenue-plan row for the period joins an included GL posting,pass,0,ctl_ledger_revenue_plan_join,
+ledger,08_proposed_entry_rules,Proposed Entries cite a finding and sit in their allowed period,pass,0,ctl_ledger_proposed_entry_rules,
+findings,01_claims_balance,Every reconciliation difference is explained exactly once (claims = difference),pass,0,ctl_findings_claims_balance,
+findings,02_claim_targets,"Findings only claim differences that exist (known customer, implemented stream)",pass,0,ctl_findings_claim_targets,
+findings,03_no_duplicate_corrections,"No duplicate corrections (one proposed document per original invoice, stream and amount)",pass,0,ctl_findings_no_duplicate_corrections,
+findings,04_finding_integrity,Findings are well-formed (evidence cited; Needs Info has no confirmed amounts; zero October effect is explained),pass,0,ctl_findings_finding_integrity,
+effects,01_no_unbilled_residual,"After the proposed billing documents, no customer has an unexplained 1150 residual",pass,0,ctl_effects_no_unbilled_residual,
+effects,02_contract_asset_after_corrections,"After the proposed October entries, 1160 equals each customer's net 2200 debit (reclass recomputed)",pass,0,ctl_effects_contract_asset_after_corrections,
+effects,03_no_netting,"Each Proposed Entry stays within one customer and one stream (no netting across customers, or platform against usage)",pass,0,ctl_effects_no_netting,
+effects,04_population_coverage,Every customer is reviewed for every implemented stream (coverage = customers × streams),pass,0,ctl_effects_population_coverage,
+agents,independent_review,Independent Review: every Disagreement with the independent reviewer is resolved,pass,0,independent_review,agrees on 59/60 customer-streams; all others resolved

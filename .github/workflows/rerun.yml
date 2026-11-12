@@ -1,0 +1,29 @@
+# Proves the "clean clone, one command" rerun: fresh checkout -> make test -> make run,
+# then fails if the regenerated outputs differ from the committed ones (stale results).
+name: rerun
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  rerun:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - name: Code tests
+        run: make test
+      - name: Review October 2026
+        run: make run PERIOD=2026-10
+      - name: Committed outputs are up to date
+        # Everything is compared, including the report's source fingerprint.
+        run: |
+          git add --intent-to-add out/
+          git diff --exit-code --stat -- out/ || {
+            echo "::error::out/ is stale. Run 'make run' and commit the regenerated outputs."
+            exit 1
+          }

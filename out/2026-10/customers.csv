@@ -1,0 +1,31 @@
+customer_id,customer_name,salesforce_account_id,stripe_customer_id,contract_id,billing_frequency,platform_invoice_amount,platform_annual_rate,included_runs_per_month,overage_rate,documents,source_file,source_line
+186097,"Alder Fieldworks, Inc.",001cd754c8a00dfAAA,cus_12d0dbb00ef364,CT-186097,annual,24000.00,24000.00,10000,0.08,OF-2026-118,data/raw/2026-10/salesforce_accounts.csv,2
+314334,"Aspen Vale, Inc.",001a2e2bf7c89bdAAA,cus_98616f9101909d,CT-314334,monthly,4000.00,48000.00,30000,0.05,OF-2026-397,data/raw/2026-10/salesforce_accounts.csv,28
+810234,"Beacon Marsh, Inc.",0010f1c55725cd6AAA,cus_6cd97b5f63f72f,CT-810234,monthly,4000.00,48000.00,30000,0.10,OF-2026-408,data/raw/2026-10/salesforce_accounts.csv,29
+866587,"Brookstone Data, Inc.",00121902038e29fAAA,cus_1c17e255781bad,CT-866587,annual,24000.00,24000.00,10000,0.08,OF-2026-122,data/raw/2026-10/salesforce_accounts.csv,3
+639373,"Cedar Harbor Labs, Inc.",0011e97a0fc9929AAA,cus_c34b5d920c411f,CT-639373,monthly,4000.00,48000.00,30000,0.40,"AM-OF-2026-157, OF-2026-157",data/raw/2026-10/salesforce_accounts.csv,24
+477694,"Copper Finch Systems, Inc.",00199462379bc17AAA,cus_3dbc6b464d0e31,CT-477694,annual,24000.00,24000.00,10000,0.08,OF-2026-133,data/raw/2026-10/salesforce_accounts.csv,4
+260381,"Crescent Shore, Inc.",001c9d190b0f125AAA,cus_bec865da1ebb19,CT-260381,monthly,5000.00,60000.00,40000,0.04,OF-2026-419,data/raw/2026-10/salesforce_accounts.csv,30
+731059,"Driftwood Research, Inc.",0019b4299633298AAA,cus_98c3c75fd26149,CT-731059,annual,24000.00,24000.00,10000,0.08,OF-2026-144,data/raw/2026-10/salesforce_accounts.csv,5
+436791,"Evergreen Dispatch, Inc.",001c74a3f587756AAA,cus_fb548d00174b56,CT-436791,annual,24000.00,24000.00,10000,0.08,OF-2026-155,data/raw/2026-10/salesforce_accounts.csv,6
+286595,"Falcon Ridge Software, Inc.",00101f851e7fbe9AAA,cus_a58cd4932b01d7,CT-286595,annual,24000.00,24000.00,10000,0.08,OF-2026-166,data/raw/2026-10/salesforce_accounts.csv,7
+963044,"Granite Orchard, Inc.",001528ebc1bb6a2AAA,cus_ed6cb4728e8022,CT-963044,annual,24000.00,24000.00,10000,0.08,OF-2026-177,data/raw/2026-10/salesforce_accounts.csv,8
+142182,"Highwater Studio, Inc.",001a0b34c4386c3AAA,cus_633aaa8be0687d,CT-142182,annual,24000.00,24000.00,10000,0.08,OF-2026-188,data/raw/2026-10/salesforce_accounts.csv,9
+620310,"Indigo Trail Networks, Inc.",00137c096146731AAA,cus_35b0367a38f10f,CT-620310,annual,24000.00,24000.00,10000,0.08,OF-2026-199,data/raw/2026-10/salesforce_accounts.csv,10
+879513,"Juniper Bay Analytics, Inc.",001e9a35c92d800AAA,cus_4a5ff59dfed00d,CT-879513,annual,24000.00,24000.00,10000,0.08,OF-2026-210,data/raw/2026-10/salesforce_accounts.csv,11
+437384,"Juniper Signal Works, Inc.",001ff8487ef5b3dAAA,cus_e5ab4c55ca775a,CT-437384,monthly,4000.00,48000.00,30000,0.16,OF-2026-331,data/raw/2026-10/salesforce_accounts.csv,22
+654552,"Kestrel Bridge, Inc.",0013ac3411943d1AAA,cus_e55898135de61c,CT-654552,monthly,3000.00,36000.00,20000,0.06,OF-2026-221,data/raw/2026-10/salesforce_accounts.csv,12
+232251,"Larch Point Services, Inc.",00141dc91389400AAA,cus_022f885a5cb476,CT-232251,monthly,3000.00,36000.00,20000,0.06,OF-2026-232,data/raw/2026-10/salesforce_accounts.csv,13
+507826,"Maple Lantern, Inc.",00185c69a4a7d58AAA,cus_817655124b9b98,CT-507826,monthly,3000.00,36000.00,20000,0.06,OF-2026-243,data/raw/2026-10/salesforce_accounts.csv,14
+335780,"Meridian Process Systems, Inc.",001cf5f649adb5cAAA,cus_75c30f56fb3df9,CT-335780,monthly,4000.00,48000.00,30000,0.12,"AM-OF-2026-164, OF-2026-164",data/raw/2026-10/salesforce_accounts.csv,25
+553102,"Northbank Design, Inc.",0011cbc851d9008AAA,cus_1be410211b982c,CT-553102,monthly,3000.00,36000.00,20000,0.06,OF-2026-254,data/raw/2026-10/salesforce_accounts.csv,15
+300468,"Oak Harbor Digital, Inc.",00168d5f330df06AAA,cus_8d5fc851f9c0e4,CT-300468,monthly,3000.00,36000.00,20000,0.06,OF-2026-265,data/raw/2026-10/salesforce_accounts.csv,16
+561562,"Pine Summit Logistics, Inc.",001674c38a854e9AAA,cus_ba70f7d283542e,CT-561562,monthly,3000.00,36000.00,20000,0.06,OF-2026-276,data/raw/2026-10/salesforce_accounts.csv,17
+730965,"Quartz Meadow, Inc.",00171cbc47d54f3AAA,cus_9c5156ea37f983,CT-730965,monthly,3000.00,36000.00,20000,0.06,OF-2026-287,data/raw/2026-10/salesforce_accounts.csv,18
+856042,"Riverbend Operations, Inc.",001a54070f5a2e4AAA,cus_84c025f9615cf1,CT-856042,monthly,3000.00,36000.00,20000,0.06,OF-2026-298,data/raw/2026-10/salesforce_accounts.csv,19
+676664,"Silver Current, Inc.",00158dba86a41d6AAA,cus_c71c17defe8cd1,CT-676664,monthly,3000.00,36000.00,20000,0.06,OF-2026-309,data/raw/2026-10/salesforce_accounts.csv,20
+941670,"Timberline Insights, Inc.",001cebd325093cbAAA,cus_51b926427b2220,CT-941670,monthly,3000.00,36000.00,20000,0.06,OF-2026-320,data/raw/2026-10/salesforce_accounts.csv,21
+240793,"Westhaven Metrics, Inc.",0018dcff54e943cAAA,cus_3fa65401464793,CT-240793,monthly,4000.00,48000.00,30000,0.05,OF-2026-342,data/raw/2026-10/salesforce_accounts.csv,23
+839653,"Willow Passage, Inc.",00174337ea6baeeAAA,cus_e33bdc2ba07de2,CT-839653,monthly,5000.00,60000.00,40000,0.04,OF-2026-430,data/raw/2026-10/salesforce_accounts.csv,31
+188999,"Yarrow Ridge, Inc.",001e11d0aa846d7AAA,cus_46ee9e5b5a2782,CT-188999,monthly,4000.00,48000.00,30000,0.12,OF-2026-375,data/raw/2026-10/salesforce_accounts.csv,26
+148565,"Zephyr Grove, Inc.",001e7f010081dd7AAA,cus_499cb732fd7b9c,CT-148565,monthly,4000.00,48000.00,30000,0.05,OF-2026-386,data/raw/2026-10/salesforce_accounts.csv,27

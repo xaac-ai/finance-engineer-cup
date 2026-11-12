@@ -1,0 +1,43 @@
+RelayCloud EXECUTED ORDER FORM
+OF-2026-298
+Platform subscription and usage services
+Contract CT-856042   |   Executed August 25, 2026
+01 CUSTOMER AND BILLING DETAILS
+CUSTOMER / BILL TO SUPPLIER
+Riverbend Operations, Inc. RelayCloud, Inc.
+409 Elm Street, Suite 300
+Portland, OR 97205, United States
+1800 Market Street, Suite 400
+Denver, CO 80202, United States
+Billing contact: Accounts Payable
+ap@riverbendoperations.example
+Billing enquiries
+billing@relaycloud.example
+02 SUBSCRIPTION TERM AND PAYMENT
+SERVICE START SERVICE END BILLING PAYMENT / CURRENCY
+September 1, 2026 August 31, 2027 Monthly in advance Net 30 days / USD
+03 SERVICES AND FEES
+PRODUCT / ENTITLEMENT BILLING BASIS FEES (USD)
+RelayCloud Platform
+One annual platform subscription
+Monthly, in advance $3,000.00 / month
+Workflow runs
+20,000 included runs per calendar month
+Monthly, in arrears $0.06 / excess run
+ANNUAL PLATFORM COMMITMENT $36,000.00 + usage overages
+04 BILLING AND COMMERCIAL TERMS
+Platform fees are invoiced on the 1st of each month, beginning September 1, 2026. The initial service term runs
+through August 31, 2027, inclusive, and ends at 00:00 America/Denver on September 1, 2027.
+Usage is invoiced separately on the first day of the following month. Aggregate usage across the customer’s
+verified product accounts before applying one calendar-month allowance. No tiers or allowance rollover apply.
+For the first partial calendar month, prorate the included allowance by active calendar days and round once to a
+whole run, half up. Full later months receive the entire allowance. The stated fees are negotiated net prices;
+no additional invoice discounts apply.
+An executed amendment prevails only for the terms it expressly changes. All other terms of this Order Form
+remain in effect.
+05 ACCEPTANCE
+FOR RIVERBEND OPERATIONS, INC. FOR RELAYCLOUD, INC.
+/s/ Devon Ortiz /s/ Morgan Lee
+Devon Ortiz  |  Controller Morgan Lee  |  Sales Director
+Date signed: August 25, 2026 Date signed: August 25, 2026
+Fictional commercial document for Finance Engineer Cup. No legal effect. OF-2026-298  |  1 / 1

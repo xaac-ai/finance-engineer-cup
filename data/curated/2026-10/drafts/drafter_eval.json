@@ -1,0 +1,115 @@
+{
+ "calls": [
+  {
+   "cache_key": "08c85397c3db0797044ac7be",
+   "document_id": "AM-OF-2026-157",
+   "model": "claude-opus-5-5",
+   "recorded_at": "2026-11-12T23:12:48Z",
+   "replayed": true,
+   "usage": {
+    "input_tokens": 2262,
+    "output_tokens": 940
+   }
+  },
+  {
+   "cache_key": "6999629534d8b33e8f810bc9",
+   "document_id": "AM-OF-2026-164",
+   "model": "claude-opus-5-5",
+   "recorded_at": "2026-11-12T23:13:01Z",
+   "replayed": true,
+   "usage": {
+    "input_tokens": 2332,
+    "output_tokens": 1666
+   }
+  }
+ ],
+ "documents": [
+  {
+   "document_id": "AM-OF-2026-157",
+   "extra_terms": [],
+   "terms": [
+    {
+     "curated_value": "45000",
+     "date_match": true,
+     "drafted_value": "45000",
+     "found": true,
+     "quote_check": "passed",
+     "term": "included_runs_per_month",
+     "value_match": true
+    },
+    {
+     "curated_value": "October: prior allowance Oct 1-15 + amended allowance Oct 16-31 by calendar days, rounded once half up",
+     "date_match": true,
+     "drafted_value": "October allowance weighted by calendar days: 30000 for Oct 1-15 and 45000 for Oct 16-31, rounded once to a whole run, half up",
+     "found": true,
+     "quote_check": "passed",
+     "term": "allowance_weighting_rule",
+     "value_match": null
+    }
+   ]
+  },
+  {
+   "document_id": "AM-OF-2026-164",
+   "extra_terms": [],
+   "terms": [
+    {
+     "curated_value": "60000.00",
+     "date_match": true,
+     "drafted_value": "60000.00",
+     "found": true,
+     "quote_check": "passed",
+     "term": "platform_annual_rate",
+     "value_match": true
+    },
+    {
+     "curated_value": "5000.00",
+     "date_match": true,
+     "drafted_value": "5000.00",
+     "found": true,
+     "quote_check": "passed",
+     "term": "platform_invoice_amount",
+     "value_match": true
+    },
+    {
+     "curated_value": "526.03",
+     "date_match": true,
+     "drafted_value": "526.03",
+     "found": true,
+     "quote_check": "passed",
+     "term": "catch_up_amount",
+     "value_match": true
+    },
+    {
+     "curated_value": "10520.55",
+     "date_match": true,
+     "drafted_value": "10520.55",
+     "found": true,
+     "quote_check": "passed",
+     "term": "incremental_consideration",
+     "value_match": true
+    },
+    {
+     "curated_value": "5.48",
+     "date_match": true,
+     "drafted_value": "5.48",
+     "found": true,
+     "quote_check": "passed",
+     "term": "final_invoice_credit",
+     "value_match": true
+    }
+   ]
+  }
+ ],
+ "effort": "high",
+ "model": "claude-opus-5-5",
+ "totals": {
+  "curated": 7,
+  "date_match": 7,
+  "drafted": 7,
+  "extra": 0,
+  "found": 7,
+  "quote_pass": 7,
+  "value_comparable": 6,
+  "value_match": 6
+ }
+}

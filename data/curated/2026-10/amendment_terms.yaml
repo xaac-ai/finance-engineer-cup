@@ -1,0 +1,39 @@
+# Hand-curated Contract Term changes from executed Amendments.
+# Every quote must appear verbatim (whitespace-normalised) in the Amendment's extracted text;
+# the run fails otherwise. effective_from defaults to the register's effective_from.
+# Stated amounts are recorded as cited facts, not computed here.
+amendments:
+  - document_id: AM-OF-2026-157
+    changes:
+      - term: included_runs_per_month
+        value: "45000"
+        section: "03 CHANGES TO COMMERCIAL TERMS"
+        quote: "Included workflow runs 30,000 / calendar month 45,000 / calendar month"
+      - term: allowance_weighting_rule
+        value: "October: prior allowance Oct 1-15 + amended allowance Oct 16-31 by calendar days, rounded once half up"
+        section: "04 APPLICATION AND OTHER TERMS"
+        quote: "For October, weight the prior allowance for October 1-15 and the amended allowance for October 16-31 by calendar days. Round the resulting allowance once to a whole run, half up."
+
+  - document_id: AM-OF-2026-164
+    changes:
+      - term: platform_annual_rate
+        value: "60000.00"
+        section: "03 CHANGES TO COMMERCIAL TERMS"
+        quote: "Annual platform rate $48,000.00 / year $60,000.00 / year"
+      - term: platform_invoice_amount
+        value: "5000.00"
+        effective_from: "2026-11-01"
+        section: "03 CHANGES TO COMMERCIAL TERMS"
+        quote: "Monthly platform invoice $4,000.00 / month $5,000.00 from Nov 1"
+      - term: catch_up_amount
+        value: "526.03"
+        section: "04 APPLICATION AND OTHER TERMS"
+        quote: "October upgrade catch-up: USD 526.03, using USD 12,000 x 16 / 365, rounded half up."
+      - term: incremental_consideration
+        value: "10520.55"
+        section: "04 APPLICATION AND OTHER TERMS"
+        quote: "Incremental consideration for 320 remaining service days is USD 10,520.55."
+      - term: final_invoice_credit
+        value: "5.48"
+        section: "04 APPLICATION AND OTHER TERMS"
+        quote: "The final platform invoice includes a USD 5.48 credit to reconcile the monthly billing convention to that amount."

@@ -1,0 +1,7 @@
+account_number,name,type,normal_balance
+1100,Accounts receivable,asset,debit
+1150,Unbilled usage receivable,asset,debit
+1160,Platform contract asset,asset,debit
+2200,Deferred platform revenue,liability,credit
+4000,Platform revenue,revenue,credit
+4010,Usage revenue,revenue,credit
