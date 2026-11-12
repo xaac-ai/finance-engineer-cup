@@ -262,7 +262,7 @@ def correction(ctx: Context, m: UsageMonth, key: str) -> dict:
     """Claims, Proposed Entries and billing documents for one usage effect (Finding kwargs)."""
     billing, revenue = m.effects[key]
     period_end = ctx.period.end_exclusive - timedelta(days=1)
-    issue = datetime.fromisoformat(ctx.period.cutoff).date() + timedelta(days=1)  # first day after cutoff, in November
+    issue = ctx.period.billing_issue_date
     nov_label = issue.strftime("%b %Y")
     claims = [Claim("billing", "usage", billing)]
     entries, documents = [], []

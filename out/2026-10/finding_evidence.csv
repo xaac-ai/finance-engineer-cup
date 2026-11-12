@@ -8,6 +8,21 @@ F-314334-USAGE-NO-OVERAGE-2026-10,1,contract_term,data/raw/2026-10/contracts/OF-
 F-314334-USAGE-NO-OVERAGE-2026-10,2,contract_term,data/raw/2026-10/contracts/OF-2026-397.pdf,,"03 SERVICES AND FEES: Monthly, in arrears $0.05 / excess run",overage rate
 F-314334-USAGE-NO-OVERAGE-2026-10,3,csv_row,data/raw/2026-10/product_usage.csv,,"31 October records, 25,000 runs on pa_9983d91e91e873 (deduplicated, active, verified mapping)",validated usage
 F-314334-USAGE-NO-OVERAGE-2026-10,4,pdf_quote,data/raw/2026-10/START_HERE.pdf,,BILLING: An absent usage invoice can be valid when no overage exists.,policy
+F-335780-PLATFORM-INVOICE-AMOUNT-2026-11,1,csv_row,data/raw/2026-10/stripe_invoice_lines.csv,99,"RC-261101-335780-P il_d34df8e74e6ad4: $4,000.00 for 2026-11-01..2026-12-01",invoice billed
+F-335780-PLATFORM-INVOICE-AMOUNT-2026-11,2,contract_term,data/raw/2026-10/contracts/AM-OF-2026-164.pdf,,"Monthly platform invoice $4,000.00 / month $5,000.00 from Nov 1",contract amount
+F-335780-PLATFORM-INVOICE-AMOUNT-2026-11,3,csv_row,data/raw/2026-10/contract_register.csv,27,"AM-OF-2026-164: effective 2026-10-16, billing_loaded_at blank (not recorded as loaded), approval MSG-2026-104",contract register
+F-335780-PLATFORM-MISSING-CATCH-UP-2026-10,1,contract_term,data/raw/2026-10/contracts/AM-OF-2026-164.pdf,,"October upgrade catch-up: USD 526.03, using USD 12,000 x 16 / 365, rounded half up.",expected charge
+F-335780-PLATFORM-MISSING-CATCH-UP-2026-10,2,csv_row,data/raw/2026-10/contract_register.csv,27,"AM-OF-2026-164: effective 2026-10-16, billing_loaded_at blank (not recorded as loaded), approval MSG-2026-104",contract register
+F-335780-PLATFORM-MISSING-CATCH-UP-2026-10,3,csv_row,data/raw/2026-10/stripe_invoice_lines.csv,,"No platform line for Meridian Process Systems, Inc. with service period 2026-10-16..2026-11-01 issued by cutoff",absence in Stripe
+F-335780-PLATFORM-MISSING-CATCH-UP-2026-10,4,pdf_quote,data/raw/2026-10/START_HERE.pdf,,"REQUIRED SCOPE: For advance subscriptions, reconcile the invoice billing periods covering October and identify any additional October-service charges.",policy
+F-335780-PLATFORM-UPGRADE-INCREMENT-2026-10,1,contract_term,data/raw/2026-10/contracts/OF-2026-164.pdf,,"03 SERVICES AND FEES: ANNUAL PLATFORM COMMITMENT $48,000.00 + usage overages",annual rate
+F-335780-PLATFORM-UPGRADE-INCREMENT-2026-10,2,contract_term,data/raw/2026-10/contracts/AM-OF-2026-164.pdf,,"03 CHANGES TO COMMERCIAL TERMS: Annual platform rate $48,000.00 / year $60,000.00 / year",annual rate
+F-335780-PLATFORM-UPGRADE-INCREMENT-2026-10,3,contract_term,data/raw/2026-10/contracts/AM-OF-2026-164.pdf,,"04 APPLICATION AND OTHER TERMS: October upgrade catch-up: USD 526.03, using USD 12,000 x 16 / 365, rounded half up.",increment basis
+F-335780-PLATFORM-UPGRADE-INCREMENT-2026-10,4,contract_term,data/raw/2026-10/contracts/AM-OF-2026-164.pdf,,"04 APPLICATION AND OTHER TERMS: Incremental consideration for 320 remaining service days is USD 10,520.55.",increment basis
+F-335780-PLATFORM-UPGRADE-INCREMENT-2026-10,5,csv_row,data/raw/2026-10/netsuite_gl_detail.csv,273,GL 4000 October base platform recognition: credit 4076.71,October recognition booked
+F-335780-PLATFORM-UPGRADE-INCREMENT-2026-10,6,csv_row,data/raw/2026-10/netsuite_revenue_plan_detail.csv,279,"Revenue plan RP-26645e070609bc Oct 2026: 4076.71, plan updated 2026-09-01T08:00:00-06:00",revenue plan (base only)
+F-335780-PLATFORM-UPGRADE-INCREMENT-2026-10,7,pdf_quote,data/raw/2026-10/START_HERE.pdf,,ACCOUNTING: Preserve the original base schedule when adding an upgrade increment.,policy
+F-335780-PLATFORM-UPGRADE-INCREMENT-2026-10,8,pdf_quote,data/raw/2026-10/START_HERE.pdf,,ACCOUNTING: Reverse any prior reclass before recalculating. The supplied October GL ALREADY contains its baseline reclass. Propose only incremental changes after correcting recognition.,policy
 F-437384-USAGE-RATE-2026-10,1,contract_term,data/raw/2026-10/contracts/OF-2026-331.pdf,,"03 SERVICES AND FEES: 30,000 included runs per calendar month",allowance
 F-437384-USAGE-RATE-2026-10,2,contract_term,data/raw/2026-10/contracts/OF-2026-331.pdf,,"03 SERVICES AND FEES: Monthly, in arrears $0.16 / excess run",overage rate
 F-437384-USAGE-RATE-2026-10,3,csv_row,data/raw/2026-10/product_usage.csv,,"31 October records, 58,502 runs on pa_6f486d59fde2c4 (deduplicated, active, verified mapping)",validated usage

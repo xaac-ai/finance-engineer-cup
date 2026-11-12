@@ -60,9 +60,9 @@ customer_id,account_number,account_name,recorded_balance,with_proposed_balance,p
 314334,4000,Platform revenue,-4076.71,-4076.71,0.00
 335780,1100,Accounts receivable,6985.48,6985.48,0.00
 335780,1150,Unbilled usage receivable,2327.52,2327.52,0.00
-335780,1160,Platform contract asset,21.92,21.92,0.00
+335780,1160,Platform contract asset,21.92,547.95,526.03
 335780,2200,Deferred platform revenue,0.00,0.00,0.00
-335780,4000,Platform revenue,-4076.71,-4076.71,0.00
+335780,4000,Platform revenue,-4076.71,-4602.74,-526.03
 335780,4010,Usage revenue,-2327.52,-2327.52,0.00
 436791,1100,Accounts receivable,2462.32,2462.32,0.00
 436791,1150,Unbilled usage receivable,2624.64,2624.64,0.00

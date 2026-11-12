@@ -1,5 +1,6 @@
 document_id,finding_id,customer_id,doc_type,issue_date,stream,amount,service_start,service_end_exclusive,original_invoice,description
 PD-F-188999-USAGE-MISSING-INVOICE-2026-10-1,F-188999-USAGE-MISSING-INVOICE-2026-10,188999,supplemental_invoice,2026-11-12,usage,3074.28,2026-10-01,2026-11-01,,October workflow-run overage not invoiced
+PD-F-335780-PLATFORM-MISSING-CATCH-UP-2026-10-1,F-335780-PLATFORM-MISSING-CATCH-UP-2026-10,335780,supplemental_invoice,2026-11-12,platform,526.03,2026-10-16,2026-11-01,,Upgrade catch-up for 2026-10-16 to 2026-11-01 (end-exclusive)
 PD-F-437384-USAGE-RATE-2026-10-1,F-437384-USAGE-RATE-2026-10,437384,supplemental_invoice,2026-11-12,usage,3135.22,2026-10-01,2026-11-01,RC-261101-437384-U,October workflow-run overage under-billed on RC-261101-437384-U
 PD-F-639373-USAGE-ALLOWANCE-2026-10-1,F-639373-USAGE-ALLOWANCE-2026-10,639373,credit_note,2026-11-12,usage,3096.80,2026-10-01,2026-11-01,RC-261101-639373-U,Credit for October workflow-run overage over-billed on RC-261101-639373-U
 PD-F-810234-USAGE-LATE-RECORD-2026-10-1,F-810234-USAGE-LATE-RECORD-2026-10,810234,supplemental_invoice,2026-11-12,usage,100.00,2026-10-01,2026-11-01,RC-261101-810234-U,October workflow-run overage under-billed on RC-261101-810234-U

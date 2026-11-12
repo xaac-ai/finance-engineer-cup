@@ -34,6 +34,8 @@ WORKPAPERS = [
     "finding_calculations",
     "finding_evidence",
     "proposed_billing_documents",
+    "platform_documents",
+    "platform_revenue_components",
     "usage_by_customer",
     "usage_batch_tieout",
 ]
@@ -112,11 +114,12 @@ def write_report(con: duckdb.DuckDBPyConnection, period: Period, controls: list[
         if e["finding_id"] not in index[k]["cited_by"]:
             index[k]["cited_by"].append(e["finding_id"])
     totals = j("""SELECT
-        coalesce(sum(CASE WHEN status = 'error' AND billing_effect > 0 THEN billing_effect END), 0) AS underbilled,
-        coalesce(sum(CASE WHEN status = 'error' AND billing_effect < 0 THEN billing_effect END), 0) AS overbilled,
-        coalesce(sum(CASE WHEN status = 'error' AND october_revenue_effect > 0 THEN october_revenue_effect END), 0) AS october_understated,
-        coalesce(sum(CASE WHEN status = 'error' AND october_revenue_effect < 0 THEN october_revenue_effect END), 0) AS october_overstated,
-        count(*) FILTER (WHERE status = 'needs_info' AND exposure IS NOT NULL) AS exposure_items
+        coalesce(sum(CASE WHEN status = 'error' AND NOT follow_up AND billing_effect > 0 THEN billing_effect END), 0) AS underbilled,
+        coalesce(sum(CASE WHEN status = 'error' AND NOT follow_up AND billing_effect < 0 THEN billing_effect END), 0) AS overbilled,
+        coalesce(sum(CASE WHEN status = 'error' AND NOT follow_up AND october_revenue_effect > 0 THEN october_revenue_effect END), 0) AS october_understated,
+        coalesce(sum(CASE WHEN status = 'error' AND NOT follow_up AND october_revenue_effect < 0 THEN october_revenue_effect END), 0) AS october_overstated,
+        count(*) FILTER (WHERE status = 'needs_info' AND exposure IS NOT NULL) AS exposure_items,
+        count(*) FILTER (WHERE follow_up) AS follow_ups
         FROM out_findings""")[0]
     data = {
         "run": {"period": period.key, "label": period.label, "cutoff": period.cutoff,

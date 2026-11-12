@@ -48,8 +48,9 @@ def run(period_key: str, root: Path | None = None) -> RunResult:
                f"{n_approvals} approved concessions"),
     ]
     results += run_controls(con, "inputs")
-    if "usage" in ctx.streams:
-        results += run_controls(con, "usage")
+    for stream in ("platform", "usage"):
+        if stream in ctx.streams:
+            results += run_controls(con, stream)
     results += ledger.run_ledger_controls(con)
     results += run_controls(con, "findings")
 
