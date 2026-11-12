@@ -24,8 +24,8 @@
   td.n, th.n { text-align:right; }
   .scroll { overflow-x:auto; }
   .chip { display:inline-block; padding:1px 8px; border-radius:999px; font-size:12px; font-weight:600; white-space:nowrap; }
-  .error,.fail { background:var(--errbg); color:var(--err); } .valid,.pass { background:var(--okbg); color:var(--ok); }
-  .needs-info,.warn { background:var(--infobg); color:var(--info); }
+  .error,.fail { background:var(--errbg); color:var(--err); } .valid_explanation,.pass { background:var(--okbg); color:var(--ok); }
+  .needs_info,.warn { background:var(--infobg); color:var(--info); }
   code, .mono { font:12px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; }
   .empty { border:1px dashed var(--line); border-radius:8px; padding:24px; text-align:center; color:var(--mute); }
   .wb { display:grid; grid-template-columns:minmax(240px, 320px) 1fr; gap:0; border:1px solid var(--line); border-radius:8px; min-height:60vh; }
@@ -74,6 +74,7 @@
    "text": "Balances are kept per customer x account; customers are never netted against each other."
   }
  ],
+ "billing_reconciliation": [],
  "controls": [
   {
    "count": 0,
@@ -191,6 +192,42 @@
    "status": "pass",
    "title": "Proposed Entries cite a finding and sit in their allowed period",
    "view": "ctl_ledger_proposed_entry_rules"
+  },
+  {
+   "count": 0,
+   "detail": "",
+   "group": "findings",
+   "name": "01_claims_balance",
+   "status": "pass",
+   "title": "Every reconciliation difference is explained exactly once (claims = difference)",
+   "view": "ctl_findings_claims_balance"
+  },
+  {
+   "count": 0,
+   "detail": "",
+   "group": "findings",
+   "name": "02_claim_targets",
+   "status": "pass",
+   "title": "Findings only claim differences that exist (known customer, implemented stream)",
+   "view": "ctl_findings_claim_targets"
+  },
+  {
+   "count": 0,
+   "detail": "",
+   "group": "findings",
+   "name": "03_no_duplicate_corrections",
+   "status": "pass",
+   "title": "No duplicate corrections (one proposed document per original invoice, stream and amount)",
+   "view": "ctl_findings_no_duplicate_corrections"
+  },
+  {
+   "count": 0,
+   "detail": "",
+   "group": "findings",
+   "name": "04_finding_integrity",
+   "status": "pass",
+   "title": "Findings are well-formed (evidence cited; Needs Info has no confirmed amounts; zero October effect is explained)",
+   "view": "ctl_findings_finding_integrity"
   }
  ],
  "customers": [
@@ -647,9 +684,10 @@
  ],
  "evidence": [],
  "findings": [],
+ "revenue_reconciliation": [],
  "run": {
   "command": "make run PERIOD=2026-10",
-  "commit": "f202315-dirty",
+  "commit": "804addb-dirty",
   "cutoff": "2026-11-11T18:00:00-07:00",
   "label": "Oct 2026",
   "period": "2026-10"
@@ -673,7 +711,15 @@
    "stripe_invoice_lines.csv": 124,
    "stripe_invoices.csv": 124,
    "usage_batch_controls.csv": 61
-  }
+  },
+  "streams": []
+ },
+ "totals": {
+  "exposure_items": 0,
+  "october_overstated": "0.00",
+  "october_understated": "0.00",
+  "overbilled": "0.00",
+  "underbilled": "0.00"
  },
  "trial_balance_by_account": [
   {
@@ -727,6 +773,12 @@
   "contract_terms.csv",
   "billing_messages.csv",
   "customers.csv",
+  "billing_reconciliation.csv",
+  "revenue_reconciliation.csv",
+  "findings.csv",
+  "finding_calculations.csv",
+  "finding_evidence.csv",
+  "proposed_billing_documents.csv",
   "controls.csv"
  ]
 }</script>
@@ -735,7 +787,7 @@
 const D = JSON.parse(document.getElementById("report-data").textContent);
 const esc = s => String(s == null ? "" : s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
 const money = v => v == null || v === "" ? "—" : (Number(v) < 0 ? "(" : "") + "$" + Math.abs(Number(v)).toLocaleString("en-US",{minimumFractionDigits:2, maximumFractionDigits:2}) + (Number(v) < 0 ? ")" : "");
-const LABEL = { error:"Error", valid:"Valid Explanation", "needs-info":"Needs Info", pass:"Pass", warn:"Warn", fail:"Fail" };
+const LABEL = { error:"Error", valid_explanation:"Valid Explanation", needs_info:"Needs Info", pass:"Pass", warn:"Warn", fail:"Fail" };
 const chip = s => `<span class="chip ${esc(s)}">${esc(LABEL[s] || s)}</span>`;
 const VIEWS = { findings:"Findings", customers:"Customers", brief:"Brief", controls:"Controls & assumptions", evidence:"Evidence index" };
 let filter = "all";
@@ -746,7 +798,9 @@ function header() {
   document.getElementById("hdr").innerHTML = `<b>RelayCloud · ${esc(D.run.label)} billing review</b>
     <span class="stat"><b>${f.length}</b><span class="mute">findings</span></span>
     <span class="stat"><b>${n("error")}</b><span class="mute">errors</span></span>
-    <span class="stat"><b>${n("needs-info")}</b><span class="mute">need info</span></span>
+    <span class="stat"><b>${n("needs_info")}</b><span class="mute">need info</span></span>
+    <span class="stat"><b>${money(D.totals.underbilled)}</b><span class="mute">underbilled</span></span>
+    <span class="stat"><b>${money(D.totals.overbilled)}</b><span class="mute">overbilled</span></span>
     <span class="stat">${chip(overall())} <span class="mute">controls ${D.controls.filter(c=>c.status==="pass").length}/${D.controls.length}</span></span>
     <span class="mute mono" style="margin-left:auto">${esc(D.run.command)} · commit ${esc(D.run.commit)} · cutoff ${esc(D.run.cutoff)}</span>`;
 }
@@ -759,34 +813,51 @@ function findingsView(selId) {
   if (!D.findings.length) return `<div class="empty"><h2>No findings yet</h2>The workbench skeleton is running; the accounting logic that produces
     Findings is built next. Controls, Customers and the Evidence index are already live.</div>`;
   const list = D.findings.filter(f => filter === "all" || f.status === filter);
-  const f = D.findings.find(x => x.id === selId) || list[0] || D.findings[0];
+  const f = D.findings.find(x => x.finding_id === selId) || list[0] || D.findings[0];
   return `<div class="wb"><div class="list">
-      <div class="filters">${["all","error","valid","needs-info"].map(s=>`<button data-f="${s}" class="${filter===s?"on":""}">${s==="all"?"All":LABEL[s]}</button>`).join("")}</div>
-      ${list.map(x=>`<a class="item ${x.id===f.id?"on":""}" href="#${esc(x.id)}"><b>${esc(x.id)}</b> · ${esc(x.customer_name)}
-        <div class="mute" style="font-size:12px">${esc(x.title)}</div><div>${chip(x.status)} <span class="mute">${money(x.amount)}</span></div></a>`).join("")}
+      <div class="filters">${["all","error","valid_explanation","needs_info"].map(s=>`<button data-f="${s}" class="${filter===s?"on":""}">${s==="all"?"All":LABEL[s]}</button>`).join("")}</div>
+      ${list.map(x=>`<a class="item ${x.finding_id===f.finding_id?"on":""}" href="#${esc(x.finding_id)}"><b>${esc(x.finding_id)}</b> · ${esc(x.customer_name || "Unattributed")}
+        <div class="mute" style="font-size:12px">${esc(x.title)}</div><div>${chip(x.status)} <span class="mute">${x.billing_effect != null ? money(x.billing_effect) : (x.exposure ? "exposure" : "")}</span></div></a>`).join("")}
     </div><div class="detail">
-      <h1>${esc(f.id)} · ${esc(f.title)}</h1>
-      <div>${chip(f.status)} <a href="#C-${esc(f.customer_id)}">${esc(f.customer_name)}</a> <span class="mute">· ${esc(f.period)} · ${esc(f.stream)} · ${money(f.amount)}</span></div>
+      <h1 id="${esc(f.finding_id)}">${esc(f.finding_id)}</h1><h2 style="margin-top:0">${esc(f.title)}</h2>
+      <div>${chip(f.status)} ${f.customer_id ? `<a href="#C-${esc(f.customer_id)}">${esc(f.customer_name)}</a>` : "<i>not attributed to a customer</i>"}
+        <span class="mute">· ${esc(f.stream)} · service ${esc(f.service_period)}${f.follow_up ? " · follow-up" : ""}</span></div>
       <p>${esc(f.summary)}</p>
-      <div class="step"><h3>1 · Calculation</h3><div class="mono">${(f.calculation||[]).map(esc).join("<br>")}</div></div>
-      <div class="step"><h3>2 · Evidence</h3><div>${(f.evidence||[]).map(e => e.quote
-          ? `<div class="quote">${srcRef(e.file, e.line)}<br>“${esc(e.quote)}”</div>`
-          : `${srcRef(e.file, e.line)}<div class="src mono">${esc(e.text)}</div>`).join("")}</div></div>
-      <div class="step"><h3>3 · Recommended action</h3><div>${esc(f.action)}</div></div>
-      <div class="step"><h3>4 · Proposed entry</h3><div>${f.entry_id ? esc(f.entry_id) : '<span class="mute">None proposed.</span>'}</div></div>
+      <table style="max-width:560px"><tr><th>Billing Effect</th><td class="n">${money(f.billing_effect)}</td></tr>
+        <tr><th>October Revenue Effect</th><td class="n">${money(f.october_revenue_effect)}</td></tr>
+        ${f.exposure ? `<tr><th>Exposure (conditional)</th><td>${esc(f.exposure)}</td></tr>` : ""}
+        ${f.no_october_entry_reason ? `<tr><th>Why no October entry</th><td>${esc(f.no_october_entry_reason)}</td></tr>` : ""}</table>
+      <div class="step"><h3>1 · Calculation</h3><div>${f.calculation.length ? `<table>${f.calculation.map(c=>`<tr><td>${esc(c.description)}</td><td class="mono">${esc(c.formula)}</td><td class="n mono">${esc(c.value)}</td></tr>`).join("")}</table>` : '<span class="mute">None.</span>'}</div></div>
+      <div class="step"><h3>2 · Evidence</h3><div>${f.evidence.map(e => e.kind === "pdf_quote" || e.kind === "billing_message"
+          ? `<div class="quote">${srcRef(e.file, e.line)} <span class="mute">· ${esc(e.role)}</span><br>“${esc(e.text)}”</div>`
+          : `${srcRef(e.file, e.line)} <span class="mute">· ${esc(e.role)}</span><div class="src mono">${esc(e.text)}</div>`).join("")}</div></div>
+      <div class="step"><h3>3 · Recommended action</h3><div>${esc(f.action)}${f.documents.length ? `<table style="margin-top:8px"><tr><th>Proposed document</th><th>Issue date</th><th>Service period</th><th>Original</th><th class="n">Amount</th></tr>${f.documents.map(d=>`<tr><td>${esc(d.doc_type)}</td><td>${esc(d.issue_date)}</td><td>${esc(d.service_start)} → ${esc(d.service_end_exclusive)}</td><td class="mono">${esc(d.original_invoice||"")}</td><td class="n">${money(d.amount)}</td></tr>`).join("")}</table>` : ""}</div></div>
+      <div class="step"><h3>4 · Proposed entries</h3><div>${f.entries.length ? `<table><tr><th>Entry</th><th>Date / period</th><th>Account</th><th class="n">Debit</th><th class="n">Credit</th></tr>${f.entries.map(e=>`<tr><td class="mono">${esc(e.entry_id)}</td><td>${esc(e.date)} · ${esc(e.posting_period)}</td><td>${esc(e.account_number)} ${esc(e.memo||"")}</td><td class="n">${Number(e.debit)?money(e.debit):""}</td><td class="n">${Number(e.credit)?money(e.credit):""}</td></tr>`).join("")}</table>` : '<span class="mute">None proposed.</span>'}</div></div>
     </div></div>`;
+}
+
+function reconCells(cid) {
+  const cell = (rows, stream, actualKey) => {
+    const r = rows.find(x => x.customer_id === cid && x.stream === stream);
+    if (!r) return `<td class="n mute">not built</td>`;
+    const diff = Number(r.difference) !== 0;
+    const links = (r.finding_ids||"").split(", ").filter(Boolean).map(id=>`<a href="#${esc(id)}">${esc(id.split("-").slice(2,-2).join("-"))}</a>`).join(" ");
+    return `<td class="n ${diff?"":"mute"}">${money(r.expected)} / ${money(r[actualKey])}${diff?`<br><b>${money(r.difference)}</b> ${links}`:""}</td>`;
+  };
+  return cell(D.billing_reconciliation,"platform","actual") + cell(D.billing_reconciliation,"usage","actual")
+       + cell(D.revenue_reconciliation,"platform","booked") + cell(D.revenue_reconciliation,"usage","booked");
 }
 
 function customersView(target) {
   return `<h1>Customers (${D.customers.length})</h1>
     <p class="mute">Every customer in the population, with identities across systems and terms in force at period start.
-    Expected vs actual billing (platform and usage separately) is filled in by the accounting logic.</p>
+    Each reconciliation shows expected / actual (or booked); a nonzero difference (expected − actual: positive = underbilled or understated) links to the Finding that explains it. Streams: ${esc((D.stats.streams||[]).join(", ") || "none built yet")}.</p>
     <div class="scroll"><table><tr><th>Customer</th><th>NetSuite</th><th>Contract</th><th>Billing</th><th class="n">Platform invoice</th>
-      <th class="n">Included runs</th><th class="n">Overage $/run</th><th>Documents</th><th class="n">Platform exp. / act.</th><th class="n">Usage exp. / act.</th><th>Source</th></tr>
+      <th class="n">Included runs</th><th class="n">Overage $/run</th><th>Documents</th><th class="n">Platform billing<br>exp. / act.</th><th class="n">Usage billing<br>exp. / act.</th><th class="n">Platform revenue<br>exp. / booked</th><th class="n">Usage revenue<br>exp. / booked</th><th>Source</th></tr>
     ${D.customers.map(c => `<tr id="C-${esc(c.customer_id)}" class="${target==="C-"+c.customer_id?"target":""}"><td><b>${esc(c.customer_name)}</b></td>
       <td class="mono">${esc(c.customer_id)}</td><td class="mono">${esc(c.contract_id)}</td><td>${esc(c.billing_frequency)}</td>
       <td class="n">${money(c.platform_invoice_amount)}</td><td class="n">${c.included_runs_per_month ? Number(c.included_runs_per_month).toLocaleString() : "—"}</td>
-      <td class="n">${esc(c.overage_rate || "—")}</td><td class="mono">${esc(c.documents)}</td><td class="n mute">— / —</td><td class="n mute">— / —</td>
+      <td class="n">${esc(c.overage_rate || "—")}</td><td class="mono">${esc(c.documents)}</td>${reconCells(c.customer_id)}
       <td>${srcRef(c.source_file, c.source_line)}</td></tr>`).join("")}
     </table></div>`;
 }
@@ -795,9 +866,11 @@ function briefView() {
   const tb = D.trial_balance_by_account;
   return `<div class="memo"><h1>${esc(D.run.label)} billing review — brief</h1>
     <p class="mute">For the Controller. Recommendations require approval; nothing has been posted or invoiced.</p>
-    <div class="q">1 · What should we have billed?</div><p class="mute">Expected vs actual billing per customer — pending accounting logic. See <a href="#customers">Customers</a>.</p>
-    <div class="q">2 · Which differences need action?</div><p class="mute">${D.findings.length} findings. See <a href="#findings">Findings</a>.</p>
+    <div class="q">1 · What should we have billed?</div><p>Confirmed Errors: underbilled <b>${money(D.totals.underbilled)}</b>, overbilled <b>${money(D.totals.overbilled)}</b>. Per customer and stream in <a href="#customers">Customers</a>.</p>
+    <div class="q">2 · Which differences need action?</div><ul>${D.findings.map(f=>`<li>${chip(f.status)} <a href="#${esc(f.finding_id)}">${esc(f.customer_name||"Unattributed")}</a>: ${esc(f.title)}</li>`).join("") || "<li class=mute>No findings.</li>"}</ul>
+    <p class="mute">Conditional exposure (Needs Info) is listed separately and never added to the totals above: ${D.totals.exposure_items} item(s).</p>
     <div class="q">3 · Does anything change ${esc(D.run.label)}'s books?</div>
+    <p>October revenue understated <b>${money(D.totals.october_understated)}</b>, overstated <b>${money(D.totals.october_overstated)}</b> (confirmed Errors). Findings with a billing effect but no October effect say why.</p>
     <div class="scroll"><table><tr><th>Account</th><th class="n">Recorded</th><th class="n">With proposed</th><th class="n">Change</th></tr>
       ${tb.map(r=>`<tr><td>${esc(r.account_number)} ${esc(r.account_name)}</td><td class="n">${money(r.recorded_balance)}</td><td class="n">${money(r.with_proposed_balance)}</td><td class="n">${money(r.proposed_change)}</td></tr>`).join("")}
     </table></div><p class="mute" style="font-size:12px">Signed debit − credit at period end, summed across customers (never netted per customer in the workpaper: <code>trial_balance.csv</code>).</p>

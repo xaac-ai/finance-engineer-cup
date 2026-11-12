@@ -12,3 +12,7 @@ ledger,05_period_integrity,Each GL line's date falls inside its posting period,p
 ledger,06_cutoff,No Recorded Entry was created after the close cutoff,pass,0,ctl_ledger_cutoff,
 ledger,07_revenue_plan_join,Every recognised revenue-plan row for the period joins an included GL posting,pass,0,ctl_ledger_revenue_plan_join,
 ledger,08_proposed_entry_rules,Proposed Entries cite a finding and sit in their allowed period,pass,0,ctl_ledger_proposed_entry_rules,
+findings,01_claims_balance,Every reconciliation difference is explained exactly once (claims = difference),pass,0,ctl_findings_claims_balance,
+findings,02_claim_targets,"Findings only claim differences that exist (known customer, implemented stream)",pass,0,ctl_findings_claim_targets,
+findings,03_no_duplicate_corrections,"No duplicate corrections (one proposed document per original invoice, stream and amount)",pass,0,ctl_findings_no_duplicate_corrections,
+findings,04_finding_integrity,Findings are well-formed (evidence cited; Needs Info has no confirmed amounts; zero October effect is explained),pass,0,ctl_findings_finding_integrity,
