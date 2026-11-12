@@ -17,7 +17,7 @@ Research for issue #5 ("How should the ledger layer be laid out?"). Facts, not a
    - It has one dominant maintainer.
 2. **Beancount 3.2.3 installs cleanly through uv** **[exp]**.
    - PyPI has binary wheels for macOS arm64 and x86, Linux x86_64 and aarch64, and Windows, for CPython 3.9–3.14. No compiler is needed.
-   - A cold install took under a second, and the package ships `bean-check` and `bean-query`.
+   - A cold install took under a second, and it ships `bean-check` (`bean-query` comes with `beanquery`).
    - The in-process API (`loader.load_file`, `beanquery.connect`) worked, and so did a **custom Python plugin** **[exp]**.
    - beanquery is still 0.2.0, released 2025-03-24.
 3. **DuckDB 2.0.0 has wheels for every target platform.** Its `DECIMAL` arithmetic is exact for `+`, `-` and `*`, but it has traps:
