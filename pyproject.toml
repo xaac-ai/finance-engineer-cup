@@ -10,6 +10,9 @@ dependencies = [
 ]
 
 [dependency-groups]
+agents = [
+    "anthropic>=2.8.0",
+]
 dev = ["pytest>=8.0"]
 
 [project.scripts]

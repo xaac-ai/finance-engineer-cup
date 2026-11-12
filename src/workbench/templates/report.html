@@ -175,10 +175,28 @@ function briefView() {
     <code>make run PERIOD=&lt;YYYY-MM&gt;</code>. Missing inputs, unparseable Order Forms and uncited Amendment terms stop the run with a message. See <a href="#controls">Controls</a>.</p></div>`;
 }
 
+function agentSteps() {
+  const dr = (D.agents||{}).drafter;
+  if (!dr) return `<h2>Agent steps</h2><p class="mute">Not run for this period.</p>`;
+  const t = dr.totals, yn = v => v === true ? "✓" : v === false ? "✗" : "—";
+  return `<h2>Agent steps</h2>
+    <h3>Amendment-term drafter (${esc(dr.model)}, effort ${esc(dr.effort)})</h3>
+    <p>Run with <code>make draft-terms</code>, outside the review; the answers are committed and replayed without a key. Drafting blind (it never sees the curated file), it found
+      <b>${t.found}/${t.curated}</b> curated terms: numeric values ${t.value_match}/${t.value_comparable}, effective dates ${t.date_match}/${t.found}, quotes passing the word-for-word gate ${t.quote_pass}/${t.drafted}, with ${t.extra} extra term(s).
+      Drafted Terms have no effect until a person copies them into the curated terms.</p>
+    <div class="scroll"><table><tr><th>Amendment</th><th>Term</th><th>Curated</th><th>Drafted</th><th>Value</th><th>Date</th><th>Quote gate</th><th>Drafted quote</th></tr>
+    ${dr.documents.flatMap(d => d.terms.map(x => `<tr><td class="mono">${esc(d.document_id)}</td><td class="mono">${esc(x.term)}</td>
+      <td class="mono">${esc(x.curated_value)}</td><td class="mono">${esc(x.drafted_value ?? "missed")}</td><td>${yn(x.value_match)}</td><td>${yn(x.date_match)}</td>
+      <td>${x.quote_check ? chip(x.quote_check === "passed" ? "pass" : "fail") : ""}</td><td class="mute" style="font-size:12px">${esc(x.drafted_quote || "")}</td></tr>`)).join("")}
+    </table></div>
+    <p class="mute" style="font-size:12px">Calls: ${dr.calls.map(c => `${esc(c.document_id)}: ${esc(c.model)}, ${c.usage.input_tokens.toLocaleString()} in / ${c.usage.output_tokens.toLocaleString()} out, recorded ${esc(c.recorded_at)}`).join("; ")}.</p>`;
+}
+
 function controlsView() {
   return `<h1>Controls</h1><div class="scroll"><table><tr><th>Status</th><th>Group</th><th>Control</th><th class="n">Rows</th><th>Detail</th></tr>
     ${D.controls.map(c=>`<tr><td>${chip(c.status)}</td><td>${esc(c.group)}</td><td>${esc(c.title)}</td><td class="n">${c.count}</td>
       <td class="mute">${c.view ? `offending rows: <code>${esc(c.view)}</code>` : esc(c.detail)}</td></tr>`).join("")}</table></div>
+    ${agentSteps()}
     <h2>Assumptions</h2><ul>${D.assumptions.map(a=>`<li>${esc(a.text)} <span class="mute">(${esc(a.source)})</span></li>`).join("")}</ul>
     <h2>Input row counts</h2><table><tr><th>File</th><th class="n">Rows</th></tr>${Object.entries(D.stats.row_counts).map(([f,n])=>`<tr><td class="mono">${esc(f)}</td><td class="n">${n}</td></tr>`).join("")}</table>
     <h2>Workpapers</h2><ul>${D.workpapers.map(w=>`<li><a href="${esc(w)}">${esc(w)}</a></li>`).join("")}</ul>`;
