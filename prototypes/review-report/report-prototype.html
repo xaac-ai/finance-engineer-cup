@@ -1,0 +1,330 @@
+<!--
+  PROTOTYPE — throwaway. Answers: "What should the per-run review report look like?"
+  (wayfinder ticket: What should the review report look like? — xaac-ai/finance-engineer-cup#6)
+  Three structurally different variants of the static HTML report, switchable via ?variant=A|B|C
+  or the floating bar / ← → keys. Open by double-clicking this file.
+  ALL AMOUNTS AND FINDINGS ARE ILLUSTRATIVE. Source rows and IDs are real; the expected-billing numbers,
+  classifications, and JEs are NOT computed — accounting logic is out of scope for this map.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Review report prototype</title>
+<style>
+  :root { --ink:#1d2330; --mute:#6a7385; --line:#e3e6ec; --bg:#fff; --soft:#f6f7f9;
+          --err:#b42318; --errbg:#fef3f2; --ok:#067647; --okbg:#ecfdf3; --info:#b54708; --infobg:#fffaeb; --acc:#2f5bd3; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:14px/1.45 -apple-system, "Segoe UI", system-ui, sans-serif; color:var(--ink); background:var(--bg); padding-bottom:80px; }
+  .banner { background:#111; color:#fde68a; text-align:center; font-size:12px; padding:6px 16px; letter-spacing:.02em; }
+  h1,h2,h3 { margin:0 0 .4em; line-height:1.2; }
+  h1 { font-size:22px; } h2 { font-size:17px; } h3 { font-size:14px; }
+  .mute { color:var(--mute); }
+  table { border-collapse:collapse; width:100%; font-variant-numeric:tabular-nums; }
+  th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { font-size:12px; color:var(--mute); font-weight:600; background:var(--soft); }
+  td.n, th.n { text-align:right; }
+  .chip { display:inline-block; padding:1px 8px; border-radius:999px; font-size:12px; font-weight:600; white-space:nowrap; }
+  .error { background:var(--errbg); color:var(--err); } .valid { background:var(--okbg); color:var(--ok); } .needs-info { background:var(--infobg); color:var(--info); }
+  .pass { background:var(--okbg); color:var(--ok); } .fail { background:var(--errbg); color:var(--err); } .warn { background:var(--infobg); color:var(--info); }
+  code, .mono { font:12px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .src { background:var(--soft); border:1px solid var(--line); border-radius:6px; padding:8px 10px; overflow-x:auto; white-space:pre; margin:6px 0; }
+  .quote { border-left:3px solid var(--acc); padding:4px 10px; margin:6px 0; background:#f3f6fe; }
+  .scroll { overflow-x:auto; }
+  a { color:var(--acc); }
+  .neg { color:var(--err); } .pos { color:var(--ok); }
+
+  /* switcher */
+  #switcher { position:fixed; left:50%; bottom:16px; transform:translateX(-50%); background:#111; color:#fff; border-radius:999px;
+              display:flex; align-items:center; gap:10px; padding:6px 10px; box-shadow:0 6px 24px rgba(0,0,0,.35); z-index:99; font-size:13px; }
+  #switcher button { background:#333; color:#fff; border:0; border-radius:999px; width:30px; height:30px; cursor:pointer; font-size:15px; }
+  #switcher button:hover { background:#555; }
+
+  /* Variant A: memo */
+  .memo { max-width:860px; margin:0 auto; padding:28px 20px; }
+  .memo section { margin:28px 0; }
+  .memo .q { font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--acc); font-weight:700; }
+  .memo .kpis { display:flex; flex-wrap:wrap; gap:12px; margin:14px 0; }
+  .memo .kpi { flex:1 1 160px; border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+  .memo .kpi b { display:block; font-size:20px; }
+  .memo sup a { text-decoration:none; font-size:11px; }
+  .memo .fn { font-size:12px; border-top:1px solid var(--line); padding-top:10px; }
+  .memo .fn li { margin:6px 0; }
+
+  /* Variant B: findings workbench */
+  .wb { display:grid; grid-template-columns:minmax(260px, 340px) 1fr; min-height:calc(100vh - 30px); }
+  .wb .top { grid-column:1/-1; display:flex; flex-wrap:wrap; gap:18px; align-items:center; padding:12px 16px; border-bottom:1px solid var(--line); background:var(--soft); }
+  .wb .top .stat b { font-size:16px; margin-right:4px; }
+  .wb .list { border-right:1px solid var(--line); overflow:auto; }
+  .wb .filters { display:flex; gap:6px; padding:10px 12px; border-bottom:1px solid var(--line); flex-wrap:wrap; }
+  .wb .filters button { border:1px solid var(--line); background:#fff; border-radius:999px; padding:3px 10px; cursor:pointer; font-size:12px; }
+  .wb .filters button.on { background:var(--ink); color:#fff; border-color:var(--ink); }
+  .wb .item { padding:10px 12px; border-bottom:1px solid var(--line); cursor:pointer; }
+  .wb .item:hover { background:var(--soft); } .wb .item.on { background:#eef2fd; box-shadow:inset 3px 0 var(--acc); }
+  .wb .item .amt { float:right; font-variant-numeric:tabular-nums; font-weight:600; }
+  .wb .detail { padding:18px 22px; overflow:auto; }
+  .wb .step { border:1px solid var(--line); border-radius:8px; margin:12px 0; }
+  .wb .step > h3 { padding:8px 12px; background:var(--soft); border-bottom:1px solid var(--line); margin:0; font-size:13px; }
+  .wb .step > div { padding:10px 12px; }
+  .wb .rail { display:flex; gap:6px; flex-wrap:wrap; font-size:12px; color:var(--mute); margin:4px 0 10px; }
+  .wb .rail span::after { content:" →"; } .wb .rail span:last-child::after { content:""; }
+  @media (max-width:760px) { .wb { grid-template-columns:1fr; } .wb .list { border-right:0; max-height:40vh; } }
+
+  /* Variant C: customer grid */
+  .grid { padding:16px; }
+  .grid .ctrlbar { position:sticky; top:0; background:#fff; z-index:5; display:flex; flex-wrap:wrap; gap:8px; align-items:center; padding:8px 0 10px; border-bottom:2px solid var(--ink); }
+  .grid .tabs { display:flex; gap:4px; margin:14px 0 8px; flex-wrap:wrap; }
+  .grid .tabs button { border:0; background:var(--soft); padding:6px 12px; border-radius:6px 6px 0 0; cursor:pointer; font-weight:600; color:var(--mute); }
+  .grid .tabs button.on { background:var(--ink); color:#fff; }
+  .grid tr.cust { cursor:pointer; } .grid tr.cust:hover td { background:#fafbfc; }
+  .grid tr.open td { background:#eef2fd; }
+  .grid tr.trail td { background:#fbfcfe; padding:10px 16px 16px 32px; }
+  .grid .grp { text-align:center; border-left:2px solid var(--line); }
+  .grid td.bl, .grid th.bl { border-left:2px solid var(--line); }
+</style>
+</head>
+<body>
+<div class="banner">PROTOTYPE · ILLUSTRATIVE NUMBERS — source rows/IDs are real, expected amounts &amp; classifications are made up · ?variant=A|B|C</div>
+<div id="root"></div>
+<div id="switcher"><button id="prev" title="Previous (←)">‹</button><span id="vlabel"></span><button id="next" title="Next (→)">›</button></div>
+
+<script>
+// ---------- illustrative data ----------
+const RUN = { period:"2026-10", cutoff:"2026-11-11T18:00:00-07:00", ranAt:"2026-11-12T09:14:03-07:00", commit:"a1b2c3d", command:"make run PERIOD=2026-10" };
+
+const CUSTOMERS = [
+  { id:"186097", name:"Alder Fieldworks", plan:"Annual $24k", pE:0, pA:0, uE:1575.76, uA:1575.76, status:"valid", findings:["F-04"] },
+  { id:"866587", name:"Brookstone Data", plan:"Annual $24k", pE:0, pA:0, uE:2041.04, uA:2041.04, status:"ok", findings:[] },
+  { id:"639373", name:"Cedar Harbor Labs", plan:"Monthly $4k", pE:4000, pA:4000, uE:9480.00, uA:12243.20, status:"error", findings:["F-02"] },
+  { id:"335780", name:"Meridian Process Systems", plan:"Monthly $4k→$5k", pE:4526.03, pA:4000, uE:2985.48, uA:2985.48, status:"error", findings:["F-01"] },
+  { id:"148565", name:"Zephyr Grove", plan:"Monthly $4k", pE:4000, pA:4000, uE:1150.00, uA:1250.00, status:"valid", findings:["F-03"] },
+  { id:"839653", name:"Willow Passage", plan:"Monthly $5k (15th)", pE:5000, pA:5000, uE:null, uA:0, status:"needs-info", findings:["F-05","F-06"] },
+  { id:"654552", name:"Kestrel Bridge", plan:"Monthly $3k", pE:3000, pA:3000, uE:0, uA:0, status:"ok", findings:[] },
+  { id:"240793", name:"Westhaven Metrics", plan:"Monthly $4k", pE:4000, pA:4000, uE:612.35, uA:612.35, status:"ok", findings:[] },
+];
+
+const FINDINGS = [
+  { id:"F-01", cust:"Meridian Process Systems", cid:"335780", status:"error", kind:"Underbilling", period:"Oct 2026 (16–31)", stream:"Platform", amount:526.03,
+    title:"Amendment upgrade catch-up not invoiced",
+    summary:"AM-OF-2026-164 raised the platform rate to $60k/yr from Oct 16 and states a $526.03 October catch-up. No catch-up invoice exists; the register shows the amendment was never loaded to billing.",
+    calc:["12,000.00 incremental annual rate × 16 days / 365 = 526.027… → 526.03 (half up)", "Stated in amendment §04 — matches calculation"],
+    evidence:[
+      {type:"quote", src:"AM-OF-2026-164.pdf §04", text:"Catch-up USD 526.03 = 12,000 x 16 / 365, half up, may be invoiced separately."},
+      {type:"row", src:"contract_register.csv", text:"document_id,…,effective_from,effective_to,supersedes_document_id,billing_loaded_at,approval_reference\nAM-OF-2026-164,…,2026-10-16,2027-09-01,OF-2026-164,,MSG-2026-104"},
+      {type:"row", src:"stripe_invoices.csv", text:"in_e36a9bc14c672b,RC-261001-335780-P,cus_75c30f56fb3df9,open,2026-10-01T09:00:00-06:00,…,400000,0,400000,stripe"},
+      {type:"msg", src:"billing_followups.pdf MSG-2026-119", text:"Review request; amendment may not have reached billing."}],
+    action:"Issue supplemental invoice for $526.03 dated Nov 2026. October revenue: recognize the incremental 16 days in October (adjusting JE). Follow-up: November platform invoice billed $4,000 vs $5,000 — November item, flag only.",
+    je:[{acct:"1160 Platform contract asset", dr:526.03, cr:0},{acct:"4000 Platform revenue", dr:0, cr:526.03}], jeNote:"October period · ILLUSTRATIVE — actual entry depends on 2200/1160 reclass rules" },
+  { id:"F-02", cust:"Cedar Harbor Labs", cid:"639373", status:"error", kind:"Overbilling", period:"Oct 2026", stream:"Usage", amount:-2763.20,
+    title:"October allowance not raised for amendment (30k → 45k from Oct 16)",
+    summary:"October usage was billed against a 30,000-run allowance. AM-OF-2026-157 weights October: 15 days at 30,000 + 16 days at 45,000.",
+    calc:["Allowance = 30,000×15/31 + 45,000×16/31 = 37,741.9… → 37,742 runs (half up, once)", "Excess runs billed vs expected × $0.40 = $2,763.20 overbilled (illustrative)"],
+    evidence:[
+      {type:"quote", src:"AM-OF-2026-157.pdf §04", text:"October allowance = prior allowance weighted Oct 1–15 + amended allowance Oct 16–31 by calendar days, rounded once to whole run half up."},
+      {type:"row", src:"stripe_invoices.csv", text:"in_c0e6eb901e48cd,RC-261101-639373-U,cus_c34b5d920c411f,open,2026-11-01T09:00:00-07:00,…,1138800,0,1138800,stripe"}],
+    action:"Propose linked credit note dated Nov 2026. October: reduce usage revenue / 1150 accrual for the overstatement. Also note $0.40/run is 2.5× peer rates but is what OF-2026-157 states — not an error.",
+    je:[{acct:"4010 Usage revenue", dr:2763.20, cr:0},{acct:"1150 Unbilled usage receivable", dr:0, cr:2763.20}], jeNote:"October period · ILLUSTRATIVE" },
+  { id:"F-03", cust:"Zephyr Grove", cid:"148565", status:"valid", kind:"Explained", period:"Oct 2026", stream:"Usage", amount:-100.00,
+    title:"$100 usage concession — approved, credit note issued",
+    summary:"Billing differs from usage by $100; Controller approved the concession and credit note CN-148565-20261104 was issued on Nov 4.",
+    calc:["10000 cents → $100.00 credit against Oct usage line"],
+    evidence:[
+      {type:"row", src:"stripe_credit_notes.csv", text:"cn_85bf669490fd97,CN-148565-20261104,in_6cf692b3e9f58a,cus_499cb732fd7b9c,issued,2026-11-04T10:00:00-07:00,,usd,10000,order_change"},
+      {type:"msg", src:"billing_followups.pdf MSG-2026-109", text:"Controller approves Zephyr USD 100."}],
+    action:"No billing action. Check whether October revenue already reflects the reduction; if not, October adjusting entry (no second reduction in November).", je:[], jeNote:"" },
+  { id:"F-04", cust:"Alder Fieldworks", cid:"186097", status:"valid", kind:"Explained", period:"Oct 2026", stream:"Usage", amount:0,
+    title:"$50 credit note voided — no credit effect",
+    summary:"CN-186097-20261102 was created in error and voided the next day. Void notes have no current credit effect.",
+    calc:["Void → $0.00 effect"],
+    evidence:[{type:"row", src:"stripe_credit_notes.csv", text:"cn_82a7ddd6e88e69,CN-186097-20261102,in_e213ca4456c1e8,cus_12d0dbb00ef364,void,2026-11-02T10:00:00-07:00,2026-11-03T10:00:00-07:00,usd,5000,order_change"},
+              {type:"msg", src:"billing_followups.pdf MSG-2026-116", text:"Alder USD 50 credit note voided."}],
+    action:"None. Confirm the GL credit memo (if any) was reversed.", je:[], jeNote:"" },
+  { id:"F-05", cust:"Willow Passage", cid:"839653", status:"needs-info", kind:"Unresolved", period:"Sep–Oct 2026", stream:"Usage", amount:null,
+    title:"Unverified workspace pa_676b6b455e0887 — usage not attributable",
+    summary:"A product account pending identity verification has usage records but no Salesforce mapping. Not forcing the mapping.",
+    calc:["Potential exposure: units × applicable rate — not quantified until mapping is confirmed"],
+    evidence:[{type:"row", src:"product_account_mapping.csv", text:"pa_676b6b455e0887,,Workspace pending identity verification,2026-09-15,,2026-09-15T08:00:00-06:00"},
+              {type:"msg", src:"billing_followups.pdf MSG-2026-131", text:"Unverified workspace pa_676b6b455e0887."}],
+    action:"Ask Sales Ops to confirm the workspace owner. Exclude from corrections; show as hypothetical exposure only.", je:[], jeNote:"" },
+  { id:"F-06", cust:"Willow Passage", cid:"839653", status:"needs-info", kind:"Unresolved", period:"Oct 2026", stream:"Platform", amount:-250.00,
+    title:"$250 credit requested — not approved",
+    summary:"Sales requested a $250 credit; no Controller approval on file.",
+    calc:["No approval → no correction proposed"],
+    evidence:[{type:"msg", src:"billing_followups.pdf MSG-2026-132", text:"Willow Passage USD 250 request, unapproved."}],
+    action:"Route to Controller for approval decision. Not included in October totals.", je:[], jeNote:"" },
+];
+
+const CONTROLS = [
+  { name:"Extract completeness (row counts vs START_HERE)", status:"pass", detail:"15/15 files match expected counts" },
+  { name:"Usage batch controls tie to records", status:"pass", detail:"61/61 dates" },
+  { name:"Order Forms parsed & match register", status:"pass", detail:"30/30" },
+  { name:"Amendment quotes found verbatim in PDF text", status:"pass", detail:"6/6 quotes" },
+  { name:"Ledger: balanced entries", status:"pass", detail:"170 entries" },
+  { name:"Ledger: opening completeness", status:"pass", detail:"120/120 customer×account" },
+  { name:"Ledger: cutoff (created_at ≤ cutoff)", status:"pass", detail:"340 lines" },
+  { name:"Ledger: Oct plan rows join GL postings", status:"warn", detail:"1 plan row without posting — see view ctl_plan_join" },
+  { name:"Customer mappings complete", status:"warn", detail:"1 product account unmapped (pa_676b6b455e0887)" },
+];
+
+const ASSUMPTIONS = [
+  "Recognition by actual service days / 365; each monthly component rounded once, half up (START_HERE · ACCOUNTING).",
+  "Usage allowance prorated by active calendar days in first partial month, rounded once to whole run (Order Form §04).",
+  "Void credit notes have no effect; issued notes keep original service-period allocation (START_HERE · CREDITS).",
+  "Unmapped/unverified usage is excluded from corrections and shown as exposure only.",
+];
+
+// ---------- helpers ----------
+const fmt = n => n == null ? "—" : (n < 0 ? "(" : "") + "$" + Math.abs(n).toLocaleString("en-US",{minimumFractionDigits:2, maximumFractionDigits:2}) + (n < 0 ? ")" : "");
+const diff = (e,a) => (e == null || a == null) ? null : +(a - e).toFixed(2);
+const chip = s => `<span class="chip ${s}">${({error:"Error", valid:"Valid explanation", "needs-info":"Needs info", ok:"No difference", pass:"Pass", fail:"Fail", warn:"Warn"})[s] || s}</span>`;
+const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
+const evid = e => e.type === "quote" ? `<div class="quote"><div class="mute mono">${e.src}</div>“${esc(e.text)}”</div>`
+                : e.type === "msg" ? `<div class="quote" style="border-color:#b54708;background:#fffaeb"><div class="mute mono">${e.src}</div>${esc(e.text)}</div>`
+                : `<div class="mute mono">${e.src}</div><div class="src mono">${esc(e.text)}</div>`;
+const jeTable = f => f.je.length ? `<table><tr><th>Account</th><th class="n">Debit</th><th class="n">Credit</th></tr>${f.je.map(l=>`<tr><td>${l.acct}</td><td class="n">${l.dr?fmt(l.dr):""}</td><td class="n">${l.cr?fmt(l.cr):""}</td></tr>`).join("")}</table><div class="mute" style="font-size:12px;margin-top:4px">${f.jeNote}</div>` : `<div class="mute">No journal entry proposed.</div>`;
+const totals = () => {
+  const under = FINDINGS.filter(f=>f.status==="error" && f.amount>0).reduce((s,f)=>s+f.amount,0);
+  const over = FINDINGS.filter(f=>f.status==="error" && f.amount<0).reduce((s,f)=>s+f.amount,0);
+  return { under, over, n:FINDINGS.length, errors:FINDINGS.filter(f=>f.status==="error").length, info:FINDINGS.filter(f=>f.status==="needs-info").length };
+};
+
+// ---------- Variant A: Close memo (narrative, top-to-bottom, answers Priya's questions in order) ----------
+function VariantA() {
+  const t = totals();
+  let fnN = 0; const fns = [];
+  const cite = e => { fns.push(e); fnN++; return `<sup><a href="#fn${fnN}">[${fnN}]</a></sup>`; };
+  const findingsHtml = ["error","valid","needs-info"].map(st => {
+    const fs = FINDINGS.filter(f=>f.status===st); if (!fs.length) return "";
+    return `<h3 style="margin-top:16px">${chip(st)} ${fs.length} finding${fs.length>1?"s":""}</h3>` + fs.map(f =>
+      `<p><b>${f.id} · ${f.cust}</b> — ${f.title}. ${f.summary} ${f.evidence.map(cite).join("")}<br>
+       <span class="mute">${f.period} · ${f.stream} · ${f.amount==null?"amount not supportable":fmt(f.amount)}</span><br>
+       <b>Action:</b> ${f.action}</p>`).join("");
+  }).join("");
+  return `<div class="memo">
+    <div class="mute mono">RelayCloud · October 2026 close · billing review · run ${RUN.ranAt} · <code>${RUN.command}</code></div>
+    <h1>October billing review — memo to the Controller</h1>
+    <p class="mute">Prepared for Priya. Recommendations require Controller approval; nothing has been posted or invoiced.</p>
+    <div class="kpis">
+      <div class="kpi"><span class="mute">Underbilled (errors)</span><b>${fmt(t.under)}</b></div>
+      <div class="kpi"><span class="mute">Overbilled (errors)</span><b>${fmt(t.over)}</b></div>
+      <div class="kpi"><span class="mute">Findings</span><b>${t.n}</b><span class="mute">${t.errors} errors · ${t.info} need info</span></div>
+      <div class="kpi"><span class="mute">Controls</span><b>${CONTROLS.filter(c=>c.status==="pass").length}/${CONTROLS.length} pass</b><span class="mute">${CONTROLS.filter(c=>c.status!=="pass").length} warnings</span></div>
+    </div>
+
+    <section><div class="q">1 · What should we have billed?</div><h2>Expected vs actual, October service</h2>
+      <div class="scroll"><table><tr><th>Customer</th><th>Plan</th><th class="n">Platform exp.</th><th class="n">Platform act.</th><th class="n">Usage exp.</th><th class="n">Usage act.</th><th class="n">Diff</th></tr>
+      ${CUSTOMERS.map(c=>{const d=(diff(c.pE,c.pA)||0)+(diff(c.uE,c.uA)||0);return `<tr><td>${c.name}</td><td class="mute">${c.plan}</td><td class="n">${fmt(c.pE)}</td><td class="n">${fmt(c.pA)}</td><td class="n">${fmt(c.uE)}</td><td class="n">${fmt(c.uA)}</td><td class="n ${d<0?"neg":d>0?"pos":""}">${c.uE==null?"?":fmt(d)}</td></tr>`}).join("")}
+      </table></div><p class="mute" style="font-size:12px">Full table for all 30 customers: <code>out/2026-10/expected_vs_actual.csv</code></p></section>
+
+    <section><div class="q">2 · Which differences need action?</div><h2>Findings</h2>${findingsHtml}</section>
+
+    <section><div class="q">3 · Does anything change October's books?</div><h2>Proposed October entries</h2>
+      ${FINDINGS.filter(f=>f.je.length).map(f=>`<h3>${f.id} · ${f.cust}</h3><p class="mute">${f.calc.join("<br>")}</p>${jeTable(f)}`).join("")}
+      <p><b>No October entry needed:</b> F-03 (Zephyr) if October revenue already reflects the approved concession — the November credit note reduces AR and reverses the unbilled-usage release without reducing revenue twice.</p></section>
+
+    <section><div class="q">4 · How do we catch this next month?</div><h2>Controls, assumptions, open items</h2>
+      <table>${CONTROLS.map(c=>`<tr><td>${c.name}</td><td>${chip(c.status)}</td><td class="mute">${c.detail}</td></tr>`).join("")}</table>
+      <h3 style="margin-top:14px">Assumptions</h3><ul>${ASSUMPTIONS.map(a=>`<li>${a}</li>`).join("")}</ul>
+      <h3>Rerun</h3><p>Drop next month's extracts in <code>data/raw/2026-11/</code>, add curated amendment terms, run <code>make run PERIOD=2026-11</code>.</p></section>
+
+    <ol class="fn">${fns.map((e,i)=>`<li id="fn${i+1}">${evid(e)}</li>`).join("")}</ol>
+  </div>`;
+}
+
+// ---------- Variant B: Findings workbench (master–detail, drill from finding to source) ----------
+let bSel = "F-01", bFilter = "all";
+function VariantB() {
+  const t = totals();
+  const list = FINDINGS.filter(f => bFilter==="all" || f.status===bFilter);
+  const f = FINDINGS.find(x=>x.id===bSel) || list[0];
+  return `<div class="wb">
+    <div class="top"><b>Oct 2026 billing review</b>
+      <span class="stat"><b>${fmt(t.under)}</b><span class="mute">underbilled</span></span>
+      <span class="stat"><b>${fmt(t.over)}</b><span class="mute">overbilled</span></span>
+      <span class="stat"><b>${t.n}</b><span class="mute">findings</span></span>
+      <span class="stat">${chip(CONTROLS.some(c=>c.status==="fail")?"fail":CONTROLS.some(c=>c.status==="warn")?"warn":"pass")} <span class="mute">controls ${CONTROLS.filter(c=>c.status==="pass").length}/${CONTROLS.length}</span></span>
+      <span class="mute mono" style="margin-left:auto">${RUN.command} · ${RUN.ranAt}</span></div>
+    <div class="list">
+      <div class="filters">${["all","error","valid","needs-info"].map(s=>`<button data-f="${s}" class="${bFilter===s?"on":""}">${s==="all"?"All":s==="needs-info"?"Needs info":s[0].toUpperCase()+s.slice(1)}</button>`).join("")}</div>
+      ${list.map(x=>`<div class="item ${x.id===f.id?"on":""}" data-id="${x.id}"><span class="amt ${x.amount<0?"neg":""}">${x.amount==null?"?":fmt(x.amount)}</span>
+        <div><b>${x.id}</b> · ${x.cust}</div><div class="mute" style="font-size:12px">${x.title}</div><div style="margin-top:4px">${chip(x.status)} <span class="mute" style="font-size:12px">${x.stream} · ${x.period}</span></div></div>`).join("")}
+      <div class="item" style="cursor:default"><b>Controls</b>${CONTROLS.map(c=>`<div style="font-size:12px;margin-top:4px">${chip(c.status)} ${c.name}</div>`).join("")}</div>
+    </div>
+    <div class="detail">
+      <div class="rail"><span>Finding</span><span>Calculation</span><span>Evidence</span><span>Action</span><span>Proposed entry</span></div>
+      <h1>${f.id} · ${f.title}</h1>
+      <div>${chip(f.status)} <b>${f.cust}</b> <span class="mute">(NetSuite ${f.cid}) · ${f.kind} · ${f.stream} · ${f.period} · ${f.amount==null?"amount not supportable":fmt(f.amount)}</span></div>
+      <p>${f.summary}</p>
+      <div class="step"><h3>1 · Calculation</h3><div class="mono">${f.calc.join("<br>")}</div></div>
+      <div class="step"><h3>2 · Evidence (${f.evidence.length} source${f.evidence.length>1?"s":""})</h3><div>${f.evidence.map(evid).join("")}</div></div>
+      <div class="step"><h3>3 · Recommended action</h3><div>${f.action}</div></div>
+      <div class="step"><h3>4 · Proposed October entry</h3><div>${jeTable(f)}</div></div>
+    </div>
+  </div>`;
+}
+
+// ---------- Variant C: Customer grid (every customer, platform | usage, expand inline; tabs for the rest) ----------
+let cOpen = "335780", cTab = "customers";
+function VariantC() {
+  const t = totals();
+  const tabs = { customers:"Customers (30)", findings:"Findings", entries:"Proposed entries", controls:"Controls", assumptions:"Assumptions & open items" };
+  let body = "";
+  if (cTab === "customers") {
+    body = `<div class="scroll"><table>
+      <tr><th></th><th></th><th colspan="3" class="grp">Platform</th><th colspan="3" class="grp">Usage</th><th class="bl"></th></tr>
+      <tr><th>Customer</th><th>Plan</th><th class="n bl">Expected</th><th class="n">Actual</th><th class="n">Diff</th><th class="n bl">Expected</th><th class="n">Actual</th><th class="n">Diff</th><th class="bl">Status</th></tr>
+      ${CUSTOMERS.map(c=>{ const dp=diff(c.pE,c.pA), du=diff(c.uE,c.uA); const open = c.id===cOpen;
+        const row = `<tr class="cust ${open?"open":""}" data-c="${c.id}"><td>${open?"▾":"▸"} <b>${c.name}</b> <span class="mute mono">${c.id}</span></td><td class="mute">${c.plan}</td>
+          <td class="n bl">${fmt(c.pE)}</td><td class="n">${fmt(c.pA)}</td><td class="n ${dp<0?"neg":dp>0?"pos":""}">${dp?fmt(dp):"–"}</td>
+          <td class="n bl">${fmt(c.uE)}</td><td class="n">${fmt(c.uA)}</td><td class="n ${du<0?"neg":du>0?"pos":""}">${du==null?"?":du?fmt(du):"–"}</td>
+          <td class="bl">${chip(c.status)}</td></tr>`;
+        const fs = FINDINGS.filter(f=>f.cid===c.id);
+        const trail = open ? `<tr class="trail"><td colspan="9">${fs.length? fs.map(f=>`<h3>${chip(f.status)} ${f.id} · ${f.title}</h3><p>${f.summary}</p>
+            <div class="mono mute">${f.calc.join("<br>")}</div>${f.evidence.map(evid).join("")}<p><b>Action:</b> ${f.action}</p>${f.je.length?jeTable(f):""}`).join("<hr>")
+            : `<span class="mute">No differences. Expected built from OF terms; actual from Stripe invoices dated Nov 1 (usage) and Oct anchor (platform).</span>`}</td></tr>` : "";
+        return row + trail; }).join("")}
+      <tr><td colspan="9" class="mute" style="font-size:12px">… 22 more customers (prototype shows 8)</td></tr></table></div>`;
+  } else if (cTab === "findings") {
+    body = `<table><tr><th>ID</th><th>Customer</th><th>Status</th><th>Stream</th><th>Period</th><th class="n">Amount</th><th>Action</th></tr>${FINDINGS.map(f=>`<tr><td>${f.id}</td><td>${f.cust}</td><td>${chip(f.status)}</td><td>${f.stream}</td><td>${f.period}</td><td class="n">${f.amount==null?"?":fmt(f.amount)}</td><td style="max-width:380px">${f.action}</td></tr>`).join("")}</table>`;
+  } else if (cTab === "entries") {
+    body = FINDINGS.filter(f=>f.je.length).map(f=>`<h3>${f.id} · ${f.cust}</h3>${jeTable(f)}`).join("<br>") + `<p class="mute">Trial balance before/after: <code>out/2026-10/trial_balance.csv</code></p>`;
+  } else if (cTab === "controls") {
+    body = `<table>${CONTROLS.map(c=>`<tr><td>${chip(c.status)}</td><td>${c.name}</td><td class="mute">${c.detail}</td></tr>`).join("")}</table>`;
+  } else {
+    body = `<ul>${ASSUMPTIONS.map(a=>`<li>${a}</li>`).join("")}</ul><h3>Open items</h3><ul>${FINDINGS.filter(f=>f.status==="needs-info").map(f=>`<li><b>${f.id}</b> ${f.cust}: ${f.action}</li>`).join("")}</ul>`;
+  }
+  return `<div class="grid">
+    <div class="ctrlbar"><b style="font-size:16px">RelayCloud · Oct 2026</b>
+      ${CONTROLS.map(c=>`<span title="${c.name}: ${c.detail}">${chip(c.status)}</span>`).join("")}
+      <span class="mute" style="margin-left:auto">Under <b class="pos">${fmt(t.under)}</b> · Over <b class="neg">${fmt(t.over)}</b> · ${t.n} findings</span></div>
+    <div class="tabs">${Object.entries(tabs).map(([k,v])=>`<button data-t="${k}" class="${cTab===k?"on":""}">${v}</button>`).join("")}</div>
+    ${body}
+  </div>`;
+}
+
+// ---------- switcher ----------
+const VARIANTS = { A:["Close memo", VariantA], B:["Findings workbench", VariantB], C:["Customer grid", VariantC] };
+const keys = Object.keys(VARIANTS);
+let cur = new URLSearchParams(location.search).get("variant"); if (!VARIANTS[cur]) cur = "A";
+function render() {
+  document.getElementById("root").innerHTML = VARIANTS[cur][1]();
+  document.getElementById("vlabel").textContent = `${cur} (${VARIANTS[cur][0]})`;
+  console.log("[prototype] state", { variant:cur, bSel, bFilter, cOpen, cTab });
+}
+function go(d) { cur = keys[(keys.indexOf(cur)+d+keys.length)%keys.length];
+  const u = new URL(location.href); u.searchParams.set("variant", cur); history.replaceState(null,"",u); render(); window.scrollTo(0,0); }
+document.getElementById("prev").onclick = () => go(-1);
+document.getElementById("next").onclick = () => go(1);
+document.addEventListener("keydown", e => { if (e.target.closest("input,textarea,[contenteditable]")) return;
+  if (e.key==="ArrowLeft") go(-1); if (e.key==="ArrowRight") go(1); });
+document.getElementById("root").addEventListener("click", e => {
+  const it = e.target.closest("[data-id]"); if (it) { bSel = it.dataset.id; render(); return; }
+  const fb = e.target.closest("[data-f]"); if (fb) { bFilter = fb.dataset.f; render(); return; }
+  const cr = e.target.closest("[data-c]"); if (cr) { cOpen = cOpen===cr.dataset.c ? null : cr.dataset.c; render(); return; }
+  const tb = e.target.closest("[data-t]"); if (tb) { cTab = tb.dataset.t; render(); return; }
+});
+render();
+</script>
+</body>
+</html>
