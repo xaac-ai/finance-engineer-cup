@@ -12,7 +12,7 @@ make run PERIOD=2026-11  # review another month (see "New month" below)
 make test                # code tests
 ```
 
-Open `out/<period>/report.html` in a browser. It is a single file with no network access, and its views are Findings, Customers, Brief, Controls & assumptions, and Evidence index. The CSV workpapers sit next to it.
+Open `out/<period>/report.html` in a browser. It is a single file with no network access, and its views are Findings, Customers, Effects (before/after balances for each customer with a proposal), Brief, Controls & assumptions, and Evidence index. The CSV workpapers sit next to it.
 
 Exit codes:
 - `0`: every control passed or warned.

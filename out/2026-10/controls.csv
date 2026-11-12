@@ -23,3 +23,7 @@ findings,01_claims_balance,Every reconciliation difference is explained exactly 
 findings,02_claim_targets,"Findings only claim differences that exist (known customer, implemented stream)",pass,0,ctl_findings_claim_targets,
 findings,03_no_duplicate_corrections,"No duplicate corrections (one proposed document per original invoice, stream and amount)",pass,0,ctl_findings_no_duplicate_corrections,
 findings,04_finding_integrity,Findings are well-formed (evidence cited; Needs Info has no confirmed amounts; zero October effect is explained),pass,0,ctl_findings_finding_integrity,
+effects,01_no_unbilled_residual,"After the proposed billing documents, no customer has an unexplained 1150 residual",pass,0,ctl_effects_no_unbilled_residual,
+effects,02_contract_asset_after_corrections,"After the proposed October entries, 1160 equals each customer's net 2200 debit (reclass recomputed)",pass,0,ctl_effects_contract_asset_after_corrections,
+effects,03_no_netting,"Each Proposed Entry stays within one customer and one stream (no netting across customers, or platform against usage)",pass,0,ctl_effects_no_netting,
+effects,04_population_coverage,Every customer is reviewed for every implemented stream (coverage = customers × streams),pass,0,ctl_effects_population_coverage,
