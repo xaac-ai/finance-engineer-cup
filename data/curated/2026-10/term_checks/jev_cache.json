@@ -1,0 +1,92 @@
+{
+ "17185aeb51dcd783ff997b27": {
+  "choice": "contradicts",
+  "confidence": 1.0,
+  "model": "jev-1.14.0",
+  "probabilities": {
+   "contradicts": 1.0,
+   "says_nothing": 0.0,
+   "supports": 0.0
+  }
+ },
+ "1b4e0be8c51132bc8aa0224d": {
+  "choice": "supports",
+  "confidence": 0.89,
+  "model": "jev-1.14.0",
+  "probabilities": {
+   "contradicts": 0.07,
+   "says_nothing": 0.0,
+   "supports": 0.93
+  }
+ },
+ "39dabe31501a422f714ebc8c": {
+  "choice": "supports",
+  "confidence": 1.0,
+  "model": "jev-1.14.0",
+  "probabilities": {
+   "contradicts": 0.0,
+   "says_nothing": 0.0,
+   "supports": 1.0
+  }
+ },
+ "684c45d78fdd84824a39612a": {
+  "choice": "supports",
+  "confidence": 0.98,
+  "model": "jev-1.14.0",
+  "probabilities": {
+   "contradicts": 0.01,
+   "says_nothing": 0.0,
+   "supports": 0.99
+  }
+ },
+ "7b523f28ca93949e9bdf255d": {
+  "choice": "supports",
+  "confidence": 1.0,
+  "model": "jev-1.14.0",
+  "probabilities": {
+   "contradicts": 0.0,
+   "says_nothing": 0.0,
+   "supports": 1.0
+  }
+ },
+ "8321c1980695a28397b1ebe0": {
+  "choice": "supports",
+  "confidence": 0.97,
+  "model": "jev-1.14.0",
+  "probabilities": {
+   "contradicts": 0.02,
+   "says_nothing": 0.0,
+   "supports": 0.98
+  }
+ },
+ "8c22c98fa88fb1c64208bd58": {
+  "choice": "supports",
+  "confidence": 1.0,
+  "model": "jev-1.14.0",
+  "probabilities": {
+   "contradicts": 0.0,
+   "says_nothing": 0.0,
+   "supports": 1.0
+  }
+ },
+ "ba033974dce302936cb6d91e": {
+  "choice": "supports",
+  "confidence": 1.0,
+  "model": "jev-1.14.0",
+  "probabilities": {
+   "contradicts": 0.0,
+   "says_nothing": 0.0,
+   "supports": 1.0
+  }
+ },
+ "d03c1f7598c09cbbb0ec422f": {
+  "choice": "supports",
+  "confidence": 1.0,
+  "model": "jev-1.14.0",
+  "probabilities": {
+   "contradicts": 0.0,
+   "says_nothing": 0.0,
+   "supports": 1.0
+  }
+ }
+}
