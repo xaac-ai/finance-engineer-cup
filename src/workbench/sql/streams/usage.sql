@@ -86,3 +86,21 @@ WHERE l.product_id = 'prod_workflow_run'
   AND CAST(CAST(l.period_start AS TIMESTAMPTZ) AS DATE) = getvariable('period_start')
   AND CAST(CAST(l.period_end AS TIMESTAMPTZ) AS DATE) = getvariable('period_end')
   AND CAST(i.finalized_at AS TIMESTAMPTZ) <= CAST(getvariable('cutoff') AS TIMESTAMPTZ);
+
+-- Credit notes against usage lines (all statuses; only issued notes by cutoff have an effect, START_HERE · CREDITS).
+CREATE OR REPLACE VIEW usage_credit_notes AS
+SELECT s."NetSuiteCustomerInternalId__c" AS customer_id, n.id AS credit_note_id, n.number, n.status,
+       CAST(n.created AS TIMESTAMPTZ)::TIMESTAMP AS created_local, CAST(n.voided_at AS TIMESTAMPTZ)::TIMESTAMP AS voided_local,
+       (CAST(nl.amount AS BIGINT) * 0.01)::DECIMAL(18,2) AS amount, nl.description,
+       CAST(nl.service_start AS DATE) AS service_start, CAST(nl.service_end_exclusive AS DATE) AS service_end_exclusive,
+       nl.service_period_source, il.id AS invoice_line_id, i.number AS invoice_number,
+       n.source_file, n.source_line, nl.source_file AS line_source_file, nl.source_line AS line_source_line,
+       n.status = 'issued' AND CAST(n.created AS TIMESTAMPTZ) <= CAST(getvariable('cutoff') AS TIMESTAMPTZ) AS effective
+FROM raw_stripe_credit_note_lines nl
+JOIN raw_stripe_credit_notes n ON n.id = nl.credit_note_id
+JOIN raw_stripe_invoice_lines il ON il.id = nl.invoice_line_item_id
+JOIN raw_stripe_invoices i ON i.id = il.invoice_id
+JOIN raw_salesforce_accounts s ON s."StripeCustomerId__c" = n.customer_id
+WHERE il.product_id = 'prod_workflow_run'
+  AND CAST(nl.service_start AS DATE) = getvariable('period_start')
+  AND CAST(nl.service_end_exclusive AS DATE) = getvariable('period_end');

@@ -58,4 +58,4 @@ customer_id,customer_name,stream,expected,actual,difference,claimed,finding_ids
 188999,"Yarrow Ridge, Inc.",platform,4000.00,4000.00,0.00,0.00,
 188999,"Yarrow Ridge, Inc.",usage,3074.28,0.00,3074.28,3074.28,F-188999-USAGE-MISSING-INVOICE-2026-10
 148565,"Zephyr Grove, Inc.",platform,4000.00,4000.00,0.00,0.00,
-148565,"Zephyr Grove, Inc.",usage,952.60,952.60,0.00,0.00,
+148565,"Zephyr Grove, Inc.",usage,852.60,852.60,0.00,0.00,

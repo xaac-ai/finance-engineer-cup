@@ -44,8 +44,8 @@ def run(period_key: str, root: Path | None = None) -> RunResult:
         passed("contracts", "amendment_quotes", "Every curated Amendment quote appears verbatim in the document text",
                f"{contract_stats['quotes_checked']} quotes across {contract_stats['amendments']} Amendments"),
         passed("inputs", "billing_messages_parsed", "Billing Messages parsed from billing_followups.pdf", f"{n_messages} messages"),
-        passed("inputs", "approval_quotes", "Every curated approval quote appears verbatim in a Controller Billing Message",
-               f"{n_approvals} approved concessions"),
+        passed("inputs", "approval_quotes", "Every curated approval (Controller) and concession request quote appears verbatim in its Billing Message",
+               f"{n_approvals} approvals and requests"),
     ]
     results += run_controls(con, "inputs")
     for stream in ("platform", "usage"):

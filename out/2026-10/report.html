@@ -666,12 +666,12 @@
    "stream": "platform"
   },
   {
-   "actual": "952.60",
+   "actual": "852.60",
    "claimed": "0.00",
    "customer_id": "148565",
    "customer_name": "Zephyr Grove, Inc.",
    "difference": "0.00",
-   "expected": "952.60",
+   "expected": "852.60",
    "finding_ids": null,
    "stream": "usage"
   }
@@ -706,11 +706,11 @@
   },
   {
    "count": 0,
-   "detail": "1 approved concessions",
+   "detail": "2 approvals and requests",
    "group": "inputs",
    "name": "approval_quotes",
    "status": "pass",
-   "title": "Every curated approval quote appears verbatim in a Controller Billing Message",
+   "title": "Every curated approval (Controller) and concession request quote appears verbatim in its Billing Message",
    "view": null
   },
   {
@@ -1349,6 +1349,24 @@
  "evidence": [
   {
    "cited_by": [
+    "F-148565-CREDIT-APPROVED-CONCESSION-2026-10"
+   ],
+   "file": "data/raw/2026-10/START_HERE.pdf",
+   "kind": "pdf_quote",
+   "line": null,
+   "text": "CREDITS: Approved reductions of October consideration affect October where not already reflected."
+  },
+  {
+   "cited_by": [
+    "F-186097-CREDIT-VOID-CN-186097-20261102-2026-10"
+   ],
+   "file": "data/raw/2026-10/START_HERE.pdf",
+   "kind": "pdf_quote",
+   "line": null,
+   "text": "CREDITS: Use issued notes only; void notes have no current credit effect."
+  },
+  {
+   "cited_by": [
     "F-188999-USAGE-MISSING-INVOICE-2026-10"
    ],
    "file": "data/raw/2026-10/START_HERE.pdf",
@@ -1422,12 +1440,57 @@
   },
   {
    "cited_by": [
+    "F-839653-CREDIT-REQUEST-MSG-2026-132-2026-10"
+   ],
+   "file": "data/raw/2026-10/START_HERE.pdf",
+   "kind": "pdf_quote",
+   "line": null,
+   "text": "UNVERIFIED USAGE: An unapproved concession request alone does not authorize a credit or revenue reduction."
+  },
+  {
+   "cited_by": [
     "F-UNATTRIBUTED-USAGE-UNVERIFIED-pa_676b6b455e0887-2026-10"
    ],
    "file": "data/raw/2026-10/START_HERE.pdf",
    "kind": "pdf_quote",
    "line": null,
    "text": "UNVERIFIED USAGE: Do not force a mapping, assume the remaining customer owns a workspace, or treat missing attribution as zero usage. Document conditional exposure and request Product Operations evidence."
+  },
+  {
+   "cited_by": [
+    "F-148565-CREDIT-APPROVED-CONCESSION-2026-10"
+   ],
+   "file": "data/raw/2026-10/billing_followups.pdf",
+   "kind": "billing_message",
+   "line": null,
+   "text": "MSG-2026-108 (Morgan Lee, Sales Director): Zephyr Grove requested a USD 100 concession for October workflow usage after a service interruption. The underlying contract pricing is unchanged."
+  },
+  {
+   "cited_by": [
+    "F-148565-CREDIT-APPROVED-CONCESSION-2026-10"
+   ],
+   "file": "data/raw/2026-10/billing_followups.pdf",
+   "kind": "billing_message",
+   "line": null,
+   "text": "MSG-2026-109 (Priya Shah, Controller): Approved: reduce Zephyr Grove October usage consideration by USD 100. Issue a credit against its October-service usage invoice once finalized; ensure the October accrual is already net of this approved concession. Do not apply a second concession."
+  },
+  {
+   "cited_by": [
+    "F-186097-CREDIT-VOID-CN-186097-20261102-2026-10"
+   ],
+   "file": "data/raw/2026-10/billing_followups.pdf",
+   "kind": "billing_message",
+   "line": null,
+   "text": "MSG-2026-116 (Alex Chen, Billing): The USD 50 Alder Fieldworks credit note cn_82a7ddd6e88e69 was created in error and voided before the NetSuite import. There is no other Alder credit note associated with this mistake. No credit or reversal has been posted to NetSuite; please use its void status when reviewing the current extract."
+  },
+  {
+   "cited_by": [
+    "F-839653-CREDIT-REQUEST-MSG-2026-132-2026-10"
+   ],
+   "file": "data/raw/2026-10/billing_followups.pdf",
+   "kind": "billing_message",
+   "line": null,
+   "text": "MSG-2026-132 (Morgan Lee): Passage concession request Willow Passage has requested USD 250 off October usage. This is a request only; I have no Controller approval and have not authorized Billing to issue a credit. The request does not establish ownership of any unverified workspace."
   },
   {
    "cited_by": [
@@ -1621,6 +1684,15 @@
   },
   {
    "cited_by": [
+    "F-186097-CREDIT-VOID-CN-186097-20261102-2026-10"
+   ],
+   "file": "data/raw/2026-10/netsuite_gl_detail.csv",
+   "kind": "csv_row",
+   "line": null,
+   "text": "No GL line has External Source ID cn_82a7ddd6e88e69"
+  },
+  {
+   "cited_by": [
     "F-437384-USAGE-RATE-2026-10"
    ],
    "file": "data/raw/2026-10/netsuite_gl_detail.csv",
@@ -1648,6 +1720,33 @@
   },
   {
    "cited_by": [
+    "F-148565-CREDIT-APPROVED-CONCESSION-2026-10"
+   ],
+   "file": "data/raw/2026-10/netsuite_gl_detail.csv",
+   "kind": "csv_row",
+   "line": 296,
+   "text": "CM-148565 Nov 2026 1150: Dr 100.00 Cr 0.00 October-service concession credit"
+  },
+  {
+   "cited_by": [
+    "F-148565-CREDIT-APPROVED-CONCESSION-2026-10"
+   ],
+   "file": "data/raw/2026-10/netsuite_gl_detail.csv",
+   "kind": "csv_row",
+   "line": 297,
+   "text": "CM-148565 Nov 2026 1100: Dr 0.00 Cr 100.00 Reduce invoice receivable"
+  },
+  {
+   "cited_by": [
+    "F-148565-CREDIT-APPROVED-CONCESSION-2026-10"
+   ],
+   "file": "data/raw/2026-10/netsuite_gl_detail.csv",
+   "kind": "csv_row",
+   "line": 301,
+   "text": "GL 4010 October usage accrual: credit 852.60"
+  },
+  {
+   "cited_by": [
     "F-810234-USAGE-LATE-RECORD-2026-10"
    ],
    "file": "data/raw/2026-10/netsuite_gl_detail.csv",
@@ -1672,6 +1771,15 @@
    "kind": "csv_row",
    "line": 33,
    "text": "pa_676b6b455e0887 mapping: label 'Workspace pending identity verification', Salesforce account blank"
+  },
+  {
+   "cited_by": [
+    "F-148565-CREDIT-APPROVED-CONCESSION-2026-10"
+   ],
+   "file": "data/raw/2026-10/product_usage.csv",
+   "kind": "csv_row",
+   "line": null,
+   "text": "31 October records, 49,052 runs on pa_2c0b53d1d7dd6b (deduplicated, active, verified mapping)"
   },
   {
    "cited_by": [
@@ -1738,6 +1846,42 @@
   },
   {
    "cited_by": [
+    "F-186097-CREDIT-VOID-CN-186097-20261102-2026-10"
+   ],
+   "file": "data/raw/2026-10/stripe_credit_note_lines.csv",
+   "kind": "csv_row",
+   "line": 2,
+   "text": "Cancelled credit created in error"
+  },
+  {
+   "cited_by": [
+    "F-148565-CREDIT-APPROVED-CONCESSION-2026-10"
+   ],
+   "file": "data/raw/2026-10/stripe_credit_note_lines.csv",
+   "kind": "csv_row",
+   "line": 3,
+   "text": "Approved October usage concession; service 2026-10-01 to 2026-11-01 (original invoice line)"
+  },
+  {
+   "cited_by": [
+    "F-186097-CREDIT-VOID-CN-186097-20261102-2026-10"
+   ],
+   "file": "data/raw/2026-10/stripe_credit_notes.csv",
+   "kind": "csv_row",
+   "line": 2,
+   "text": "CN-186097-20261102 status void, voided 2026-11-03T10:00:00-07:00, $50.00"
+  },
+  {
+   "cited_by": [
+    "F-148565-CREDIT-APPROVED-CONCESSION-2026-10"
+   ],
+   "file": "data/raw/2026-10/stripe_credit_notes.csv",
+   "kind": "csv_row",
+   "line": 3,
+   "text": "CN-148565-20261104 issued 2026-11-04 10:00: $100.00 against RC-261101-148565-U"
+  },
+  {
+   "cited_by": [
     "F-335780-PLATFORM-MISSING-CATCH-UP-2026-10"
    ],
    "file": "data/raw/2026-10/stripe_invoice_lines.csv",
@@ -1771,6 +1915,15 @@
    "kind": "csv_row",
    "line": 99,
    "text": "RC-261101-335780-P il_d34df8e74e6ad4: $4,000.00 for 2026-11-01..2026-12-01"
+  },
+  {
+   "cited_by": [
+    "F-148565-CREDIT-APPROVED-CONCESSION-2026-10"
+   ],
+   "file": "data/raw/2026-10/stripe_invoice_lines.csv",
+   "kind": "csv_row",
+   "line": 110,
+   "text": "RC-261101-148565-U il_df52e1ad4a7155: 19,052 \u00d7 $0.05 = $952.60"
   },
   {
    "cited_by": [
@@ -2908,6 +3061,46 @@
    "title": "1,000 October runs ingested after the usage invoice was issued"
   },
   {
+   "action": "Controller to approve or decline. If approved, issue a credit note against the service month and reduce that month's consideration once.",
+   "billing_effect": null,
+   "calculation": [],
+   "customer_id": "839653",
+   "customer_name": "Willow Passage, Inc.",
+   "documents": [],
+   "entries": [],
+   "evidence": [
+    {
+     "file": "data/raw/2026-10/billing_followups.pdf",
+     "finding_id": "F-839653-CREDIT-REQUEST-MSG-2026-132-2026-10",
+     "kind": "billing_message",
+     "line": null,
+     "role": "request (no approval)",
+     "seq": 1,
+     "text": "MSG-2026-132 (Morgan Lee): Passage concession request Willow Passage has requested USD 250 off October usage. This is a request only; I have no Controller approval and have not authorized Billing to issue a credit. The request does not establish ownership of any unverified workspace."
+    },
+    {
+     "file": "data/raw/2026-10/START_HERE.pdf",
+     "finding_id": "F-839653-CREDIT-REQUEST-MSG-2026-132-2026-10",
+     "kind": "pdf_quote",
+     "line": null,
+     "role": "policy",
+     "seq": 2,
+     "text": "UNVERIFIED USAGE: An unapproved concession request alone does not authorize a credit or revenue reduction."
+    }
+   ],
+   "exposure": "$250.00 reduction of 2026-10 usage consideration, only if approved.",
+   "finding_id": "F-839653-CREDIT-REQUEST-MSG-2026-132-2026-10",
+   "follow_up": false,
+   "no_october_entry_reason": null,
+   "october_revenue_effect": null,
+   "rule": "credits_concession_request",
+   "service_period": "2026-10",
+   "status": "needs_info",
+   "stream": "usage",
+   "summary": "MSG-2026-132 records a request for $250.00 off usage with no Controller approval. No credit has been issued and none is proposed; the request does not establish ownership of any unverified workspace.",
+   "title": "Unapproved $250.00 usage concession request"
+  },
+  {
    "action": "Product Operations to verify the owner. Then bill the runs under that customer's executed terms (or confirm the workspace is internal) and accrue October accordingly.",
    "billing_effect": null,
    "calculation": [
@@ -2981,6 +3174,221 @@
    "stream": "usage",
    "summary": "pa_676b6b455e0887 metered 49,762 runs in October but has no verified billing owner. They are kept out of every customer's usage and are not priced: assigning them to the only customer without a mapped account would be identification by elimination, which Product Operations forbids.",
    "title": "49,762 October runs on unverified workspace pa_676b6b455e0887"
+  },
+  {
+   "action": "None. Do not apply a second concession.",
+   "billing_effect": "0.00",
+   "calculation": [
+    {
+     "description": "Contract usage charge",
+     "finding_id": "F-148565-CREDIT-APPROVED-CONCESSION-2026-10",
+     "formula": "max(0, 49,052 \u2212 30,000) \u00d7 $0.05",
+     "step": 1,
+     "value": "952.60"
+    },
+    {
+     "description": "Approved concession",
+     "finding_id": "F-148565-CREDIT-APPROVED-CONCESSION-2026-10",
+     "formula": "MSG-2026-109",
+     "step": 2,
+     "value": "-100.00"
+    },
+    {
+     "description": "Expected October consideration",
+     "finding_id": "F-148565-CREDIT-APPROVED-CONCESSION-2026-10",
+     "formula": "charge \u2212 concession",
+     "step": 3,
+     "value": "852.60"
+    },
+    {
+     "description": "October accrual booked",
+     "finding_id": "F-148565-CREDIT-APPROVED-CONCESSION-2026-10",
+     "formula": "GL 4010",
+     "step": 4,
+     "value": "0.00"
+    },
+    {
+     "description": "Net billed",
+     "finding_id": "F-148565-CREDIT-APPROVED-CONCESSION-2026-10",
+     "formula": "invoice 952.60 \u2212 credit 100.00",
+     "step": 5,
+     "value": "852.60"
+    }
+   ],
+   "customer_id": "148565",
+   "customer_name": "Zephyr Grove, Inc.",
+   "documents": [],
+   "entries": [],
+   "evidence": [
+    {
+     "file": "data/raw/2026-10/billing_followups.pdf",
+     "finding_id": "F-148565-CREDIT-APPROVED-CONCESSION-2026-10",
+     "kind": "billing_message",
+     "line": null,
+     "role": "request",
+     "seq": 1,
+     "text": "MSG-2026-108 (Morgan Lee, Sales Director): Zephyr Grove requested a USD 100 concession for October workflow usage after a service interruption. The underlying contract pricing is unchanged."
+    },
+    {
+     "file": "data/raw/2026-10/billing_followups.pdf",
+     "finding_id": "F-148565-CREDIT-APPROVED-CONCESSION-2026-10",
+     "kind": "billing_message",
+     "line": null,
+     "role": "Controller approval",
+     "seq": 2,
+     "text": "MSG-2026-109 (Priya Shah, Controller): Approved: reduce Zephyr Grove October usage consideration by USD 100. Issue a credit against its October-service usage invoice once finalized; ensure the October accrual is already net of this approved concession. Do not apply a second concession."
+    },
+    {
+     "file": "data/raw/2026-10/stripe_credit_notes.csv",
+     "finding_id": "F-148565-CREDIT-APPROVED-CONCESSION-2026-10",
+     "kind": "csv_row",
+     "line": 3,
+     "role": "credit note",
+     "seq": 3,
+     "text": "CN-148565-20261104 issued 2026-11-04 10:00: $100.00 against RC-261101-148565-U"
+    },
+    {
+     "file": "data/raw/2026-10/stripe_credit_note_lines.csv",
+     "finding_id": "F-148565-CREDIT-APPROVED-CONCESSION-2026-10",
+     "kind": "csv_row",
+     "line": 3,
+     "role": "credit note line",
+     "seq": 4,
+     "text": "Approved October usage concession; service 2026-10-01 to 2026-11-01 (original invoice line)"
+    },
+    {
+     "file": "data/raw/2026-10/netsuite_gl_detail.csv",
+     "finding_id": "F-148565-CREDIT-APPROVED-CONCESSION-2026-10",
+     "kind": "csv_row",
+     "line": 296,
+     "role": "credit memo posted",
+     "seq": 5,
+     "text": "CM-148565 Nov 2026 1150: Dr 100.00 Cr 0.00 October-service concession credit"
+    },
+    {
+     "file": "data/raw/2026-10/netsuite_gl_detail.csv",
+     "finding_id": "F-148565-CREDIT-APPROVED-CONCESSION-2026-10",
+     "kind": "csv_row",
+     "line": 297,
+     "role": "credit memo posted",
+     "seq": 6,
+     "text": "CM-148565 Nov 2026 1100: Dr 0.00 Cr 100.00 Reduce invoice receivable"
+    },
+    {
+     "file": "data/raw/2026-10/product_usage.csv",
+     "finding_id": "F-148565-CREDIT-APPROVED-CONCESSION-2026-10",
+     "kind": "csv_row",
+     "line": null,
+     "role": "validated usage",
+     "seq": 7,
+     "text": "31 October records, 49,052 runs on pa_2c0b53d1d7dd6b (deduplicated, active, verified mapping)"
+    },
+    {
+     "file": "data/raw/2026-10/stripe_invoice_lines.csv",
+     "finding_id": "F-148565-CREDIT-APPROVED-CONCESSION-2026-10",
+     "kind": "csv_row",
+     "line": 110,
+     "role": "invoice billed",
+     "seq": 8,
+     "text": "RC-261101-148565-U il_df52e1ad4a7155: 19,052 \u00d7 $0.05 = $952.60"
+    },
+    {
+     "file": "data/raw/2026-10/netsuite_gl_detail.csv",
+     "finding_id": "F-148565-CREDIT-APPROVED-CONCESSION-2026-10",
+     "kind": "csv_row",
+     "line": 301,
+     "role": "October accrual booked",
+     "seq": 9,
+     "text": "GL 4010 October usage accrual: credit 852.60"
+    },
+    {
+     "file": "data/raw/2026-10/START_HERE.pdf",
+     "finding_id": "F-148565-CREDIT-APPROVED-CONCESSION-2026-10",
+     "kind": "pdf_quote",
+     "line": null,
+     "role": "policy",
+     "seq": 10,
+     "text": "CREDITS: Approved reductions of October consideration affect October where not already reflected."
+    }
+   ],
+   "exposure": null,
+   "finding_id": "F-148565-CREDIT-APPROVED-CONCESSION-2026-10",
+   "follow_up": false,
+   "no_october_entry_reason": "The October accrual is already net of the approved concession.",
+   "october_revenue_effect": "0.00",
+   "rule": "credits_approved_concession",
+   "service_period": "2026-10",
+   "status": "valid_explanation",
+   "stream": "usage",
+   "summary": "The Controller approved a $100.00 reduction of October usage consideration (MSG-2026-109). The October accrual ($0.00) is already net of it, and credit note CN-148565-20261104 reduced the November receivable and reversed the over-release of unbilled usage. Revenue was reduced once, in October.",
+   "title": "Approved $100.00 October usage concession, reflected once"
+  },
+  {
+   "action": "None.",
+   "billing_effect": "0.00",
+   "calculation": [],
+   "customer_id": "186097",
+   "customer_name": "Alder Fieldworks, Inc.",
+   "documents": [],
+   "entries": [],
+   "evidence": [
+    {
+     "file": "data/raw/2026-10/stripe_credit_notes.csv",
+     "finding_id": "F-186097-CREDIT-VOID-CN-186097-20261102-2026-10",
+     "kind": "csv_row",
+     "line": 2,
+     "role": "credit note",
+     "seq": 1,
+     "text": "CN-186097-20261102 status void, voided 2026-11-03T10:00:00-07:00, $50.00"
+    },
+    {
+     "file": "data/raw/2026-10/stripe_credit_note_lines.csv",
+     "finding_id": "F-186097-CREDIT-VOID-CN-186097-20261102-2026-10",
+     "kind": "csv_row",
+     "line": 2,
+     "role": "credit note line",
+     "seq": 2,
+     "text": "Cancelled credit created in error"
+    },
+    {
+     "file": "data/raw/2026-10/netsuite_gl_detail.csv",
+     "finding_id": "F-186097-CREDIT-VOID-CN-186097-20261102-2026-10",
+     "kind": "csv_row",
+     "line": null,
+     "role": "not posted",
+     "seq": 3,
+     "text": "No GL line has External Source ID cn_82a7ddd6e88e69"
+    },
+    {
+     "file": "data/raw/2026-10/billing_followups.pdf",
+     "finding_id": "F-186097-CREDIT-VOID-CN-186097-20261102-2026-10",
+     "kind": "billing_message",
+     "line": null,
+     "role": "explanation",
+     "seq": 4,
+     "text": "MSG-2026-116 (Alex Chen, Billing): The USD 50 Alder Fieldworks credit note cn_82a7ddd6e88e69 was created in error and voided before the NetSuite import. There is no other Alder credit note associated with this mistake. No credit or reversal has been posted to NetSuite; please use its void status when reviewing the current extract."
+    },
+    {
+     "file": "data/raw/2026-10/START_HERE.pdf",
+     "finding_id": "F-186097-CREDIT-VOID-CN-186097-20261102-2026-10",
+     "kind": "pdf_quote",
+     "line": null,
+     "role": "policy",
+     "seq": 5,
+     "text": "CREDITS: Use issued notes only; void notes have no current credit effect."
+    }
+   ],
+   "exposure": null,
+   "finding_id": "F-186097-CREDIT-VOID-CN-186097-20261102-2026-10",
+   "follow_up": false,
+   "no_october_entry_reason": "Void notes have no current credit effect.",
+   "october_revenue_effect": "0.00",
+   "rule": "credits_void_note",
+   "service_period": "2026-10",
+   "status": "valid_explanation",
+   "stream": "usage",
+   "summary": "CN-186097-20261102 was created 2026-11-02T10:00 and voided 2026-11-03T10:00. Void notes have no current credit effect, and nothing was posted to NetSuite.",
+   "title": "Void credit note CN-186097-20261102 ($50.00) has no effect"
   },
   {
    "action": "None.",
@@ -3667,7 +4075,7 @@
  ],
  "run": {
   "command": "make run PERIOD=2026-10",
-  "commit": "72b22a7-dirty",
+  "commit": "6183893-dirty",
   "cutoff": "2026-11-11T18:00:00-07:00",
   "label": "Oct 2026",
   "period": "2026-10"
@@ -3698,7 +4106,7 @@
   ]
  },
  "totals": {
-  "exposure_items": 1,
+  "exposure_items": 2,
   "follow_ups": 2,
   "october_overstated": "-3096.80",
   "october_understated": "6735.53",

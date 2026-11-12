@@ -189,13 +189,28 @@ def build(ctx: Context) -> None:
         contract_id VARCHAR, product_accounts VARCHAR, records INTEGER, units BIGINT, allowance BIGINT,
         allowance_formula VARCHAR, overage_units BIGINT, rate DECIMAL(18,4), expected_billing DECIMAL(18,2),
         approved_concession DECIMAL(18,2), concession_message VARCHAR, expected_accrual DECIMAL(18,2),
-        billed DECIMAL(18,2), billed_invoices VARCHAR)""")
+        billed DECIMAL(18,2), billed_invoices VARCHAR, credited DECIMAL(18,2), credit_notes VARCHAR)""")
     doc = f"usage-{ctx.period.key}"
+    credits: dict[str, list[dict]] = {}
+    for n in ctx.rows("""SELECT customer_id, number, amount, invoice_number, line_source_file, line_source_line
+            FROM usage_credit_notes WHERE effective ORDER BY line_source_line"""):
+        credits.setdefault(n["customer_id"], []).append(n)
     for m in months:
-        ctx.con.execute("INSERT INTO usage_by_customer VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", [
+        cns = credits.get(m.customer_id, [])
+        ctx.con.execute("INSERT INTO usage_by_customer VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", [
             m.customer_id, m.customer_name, m.contract_id, ", ".join(m.product_accounts), m.records, m.units,
             m.allowance, m.allowance_formula, m.overage_units, m.rate, m.expected_billing, m.concession,
-            m.concession_message, m.expected_revenue, m.billed, ", ".join(ln.invoice_number for ln in m.lines) or None])
+            m.concession_message, m.expected_revenue, m.billed, ", ".join(ln.invoice_number for ln in m.lines) or None,
+            sum((n["amount"] for n in cns), ZERO), ", ".join(n["number"] for n in cns) or None])
+        # Billing is what the customer owes for the month's service: issued credit notes reduce actual,
+        # approved concessions reduce expected (decision: "Build the credits and approvals stream").
+        for n in cns:
+            ctx.con.execute("INSERT INTO billing_lines VALUES (?, 'usage', 'actual', ?, ?, ?, ?, ?)", [
+                m.customer_id, n["number"], -n["amount"], f"{n['number']}: issued credit against {n['invoice_number']}",
+                n["line_source_file"], n["line_source_line"]])
+        if m.concession:
+            ctx.con.execute("INSERT INTO billing_lines VALUES (?, 'usage', 'expected', ?, ?, ?, NULL, NULL)", [
+                m.customer_id, m.concession_message, -m.concession, f"approved concession, {m.concession_message}"])
         ctx.con.execute("INSERT INTO billing_lines VALUES (?, 'usage', 'expected', ?, ?, ?, NULL, NULL)", [
             m.customer_id, doc, m.expected_billing,
             f"{m.units:,} runs − allowance {m.allowance:,} = {m.overage_units:,} × ${m.rate}"])

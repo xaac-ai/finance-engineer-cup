@@ -59,7 +59,7 @@ def test_population_ties_to_batch_controls(db):
 
 def test_findings_and_effects(db):
     rows = db.execute("SELECT finding_id, status, billing_effect, october_revenue_effect FROM findings "
-                      "WHERE stream = 'usage' ORDER BY finding_id").fetchall()
+                      "WHERE rule LIKE 'usage%' ORDER BY finding_id").fetchall()
     assert rows == [
         ("F-188999-USAGE-MISSING-INVOICE-2026-10", "error", D("3074.28"), D("3074.28")),
         ("F-314334-USAGE-NO-OVERAGE-2026-10", "valid_explanation", D("0.00"), D("0.00")),
