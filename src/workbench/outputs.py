@@ -109,6 +109,8 @@ def _agent_steps(period: Period) -> dict:
                 t.update(drafted_quote=c.get("quote"), confidence=c.get("confidence"), notes=c.get("notes"))
         ev["calls"] = [{k: v for k, v in c.items() if k != "replayed"} for c in ev["calls"]]
         out["drafter"] = ev
+    if (period.curated_dir / "term_checks" / "jev_checks.json").exists():
+        out["jev"] = json.loads((period.curated_dir / "term_checks" / "jev_checks.json").read_text())
     return out
 
 

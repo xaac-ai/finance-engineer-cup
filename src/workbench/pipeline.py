@@ -5,6 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
 
+from workbench.agents import jev
 from workbench import approvals, contracts, db, findings, inputs, ledger, messages, outputs, pdf
 from workbench.controls import SQL_ROOT, ControlResult, passed, run_controls
 from workbench.period import Period, load_period
@@ -48,6 +49,7 @@ def run(period_key: str, root: Path | None = None) -> RunResult:
                f"{n_approvals} approvals and requests"),
     ]
     results += run_controls(con, "inputs")
+    results += jev.controls(period)  # committed Jev answers; the model itself runs in `make jev-check`
     for stream in ("platform", "usage"):
         if stream in ctx.streams:
             results += run_controls(con, stream)
