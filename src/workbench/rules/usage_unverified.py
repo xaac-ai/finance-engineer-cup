@@ -43,7 +43,6 @@ def detect(ctx):
                    "(or confirm the workspace is internal) and accrue October accordingly.",
             exposure=(f"Unpriced: {int(a['units']):,} runs. $0 if the workspace is internal; otherwise the owner's overage "
                       f"on its combined October runs under its executed contract."),
-            follow_up=True,
             calculations=(CalcStep("Unattributed October runs", "unique active records with no verified mapping",
                                    f"{int(a['units']):,}"),),
             evidence=tuple(ev),

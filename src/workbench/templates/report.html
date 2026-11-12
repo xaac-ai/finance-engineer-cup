@@ -59,7 +59,8 @@ const esc = s => String(s == null ? "" : s).replace(/&/g,"&amp;").replace(/</g,"
 const money = v => v == null || v === "" ? "—" : (Number(v) < 0 ? "(" : "") + "$" + Math.abs(Number(v)).toLocaleString("en-US",{minimumFractionDigits:2, maximumFractionDigits:2}) + (Number(v) < 0 ? ")" : "");
 const LABEL = { error:"Error", valid_explanation:"Valid Explanation", needs_info:"Needs Info", pass:"Pass", warn:"Warn", fail:"Fail" };
 const chip = s => `<span class="chip ${esc(s)}">${esc(LABEL[s] || s)}</span>`;
-const VIEWS = { findings:"Findings", customers:"Customers", brief:"Brief", controls:"Controls & assumptions", evidence:"Evidence index" };
+LABEL.clean = "Clean";
+const VIEWS = { findings:"Findings", customers:"Customers", effects:"Effects", brief:"Brief", controls:"Controls & assumptions", evidence:"Evidence index" };
 let filter = "all";
 
 function overall() { return D.controls.some(c => c.status === "fail") ? "fail" : D.controls.some(c => c.status === "warn") ? "warn" : "pass"; }
@@ -123,13 +124,29 @@ function customersView(target) {
     <p class="mute">Every customer in the population, with identities across systems and terms in force at period start.
     Each reconciliation shows expected / actual (or booked); a nonzero difference (expected − actual: positive = underbilled or understated) links to the Finding that explains it. Streams: ${esc((D.stats.streams||[]).join(", ") || "none built yet")}.</p>
     <div class="scroll"><table><tr><th>Customer</th><th>NetSuite</th><th>Contract</th><th>Billing</th><th class="n">Platform invoice</th>
-      <th class="n">Included runs</th><th class="n">Overage $/run</th><th>Documents</th><th class="n">Platform billing<br>exp. / act.</th><th class="n">Usage billing<br>exp. / act.</th><th class="n">Platform revenue<br>exp. / booked</th><th class="n">Usage revenue<br>exp. / booked</th><th>Source</th></tr>
+      <th class="n">Included runs</th><th class="n">Overage $/run</th><th>Documents</th><th class="n">Platform billing<br>exp. / act.</th><th class="n">Usage billing<br>exp. / act.</th><th class="n">Platform revenue<br>exp. / booked</th><th class="n">Usage revenue<br>exp. / booked</th><th>Status<br>platform · usage</th><th>Source</th></tr>
     ${D.customers.map(c => `<tr id="C-${esc(c.customer_id)}" class="${target==="C-"+c.customer_id?"target":""}"><td><b>${esc(c.customer_name)}</b></td>
       <td class="mono">${esc(c.customer_id)}</td><td class="mono">${esc(c.contract_id)}</td><td>${esc(c.billing_frequency)}</td>
       <td class="n">${money(c.platform_invoice_amount)}</td><td class="n">${c.included_runs_per_month ? Number(c.included_runs_per_month).toLocaleString() : "—"}</td>
       <td class="n">${esc(c.overage_rate || "—")}</td><td class="mono">${esc(c.documents)}</td>${reconCells(c.customer_id)}
+      <td>${["platform","usage"].map(st => { const v = (D.coverage||[]).find(x => x.customer_id === c.customer_id && x.stream === st); return v ? chip(v.status) : ""; }).join(" ")}</td>
       <td>${srcRef(c.source_file, c.source_line)}</td></tr>`).join("")}
     </table></div>`;
+}
+
+function effectsView() {
+  const ACCTS = ["1100","1150","1160","2200","4000","4010"];
+  const byCust = {}; (D.effects||[]).forEach(r => (byCust[r.customer_id] = byCust[r.customer_id] || {name:r.customer_name, rows:{}}).rows[r.account_number] = r);
+  const cell = v => `<td class="n ${Number(v) ? "" : "mute"}">${money(v)}</td>`;
+  return `<h1>Combined effects</h1>
+    <p class="mute">Every customer with a Proposed Entry: balances per account (debit − credit) before and after the proposals, for ${esc(D.run.label)}
+    and the following month's billing documents. Controls check that no customer is left with an unbilled-usage (1150) residual, that 1160 equals
+    each customer's net 2200 debit after corrections, and that no entry nets customers or platform against usage. Full grid: <code>customer_effects.csv</code>.</p>
+    ${Object.entries(byCust).map(([cid, c]) => `<h2 id="E-${esc(cid)}"><a href="#C-${esc(cid)}">${esc(c.name)}</a></h2>
+      <div class="scroll"><table style="max-width:980px"><tr><th>Account</th><th class="n">${esc(D.run.label)} recorded</th><th class="n">Proposed</th><th class="n">${esc(D.run.label)} after</th>
+        <th class="n">Next month recorded</th><th class="n">Proposed billing</th><th class="n">After billing</th></tr>
+      ${ACCTS.map(a => c.rows[a]).filter(Boolean).map(r => `<tr><td>${esc(r.account_number)} ${esc(r.account_name)}</td>${cell(r.october_recorded)}${cell(r.october_proposed)}<td class="n"><b>${money(r.october_after)}</b></td>${cell(r.next_recorded)}${cell(r.next_proposed)}<td class="n"><b>${money(r.next_after)}</b></td></tr>`).join("")}
+      </table></div>`).join("") || '<div class="empty">No Proposed Entries.</div>'}`;
 }
 
 function briefView() {
@@ -137,10 +154,19 @@ function briefView() {
   return `<div class="memo"><h1>${esc(D.run.label)} billing review — brief</h1>
     <p class="mute">For the Controller. Recommendations require approval; nothing has been posted or invoiced.</p>
     <div class="q">1 · What should we have billed?</div><p>Confirmed Errors: underbilled <b>${money(D.totals.underbilled)}</b>, overbilled <b>${money(D.totals.overbilled)}</b>. Per customer and stream in <a href="#customers">Customers</a>.</p>
-    <div class="q">2 · Which differences need action?</div><ul>${D.findings.map(f=>`<li>${chip(f.status)} <a href="#${esc(f.finding_id)}">${esc(f.customer_name||"Unattributed")}</a>: ${esc(f.title)}</li>`).join("") || "<li class=mute>No findings.</li>"}</ul>
-    <p class="mute">Conditional exposure (Needs Info) is listed separately and never added to the totals above: ${D.totals.exposure_items} item(s).</p>
+    <div class="scroll"><table style="max-width:820px"><tr><th>Stream</th><th class="n">Underbilled</th><th class="n">Overbilled</th><th class="n">Oct revenue understated</th><th class="n">Oct revenue overstated</th><th class="n">Errors</th><th class="n">Valid Expl.</th><th class="n">Needs Info</th></tr>
+      ${(D.totals_by_stream||[]).map(t=>`<tr><td>${esc(t.stream)}</td><td class="n">${money(t.underbilled)}</td><td class="n">${money(t.overbilled)}</td><td class="n">${money(t.october_understated)}</td><td class="n">${money(t.october_overstated)}</td><td class="n">${t.errors}</td><td class="n">${t.valid_explanations}</td><td class="n">${t.needs_info}</td></tr>`).join("")}</table></div>
+    ${(() => { const cov = D.coverage||[], n = s => cov.filter(c => c.status === s).length;
+      return `<p>Coverage: all <b>${new Set(cov.map(c=>c.customer_id)).size}</b> customers × <b>${new Set(cov.map(c=>c.stream)).size}</b> streams reviewed (${cov.length} customer-streams):
+        ${chip("clean")} ${n("clean")} &nbsp;${chip("error")} ${n("error")} &nbsp;${chip("valid_explanation")} ${n("valid_explanation")} &nbsp;${chip("needs_info")} ${n("needs_info")}.
+        Usage not attributable to any customer is reported separately as Needs Info.</p>`; })()}
+    <div class="q">2 · Which differences need action?</div><ul>${D.findings.filter(f=>!f.follow_up).map(f=>`<li>${chip(f.status)} <a href="#${esc(f.finding_id)}">${esc(f.customer_name||"Unattributed")}</a>: ${esc(f.title)}${f.billing_effect != null && Number(f.billing_effect) ? ` <span class="mute">· billing ${money(f.billing_effect)}</span>` : ""}</li>`).join("") || "<li class=mute>No findings.</li>"}</ul>
+    <p class="mute">Conditional exposure (Needs Info) is never added to the totals above:</p>
+    <ul>${D.findings.filter(f=>f.exposure).map(f=>`<li><a href="#${esc(f.finding_id)}">${esc(f.customer_name||"Unattributed")}</a>: ${esc(f.exposure)}</li>`).join("") || "<li class=mute>None.</li>"}</ul>
+    <p class="mute">Later-service follow-ups (outside ${esc(D.run.label)} totals):</p>
+    <ul>${D.findings.filter(f=>f.follow_up).map(f=>`<li><a href="#${esc(f.finding_id)}">${esc(f.customer_name||"Unattributed")}</a>: ${esc(f.title)} <span class="mute">· billing ${money(f.billing_effect)}</span></li>`).join("") || "<li class=mute>None.</li>"}</ul>
     <div class="q">3 · Does anything change ${esc(D.run.label)}'s books?</div>
-    <p>October revenue understated <b>${money(D.totals.october_understated)}</b>, overstated <b>${money(D.totals.october_overstated)}</b> (confirmed Errors). Findings with a billing effect but no October effect say why.</p>
+    <p>October revenue understated <b>${money(D.totals.october_understated)}</b>, overstated <b>${money(D.totals.october_overstated)}</b> (confirmed Errors). Findings with a billing effect but no October effect say why. Per-customer before/after balances are in <a href="#effects">Effects</a>.</p>
     <div class="scroll"><table><tr><th>Account</th><th class="n">Recorded</th><th class="n">With proposed</th><th class="n">Change</th></tr>
       ${tb.map(r=>`<tr><td>${esc(r.account_number)} ${esc(r.account_name)}</td><td class="n">${money(r.recorded_balance)}</td><td class="n">${money(r.with_proposed_balance)}</td><td class="n">${money(r.proposed_change)}</td></tr>`).join("")}
     </table></div><p class="mute" style="font-size:12px">Signed debit − credit at period end, summed across customers (never netted per customer in the workpaper: <code>trial_balance.csv</code>).</p>
@@ -171,7 +197,7 @@ function render() {
   header(); nav(view);
   document.getElementById("view").innerHTML =
     view === "findings" ? findingsView(VIEWS[h] ? null : h) : view === "customers" ? customersView(h) :
-    view === "brief" ? briefView() : view === "controls" ? controlsView() : evidenceView();
+    view === "effects" ? effectsView() : view === "brief" ? briefView() : view === "controls" ? controlsView() : evidenceView();
   if (h.startsWith("C-")) { const el = document.getElementById(h); if (el) el.scrollIntoView({block:"center"}); }
 }
 document.addEventListener("click", e => { const b = e.target.closest("[data-f]"); if (b) { filter = b.dataset.f; render(); } });
