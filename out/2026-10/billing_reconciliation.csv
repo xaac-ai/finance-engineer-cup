@@ -1,1 +1,31 @@
 customer_id,customer_name,stream,expected,actual,difference,claimed,finding_ids
+186097,"Alder Fieldworks, Inc.",usage,1575.76,1575.76,0.00,0.00,
+314334,"Aspen Vale, Inc.",usage,0.00,0.00,0.00,0.00,
+810234,"Beacon Marsh, Inc.",usage,1444.30,1344.30,100.00,100.00,F-810234-USAGE-LATE-RECORD-2026-10
+866587,"Brookstone Data, Inc.",usage,2041.04,2041.04,0.00,0.00,
+639373,"Cedar Harbor Labs, Inc.",usage,8291.20,11388.00,-3096.80,-3096.80,F-639373-USAGE-ALLOWANCE-2026-10
+477694,"Copper Finch Systems, Inc.",usage,1227.52,1227.52,0.00,0.00,
+260381,"Crescent Shore, Inc.",usage,141.72,141.72,0.00,0.00,
+731059,"Driftwood Research, Inc.",usage,1341.36,1341.36,0.00,0.00,
+436791,"Evergreen Dispatch, Inc.",usage,2624.64,2624.64,0.00,0.00,
+286595,"Falcon Ridge Software, Inc.",usage,5908.48,5908.48,0.00,0.00,
+963044,"Granite Orchard, Inc.",usage,3712.08,3712.08,0.00,0.00,
+142182,"Highwater Studio, Inc.",usage,5857.28,5857.28,0.00,0.00,
+620310,"Indigo Trail Networks, Inc.",usage,2916.32,2916.32,0.00,0.00,
+879513,"Juniper Bay Analytics, Inc.",usage,2162.64,2162.64,0.00,0.00,
+437384,"Juniper Signal Works, Inc.",usage,4560.32,1425.10,3135.22,3135.22,F-437384-USAGE-RATE-2026-10
+654552,"Kestrel Bridge, Inc.",usage,2750.22,2750.22,0.00,0.00,
+232251,"Larch Point Services, Inc.",usage,1068.96,1068.96,0.00,0.00,
+507826,"Maple Lantern, Inc.",usage,4967.94,4967.94,0.00,0.00,
+335780,"Meridian Process Systems, Inc.",usage,2327.52,2327.52,0.00,0.00,
+553102,"Northbank Design, Inc.",usage,1604.40,1604.40,0.00,0.00,
+300468,"Oak Harbor Digital, Inc.",usage,1984.62,1984.62,0.00,0.00,
+561562,"Pine Summit Logistics, Inc.",usage,2988.24,2988.24,0.00,0.00,
+730965,"Quartz Meadow, Inc.",usage,3889.14,3889.14,0.00,0.00,
+856042,"Riverbend Operations, Inc.",usage,345.66,345.66,0.00,0.00,
+676664,"Silver Current, Inc.",usage,3135.96,3135.96,0.00,0.00,
+941670,"Timberline Insights, Inc.",usage,3557.10,3557.10,0.00,0.00,
+240793,"Westhaven Metrics, Inc.",usage,1593.30,1593.30,0.00,0.00,
+839653,"Willow Passage, Inc.",usage,0.00,0.00,0.00,0.00,
+188999,"Yarrow Ridge, Inc.",usage,3074.28,0.00,3074.28,3074.28,F-188999-USAGE-MISSING-INVOICE-2026-10
+148565,"Zephyr Grove, Inc.",usage,952.60,952.60,0.00,0.00,

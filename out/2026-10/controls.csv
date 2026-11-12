@@ -2,8 +2,13 @@ group,name,title,status,count,view,detail
 contracts,order_forms_parsed,Order Forms parsed from the template and agree with contract_register.csv,pass,0,,30 Order Forms
 contracts,amendment_quotes,Every curated Amendment quote appears verbatim in the document text,pass,0,,7 quotes across 2 Amendments
 inputs,billing_messages_parsed,Billing Messages parsed from billing_followups.pdf,pass,0,,10 messages
+inputs,approval_quotes,Every curated approval quote appears verbatim in a Controller Billing Message,pass,0,,1 approved concessions
 inputs,01_row_counts,Extract completeness: physical row counts match START_HERE expected counts,pass,0,ctl_inputs_row_counts,
 inputs,02_money_precision,NetSuite amounts have at most two decimals (no silent rounding on load),pass,0,ctl_inputs_money_precision,
+usage,01_batch_tieout,Countable usage records and units tie to usage_batch_controls for every service date,pass,0,ctl_usage_batch_tieout,
+usage,02_conflicting_duplicates,No usage record_id is exported twice with different content,pass,0,ctl_usage_conflicting_duplicates,
+usage,03_after_cutoff,Usage records for the period ingested after the cutoff (excluded from October),pass,0,ctl_usage_after_cutoff,
+usage,04_unattributed,Usage for the period with no verified owner (isolated; see the unverified-usage Needs Info finding),warn,1,ctl_usage_unattributed,
 ledger,01_balanced_entries,Balanced entries (debits = credits per Recorded and Proposed Entry),pass,0,ctl_ledger_balanced_entries,
 ledger,02_opening_completeness,"Opening Balances cover accounts 1100/1150/1160/2200 for every customer, one side only",pass,0,ctl_ledger_opening_completeness,
 ledger,03_known_accounts,Every journal line posts to an account in the chart of accounts,pass,0,ctl_ledger_known_accounts,

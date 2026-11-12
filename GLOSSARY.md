@@ -32,6 +32,20 @@ _Avoid_: Adjustment (alone), correction entry, draft JE
 A customer's balance in one account at the start of the review period, as supplied; a starting point, not an entry.
 _Avoid_: Opening entry, beginning JE
 
+### Usage
+
+**Validated Usage**:
+Workflow runs that count toward a customer's month: unique, active, unreplaced usage records on product accounts with a verified mapping to that customer, effective on the service date.
+_Avoid_: Usage (alone) when meaning the billable count, metered runs
+
+**Unverified Usage**:
+Usage on a product account with no verified billing owner. It is isolated, never assigned to a customer by elimination, and reported as Needs Info.
+_Avoid_: Orphan usage, unmapped customer usage
+
+**Approved Concession**:
+A reduction of a customer's consideration approved by the Controller in a Billing Message; it lowers the expected accrual for its service period exactly once.
+_Avoid_: Discount, credit request
+
 ### Review
 
 **Finding**:
