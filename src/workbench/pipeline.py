@@ -5,7 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
 
-from workbench.agents import jev
+from workbench.agents import jev, reviewer
 from workbench import approvals, contracts, db, findings, inputs, ledger, messages, outputs, pdf
 from workbench.controls import SQL_ROOT, ControlResult, passed, run_controls
 from workbench.period import Period, load_period
@@ -58,6 +58,8 @@ def run(period_key: str, root: Path | None = None) -> RunResult:
     # Combined effects across streams: before/after balances, coverage and totals, checked as one answer.
     con.execute((SQL_ROOT / "effects.sql").read_text())
     results += run_controls(con, "effects")
+    # Four-Eye Check: committed independent reviews vs the Findings (the reviewer runs in `make review-findings`).
+    results.append(reviewer.compare(con, period))
 
     stats = {"row_counts": counts, "journal_lines": n_journal, "billing_messages": n_messages,
              "streams": ctx.streams, **contract_stats}

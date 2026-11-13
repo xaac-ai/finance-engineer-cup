@@ -29,3 +29,4 @@ effects,01_no_unbilled_residual,"After the proposed billing documents, no custom
 effects,02_contract_asset_after_corrections,"After the proposed October entries, 1160 equals each customer's net 2200 debit (reclass recomputed)",pass,0,ctl_effects_contract_asset_after_corrections,
 effects,03_no_netting,"Each Proposed Entry stays within one customer and one stream (no netting across customers, or platform against usage)",pass,0,ctl_effects_no_netting,
 effects,04_population_coverage,Every customer is reviewed for every implemented stream (coverage = customers × streams),pass,0,ctl_effects_population_coverage,
+agents,four_eye,Four-Eye Check: every Disagreement with the independent reviewer is resolved,pass,0,four_eye_check,agrees on 59/60 customer-streams; all others resolved

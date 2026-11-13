@@ -1,6 +1,6 @@
 PERIOD ?= 2026-10
 
-.PHONY: run test clean draft-terms jev-check
+.PHONY: run test clean draft-terms jev-check review-findings
 
 ## Run the full review for PERIOD (default 2026-10). Outputs land in out/$(PERIOD)/.
 run:
@@ -23,3 +23,8 @@ draft-terms:
 ## TYPESAFE_API_KEY, or replays the committed cache). Rerun after changing amendment_terms.yaml.
 jev-check:
 	uv run python -m workbench.agents.jev --period $(PERIOD)
+
+## Agent step: Four-Eye Check. A second agent classifies every customer x stream from source files only
+## (needs ANTHROPIC_API_KEY, or replays the committed cache). `make run` compares it with the Findings.
+review-findings:
+	uv run --group agents python -m workbench.agents.reviewer --period $(PERIOD)

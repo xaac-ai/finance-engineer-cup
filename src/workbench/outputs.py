@@ -41,6 +41,7 @@ WORKPAPERS = [
     "customer_effects",
     "coverage",
     "totals_by_stream",
+    "four_eye_check",
 ]
 
 # Policies applied by the workbench, each cited to its source (START_HERE.pdf section).
@@ -159,6 +160,7 @@ def write_report(con: duckdb.DuckDBPyConnection, period: Period, controls: list[
         "trial_balance_by_account": tb,
         "totals_by_stream": j("SELECT * FROM out_totals_by_stream"),
         "coverage": j("SELECT * FROM out_coverage"),
+        "four_eye": j("SELECT * FROM out_four_eye_check"),
         "effects": j("""SELECT * FROM out_customer_effects WHERE customer_id IN
             (SELECT DISTINCT customer_id FROM journal_lines WHERE status = 'proposed')"""),
         "assumptions": [{"text": t, "source": s} for t, s in ASSUMPTIONS],

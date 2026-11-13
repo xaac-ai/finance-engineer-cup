@@ -84,6 +84,14 @@ _Avoid_: Revenue adjustment (alone), P&L impact
 A conditional amount attached to a Needs Info Finding: what would be owed if the missing evidence came out one way. Never added to confirmed corrections.
 _Avoid_: Potential error, estimate, at-risk amount
 
+**Four-Eye Check**:
+An independent classification of every customer and stream by a second agent that never sees the Findings, compared with them field by field.
+_Avoid_: Second opinion, AI audit
+
+**Disagreement**:
+A customer-stream where the Four-Eye Check's status or amounts differ from the Findings. It stays open until a person resolves it with a reason.
+_Avoid_: Mismatch, discrepancy
+
 ### Evidence
 
 **Billing Message**:
