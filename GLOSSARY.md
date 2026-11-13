@@ -92,6 +92,10 @@ _Avoid_: Second opinion, AI audit
 A customer-stream where the Independent Review's status or amounts differ from the Findings. It stays open until a person resolves it with a reason.
 _Avoid_: Mismatch, discrepancy
 
+**Scenario**:
+A copy of one period's inputs with one named, deliberate change, and the Findings that change should produce: a new or altered Finding for a change the review must catch, or identical results for a change it must ignore.
+_Avoid_: Perturbation, fixture, data-change test
+
 ### Evidence
 
 **Billing Message**:

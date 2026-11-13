@@ -27,6 +27,21 @@ Exit codes:
 
 The run stops with a clear message if anything is missing, if an Order Form doesn't match the template, or if a curated quote isn't in its PDF.
 
+## Scenarios: does it catch next month's problems?
+
+A **Scenario** is October's inputs with one deliberate change, plus the results that change should produce. Each one runs the real pipeline and is compared with the untouched October run: Findings, totals by stream, and the status of every control.
+
+- **Catch** Scenarios must produce exactly the expected difference, and nothing else may change. Examples: 5,000 extra runs that weren't invoiced (+$400.00 usage Error), a missing platform invoice (+$3,000.00), late usage, an unmapped product account (Needs Info), and an extract that no longer ties to its batch totals (a failed control).
+- **Ignore** Scenarios must produce no difference: an exactly duplicated usage row, every CSV reordered, and a record restated with the same units.
+
+```bash
+make scenario                      # list them
+make scenario NAME=extra-usage     # run one; report in out/scenarios/extra-usage/, difference printed
+make test                          # runs them all (tests/test_scenarios.py)
+```
+
+Expected amounts are worked out by hand in `src/workbench/scenarios.py`. The suite has already paid for itself: `extra-usage` showed the review had no cause for "invoice billed fewer runs than were known", so the `usage_quantity` rule was added.
+
 ## Agent steps
 
 These run outside `make run`. Each pins its model, and its answers are committed, so the review and CI never need an API key. `make run` checks the committed results.

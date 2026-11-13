@@ -5,6 +5,8 @@ __pycache__/
 # The DuckDB working database is rebuilt every run; reviewers get CSVs + report.html.
 out/*/workbench.duckdb
 out/*/workbench.duckdb.wal
+# Scenario runs are rebuilt on demand (make scenario NAME=...).
+out/scenarios/
 
 # Local secrets (API keys). Never commit.
 .env

@@ -229,6 +229,7 @@ def build(ctx: Context) -> None:
 # ---- analysis used by the usage finding rules ---------------------------------------------------
 
 LATE = "USAGE-LATE-RECORD"
+QUANTITY = "USAGE-QUANTITY"
 
 
 def _allocate_revenue(effects: dict[str, Decimal], revenue_diff: Decimal) -> dict[str, Decimal | None]:
@@ -265,6 +266,10 @@ def analyse(ctx: Context) -> list[UsageMonth]:
             implied_allowance = known - ln.quantity
             if implied_allowance != m.allowance and implied_allowance in m.allowance_values:
                 billing["USAGE-ALLOWANCE"] = charge(known, m.allowance, m.rate) - round_cents(ln.quantity * m.rate)
+            elif ln.quantity != max(0, known - m.allowance):
+                # The invoice billed a different overage quantity than the validated usage known when it was
+                # issued, and no allowance explains it. Priced at the contract rate (any price error is USAGE-RATE).
+                billing[QUANTITY] = charge(known, m.allowance, m.rate) - round_cents(ln.quantity * m.rate)
             if m.late_records:
                 billing[LATE] = m.expected_billing - charge(known, m.allowance, m.rate)
         billing = {k: v for k, v in billing.items() if v}

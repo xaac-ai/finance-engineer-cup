@@ -1,6 +1,6 @@
 PERIOD ?= 2026-10
 
-.PHONY: run test clean draft-terms jev-check review-findings
+.PHONY: run test clean scenario draft-terms jev-check review-findings
 
 ## Run the full review for PERIOD (default 2026-10). Outputs land in out/$(PERIOD)/.
 run:
@@ -9,6 +9,11 @@ run:
 ## Run the code tests.
 test:
 	uv run pytest -q
+
+## Run one Scenario: October's inputs with one deliberate change, compared with the untouched run.
+## `make scenario` lists them; `make scenario NAME=extra-usage` writes out/scenarios/extra-usage/.
+scenario:
+	uv run python -m workbench.scenarios $(NAME)
 
 ## Remove generated outputs for PERIOD.
 clean:
