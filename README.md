@@ -27,6 +27,20 @@ Exit codes:
 
 The run stops with a clear message if anything is missing, if an Order Form doesn't match the template, or if a curated quote isn't in its PDF.
 
+## Agent steps
+
+These run outside `make run`. Each pins its model, and its answers are committed, so the review and CI never need an API key. `make run` checks the committed results.
+
+| Target | What it does |
+|---|---|
+| `make draft-terms` | Claude drafts each Amendment's term changes, without seeing the curated terms. The draft is scored against them and never replaces them. |
+| `make jev-check` | Jev (TypeSafe) judges whether the Amendment text supports each curated and drafted term. `make run` fails if a curated term is unchecked. |
+| `make review-findings` | Independent Review: a second agent classifies every customer and stream from the source files alone. `make run` warns until each Disagreement with the Findings is resolved in `reviewer_resolutions.yaml`. |
+
+The Independent Review applies the standard four-eyes (maker-checker) control to the review itself. An independent second reviewer was also part of a Finance Engineer Cup I entry; the design here is our own.
+
+Keys, if you rerun the agents yourself, go in a gitignored `.env` as `ANTHROPIC_API_KEY` and `TYPESAFE_API_KEY`.
+
 ## Layout
 
 | Path | What |

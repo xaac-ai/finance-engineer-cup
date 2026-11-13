@@ -1,4 +1,4 @@
-# Resolutions of Four-Eye Check Disagreements, decided by a person (Daniel Bank).
+# Resolutions of Independent Review Disagreements, decided by a person (Daniel Bank).
 # resolution: rules_correct (the Finding stands) or reviewer_correct (fix the rules, then re-run).
 resolutions:
   - customer_id: "839653"  # Willow Passage
