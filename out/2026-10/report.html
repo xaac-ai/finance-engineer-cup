@@ -1401,10 +1401,10 @@
    "count": 0,
    "detail": "agrees on 59/60 customer-streams; all others resolved",
    "group": "agents",
-   "name": "four_eye",
+   "name": "independent_review",
    "status": "pass",
-   "title": "Four-Eye Check: every Disagreement with the independent reviewer is resolved",
-   "view": "four_eye_check"
+   "title": "Independent Review: every Disagreement with the independent reviewer is resolved",
+   "view": "independent_review"
   }
  ],
  "coverage": [
@@ -4948,7 +4948,7 @@
    "title": "No October usage invoice: usage within the allowance"
   }
  ],
- "four_eye": [
+ "independent_review": [
   {
    "agreement": "agrees",
    "customer_id": "186097",
@@ -6574,7 +6574,7 @@
  ],
  "run": {
   "command": "make run PERIOD=2026-10",
-  "commit": "2be06b3-dirty",
+  "commit": "eaeaa2b-dirty",
   "cutoff": "2026-11-11T18:00:00-07:00",
   "label": "Oct 2026",
   "period": "2026-10"
@@ -6701,7 +6701,7 @@
   "customer_effects.csv",
   "coverage.csv",
   "totals_by_stream.csv",
-  "four_eye_check.csv",
+  "independent_review.csv",
   "controls.csv"
  ]
 }</script>
@@ -6813,9 +6813,9 @@ function briefView() {
       return `<p>Coverage: all <b>${new Set(cov.map(c=>c.customer_id)).size}</b> customers × <b>${new Set(cov.map(c=>c.stream)).size}</b> streams reviewed (${cov.length} customer-streams):
         ${chip("clean")} ${n("clean")} &nbsp;${chip("error")} ${n("error")} &nbsp;${chip("valid_explanation")} ${n("valid_explanation")} &nbsp;${chip("needs_info")} ${n("needs_info")}.
         Usage not attributable to any customer is reported separately as Needs Info.</p>`; })()}
-    ${(() => { const fe = (D.four_eye||[]).filter(r => r.reviewer_status); if (!fe.length) return "";
+    ${(() => { const fe = (D.independent_review||[]).filter(r => r.reviewer_status); if (!fe.length) return "";
       const a = fe.filter(r => r.agreement === "agrees").length, open = fe.filter(r => r.agreement !== "agrees" && !r.resolution).length;
-      return `<p>Four-Eye Check: an independent reviewer agrees on <b>${a}/${fe.length}</b> customer-streams; ${open} Disagreement(s) open. See <a href="#controls">Controls → Agent steps</a>.</p>`; })()}
+      return `<p>Independent Review: an independent reviewer agrees on <b>${a}/${fe.length}</b> customer-streams; ${open} Disagreement(s) open. See <a href="#controls">Controls → Agent steps</a>.</p>`; })()}
     <div class="q">2 · Which differences need action?</div><ul>${D.findings.filter(f=>!f.follow_up).map(f=>`<li>${chip(f.status)} <a href="#${esc(f.finding_id)}">${esc(f.customer_name||"Unattributed")}</a>: ${esc(f.title)}${f.billing_effect != null && Number(f.billing_effect) ? ` <span class="mute">· billing ${money(f.billing_effect)}</span>` : ""}</li>`).join("") || "<li class=mute>No findings.</li>"}</ul>
     <p class="mute">Conditional exposure (Needs Info) is never added to the totals above:</p>
     <ul>${D.findings.filter(f=>f.exposure).map(f=>`<li><a href="#${esc(f.finding_id)}">${esc(f.customer_name||"Unattributed")}</a>: ${esc(f.exposure)}</li>`).join("") || "<li class=mute>None.</li>"}</ul>
@@ -6842,11 +6842,11 @@ function jevSection() {
       <td>${esc(r.choice)}</td><td class="n">${Number(r.confidence).toFixed(2)}</td><td>${chip(r.gate === "auto" ? "pass" : "warn")}</td></tr>`).join("")}</table></div>`;
 }
 
-function fourEyeSection() {
-  const fe = D.four_eye || [];
-  if (!fe.length || fe.every(r => !r.reviewer_status)) return `<h3>Four-Eye Check</h3><p class="mute">Not run for this period.</p>`;
+function independentReviewSection() {
+  const fe = D.independent_review || [];
+  if (!fe.length || fe.every(r => !r.reviewer_status)) return `<h3>Independent Review</h3><p class="mute">Not run for this period.</p>`;
   const agree = fe.filter(r => r.agreement === "agrees").length, diff = fe.filter(r => r.agreement !== "agrees");
-  return `<h3>Four-Eye Check (independent reviewer)</h3>
+  return `<h3>Independent Review</h3>
     <p>A second agent classified every customer × stream from the source files only, never seeing the Findings. It agrees with the rules on
       <b>${agree}/${fe.length}</b> customer-streams (same status, amounts to the cent). Nothing changes automatically: each Disagreement is resolved by a person with a reason.</p>
     ${diff.length ? `<div class="scroll"><table><tr><th>Customer</th><th>Stream</th><th>Rules</th><th>Reviewer</th><th>Disagreement</th><th>Resolution</th></tr>
@@ -6870,7 +6870,7 @@ function agentSteps() {
       <td class="mono">${esc(x.curated_value)}</td><td class="mono">${esc(x.drafted_value ?? "missed")}</td><td>${yn(x.value_match)}</td><td>${yn(x.date_match)}</td>
       <td>${x.quote_check ? chip(x.quote_check === "passed" ? "pass" : "fail") : ""}</td><td class="mute" style="font-size:12px">${esc(x.drafted_quote || "")}</td></tr>`)).join("")}
     </table></div>
-    <p class="mute" style="font-size:12px">Calls: ${dr.calls.map(c => `${esc(c.document_id)}: ${esc(c.model)}, ${c.usage.input_tokens.toLocaleString()} in / ${c.usage.output_tokens.toLocaleString()} out, recorded ${esc(c.recorded_at)}`).join("; ")}.</p>${jevSection()}${fourEyeSection()}`;
+    <p class="mute" style="font-size:12px">Calls: ${dr.calls.map(c => `${esc(c.document_id)}: ${esc(c.model)}, ${c.usage.input_tokens.toLocaleString()} in / ${c.usage.output_tokens.toLocaleString()} out, recorded ${esc(c.recorded_at)}`).join("; ")}.</p>${jevSection()}${independentReviewSection()}`;
 }
 
 function controlsView() {

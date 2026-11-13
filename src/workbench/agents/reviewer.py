@@ -1,4 +1,4 @@
-"""Four-Eye Check: a second agent classifies every customer × stream from source files alone.
+"""Independent Review: a second agent classifies every customer × stream from source files alone.
 
 Decision (wayfinder: "How should the independent findings reviewer work?"):
 - One call per customer (both streams), `claude-opus-5-5` at effort high, structured output.
@@ -198,16 +198,16 @@ def _dec(v) -> Decimal | None:
 
 
 def compare(con, period: Period):
-    """Create `four_eye_check` (one row per customer × stream) and return its control."""
+    """Create `independent_review` (one row per customer × stream) and return its control."""
     from workbench.controls import ControlResult
     path = period.curated_dir / "reviews" / "reviewer.json"
-    con.execute("""CREATE OR REPLACE TABLE four_eye_check (customer_id VARCHAR, customer_name VARCHAR, stream VARCHAR,
+    con.execute("""CREATE OR REPLACE TABLE independent_review (customer_id VARCHAR, customer_name VARCHAR, stream VARCHAR,
         rules_status VARCHAR, rules_billing DECIMAL(18,2), rules_revenue DECIMAL(18,2), finding_ids VARCHAR,
         reviewer_status VARCHAR, reviewer_billing DECIMAL(18,2), reviewer_revenue DECIMAL(18,2), reviewer_reason VARCHAR,
         reviewer_citations VARCHAR, agreement VARCHAR, resolution VARCHAR, resolution_reason VARCHAR)""")
     if not path.exists():
-        return ControlResult("agents", "four_eye", "Four-Eye Check: every Disagreement with the independent reviewer is resolved",
-                             "warn", 0, None, "Four-Eye Check not run (make review-findings)")
+        return ControlResult("agents", "independent_review", "Independent Review: every Disagreement with the independent reviewer is resolved",
+                             "warn", 0, None, "Independent Review not run (make review-findings)")
     reviews = {(r["customer_id"], r["stream"]): r for r in json.loads(path.read_text())["reviews"]}
     res_path = period.curated_dir / "reviews" / "reviewer_resolutions.yaml"
     resolutions = {(str(r["customer_id"]), r["stream"]): r
@@ -235,14 +235,14 @@ def compare(con, period: Period):
         res = resolutions.get((cid, stream))
         if agreement != "agrees" and not res:
             open_items.append(f"{name} {stream} ({agreement})")
-        con.execute("INSERT INTO four_eye_check VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", [
+        con.execute("INSERT INTO independent_review VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", [
             cid, name, stream, status, rbill, rrev, fids, rv.get("status"), vb, vr, rv.get("reason"),
             "; ".join(rv.get("citations") or []), agreement,
             res["resolution"] if res else None, res.get("reason") if res else None])
     n = len(rules)
-    agreed = n - con.execute("SELECT count(*) FROM four_eye_check WHERE agreement <> 'agrees'").fetchone()[0]
-    return ControlResult("agents", "four_eye", "Four-Eye Check: every Disagreement with the independent reviewer is resolved",
-                         "warn" if open_items else "pass", len(open_items), "four_eye_check",
+    agreed = n - con.execute("SELECT count(*) FROM independent_review WHERE agreement <> 'agrees'").fetchone()[0]
+    return ControlResult("agents", "independent_review", "Independent Review: every Disagreement with the independent reviewer is resolved",
+                         "warn" if open_items else "pass", len(open_items), "independent_review",
                          f"agrees on {agreed}/{n} customer-streams; open: " + "; ".join(open_items) if open_items
                          else f"agrees on {agreed}/{n} customer-streams; all others resolved")
 
