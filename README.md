@@ -114,3 +114,7 @@ Keys, if you rerun the agents yourself, go in a gitignored `.env` as `ANTHROPIC_
 | `src/workbench/sql/` | The books (`ledger/`), controls (`controls/<group>/`, one file each; empty result = pass), workpapers (`outputs/`) |
 | `out/<period>/` | Generated report, workpapers and extracted PDF text |
 | `docs/adr/` | Architecture decisions |
+
+## Licence
+
+The code is MIT-licensed (see `LICENSE`). `data/raw/` is Numeric's fictional Finance Engineer Cup II challenge data, included as supplied for the Cup; it isn't covered by the licence.
